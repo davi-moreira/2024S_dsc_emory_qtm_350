@@ -1,0 +1,49 @@
+---
+title: "Syllabus: QTM 350: Data Science Computing "
+subtitle: "Quantitative Theory and Methods Department, Emory University"
+listing:
+  - id: schedule
+    contents:
+      - topics/topic-*.qmd
+    type: table
+    fields: [title, subtitle, date]
+    field-display-names:
+      title: "Topic"
+      description: "Dates"
+      subtitle: "Topics"
+    date-format: "MMMM DD, YYYY"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+---
+
+## Course Description
+
+XXX
+
+**Class Website**: <https://davi-moreira.github.io/2024S_dsc_emory_qtm_350>
+
+## Learning Goals
+
+After completing this course, the students will be able to:
+
+-   XXX
+
+-   XXX
+
+## Instructors and TAs
+
+### Instructor: [Professor Davi Moreira](https://davi-moreira.github.io)
+
+-   Pronouns: He/Him
+-   Email: [davi.moreira\@emory.edu](mailto:davi.moreira@emory.edu)
+-   Office hours:
+    -   Time: XXX
+    -   Location: XXX
+
+### TA: Michael Cao XXX (DSPP, Second Year)
+
+-   Email: xxx
+-   Office Hours:
+    -   xxx
+

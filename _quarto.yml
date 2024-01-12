@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs
+  
+
+website:
+  title: "QTM 350 Data Science Computing"
+  sidebar:
+    background: primary
+    logo: "images/course_image_2.png"
+    pinned: true
+    align: center
+    # tools:
+    #   - icon: github
+    #     href: https://github.com/davi-moreira/2024S_dsc_emory_qtm_350
+    #     text: GitHub
+    style: docked
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: schedule.qmd
+        text: Schedule
+      #- href: problemset.qmd
+      #  text: Problem Sets
+      # - href: finalproject.qmd
+      #  text: Final Project
+      - section: "Materials"
+        contents: 
+          - href: topics/topic-01.qmd
+            text: "Topic 1: Intro"
+          
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

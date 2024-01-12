@@ -1,0 +1,39 @@
+---
+title: "QTM 350: Data Science Computing"
+subtitle: "Quantitative Theory and Methods Department, Emory University"
+---
+
+## Course Description
+
+XXXX
+
+## Goals
+
+XXX:
+
+-   xxx
+
+-   xxx
+
+## Instructors and TAs
+
+### Instructor: [Professor Davi Moreira](https://davi-moreira.github.io)
+
+-   Pronouns: He/Him
+-   Email: [davi.moreira\@emory.edu](mailto:davi.moreira@emory.edu)
+-   Office hours:
+    -   Time: XXX
+    -   Location: XXX
+
+### TA: Michael Cao XXX (DSPP, Second Year)
+
+-   Email: xxx
+-   Office Hours:
+    -   xxx
+
+### Course Infra-structure
+
+**Class Website:** xxx
+
+**Canvas:** xxx
+

@@ -1,0 +1,10 @@
+---
+title: "Syllabus: Test "
+subtitle: "Test"
+format: pdf
+---
+
+# Course Description
+
+Test
+

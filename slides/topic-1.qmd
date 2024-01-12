@@ -1,0 +1,62 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 1: Introductions, Installations, IDEs, Command line </span>"
+author: "Professor: Davi Moreira"
+date: "18/01/2024"
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    width: 1600
+    height: 900
+    center: true
+    slide-number: true
+    incremental: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    #logo: images/quarto.png
+    footer: "Data science Computing"
+    theme: [simple,custom.scss]
+---
+
+# Welcome to QTM 350 Data Science Computing {background-color="#447099"}
+
+## Plans for Today
+
+<br>
+
+-   [Data Science for Public Policy]{.blue}, [Computational Social Science]{.blue}, or why are we here?!
+
+-   Goals of the course
+
+-   Course Logistics
+
+-   Introductions
+
+-   IDEs
+
+    -   Jupyter
+    -   Quarto
+
+-   Introduction to Commandline
+
+# Why are we here? {background-color="#447099"}
+
+## Rise of the digital information age
+
+```{r  echo=FALSE, out.width = "50%", fig.align="center"}
+knitr::include_graphics("topic-1-figs/digital.jpeg") 
+```
+
+::: aside
+https://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html
+:::
+
+## Real Time Data: Mobility, Credit Card Usage, Expenses...
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("week1_figs/mob_01.png") 
+```
+
+# Thank you!
