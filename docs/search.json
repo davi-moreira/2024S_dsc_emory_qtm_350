@@ -32,7 +32,7 @@
     "href": "index.html#objectives",
     "title": "QTM 350: Data Science Computing",
     "section": "Objectives",
-    "text": "Objectives\n\nConceptual Understanding: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.\nTechnical Proficiency: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.\nCloud Computing Literacy: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.\nCritical Integrated Learning: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.\n\n\nCourse Infra-structure\nCourse Website: This class website will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nCanvas: The course Canvas site http://canvas.emory.edu should be checked on a regular basis for announcements and course material.."
+    "text": "Objectives\n\nConceptual Understanding: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.\nTechnical Proficiency: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.\nCloud Computing Literacy: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.\nCritical Integrated Learning: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.\n\n\nCourse Infra-structure\nCourse Website: This class website will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nCanvas: The course Canvas site http://canvas.emory.edu should be checked on a regular basis for announcements and course material."
   },
   {
     "objectID": "problemset.html",
@@ -46,14 +46,14 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\n\n\nWeek\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Week\n\n\nWeek\n\n\nDate\n\n\n\n\n\n\nTopic 01\n\n\nIntroduction, Set up, Command line\n\n\nJune 01, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "schedule.html#schedule",
     "href": "schedule.html#schedule",
     "title": "Schedule",
     "section": "",
-    "text": "Week\n\n\nWeek\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Week\n\n\nWeek\n\n\nDate\n\n\n\n\n\n\nTopic 01\n\n\nIntroduction, Set up, Command line\n\n\nJune 01, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "problem_sets/ps01/ps01.html",
@@ -229,5 +229,40 @@
     "title": "Syllabus: QTM 350 - Data Science Computing",
     "section": "Subject to Change Policy",
     "text": "Subject to Change Policy\nWhile I will try to adhere to the course schedule as much as possible, I also want to adapt to your learning pace and style. The syllabus and course plan may change in the semester."
+  },
+  {
+    "objectID": "slides/week-01.html",
+    "href": "slides/week-01.html",
+    "title": " QTM 350 Data Science Computing ",
+    "section": "",
+    "text": "Data Science for Public Policy, Computational Social Science, or why are we here?!\nGoals of the course\nCourse Logistics\nIntroductions\nIDEs\n\nJupyter\nQuarto\n\nIntroduction to Commandline"
+  },
+  {
+    "objectID": "slides/week-01.html#plans-for-today",
+    "href": "slides/week-01.html#plans-for-today",
+    "title": " QTM 350 Data Science Computing ",
+    "section": "",
+    "text": "Data Science for Public Policy, Computational Social Science, or why are we here?!\nGoals of the course\nCourse Logistics\nIntroductions\nIDEs\n\nJupyter\nQuarto\n\nIntroduction to Commandline"
+  },
+  {
+    "objectID": "slides/week-01.html#rise-of-the-digital-information-age",
+    "href": "slides/week-01.html#rise-of-the-digital-information-age",
+    "title": " QTM 350 Data Science Computing ",
+    "section": "Rise of the digital information age",
+    "text": "Rise of the digital information age\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html"
+  },
+  {
+    "objectID": "slides/week-01.html#real-time-data-mobility-credit-card-usage-expenses",
+    "href": "slides/week-01.html#real-time-data-mobility-credit-card-usage-expenses",
+    "title": " QTM 350 Data Science Computing ",
+    "section": "Real Time Data: Mobility, Credit Card Usage, Expenses…",
+    "text": "Real Time Data: Mobility, Credit Card Usage, Expenses…"
+  },
+  {
+    "objectID": "weeks/week-01.html",
+    "href": "weeks/week-01.html",
+    "title": "Topic 01",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nBest Practices in Programming, IDEs and Files Management:\nReadings\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\n\nAdditional\n\nMore on RStudio + Reticulate\nR & Python: A Love Storsy - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nMath in markdown - docx2latex.com"
   }
 ]

@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-date',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -218,6 +218,17 @@ Date
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-listing-date-sort="1748750400000" data-listing-file-modified-sort="1705168910587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Topic 01" data-listing-filename-sort="week-01.qmd">
+<td>
+<a href="./weeks/week-01.html" class="title listing-title">Topic 01</a>
+</td>
+<td>
+<span class="listing-subtitle">Introduction, Set up, Command line</span>
+</td>
+<td>
+<span class="listing-date">June 01, 2025</span>
+</td>
+</tr>
 </tbody>
 
 </table>

@@ -8,12 +8,14 @@
   },
   {
     "listing": "/schedule.html",
-    "items": []
+    "items": [
+      "/weeks/week-01.html"
+    ]
   },
   {
     "listing": "/syllabus.html",
     "items": [
-      "/topics/topic-01.html"
+      "/weeks/week-01.html"
     ]
   }
 ]
