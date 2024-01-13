@@ -15,8 +15,6 @@ website:
     #     href: https://github.com/davi-moreira/2024S_dsc_emory_qtm_350
     #     text: GitHub
     style: docked
-    filters:
-      - openlinksinnewpage
     contents:
       - href: index.qmd
         text: Home

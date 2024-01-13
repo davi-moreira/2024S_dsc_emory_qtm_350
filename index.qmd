@@ -1,8 +1,6 @@
 ---
 title: "QTM 350: Data Science Computing"
 subtitle: "Quantitative Theory and Methods Department, Emory University"
-filters:
-  - openlinksinnewpage
 ---
 
 ## Course Description
