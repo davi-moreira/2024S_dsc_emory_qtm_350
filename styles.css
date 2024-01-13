@@ -3,3 +3,9 @@
 code {
   color: #041E42;
 }
+
+/* CSS class for the left-menu */
+.left-menu {
+  background-color: #0E315F; /* Change this to your desired color */
+  /* Other styles */
+}

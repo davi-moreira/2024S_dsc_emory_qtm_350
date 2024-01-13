@@ -19,31 +19,57 @@ listing:
 
 ## Course Description
 
-XXX
+This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects.
 
 **Class Website**: <https://davi-moreira.github.io/2024S_dsc_emory_qtm_350>
 
-## Learning Goals
-
-After completing this course, the students will be able to:
-
--   XXX
-
--   XXX
-
-## Instructors and TAs
+## Instructor and TAs
 
 ### Instructor: [Professor Davi Moreira](https://davi-moreira.github.io)
 
 -   Pronouns: He/Him
 -   Email: [davi.moreira\@emory.edu](mailto:davi.moreira@emory.edu)
--   Office hours:
-    -   Time: XXX
-    -   Location: XXX
+-   Office hours: Tuesdays, 9:15am - 10:15am, or by appointment
+    -   Zoom link in your Course Canvas Page.
 
-### TA: Michael Cao XXX (DSPP, Second Year)
+### Teaching Assistant: Michael Cao
 
--   Email: xxx
--   Office Hours:
-    -   xxx
+-   Email: [michael.cao\@emory.edu](mailto:michael.cao@emory.edu)
+-   Office Hours: Mondays, 6-7 pm
+    -   Zoom link in your Course Canvas Page.
 
+
+## Learning Outcomes
+
+By the end of this course, students will be able to:
+1.	Demonstrate proficiency in data science project collaboration and version control.
+2.	Utilize advanced data storage, manipulation, and querying. 
+3.	High-level understanding of data structures, algorithms, and cloud computing concepts.
+4.	Critically navigate the emergent trends in data science computing. 
+
+## Objectives
+
+-   **Conceptual Understanding**: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.
+-   **Technical Proficiency**: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.
+-   **Cloud Computing Literacy**: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.
+- **Critical Integrated Learning**: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.
+
+## Course References
+
+-   [**Computing Skills for Biologists**](https://computingskillsforbiologists.com/): A toolbox with basic computational skills necessary for the course.
+-   [**Elements of Data Science**](https://allendowney.github.io/ElementsOfDataScience/README.html): a digital textbook by Allen Downey written in the form of Jupyter notebooks. It provides an introduction to data science in Python for students with limited programming experience.
+-   [**Think Python**](https://greenteapress.com/thinkpython/html/index.html): An introduction to programming using Python. 
+-   [**Applied Computing**](https://runestone.academy/runestone/books/published/ac1/index.html): Applied Computing is an [online textbook](https://runestone.academy/). It provides an introduction to spreadsheets and SQL. To view the book, students need to [register](https://runestone.academy/runestone/default/user/register) using the course name. 
+-   [**SQL & NoSQL Databases**](https://link.springer.com/book/10.1007/978-3-658-24549-8?source=shoppingads&locale=en-us&srsltid=AfmBOooFhPgF4FU06eeYUCeF2tELId4l3LBx1Fv8Ntb-xeUCTVUN3cUfu7o): Models, Languages, Consistency Options, and Architectures for Big Data Management: Explores relational (SQL) and non-relational (NoSQL) databases. Covers database management, modeling, languages, consistency, architecture, and more. 
+-   [**Pro Git Book**](https://git-scm.com/book/en/v2): A comprehensive resource for learning Git, covering everything from the basics to advanced topics by Scott Chacon and Ben Straub.
+-   [**Overview of Cloud Computing**](https://dc.arcabc.ca/islandora/object/dc%3A54375): An introductory textbook on cloud computing by Michael Wufka and Massimo Canonico.
+
+## Additional References
+
+-   [**Google Cloud Computing Foundations**](https://edu.google.com/programs/cloud-computing-curriculum/?modal_active=none): Google Cloud experts develop and maintain the Computing Foundations reference material specifically for university courses such as this to ensure it keeps pace with cloud innovation and to prepare students seeking to launch or pivot to [careers](https://careers.google.com/students/) in a cloud-first world.
+-   [**Big Data: Principles and best practices of scalable real-time data systems:**](https://www.amazon.com/exec/obidos/ASIN/1617290343/acmorg-20): It describes a scalable, easy to understand approach to big data systems that can be built and run by a small team.
+-   [**Version Control with Git: Powerful Tools and Techniques for Collaborative Software Development**](https://www.amazon.com/Version-Control-Git-collaborative-development/dp/1449316387): This book explains how Git works and how to use it effectively. By Jon Loeliger and Matthew McCullough.
+-   [**GitHub Learning Lab**](https://lab.github.com/): Offers a variety of exercises to get hands-on experience using Git and GitHub.
+-   [**AWS Academy Cloud Foundations (login required)**](https://awsacademy.instructure.com/courses/976): AWS experts develop and maintain the Cloud Foundations reference material to ensure it keeps pace with cloud innovation and prepares students for real-world, industry challenges. This digital textbook with accompanying labs comes in the form of a Canvas page, separate from the class Canvas page.
+
+## Assessment and Grading

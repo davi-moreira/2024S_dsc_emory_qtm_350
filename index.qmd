@@ -1,39 +1,48 @@
 ---
 title: "QTM 350: Data Science Computing"
 subtitle: "Quantitative Theory and Methods Department, Emory University"
+filters:
+  - openlinksinnewpage
 ---
 
 ## Course Description
 
-XXXX
+This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects.
 
-## Goals
-
-XXX:
-
--   xxx
-
--   xxx
-
-## Instructors and TAs
+## Instructor and TAs
 
 ### Instructor: [Professor Davi Moreira](https://davi-moreira.github.io)
 
 -   Pronouns: He/Him
 -   Email: [davi.moreira\@emory.edu](mailto:davi.moreira@emory.edu)
--   Office hours:
-    -   Time: XXX
-    -   Location: XXX
+-   Office hours: Tuesdays, 9:15am - 10:15am, or by appointment
+    -   Zoom link in your Course Canvas Page.
 
-### TA: Michael Cao XXX 
+### Teaching Assistant: Michael Cao
 
--   Email: xxx
--   Office Hours:
-    -   xxx
+-   Email: [michael.cao\@emory.edu](mailto:michael.cao@emory.edu)
+-   Office Hours: Mondays, 6-7 pm
+    -   Zoom link in your Course Canvas Page.
+
+## Learning Outcomes
+
+By the end of this course, students will be able to:
+
+1.	Demonstrate proficiency in data science project collaboration and version control.
+2.	Utilize advanced data storage, manipulation, and querying. 
+3.	High-level understanding of data structures, algorithms, and cloud computing concepts.
+4.	Critically navigate the emergent trends in data science computing. 
+
+## Objectives
+
+-   **Conceptual Understanding**: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.
+-   **Technical Proficiency**: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.
+-   **Cloud Computing Literacy**: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.
+- **Critical Integrated Learning**: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.
 
 ### Course Infra-structure
 
-**Class Website:** xxx
+**Course Website:** This class website will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.
 
-**Canvas:** xxx
+**Canvas:** The course Canvas site <http://canvas.emory.edu> should be checked on a regular basis for announcements and course material.
 
