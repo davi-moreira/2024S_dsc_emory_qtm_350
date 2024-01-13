@@ -11,7 +11,6 @@ This course equips students with computing skills and knowledge for data science
 
 ### Instructor: [Professor Davi Moreira](https://davi-moreira.github.io)
 
--   Pronouns: He/Him
 -   Email: [davi.moreira\@emory.edu](mailto:davi.moreira@emory.edu)
 -   Office hours: Tuesdays, 9:15am - 10:15am, or by appointment
     -   Zoom link in your Course Canvas Page.

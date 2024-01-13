@@ -1,5 +1,5 @@
 ---
-title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+title: "<span style = 'font-size: 100%;'> QTM 350 Data Science Computing </span>"
 subtitle: "<span style = 'font-size: 100%;'> Week 1: Introductions, Installations, IDEs, Command line </span>"
 author: "Professor: Davi Moreira"
 date: "18/01/2024"
@@ -46,7 +46,7 @@ format:
 ## Rise of the digital information age
 
 ```{r  echo=FALSE, out.width = "50%", fig.align="center"}
-knitr::include_graphics("topic-1-figs/digital.jpeg") 
+knitr::include_graphics("week-01-figs/digital.jpeg") 
 ```
 
 ::: aside
@@ -56,7 +56,7 @@ https://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614
 ## Real Time Data: Mobility, Credit Card Usage, Expenses...
 
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("week1_figs/mob_01.png") 
+#knitr::include_graphics("week1_figs/mob_01.png") 
 ```
 
 # Thank you!
