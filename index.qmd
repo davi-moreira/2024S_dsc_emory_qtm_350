@@ -41,5 +41,5 @@ By the end of this course, students will be able to:
 
 **Course Website:** This class website will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.
 
-**Canvas:** The course Canvas site <http://canvas.emory.edu> should be checked on a regular basis for announcements and course material.
+**Canvas:** The course Canvas site <http://canvas.emory.edu> should be checked on a regular basis for announcements and course material..
 
