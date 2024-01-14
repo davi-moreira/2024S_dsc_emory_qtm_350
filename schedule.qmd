@@ -7,9 +7,9 @@ listing:
     type: table
     fields: [title, subtitle, date]
     field-display-names:
-      title: "Week"
+      title: "Topic"
       description: "Dates"
-      subtitle: "Week"
+      subtitle: "Topics"
     date-format: "MMMM DD, YYYY"
     sort: [filename]
     sort-ui: false

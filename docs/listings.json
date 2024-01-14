@@ -9,13 +9,13 @@
   {
     "listing": "/schedule.html",
     "items": [
-      "/weeks/week-01.html"
+      "/topics/topic-01.html"
     ]
   },
   {
     "listing": "/syllabus.html",
     "items": [
-      "/weeks/week-01.html"
+      "/topics/topic-01.html"
     ]
   }
 ]
