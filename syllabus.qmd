@@ -1,20 +1,20 @@
 ---
 title: "Syllabus: QTM 350 - Data Science Computing "
 subtitle: "Quantitative Theory and Methods Department, Emory University"
-listing:
-  - id: schedule
-    contents:
-      - topics/topic-*.qmd
-    type: table
-    fields: [title, subtitle, date]
-    field-display-names:
-      title: "Topic"
-      description: "Dates"
-      subtitle: "Topics"
-    date-format: "MMMM DD, YYYY"
-    sort: [filename]
-    sort-ui: false
-    filter-ui: false
+#listing:
+# - id: schedule
+#   contents:
+#      - topics/topic-*.qmd
+#    type: table
+#    fields: [title, subtitle, date]
+#    field-display-names:
+#      title: "Topic"
+#      description: "Dates"
+#      subtitle: "Topics"
+#    date-format: "MMMM DD, YYYY"
+#    sort: [filename]
+#    sort-ui: false
+#    filter-ui: false
 ---
 
 ## Course Description
@@ -197,4 +197,4 @@ Students with medical/health conditions that might impact academic success shoul
 
 While I will try to adhere to the course schedule as much as possible, I also want to adapt to your learning pace and style. The syllabus and course plan may change in the semester.
 
-## Schedule
+## [Schedule](./schedule.qmd)
