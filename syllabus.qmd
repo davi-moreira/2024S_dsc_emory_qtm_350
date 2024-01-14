@@ -37,29 +37,24 @@ This course equips students with computing skills and knowledge for data science
 -   Office Hours: Mondays, 6-7 pm
     -   Zoom link in your Course Canvas Page.
 
-
 ## Learning Outcomes
 
-By the end of this course, students will be able to:
-1.	Demonstrate proficiency in data science project collaboration and version control.
-2.	Utilize advanced data storage, manipulation, and querying. 
-3.	High-level understanding of data structures, algorithms, and cloud computing concepts.
-4.	Critically navigate the emergent trends in data science computing. 
+By the end of this course, students will be able to: 1. Demonstrate proficiency in data science project collaboration and version control. 2. Utilize advanced data storage, manipulation, and querying. 3. High-level understanding of data structures, algorithms, and cloud computing concepts. 4. Critically navigate the emergent trends in data science computing.
 
 ## Objectives
 
 -   **Conceptual Understanding**: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.
 -   **Technical Proficiency**: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.
 -   **Cloud Computing Literacy**: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.
-- **Critical Integrated Learning**: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.
+-   **Critical Integrated Learning**: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.
 
 ## Course References
 
 -   [**Computing Skills for Biologists**](https://computingskillsforbiologists.com/): A toolbox with basic computational skills necessary for the course.
 -   [**Elements of Data Science**](https://allendowney.github.io/ElementsOfDataScience/README.html): a digital textbook by Allen Downey written in the form of Jupyter notebooks. It provides an introduction to data science in Python for students with limited programming experience.
--   [**Think Python**](https://greenteapress.com/thinkpython/html/index.html): An introduction to programming using Python. 
--   [**Applied Computing**](https://runestone.academy/runestone/books/published/ac1/index.html): Applied Computing is an [online textbook](https://runestone.academy/). It provides an introduction to spreadsheets and SQL. To view the book, students need to [register](https://runestone.academy/runestone/default/user/register) using the course name. 
--   [**SQL & NoSQL Databases**](https://link.springer.com/book/10.1007/978-3-658-24549-8?source=shoppingads&locale=en-us&srsltid=AfmBOooFhPgF4FU06eeYUCeF2tELId4l3LBx1Fv8Ntb-xeUCTVUN3cUfu7o): Models, Languages, Consistency Options, and Architectures for Big Data Management: Explores relational (SQL) and non-relational (NoSQL) databases. Covers database management, modeling, languages, consistency, architecture, and more. 
+-   [**Think Python**](https://greenteapress.com/thinkpython/html/index.html): An introduction to programming using Python.
+-   [**Applied Computing**](https://runestone.academy/runestone/books/published/ac1/index.html): Applied Computing is an [online textbook](https://runestone.academy/). It provides an introduction to spreadsheets and SQL. To view the book, students need to [register](https://runestone.academy/runestone/default/user/register) using the course name.
+-   [**SQL & NoSQL Databases**](https://link.springer.com/book/10.1007/978-3-658-24549-8?source=shoppingads&locale=en-us&srsltid=AfmBOooFhPgF4FU06eeYUCeF2tELId4l3LBx1Fv8Ntb-xeUCTVUN3cUfu7o): Models, Languages, Consistency Options, and Architectures for Big Data Management: Explores relational (SQL) and non-relational (NoSQL) databases. Covers database management, modeling, languages, consistency, architecture, and more.
 -   [**Pro Git Book**](https://git-scm.com/book/en/v2): A comprehensive resource for learning Git, covering everything from the basics to advanced topics by Scott Chacon and Ben Straub.
 -   [**Overview of Cloud Computing**](https://dc.arcabc.ca/islandora/object/dc%3A54375): An introductory textbook on cloud computing by Michael Wufka and Massimo Canonico.
 
@@ -75,16 +70,16 @@ By the end of this course, students will be able to:
 
 Final grades will be based on:
 
-| **Assignment**            | **Percentage**          |
-|---------------------------|:-----------------------:|
-| Lecture Quizzes           |           10%           |
-| Problem Sets              |           40%           |
-| Final Project Proposal    |           5%            |
-| Final Project Submission  |           25%           |
-| Final Project Presentation|           10%           |
-| Peer Review               |           10%           |
+| **Assignment**             | **Percentage** |
+|----------------------------|:--------------:|
+| Lecture Quizzes            |      10%       |
+| Problem Sets               |      40%       |
+| Final Project Proposal     |       5%       |
+| Final Project Submission   |      25%       |
+| Final Project Presentation |      10%       |
+| Peer Review                |      10%       |
 
-### Lecture Quizzes 
+### Lecture Quizzes
 
 Each lecture will be accompanied by a set of questions, available on the course's Canvas page and to be completed individually. Students may complete these quizzes either during or after class, but must submit them by 11:59 p.m. on the lecture day. To accommodate the learning process, the lowest two quiz scores will be excluded from the final grade calculation. While individual submission is mandatory, collaborative discussions are encouraged. Please note that no extensions for quiz submissions will be granted under any circumstances, ensuring fairness and consistency in assessment for all students.
 
@@ -97,9 +92,18 @@ Problem sets aligned with each topic will be assigned to solidify and apply the 
 -   **Each problem set material will have its own GitHub repository**;
 
 -   **Readable Solutions**: To facilitate effective evaluation and comprehension of the coding assignments, students must adhere to the following standards for code readability:
-  - 1. **Comprehensive Commenting**: All code must include thorough comments. These comments are essential as they allow the Professor and Teaching Assistants to understand the purpose and functionality of the code solely through these annotations. It is crucial that the comments are clear and concise, providing insight into the logic and purpose behind each segment of code.
-  - 2. **Structured Code Segmentation**: Solutions should be methodically organized into distinct code chunks within Jupyter or R Markdown notebooks. For clarity on this format, refer to examples provided in class or consult with the Professor or Teaching Assistants.
-  - 3. **Detailed Documentation of Functions**: Every function defined by a student must be accompanied by a docstring. This documentation should clearly explain the function's purpose, describe each input argument, and outline what the function returns.
+
+-   
+
+    1.  **Comprehensive Commenting**: All code must include thorough comments. These comments are essential as they allow the Professor and Teaching Assistants to understand the purpose and functionality of the code solely through these annotations. It is crucial that the comments are clear and concise, providing insight into the logic and purpose behind each segment of code.
+
+-   
+
+    2.  **Structured Code Segmentation**: Solutions should be methodically organized into distinct code chunks within Jupyter or R Markdown notebooks. For clarity on this format, refer to examples provided in class or consult with the Professor or Teaching Assistants.
+
+-   
+
+    3.  **Detailed Documentation of Functions**: Every function defined by a student must be accompanied by a docstring. This documentation should clearly explain the function's purpose, describe each input argument, and outline what the function returns.
 
 ### Final Project
 
@@ -107,8 +111,8 @@ At the heart of Data Science lies the critical skill of managing data effectivel
 
 #### Final Project Proposal
 
-Each group is required to submit a concise, yet comprehensive, two-page proposal outlining their intended project. This proposal is a crucial step in ensuring the viability and academic rigor of your planned research. Prior to its development, it is mandatory for each group to arrange a 15-minute consultation meeting with me. This meeting is intended to provide guidance, clarify objectives, and ensure alignment with course goals. To make the most of this consultation, groups must submit a draft of their project ideas in advance of the meeting. Please note that these consultation meetings will be scheduled during Week 10. It is imperative to adhere to this timeline to ensure timely feedback and guidance on your proposals. 
-  
+Each group is required to submit a concise, yet comprehensive, two-page proposal outlining their intended project. This proposal is a crucial step in ensuring the viability and academic rigor of your planned research. Prior to its development, it is mandatory for each group to arrange a 15-minute consultation meeting with me. This meeting is intended to provide guidance, clarify objectives, and ensure alignment with course goals. To make the most of this consultation, groups must submit a draft of their project ideas in advance of the meeting. Please note that these consultation meetings will be scheduled during Week 10. It is imperative to adhere to this timeline to ensure timely feedback and guidance on your proposals.
+
 #### Final Project Submission
 
 Students are provided with two distinct opportunities to submit their final projects. The first submission is madatory for all groups and must be completed before the start of the presentation week. This phase allows for a preliminary assessment of your project. The subsequent submission is optional and should occur by the course's last date. This opportunity is particularly beneficial for incorporating improvements based on peer review feedback received after the first submission. The final deliverable should be a comprehensive GitHub repository and a `.zip` file encompassing the following components:
@@ -116,46 +120,47 @@ Students are provided with two distinct opportunities to submit their final proj
 -   **Raw Source Data**: Include the raw data utilized for your project. If the data file size exceeds GitHub's limitations, it should be exclusively contained within the `.zip` file.
 
 -   **Detailed README**: Your repository should contain a `README` file providing an in-depth description of each included file, covering:
-    - **Inputs**: Detail the inputs to each file, such as raw data or files containing credentials for API access.
-    - **Functionality**: Clearly describe the major transformations and operations performed by the file.
-    - **Outputs**: Enumerate any outputs generated by the file (e.g. cleaned datasets).
+
+    -   **Inputs**: Detail the inputs to each file, such as raw data or files containing credentials for API access.
+    -   **Functionality**: Clearly describe the major transformations and operations performed by the file.
+    -   **Outputs**: Enumerate any outputs generated by the file (e.g. cleaned datasets).
 
 -   **Data Transformation and Organization Code**: Submit all code files that are used to transform and organize your data.
 
 -   **Data Query for Analysis**: Provide the set of code files that query your dataset, rendering it suitable for addressing your chosen data analysis question.
 
 Further details and specific requirements will be shared before Week 10 of the course.
-  
+
 #### Final Project Presentation
 
-During the final week of the course, each group will have a 10 to 15-minute time slot to present their project. This presentation is a vital component of your project, providing an opportunity to showcase the depth of your analysis, the insights gained, and the skills acquired throughout the course. The scheduling of presentations will be randomly defined. Specific dates and the order of presentations for each group will be assigned and communicated in advance. 
+During the final week of the course, each group will have a 10 to 15-minute time slot to present their project. This presentation is a vital component of your project, providing an opportunity to showcase the depth of your analysis, the insights gained, and the skills acquired throughout the course. The scheduling of presentations will be randomly defined. Specific dates and the order of presentations for each group will be assigned and communicated in advance.
 
 Further details and specific requirements will be shared before Week 13 of the course.
-  
+
 ### Peer Review
 
-In the week of presentations, your active participation in the peer review process will be essential. Each student is expected to engage constructively in evaluating and providing feedback on their colleagues' projects. You will be asked to thoughtfully comment on various aspects of the projects, including methodology, data structure, presentation features, and the overall effectiveness of the conveyed message. This exercise is not only a crucial part of your learning experience but also an opportunity to contribute to the academic development of your peers.  
+In the week of presentations, your active participation in the peer review process will be essential. Each student is expected to engage constructively in evaluating and providing feedback on their colleagues' projects. You will be asked to thoughtfully comment on various aspects of the projects, including methodology, data structure, presentation features, and the overall effectiveness of the conveyed message. This exercise is not only a crucial part of your learning experience but also an opportunity to contribute to the academic development of your peers.
 
 ## Grading
 
 Each student’s final grade will be based on the following after rounding up to the nearest point:
 
-| Grade  | Range       |
-|--------|-------------|
-| A      | 91% -- 100% |
-| A-     | 86% -- 90%  |
-| B+     | 81% -- 85%  |
-| B      | 76% -- 80%  |
-| B-     | 71% -- 75%  |
-| C      | 66% -- 70%  |
-| D      | 60% -- 65%  |
-| F      | \< 60%      |
+| Grade | Range       |
+|-------|-------------|
+| A     | 91% -- 100% |
+| A-    | 86% -- 90%  |
+| B+    | 81% -- 85%  |
+| B     | 76% -- 80%  |
+| B-    | 71% -- 75%  |
+| C     | 66% -- 70%  |
+| D     | 60% -- 65%  |
+| F     | \< 60%      |
 
 ## AI policy
 
 I encourage you to use AI tools you believe will enhance your individual or group performance. Learning to use AI is a valuable and emerging skill, and I am available to provide support and assistance with these tools during office hours or by appointment.
 
-Be aware of the following guidelines: 
+Be aware of the following guidelines:
 
 -   You are not allowed to use AI tools during the exams.
 
@@ -186,11 +191,10 @@ Upon every individual who is a part of Emory University falls the responsibility
 
 ## Access and Disability Resources
 
-Students with medical/health conditions that might impact academic success should visit the [Department of Accessibility Services (DAS)](http://accessibility.emory.edu/) to determine eligibility for appropriate accommodations. Students who receive accommodations must contact the instructor with an  Accommodation Letter from the DAS at the beginning of the semester, or as soon as the accommodation is granted.
-If you have DAS accommodations, you must inform the instructor after confirming that your accommodation letter is available in the DAS web portal. The instructor will respond to your email confirming which accommodations you will receive for this class. If you wish to do so, you may request an individual meeting to further discuss the specific accommodations.
+Students with medical/health conditions that might impact academic success should visit the [Department of Accessibility Services (DAS)](http://accessibility.emory.edu/) to determine eligibility for appropriate accommodations. Students who receive accommodations must contact the instructor with an Accommodation Letter from the DAS at the beginning of the semester, or as soon as the accommodation is granted. If you have DAS accommodations, you must inform the instructor after confirming that your accommodation letter is available in the DAS web portal. The instructor will respond to your email confirming which accommodations you will receive for this class. If you wish to do so, you may request an individual meeting to further discuss the specific accommodations.
 
 ## Subject to Change Policy
 
-While I will try to adhere to the course schedule as much as possible, I also want to adapt to your learning pace and style. The syllabus and course plan may change in the semester. 
+While I will try to adhere to the course schedule as much as possible, I also want to adapt to your learning pace and style. The syllabus and course plan may change in the semester.
 
-
+## Schedule
