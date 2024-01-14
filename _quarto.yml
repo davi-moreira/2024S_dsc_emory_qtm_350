@@ -30,7 +30,27 @@ website:
         contents: 
           - href: topics/topic-01.qmd
             text: "Topic 1: Intro"
-          
+          - href: topics/topic-02.qmd
+            text: "Topic 2: Version Control"
+          - href: topics/topic-03.qmd
+            text: "Topic 3: Python"
+          - href: topics/topic-04.qmd
+            text: "Topic 4: Web Scraping"
+          - href: topics/topic-05.qmd
+            text: "Topic 5: Data Structures"
+          - href: topics/topic-06.qmd
+            text: "Topic 6: SQL"
+          - href: topics/topic-07.qmd
+            text: "Topic 7: NoSQL"
+          - href: topics/topic-08.qmd
+            text: "Topic 8: DSM"
+          - href: topics/topic-09.qmd
+            text: "Topic 9: CPM"
+          - href: topics/topic-10.qmd
+            text: "Topic 10: Cloud DB"
+          - href: topics/topic-11.qmd
+            text: "Topic 11: Final Project"
+
 format:
   html:
     theme: cosmo

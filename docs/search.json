@@ -138,5 +138,26 @@
     "title": "Syllabus: QTM 350 - Data Science Computing",
     "section": "Subject to Change Policy",
     "text": "Subject to Change Policy\nWhile I will try to adhere to the course schedule as much as possible, I also want to adapt to your learning pace and style. The syllabus and course plan may change in the semester."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Week\nTopic\nTitle\nDate\n\n\n\n\nWeek 01\nTopic 01\nIntroduction, Syllabus and Set up\nJan 18\n\n\nWeek 02\nTopic 02\nVersion Control\nJan 23\n\n\nWeek 02\nTopic 02\nVersion Control\nJan 25\n\n\nWeek 03\nTopic 03\nPython essentials\nJan 30\n\n\nWeek 03\nTopic 03\nPython essentials\nFeb 1\n\n\nWeek 04\nTopic 03\nPython essentials\nFeb 6\n\n\nWeek 04\nTopic 03\nPython essentials\nFeb 8\n\n\nWeek 05\nTopic 04\nAPI Interactions and Web Scraping\nFeb 13\n\n\nWeek 05\nTopic 04\nAPI Interactions and Web Scraping\nFeb 15\n\n\nWeek 06\nTopic 05\nOverview of Data Structure and Algorithms\nFeb 20\n\n\nWeek 06\nTopic 05\nOverview of Data Structure and Algorithms\nFeb 22\n\n\nWeek 07\nTopic 06\nSQL Operations and Operators\nFeb 27\n\n\nWeek 07\nTopic 06\nSQL Operations and Operators\nFeb 29\n\n\nWeek 08\nTopic 06\nSQL Operations and Operators\nMar 5\n\n\nWeek 08\nTopic 06\nSQL Operations and Operators\nMar 7\n\n\nWeek 09\n-\nSpring Break (no classes, no office hours)\nMar 12\n\n\nWeek 09\n-\nSpring Break (no classes, no office hours)\nMar 14\n\n\nWeek 10\nTopic 07\nNoSQL\nMar 19\n\n\nWeek 10\nTopic 07\nNoSQL\nMar 21\n\n\nWeek 11\nTopic 08\nDatabase Design, Structures and Management\nMar 26\n\n\nWeek 11\nTopic 08\nDatabase Design, Structures and Management\nMar 28\n\n\nWeek 12\nTopic 09\nCreate, Populate and Manipulate databases\nApr 2\n\n\nWeek 12\nTopic 09\nCreate, Populate and Manipulate databases\nApr 4\n\n\nWeek 13\nTopic 10\nCloud Computing and Data Bases\nApr 9\n\n\nWeek 13\nTopic 10\nCloud Computing and Data Bases\nApr 11\n\n\nWeek 14\nTopic 10\nCloud Computing and Data Bases\nApr 16\n\n\nWeek 14\nTopic 10\nCloud Computing and Data Bases\nApr 18\n\n\nWeek 15\nTopic 11\nPresentations\nApr 23\n\n\nWeek 15\nTopic 11\nPresentations\nApr 25"
+  },
+  {
+    "objectID": "schedule.html#schedule",
+    "href": "schedule.html#schedule",
+    "title": "Schedule",
+    "section": "",
+    "text": "Week\nTopic\nTitle\nDate\n\n\n\n\nWeek 01\nTopic 01\nGetting started: Syllabus and Set up\nJan 18\n\n\nWeek 02\nTopic 02\nVersion Control\nJan 23\n\n\nWeek 02\nTopic 02\nVersion Control\nJan 25\n\n\nWeek 03\nTopic 03\nPython essentials I\nJan 30\n\n\nWeek 03\nTopic 03\nPython essentials I\nFeb 1\n\n\nWeek 04\nTopic 03\nPython essentials II\nFeb 6\n\n\nWeek 04\nTopic 03\nPython essentials II\nFeb 8\n\n\nWeek 05\nTopic 04\nAPI Interactions and Web Scraping\nFeb 13\n\n\nWeek 05\nTopic 04\nAPI Interactions and Web Scraping\nFeb 15\n\n\nWeek 06\nTopic 05\nOverview of Data Structure and Algorithms\nFeb 20\n\n\nWeek 06\nTopic 05\nOverview of Data Structure and Algorithms\nFeb 22\n\n\nWeek 07\nTopic 06\nSQL Operations and Operators\nFeb 27\n\n\nWeek 07\nTopic 06\nSQL Operations and Operators\nFeb 29\n\n\nWeek 08\nTopic 06\nSQL Operations and Operators\nMar 5\n\n\nWeek 08\nTopic 06\nSQL Operations and Operators\nMar 7\n\n\nWeek 09\n-\nSpring Break (no classes, no office hours)\nMar 12\n\n\nWeek 09\n-\nSpring Break (no classes, no office hours)\nMar 14\n\n\nWeek 10\nTopic 07\nNoSQL\nMar 19\n\n\nWeek 10\nTopic 07\nNoSQL\nMar 21\n\n\nWeek 11\nTopic 08\nDatabase Design, Structures and Management\nMar 26\n\n\nWeek 11\nTopic 08\nDatabase Design, Structures and Management\nMar 28\n\n\nWeek 12\nTopic 09\nCreate, Populate and Manipulate databases\nApr 2\n\n\nWeek 12\nTopic 09\nCreate, Populate and Manipulate databases\nApr 4\n\n\nWeek 13\nTopic 10\nCloud Computing and Data Bases\nApr 9\n\n\nWeek 13\nTopic 10\nCloud Computing and Data Bases\nApr 11\n\n\nWeek 14\nTopic 10\nCloud Computing and Data Bases\nApr 16\n\n\nWeek 14\nTopic 10\nCloud Computing and Data Bases\nApr 18\n\n\nWeek 15\nTopic 11\nPresentations\nApr 23\n\n\nWeek 15\nTopic 11\nPresentations\nApr 25"
+  },
+  {
+    "objectID": "topics/topic-01.html",
+    "href": "topics/topic-01.html",
+    "title": "Topic 01",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nBest Practices in Programming, IDEs and Files Management:\nReadings\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\n\nAdditional\n\nMore on RStudio + Reticulate\nR & Python: A Love Storsy - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nMath in markdown - docx2latex.com"
   }
 ]

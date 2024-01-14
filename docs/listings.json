@@ -15,7 +15,17 @@
   {
     "listing": "/syllabus.html",
     "items": [
-      "/topics/topic-01.html"
+      "/topics/topic-01.html",
+      "/topics/topic-02.html",
+      "/topics/topic-03.html",
+      "/topics/topic-04.html",
+      "/topics/topic-05.html",
+      "/topics/topic-06.html",
+      "/topics/topic-07.html",
+      "/topics/topic-08.html",
+      "/topics/topic-09.html",
+      "/topics/topic-10.html",
+      "/topics/topic-11.html"
     ]
   }
 ]

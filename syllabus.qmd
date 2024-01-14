@@ -4,7 +4,7 @@ subtitle: "Quantitative Theory and Methods Department, Emory University"
 listing:
   - id: schedule
     contents:
-      - weeks/week-*.qmd
+      - topics/topic-*.qmd
     type: table
     fields: [title, subtitle, date]
     field-display-names:

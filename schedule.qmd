@@ -1,24 +1,55 @@
 ---
 title: "Schedule"
-listing:
-  - id: schedule
-    contents:
-      - weeks/week-*.qmd
-    type: table
-    fields: [title, subtitle, date]
-    field-display-names:
-      title: "Topic"
-      description: "Dates"
-      subtitle: "Topics"
-    date-format: "MMMM DD, YYYY"
-    sort: [filename]
-    sort-ui: false
-    filter-ui: false
+author: "Davi Moreira"
+date: "2024-01-18"
+# listing:
+#   - id: schedule
+#     contents:
+#       - topics/topic-*.qmd
+#     type: table
+#     fields: [week, title, subtitle, date]
+#     field-display-names:
+#       week: "Week"
+#       title: "Topic"
+#       description: "Dates"
+#       subtitle: "Description"
+#     date-format: "MMMM DD, YYYY to MMMM DD, YYYY"
+#     sort: [filename]
+#     sort-ui: false
+#     filter-ui: false
  #tbl-colwidths: [5,20,50,25]
 editor: visual
 ---
 
-## Schedule
 
-::: {#schedule}
-:::
+| Week    | Topic    | Title                                      | Date    |
+|:--------|:-------------------|:-------------------------------------------|:--------|
+| Week 01 | [Topic 01](./topics/topic-01.qmd) | Introduction, Syllabus and Set up   | Jan 18  |
+| Week 02 | [Topic 02](./topics/topic-02.qmd)  | Version Control                            | Jan 23  |
+| Week 02 | [Topic 02](./topics/topic-02.qmd)  | Version Control                            | Jan 25  |
+| Week 03 | [Topic 03](./topics/topic-03.qmd)  | Python essentials                        | Jan 30  |
+| Week 03 | [Topic 03](./topics/topic-03.qmd)  | Python essentials                       | Feb 1   |
+| Week 04 | [Topic 03](./topics/topic-04.qmd)  | Python essentials                        | Feb 6   |
+| Week 04 | [Topic 03](./topics/topic-04.qmd)  | Python essentials                        | Feb 8   |
+| Week 05 | [Topic 04](./topics/topic-04.qmd)  | API Interactions and Web Scraping          | Feb 13  |
+| Week 05 | [Topic 04](./topics/topic-04.qmd)  | API Interactions and Web Scraping          | Feb 15  |
+| Week 06 | [Topic 05](./topics/topic-05.qmd)  | Overview of Data Structure and Algorithms  | Feb 20  |
+| Week 06 | [Topic 05](./topics/topic-05.qmd)  | Overview of Data Structure and Algorithms  | Feb 22  |
+| Week 07 | [Topic 06](./topics/topic-06.qmd)  | SQL Operations and Operators               | Feb 27  |
+| Week 07 | [Topic 06](./topics/topic-06.qmd)  | SQL Operations and Operators               | Feb 29  |
+| Week 08 | [Topic 06](./topics/topic-06.qmd)  | SQL Operations and Operators               | Mar 5   |
+| Week 08 | [Topic 06](./topics/topic-06.qmd)  | SQL Operations and Operators               | Mar 7   |
+| Week 09 | -        | Spring Break (no classes, no office hours) | Mar 12  |
+| Week 09 | -        | Spring Break (no classes, no office hours) | Mar 14  |
+| Week 10 | [Topic 07](./topics/topic-07.qmd)  | NoSQL                                      | Mar 19  |
+| Week 10 | [Topic 07](./topics/topic-07.qmd)  | NoSQL                                      | Mar 21  |
+| Week 11 | [Topic 08](./topics/topic-08.qmd)  | Database Design, Structures and Management | Mar 26  |
+| Week 11 | [Topic 08](./topics/topic-08.qmd)  | Database Design, Structures and Management | Mar 28  |
+| Week 12 | [Topic 09](./topics/topic-09.qmd)  | Create, Populate and Manipulate databases  | Apr 2   |
+| Week 12 | [Topic 09](./topics/topic-09.qmd)  | Create, Populate and Manipulate databases  | Apr 4   |
+| Week 13 | [Topic 10](./topics/topic-10.qmd)  | Cloud Computing and Data Bases             | Apr 9   |
+| Week 13 | [Topic 10](./topics/topic-10.qmd)  | Cloud Computing and Data Bases             | Apr 11  |
+| Week 14 | [Topic 10](./topics/topic-10.qmd)  | Cloud Computing and Data Bases             | Apr 16  |
+| Week 14 | [Topic 10](./topics/topic-10.qmd)  | Cloud Computing and Data Bases             | Apr 18  |
+| Week 15 | [Topic 11](./topics/topic-11.qmd)  | Final Project                              | Apr 23  |
+| Week 15 | [Topic 11](./topics/topic-11.qmd)  | Final Project                              | Apr 25  |

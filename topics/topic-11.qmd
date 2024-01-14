@@ -1,0 +1,63 @@
+---
+title: "Topic 11"
+subtitle: "Presentations"
+description: ""
+author: "Davi Moreira"
+date: "2024-04-25"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/topic-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+# Lectures Notes:
+
+-   XXX
+
+-   XXX
+
+# Slides
+
+-   [Topic 01:Introduction, Set up, IDEs, Command line](/slides/topic-02.html)
+
+# Readings
+
+XXXX
+
+**Required Readings**
+
+-   XXX
+
+-   XXX
+
+**Readings**
+
+-   XXXX
+
+**Additional**
+
+-   XXX
