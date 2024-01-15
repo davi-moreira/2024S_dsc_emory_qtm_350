@@ -36,13 +36,19 @@ tbl-colwidths: [10,50,40]
 
 # Lectures Notes:
 
--   XXX
+-   [Instructions for setting up the course](/lecture_notes/topic-01/course_infrastructure.html).
 
--   XXX
+-   Using Jupyter Notebooks: [html](/lecture_notes/topic-01/_using-jupyter-notebooks.html), <a href="/lecture_notes/topic-01/_using-jupyter-notebooks.ipynb" download> notebook </a>
+
+PAREI AQUI!!!
+
+-   Using Quarto for Python and R [html](/lecture_notes/topic-01/intro-to-quarto.html), <a href="/lecture_notes/topic-01/intro-to-quarto.qmd" download> notebook </a>
+
+-   Basics of Command Line: [html](/lecture_notes/topic-01/_basics_of_cmd.html), <a href="/lecture_notes/topic-01/_basics_of_cmd.ipynb" download> notebook </a>
 
 # Slides
 
--   [Topic 01:Introduction, Set up, IDEs, Command line](/slides/topic-01.html)
+-   [Topic 01: Introduction, Syllabus and Set up](/slides/topic-01.html)
 
 # Readings
 
