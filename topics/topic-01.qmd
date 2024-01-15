@@ -40,8 +40,6 @@ tbl-colwidths: [10,50,40]
 
 -   Using Jupyter Notebooks: [html](/lecture_notes/topic-01/_using-jupyter-notebooks.html), <a href="/lecture_notes/topic-01/_using-jupyter-notebooks.ipynb" download> notebook </a>
 
-PAREI AQUI!!!
-
 -   Using Quarto for Python and R [html](/lecture_notes/topic-01/intro-to-quarto.html), <a href="/lecture_notes/topic-01/intro-to-quarto.qmd" download> notebook </a>
 
 -   Basics of Command Line: [html](/lecture_notes/topic-01/_basics_of_cmd.html), <a href="/lecture_notes/topic-01/_basics_of_cmd.ipynb" download> notebook </a>

@@ -158,7 +158,7 @@
     "href": "topics/topic-01.html",
     "title": "Topic 01",
     "section": "",
-    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nBest Practices in Programming, IDEs and Files Management:\nReadings\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\n\nAdditional\n\nMore on RStudio + Reticulate\nR & Python: A Love Storsy - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nMath in markdown - docx2latex.com"
+    "text": "Lectures Notes:\n\nInstructions for setting up the course.\nUsing Jupyter Notebooks: html,  notebook \nUsing Quarto for Python and R html,  notebook \nBasics of Command Line: html,  notebook \n\n\n\nSlides\n\nTopic 01: Introduction, Syllabus and Set up\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nBest Practices in Programming, IDEs and Files Management:\nReadings\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\n\nAdditional\n\nMore on RStudio + Reticulate\nR & Python: A Love Storsy - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nMath in markdown - docx2latex.com"
   },
   {
     "objectID": "syllabus.html#schedule",
@@ -173,5 +173,173 @@
     "title": "Topic 04",
     "section": "",
     "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "lecture_notes/topic-01/intro-to-quarto.html",
+    "href": "lecture_notes/topic-01/intro-to-quarto.html",
+    "title": "Topic 1: Introduction to Quarto for Python",
+    "section": "",
+    "text": "The document offers a short guide on utilizing Quarto effectively for data science projects with R and Python.[1]"
+  },
+  {
+    "objectID": "lecture_notes/topic-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
+    "href": "lecture_notes/topic-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
+    "title": "Topic 1: Introduction to Quarto for Python",
+    "section": "Quick tutorial for RStudio",
+    "text": "Quick tutorial for RStudio\nThis is what RStudio looks like when you open it for the first time.\n\n\n\n\n\nTop left pane (input/script)\nThis is your code editor. Here you enter code in any file type (.py, .r, .qmd) you are working on. If not working with notebooks, this is just gonna be a plain text file but with a extension that run the commands.\nFor example, enter 2 + 2 in your script and run a line of code by pressing command + enter (Mac) or Ctrl + enter (PC). This is a huge advantage of Rstudio over Jupyter. You can run your code line by line, instead of running the entire cell.\nBottom left pane (output/console)\nThis is the console. It is pretty much like when you open Python/R from the Command line.\nIn the console, the prompt &gt; looks like a greater than symbol. If your prompt begins to look like a + symbol by mistake, simply click in your console and press the esc key on your keyboard as many times as necessary to return to the prompt.\nRstudio uses + when code is broken up across multiple lines and is still expecting more code. A line of code does not usually end until Rstudio finds an appropriate stop parameter or punctuation that completes some code such as a closed round parenthesis ), square bracket ], curly brace }, or quotation mark '.\nIf the output in your console gets too messy, you can clear it by pressing control + l on both Mac and PC. This will not erase any saved data - it will simply make your console easier to read.\nTop right pane (global environment)\nThis is your environment pane. All objects you create will be displayed here.\nBottom right pane (files, plots, packages, and help)\nHere you find useful tabs for navigating your file system, displaying plots, installing packages, and viewing help pages. Press the control key and a number (1 through 9) on your keyboard to shortcut between these panes and tabs."
+  },
+  {
+    "objectID": "topics/topic-02.html",
+    "href": "topics/topic-02.html",
+    "title": "Topic 02",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "topics/topic-05.html",
+    "href": "topics/topic-05.html",
+    "title": "Topic 05",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "topics/topic-07.html",
+    "href": "topics/topic-07.html",
+    "title": "Topic 07",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "topics/topic-08.html",
+    "href": "topics/topic-08.html",
+    "title": "Topic 08",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "lecture_notes/topic-01/course_infrastructure.html",
+    "href": "lecture_notes/topic-01/course_infrastructure.html",
+    "title": "Topic 1: Course Set Up",
+    "section": "",
+    "text": "The document offers a guide about the course infrastructure.[1]"
+  },
+  {
+    "objectID": "lecture_notes/topic-01/course_infrastructure.html#commandline",
+    "href": "lecture_notes/topic-01/course_infrastructure.html#commandline",
+    "title": "Topic 1: Course Set Up",
+    "section": "CommandLine",
+    "text": "CommandLine\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nWe will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for Topic 1"
+  },
+  {
+    "objectID": "lecture_notes/topic-01/course_infrastructure.html#python3",
+    "href": "lecture_notes/topic-01/course_infrastructure.html#python3",
+    "title": "Topic 1: Course Set Up",
+    "section": "Python3",
+    "text": "Python3\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline:\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
+  },
+  {
+    "objectID": "lecture_notes/topic-01/course_infrastructure.html#jupyter-notebooks",
+    "href": "lecture_notes/topic-01/course_infrastructure.html#jupyter-notebooks",
+    "title": "Topic 1: Course Set Up",
+    "section": "Jupyter Notebooks",
+    "text": "Jupyter Notebooks\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\nWorkflow to work with Juyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd qtm_350\njupyter notebook\n\n\nWorkflow with Anaconda.\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system.\nIn the lecture notes, you can also find a Introduction to Jupyter notebook."
+  },
+  {
+    "objectID": "lecture_notes/topic-01/course_infrastructure.html#rstudio-reticulatequarto",
+    "href": "lecture_notes/topic-01/course_infrastructure.html#rstudio-reticulatequarto",
+    "title": "Topic 1: Course Set Up",
+    "section": "Rstudio + Reticulate|Quarto",
+    "text": "Rstudio + Reticulate|Quarto\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio is not just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nCheck the intro to quarto notebook on how to use Python in Rstudio. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link. reticulate is a R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you are an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
+  },
+  {
+    "objectID": "lecture_notes/topic-01/course_infrastructure.html#git",
+    "href": "lecture_notes/topic-01/course_infrastructure.html#git",
+    "title": "Topic 1: Course Set Up",
+    "section": "Git",
+    "text": "Git\nGit/GitHub instructions to check before the next session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n1. This document was originally developed by Professor Tiago Ventura and adapted to our courses purposes."
+  },
+  {
+    "objectID": "lecture_notes/topic-01/minimal_example_python.html",
+    "href": "lecture_notes/topic-01/minimal_example_python.html",
+    "title": "Minimal Example Python",
+    "section": "",
+    "text": "Here you add your text as markdown."
+  },
+  {
+    "objectID": "lecture_notes/topic-01/minimal_example_python.html#minimal-example-of-using-python-with-quarto",
+    "href": "lecture_notes/topic-01/minimal_example_python.html#minimal-example-of-using-python-with-quarto",
+    "title": "Minimal Example Python",
+    "section": "",
+    "text": "Here you add your text as markdown."
+  },
+  {
+    "objectID": "lecture_notes/topic-01/minimal_example_python.html#code",
+    "href": "lecture_notes/topic-01/minimal_example_python.html#code",
+    "title": "Minimal Example Python",
+    "section": "Code",
+    "text": "Code\nYou will use the same code block for any language. You just need to change language inside of the brackets {}\n\n# Your Python code here\nprint(\"Hello, Quarto!\")\n\nHello, Quarto!"
+  },
+  {
+    "objectID": "topics/topic-09.html",
+    "href": "topics/topic-09.html",
+    "title": "Topic 09",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "topics/topic-06.html",
+    "href": "topics/topic-06.html",
+    "title": "Topic 06",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "topics/topic-11.html",
+    "href": "topics/topic-11.html",
+    "title": "Topic 11",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "topics/topic-10.html",
+    "href": "topics/topic-10.html",
+    "title": "Topic 10",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "topics/topic-03.html",
+    "href": "topics/topic-03.html",
+    "title": "Topic 03",
+    "section": "",
+    "text": "Lectures Notes:\n\nXXX\nXXX\n\n\n\nSlides\n\nTopic 01:Introduction, Set up, IDEs, Command line\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nReadings\n\nXXXX\n\nAdditional\n\nXXX"
+  },
+  {
+    "objectID": "lecture_notes/topic-01/example_py.html",
+    "href": "lecture_notes/topic-01/example_py.html",
+    "title": "My Quarto Document",
+    "section": "",
+    "text": "# Your Python code here\nprint(\"Hello, Quarto!\")\n\nHello, Quarto!"
+  },
+  {
+    "objectID": "lecture_notes/topic-01/quarto_python_example.html",
+    "href": "lecture_notes/topic-01/quarto_python_example.html",
+    "title": "Quarto Python Example",
+    "section": "",
+    "text": "Here you can add your markdown text."
+  },
+  {
+    "objectID": "lecture_notes/topic-01/quarto_python_example.html#example-of-using-python-with-quarto",
+    "href": "lecture_notes/topic-01/quarto_python_example.html#example-of-using-python-with-quarto",
+    "title": "Quarto Python Example",
+    "section": "",
+    "text": "Here you can add your markdown text."
+  },
+  {
+    "objectID": "lecture_notes/topic-01/quarto_python_example.html#code",
+    "href": "lecture_notes/topic-01/quarto_python_example.html#code",
+    "title": "Quarto Python Example",
+    "section": "Code",
+    "text": "Code\nIn the code chunk, you just need to change the programming language you want to use inside of the brackets {}\n\n# R code chunck\n\nlibrary(ggplot2)\n\nmu &lt;- 0\nsigma &lt;- 1\nx &lt;- seq(mu - 3*sigma, mu + 3*sigma, length.out = 100)\ny &lt;- dnorm(x, mean = mu, sd = sigma)\ndata &lt;- data.frame(x, y)\n\nggplot(data, aes(x, y)) +\n  geom_line() +\n  theme_minimal() +\n  labs(title = \"Standard Normal Distribution\", x = \"X\", y = \"Density\")\n\n\n\n\n\n# Python code chunck\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport scipy.stats as stats\nimport math\n\nmu = 0\nvariance = 1\nsigma = math.sqrt(variance)\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)\nplt.plot(x, stats.norm.pdf(x, mu, sigma))\nplt.show()"
   }
 ]
