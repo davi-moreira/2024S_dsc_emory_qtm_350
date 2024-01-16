@@ -158,7 +158,7 @@
     "href": "topics/topic-01.html",
     "title": "Topic 01",
     "section": "",
-    "text": "Lectures Notes:\n\nInstructions for setting up the course.\nUsing Jupyter Notebooks: html,  notebook \nUsing Quarto for Python and R html,  notebook \nBasics of Command Line: html,  notebook \n\n\n\nSlides\n\nTopic 01: Introduction, Syllabus and Set up\n\n\n\nReadings\nXXXX\nRequired Readings\n\nXXX\nXXX\n\nBest Practices in Programming, IDEs and Files Management:\nReadings\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\n\nAdditional\n\nMore on RStudio + Reticulate\nR & Python: A Love Storsy - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nMath in markdown - docx2latex.com"
+    "text": "Lectures Notes:\n\nInstructions for setting up the course.\nUsing Jupyter Notebooks: html,  notebook \nUsing Quarto for Python and R html,  notebook \nBasics of Command Line: html,  notebook \n\n\n\nSlides\n\nTopic 01: Introduction, Syllabus and Set up\n\nBest Practices in Programming, IDEs and Files Management:\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\nR & Python: A Love Story - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nUsing LaTex to write math in markdown - docx2latex.com"
   },
   {
     "objectID": "syllabus.html#schedule",
@@ -341,5 +341,257 @@
     "title": "Quarto Python Example",
     "section": "Code",
     "text": "Code\nIn the code chunk, you just need to change the programming language you want to use inside of the brackets {}\n\n# R code chunck\n\nlibrary(ggplot2)\n\nmu &lt;- 0\nsigma &lt;- 1\nx &lt;- seq(mu - 3*sigma, mu + 3*sigma, length.out = 100)\ny &lt;- dnorm(x, mean = mu, sd = sigma)\ndata &lt;- data.frame(x, y)\n\nggplot(data, aes(x, y)) +\n  geom_line() +\n  theme_minimal() +\n  labs(title = \"Standard Normal Distribution\", x = \"X\", y = \"Density\")\n\n\n\n\n\n# Python code chunck\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport scipy.stats as stats\nimport math\n\nmu = 0\nvariance = 1\nsigma = math.sqrt(variance)\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)\nplt.plot(x, stats.norm.pdf(x, mu, sigma))\nplt.show()"
+  },
+  {
+    "objectID": "slides/topic-01.html#topic-overview",
+    "href": "slides/topic-01.html#topic-overview",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Topic Overview",
+    "text": "Topic Overview\n\n\nIntroductions\nMotivation\nCourse Overview and Logistics\nSet up\nIDEs\n\nJupyter\nQuarto\n\nIntroduction to Commandline"
+  },
+  {
+    "objectID": "slides/topic-01.html#rise-of-the-digital-information-age",
+    "href": "slides/topic-01.html#rise-of-the-digital-information-age",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Rise of the digital information age",
+    "text": "Rise of the digital information age\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html"
+  },
+  {
+    "objectID": "slides/topic-01.html#new-data-formats-image-text-videos..",
+    "href": "slides/topic-01.html#new-data-formats-image-text-videos..",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "New Data Formats: Image, text, videos..",
+    "text": "New Data Formats: Image, text, videos.."
+  },
+  {
+    "objectID": "slides/topic-01.html#as-a-consequence",
+    "href": "slides/topic-01.html#as-a-consequence",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "As a consequence:",
+    "text": "As a consequence:\n\nAbundance of data we can use for research and governments can use to make better decisions\n\nNovel research questions\nNew ways to answer old, long-standing research questions\n\nNew technologies also have social implications and can generate important policy questions.\n\nPrivacy issues\nUse of technology by bad actors.\nUse of technology by governments to censor/monitor citizens.\netc…"
+  },
+  {
+    "objectID": "slides/topic-01.html#all-the-steps-tools-....-so-far-...",
+    "href": "slides/topic-01.html#all-the-steps-tools-....-so-far-...",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "All the steps + Tools .... so far ...",
+    "text": "All the steps + Tools .... so far ...\n\n\nStep 1: Processing 180M voter files ~ 5 terabytes\n\nHPC + Python + Spark\n\nStep 2: Find Matches between voters and Twitter users and Neighboors\n\nHPC + Python\n\nStep 3: Estimate/Impute Ideology for voters and neighboors\n\nJuggles across multiple dataset (census, precincts, twitter networks) + Python and R\n\nStep 4: Run the analysis\n\nR"
+  },
+  {
+    "objectID": "slides/topic-01.html#data-science-for-public-policy",
+    "href": "slides/topic-01.html#data-science-for-public-policy",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Data Science for Public Policy",
+    "text": "Data Science for Public Policy\nData Scientist for Public Policy focuses on computational approaches to solve/understand Policy Problems.\n\nA part of a larger field on computational social scientist with a more policy-focus.\nWhat is social science? It refers to a domain of study - social phenomena:\n\nEncompasses many scales: human psychology, language, economic behavior, political systems, policy problems\nInvolve many approaches: qualitative interviews, statistical analysis, simulations\n\nWhat is Data Science?:\n\nUse often large-scale data + algorithms to answer questions"
+  },
+  {
+    "objectID": "slides/topic-01.html#readings",
+    "href": "slides/topic-01.html#readings",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Readings",
+    "text": "Readings\n\nBit by Bit: Social Research in the Digital Age By Mathew Salganik\n\nIntroduction\nObserving Behavior"
+  },
+  {
+    "objectID": "slides/topic-01.html#goals-of-the-course",
+    "href": "slides/topic-01.html#goals-of-the-course",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Goals of the course",
+    "text": "Goals of the course\n\nThe goal of this course is to teach you:\n\nComputational thinking: how to approach problems and devise solutions from a computational perspective.\nGet you started on Python and a bit of SQL for applied data science; lay the foundations for the remainder of the core sequence\nWorkflows and tools: Git/Github + Commandline."
+  },
+  {
+    "objectID": "slides/topic-01.html#logistics",
+    "href": "slides/topic-01.html#logistics",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Logistics",
+    "text": "Logistics\n\nSyllabus\nSchedule\nOffice Hours\nMaterials:\n\nhttps://davi-moreira.github.io/2024S_dsc_emory_qtm_350/\nCanvas"
+  },
+  {
+    "objectID": "slides/topic-01.html#ta",
+    "href": "slides/topic-01.html#ta",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "TA",
+    "text": "TA\nSierra Sikorski\n\nEmail: sps126@georgetown.edu\nOffice Hours:\n\nEvery Tuesday 2pm (in person, old north)\nEvery Wednesday 2pm (remote via Zoom)"
+  },
+  {
+    "objectID": "slides/topic-01.html#evaluation",
+    "href": "slides/topic-01.html#evaluation",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Evaluation",
+    "text": "Evaluation\n\n\n\nAssignment\nPercentage of Grade\n\n\n\n\nParticipation/Attendance\n5%\n\n\nCoding Discussion\n5%\n\n\nProblem sets\n50%\n\n\nFinal Project\n40%"
+  },
+  {
+    "objectID": "slides/topic-01.html#problem-sets",
+    "href": "slides/topic-01.html#problem-sets",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Problem Sets",
+    "text": "Problem Sets\nIndividual submission through GitHub.\n\n\n\nAssignment\nDate Assigned\nDate Due\n\n\n\n\nNo. 1\nWeek 2\nBefore EOD of Friday of Week 3\n\n\nNo. 2\nWeek 4\nBefore EOD of Friday of Week 5\n\n\nNo. 3\nWeek 6\nBefore EOD of Friday of Week 7\n\n\nNo. 4\nweek 8\nBefore EOD of Friday of Week 9\n\n\nNo. 5\nNovember 10\nBefore EOD of Friday of Week 111"
+  },
+  {
+    "objectID": "slides/topic-01.html#final-project",
+    "href": "slides/topic-01.html#final-project",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Final Project",
+    "text": "Final Project\n\nYou will work on randomly assigned groups!\nThe project is composed of three parts:\n\na 2 page project proposal: (which should be discussed and approved by me)\nan in-class presentation,\nA 10-page project report."
+  },
+  {
+    "objectID": "slides/topic-01.html#due-dates-and-points",
+    "href": "slides/topic-01.html#due-dates-and-points",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Due dates and Points:",
+    "text": "Due dates and Points:\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nOctober 31\n2 pages\n5%\n\n\nPresentation\nDecember 5\n10-15 minutes\n10%\n\n\nProject Report\nDecember 12\n10 pages\n25%"
+  },
+  {
+    "objectID": "slides/topic-01.html#chatgpt",
+    "href": "slides/topic-01.html#chatgpt",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ChatGPT",
+    "text": "ChatGPT\nYou are allowed to use ChatGPT as you would use google in this class. This means:\n\nDo not copy the responses from chatgpt – a lot of them are wrong or will just not run on your computer\nUse chatgpt as a auxiliary source.\nIf your entire homework comes straight from chatgpt, I will consider it plagiarism.\nIf you use chatgpt, I ask you to mention on your code how chatgpt worked for you."
+  },
+  {
+    "objectID": "slides/topic-01.html#about-me",
+    "href": "slides/topic-01.html#about-me",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "About me",
+    "text": "About me\n\n\nProfessor Tiago Ventura (he/him)\n\nAssistant Professor at McCourt School.\nPolitical Science Ph.D.\nPostdoc at Center for Social Media and Politics at NYU.\nResearcher at Twitter.\n\nResearch Interests:\n\nSocial media and politics\nComputational methods\nFocus on Global South\n\nOutside of work, I enjoy watching soccer and reading sci-fi.\n\nSometimes I enjoy soccer while working!\nAnd I am from Brazil!"
+  },
+  {
+    "objectID": "slides/topic-01.html#quiz",
+    "href": "slides/topic-01.html#quiz",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Quiz!",
+    "text": "Quiz!\nWhich programming language did I use the most at?\n\nPhD\nPostdoc\nTwitter"
+  },
+  {
+    "objectID": "slides/topic-01.html#a-comment-from-the-pre-course-survey",
+    "href": "slides/topic-01.html#a-comment-from-the-pre-course-survey",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "A comment from the pre-course survey",
+    "text": "A comment from the pre-course survey\n\nHi professor Ventura! I noticed that we gonna learn multiple data analysis tool this semester and I am definitely a novice of data science. I am little worried about how can I master all of them without being confused, because some commands might be very similar."
+  },
+  {
+    "objectID": "slides/topic-01.html#your-turn",
+    "href": "slides/topic-01.html#your-turn",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Your turn!",
+    "text": "Your turn!\n\nName\n(Briefly) what you were up to prior to the DSPP\nIf you could have any data source at your disposal, what would it be?"
+  },
+  {
+    "objectID": "slides/topic-01.html#summary-of-the-survey",
+    "href": "slides/topic-01.html#summary-of-the-survey",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary of the survey",
+    "text": "Summary of the survey\n\n75% of you have some experience with Python.\n42% of you have some with SQL and 42% have none (which is great for the intro purposes of this course!)\nNONE of you were using primarily Python in your work before!\n\n30% using R and 30% using Stata.\n\nA few still do not have Python/Jupyter/Github in your laptops. If you are having issue after today, talk to Sierra.\nMain Policy Areas:\n\nSocial Media/Tech (Thank you, my dear students. Not so much for you Elon!)\nInternational Development (let’s talk war, peace and RCTs)\nEducation (Gonna get some data with Professor Johnson)"
+  },
+  {
+    "objectID": "slides/topic-01.html#jupyter",
+    "href": "slides/topic-01.html#jupyter",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Jupyter:",
+    "text": "Jupyter:\nSee Jupyter Notebook in the Class Website"
+  },
+  {
+    "objectID": "slides/topic-01.html#quarto",
+    "href": "slides/topic-01.html#quarto",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Quarto",
+    "text": "Quarto\nSee Quarto Notebook in the Class Website"
+  },
+  {
+    "objectID": "slides/topic-01.html#command-line",
+    "href": "slides/topic-01.html#command-line",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Command Line",
+    "text": "Command Line\nSee Command Line Tutorial in the Class Website"
+  },
+  {
+    "objectID": "slides/topic-01.html#instructor",
+    "href": "slides/topic-01.html#instructor",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Instructor",
+    "text": "Instructor\n\n\n\n\n\n\n\n\n\n\n\ndavi.moreira@emory.edu\nhttps://davi- moreira.github.io/\n\n\nVisiting Assistant Professor in the QTM Department at Emory University;\n\n\n\nMy academic work addresses Political Communication, Data Science, Text as Data, Artificial Intelligence, and Comparative Politics.\n\n\n\nM&E Specialist consultant - World Bank (Brazil, Mozambique, Angola, and DRC)"
+  },
+  {
+    "objectID": "slides/topic-01.html#instructors-passions",
+    "href": "slides/topic-01.html#instructors-passions",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Instructor’s Passions",
+    "text": "Instructor’s Passions"
+  },
+  {
+    "objectID": "slides/topic-01.html#instructors-passions-1",
+    "href": "slides/topic-01.html#instructors-passions-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Instructor’s Passions",
+    "text": "Instructor’s Passions"
+  },
+  {
+    "objectID": "slides/topic-01.html#students",
+    "href": "slides/topic-01.html#students",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Students",
+    "text": "Students\n\n\nIt is your turn! - 5 minutes\n\n\n\nPresent yourself to your left/right colleague and tell her/him what are the current two main passions in your life."
+  },
+  {
+    "objectID": "slides/topic-01.html#real-time-data-mobility-credit-card-usage-expenses",
+    "href": "slides/topic-01.html#real-time-data-mobility-credit-card-usage-expenses",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Real Time Data: Mobility, Credit Card Usage, Expenses…",
+    "text": "Real Time Data: Mobility, Credit Card Usage, Expenses…"
+  },
+  {
+    "objectID": "slides/topic-01.html#social-media-data",
+    "href": "slides/topic-01.html#social-media-data",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Social Media Data",
+    "text": "Social Media Data"
+  },
+  {
+    "objectID": "slides/topic-01.html#online-research",
+    "href": "slides/topic-01.html#online-research",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Online Research",
+    "text": "Online Research"
+  },
+  {
+    "objectID": "slides/topic-01.html#powerful-and-cheap-computer-power",
+    "href": "slides/topic-01.html#powerful-and-cheap-computer-power",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Powerful and Cheap Computer Power",
+    "text": "Powerful and Cheap Computer Power"
+  },
+  {
+    "objectID": "slides/topic-01.html#what-did-data-science-need-to-emerge-1",
+    "href": "slides/topic-01.html#what-did-data-science-need-to-emerge-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What did Data Science need to emerge?",
+    "text": "What did Data Science need to emerge?\n\nLarge-scale data + algorithms to answer questions"
+  },
+  {
+    "objectID": "slides/topic-01.html#section",
+    "href": "slides/topic-01.html#section",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "",
+    "text": "Large-scale data + algorithms to answer questions"
+  },
+  {
+    "objectID": "slides/topic-01.html#course-webpage",
+    "href": "slides/topic-01.html#course-webpage",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Course Webpage",
+    "text": "Course Webpage\n\n(https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/)"
+  },
+  {
+    "objectID": "slides/topic-01.html#section-1",
+    "href": "slides/topic-01.html#section-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "",
+    "text": "Some key things to take from this topic:\n\nData Science is about data:\n\nData collection;\nData management;\nData storage;\nData structure;\nData, Data, Data ...\n\nData Science is also about…\n\nCollaboration!\n\nThe schedule is tentative;\nJupiter Notebook will be the main tool of the course, but there are other IDEs:\n\nGoogle Colab\nQuarto\n\nWe gain power learning how to use the Command line"
+  },
+  {
+    "objectID": "slides/topic-01.html#summary-1",
+    "href": "slides/topic-01.html#summary-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary",
+    "text": "Summary\nSome key things to take from this topic:\n\nData Science is about data:\n\nData collection;\nData management;\nData storage;\nData structure;\nData, Data, Data ...\n\nData Science is also about…\n\nCollaboration!\n\nThe schedule is tentative;\nJupiter Notebook will be the main tool of the course, but there are other IDEs:\n\nGoogle Colab\nQuarto\n\nWe gain power learning how to use the Command line"
   }
 ]
