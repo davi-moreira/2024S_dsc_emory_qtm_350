@@ -39,7 +39,23 @@ This course equips students with computing skills and knowledge for data science
 
 ## Learning Outcomes
 
-By the end of this course, students will be able to: 1. Demonstrate proficiency in data science project collaboration and version control. 2. Utilize advanced data storage, manipulation, and querying. 3. High-level understanding of data structures, algorithms, and cloud computing concepts. 4. Critically navigate the emergent trends in data science computing.
+By the end of this course, students will be able to: 
+
+-   
+
+    1. Demonstrate proficiency in data science project collaboration and version control.
+
+-   
+    
+    2. Utilize advanced data storage, manipulation, and querying. 
+    
+-
+    
+    3. High-level understanding of data structures, algorithms, and cloud computing concepts. 
+    
+-
+    
+    4. Critically navigate the emergent trends in data science computing.
 
 ## Objectives
 
@@ -85,7 +101,7 @@ Each lecture will be accompanied by a set of questions, available on the course'
 
 ### Problem Sets
 
-Problem sets aligned with each topic will be assigned to solidify and apply the concepts covered. These sets are to be collaboratively developed in groups of up to three members, emphasizing the importance of code collaboration. Consequently, individual submissions will not be accepted. The primary objective of these problem sets is to provide a practical application of the content discussed during the semester. Assignments will be distributed via Canvas and/or GitHub, and may be formatted as either a Jupyter Notebook (`.ipynb`) or Quarto documents (`.qmd`). Groups will be required to submit the complete source code of their assignments (`.ipynb` or `.qmd`). Each problem set will be meticulously evaluated, with grading based on both the accuracy and the overall quality of the work submitted. For instance, you must guarantee:
+Problem sets aligned with each topic will be assigned to solidify and apply the concepts covered. These sets are to be collaboratively developed in groups of up to three members, emphasizing the importance of code collaboration. Consequently, individual submissions will not be accepted. The primary objective of these problem sets is to provide a practical application of the content discussed during the semester. Assignments will be distributed via Canvas and/or GitHub, and may be formatted as either a Jupyter Notebook (`.ipynb`), Quarto documents (`.qmd`), or HTML (`.html`). Groups will be required to submit the complete source code of their assignments (`.ipynb` or `.qmd`). Each problem set will be meticulously evaluated, with grading based on both the accuracy and the overall quality of the work submitted. For instance, you must guarantee:
 
 -   **All code must run**;
 
