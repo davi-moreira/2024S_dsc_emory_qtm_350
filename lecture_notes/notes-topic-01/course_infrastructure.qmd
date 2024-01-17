@@ -11,7 +11,7 @@ editor_options:
 
 # About
 
-The document offers a guide about the course infrastructure.<a name="cite_ref-1"></a>[<sup>[1]</sup>](#cite_note-1)
+The document offers a guide about the course infrastructure.<a name="cite_ref-1"></a><sup>[\[1\]</sup>](#cite_note-1)
 
 # Introduction
 
@@ -103,9 +103,9 @@ jupyter notebook
 
 ### Workflow with Anaconda.
 
-If you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. 
+If you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system.
 
-In the lecture notes, you can also find a Introduction to Jupyter notebook. 
+In the lecture notes, you can also find a Introduction to Jupyter notebook.
 
 ## Rstudio + Reticulate\|Quarto
 
@@ -125,4 +125,4 @@ Git/GitHub instructions to check before the next session:
 
 -   [Create a GitHub account if you don't have one already (any email and free subscription is fine)](https://docs.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account)
 
-<a name="cite_note-1"></a>1. This document was originally developed by [Professor Tiago Ventura](https://www.venturatiago.com/) and adapted to our courses purposes. 
+<a name="cite_note-1"></a>1. This document was originally developed by [Professor Tiago Ventura](https://www.venturatiago.com/) and adapted to our courses purposes.

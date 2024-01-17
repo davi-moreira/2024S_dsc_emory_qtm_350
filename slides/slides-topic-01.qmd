@@ -21,7 +21,6 @@ format:
     theme: [simple,custom.scss]
 ---
 
-
 # Welcome to QTM 350 Data Science Computing {background-color="#0E315F"}
 
 ## Topic Overview
@@ -41,54 +40,48 @@ format:
     -   Jupyter
     -   Quarto
 
--   Introduction to Commandline
-
 # Introductions
 
 ## Instructor
 
-:::: {.columns}
-
-::: {.column width="40%" style='text-align: center; justify-content: center; align-items: center;'}
-
+::: columns
+::: {.column width="40%" style="text-align: center; justify-content: center; align-items: center;"}
 ```{r  echo=FALSE, out.width = "60%",fig.align="center"}
-knitr::include_graphics("topic-01-figs/davi_moreira_photo.JPG") 
+knitr::include_graphics("figs/davi_moreira_photo.JPG") 
 ```
 
-[davi.moreira\@emory.edu](davi.moreira@emory.edu) 
+[davi.moreira\@emory.edu](davi.moreira@emory.edu)
 
-[https://davi- moreira.github.io/](https://davi- moreira.github.io/)
+[https://davi- moreira.github.io/](https://davi-%20moreira.github.io/)
 :::
 
-::: {.column width="60%" style='text-align: center; justify-content: center; align-items: center;'}
-
-- Visiting Assistant Professor in the QTM Department at Emory University;
+::: {.column width="60%" style="text-align: center; justify-content: center; align-items: center;"}
+-   Visiting Assistant Professor in the QTM Department at Emory University;
 
 <br>
 
-- My academic work addresses Political Communication, Data Science, Text as Data, Artificial Intelligence, and Comparative Politics.
+-   My academic work addresses Political Communication, Data Science, Text as Data, Artificial Intelligence, and Comparative Politics.
 
 <br>
 
-- [M&E Specialist consultant - World Bank (Brazil, Mozambique, Angola, and DRC)](https://blogs.worldbank.org/opendata/improving-how-we-measure-progress-community-biodiversity-conservation-projects-mozambique)
+-   [M&E Specialist consultant - World Bank (Brazil, Mozambique, Angola, and DRC)](https://blogs.worldbank.org/opendata/improving-how-we-measure-progress-community-biodiversity-conservation-projects-mozambique)
 :::
-
-::::
+:::
 
 ## Instructor's Passions
 
 ```{r  echo=FALSE, out.width = "20%", fig.align="center"}
-knitr::include_graphics("topic-01-figs/palmeiras_logo.png") 
+knitr::include_graphics("figs/palmeiras_logo.png") 
 ```
 
 ```{r  echo=FALSE, out.width = "60%", fig.align="center"}
-knitr::include_graphics("topic-01-figs/palmeiras_stadium.jpg") 
+knitr::include_graphics("figs/palmeiras_stadium.jpg") 
 ```
 
 ## Instructor's Passions
 
 ```{r  echo=FALSE, out.width = "35%", fig.align="center"}
-knitr::include_graphics("topic-01-figs/carnaval_olinda.jpg") 
+knitr::include_graphics("figs/carnaval_olinda.jpg") 
 ```
 
 ## Students
@@ -114,18 +107,17 @@ Large-scale data + algorithms to answer questions
 ## Rise of the digital information age
 
 ```{r  echo=FALSE, out.width = "50%", fig.align="center"}
-knitr::include_graphics("topic-01-figs/digital.jpeg") 
+knitr::include_graphics("figs/digital.jpeg") 
 ```
 
 ::: aside
 https://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html
 :::
 
-
 ## Social Media Data
 
 ```{r  echo=FALSE, out.width = "20%", fig.align="center"}
-knitr::include_graphics("topic-01-figs/redes.png") 
+knitr::include_graphics("figs/redes.png") 
 ```
 
 ## New Data Formats: Image, text, videos..
@@ -133,13 +125,13 @@ knitr::include_graphics("topic-01-figs/redes.png")
 ::: columns
 ::: {.column width="50%"}
 ```{r  echo=FALSE, out.width = "100%", fig.align="center"}
-knitr::include_graphics("topic-01-figs/tweets.png") 
+knitr::include_graphics("figs/tweets.png") 
 ```
 :::
 
 ::: {.column width="50%"}
 ```{r  echo=FALSE, out.width = "100%",fig.align="center"}
-knitr::include_graphics("topic-01-figs/imagescnn.png") 
+knitr::include_graphics("figs/imagescnn.png") 
 ```
 :::
 :::
@@ -147,13 +139,13 @@ knitr::include_graphics("topic-01-figs/imagescnn.png")
 ## Online Research
 
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("topic-01-figs/survey.png") 
+knitr::include_graphics("figs/survey.png") 
 ```
 
 ## Powerful and Cheap Computer Power
 
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("topic-01-figs/collab.png") 
+knitr::include_graphics("figs/collab.png") 
 ```
 
 ## As a consequence:
@@ -184,11 +176,11 @@ knitr::include_graphics("topic-01-figs/collab.png")
 
 -   **Office Hours**
 
--   **Materials**: 
-    
-    -   [https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/](https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/)
-    
-    - Canvas
+-   **Materials**:
+
+    -   <https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/>
+
+    -   Canvas
 
 # `r fontawesome::fa("laptop-code")` Transiton: Coding!
 
@@ -200,10 +192,6 @@ knitr::include_graphics("topic-01-figs/collab.png")
 
 [See Quarto Notebook in the Class Website]{.red}
 
-## Command Line
-
-[See Command Line Tutorial in the Class Website]{.red}
-
 # Summary
 
 ## Summary
@@ -211,22 +199,22 @@ knitr::include_graphics("topic-01-figs/collab.png")
 Some key things to take from this topic:
 
 -   Data Science is about data:
+
     -   Data collection;
     -   Data management;
     -   Data storage;
     -   Data structure;
-    -   Data, Data, Data `...`  
+    -   Data, Data, Data `...`
 
 -   Data Science is also about...
+
     -   Collaboration!
-    
+
 -   The schedule is tentative;
 
 -   Jupiter Notebook will be the main tool of the course, but there are other IDEs:
+
     -   Google Colab
     -   Quarto
-
--   We gain power learning how to use the Command line
-
 
 # Thank you!
