@@ -43,7 +43,7 @@ For Windows (specifically Windows 10), you can enable Linux Bash shell. The foll
 
 If you're using a version of Windows that pre-dates version 10, then [Git Bash](https://www.atlassian.com/git/tutorials/git-bash#:~:text=Git%20Bash%20is%20an%20application,operating%20system%20through%20written%20commands.) offers a program will allow you to use `git` commands from your windows machine.
 
-We will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for [Topic 1](%22topics/topic-01.html%22)
+We will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for [Topic 2](%22topics-pages/page-topic-02.html%22)
 
 ## Python3
 
