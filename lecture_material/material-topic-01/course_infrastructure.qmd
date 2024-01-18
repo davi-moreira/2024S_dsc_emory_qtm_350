@@ -111,7 +111,7 @@ In the lecture notes, you can also find a Introduction to Jupyter notebook.
 
 In your classes that are focused on using `R`, `RStudio` will be your main IDE. However, `RStudio` is not just for `R`. It can handle a number of different languages. We can use Python in `RStudio` using the `reticulate` package.
 
-Check [the intro to quarto notebook](/lecture_notes/week-1/intro_to_quarto.html) on how to use Python in Rstudio. Let's cover some of the installation steps here:
+Check [the intro to quarto notebook](/lecture_material/material-topic-01/intro-to-quarto.html) on how to use Python in Rstudio. Let's cover some of the installation steps here:
 
 To install `RStudio`, [download from the following link](https://www.rstudio.com/products/rstudio/download/). `reticulate` is a `R` package that allows one run a `Python` REPL in the R console. In addition, it allows one to read in and use `Python` code, and pass data between `R` and Python. The following provides [instructions on installing `reticulate`](https://rstudio.github.io/reticulate/).
 
