@@ -13304,39 +13304,13 @@ Davi Moreira <h1></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">lsmagic</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[109]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Available line magics:
-%alias  %alias_magic  %autoawait  %autocall  %automagic  %autosave  %bookmark  %cat  %cd  %clear  %colors  %conda  %config  %connect_info  %cp  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %lf  %lk  %ll  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %lx  %macro  %magic  %man  %matplotlib  %mkdir  %more  %mv  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %pip  %popd  %pprint  %precision  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %rm  %rmdir  %run  %save  %sc  %set_env  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
-
-Available cell magics:
-%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%markdown  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
-
-Automagic is ON, % prefix IS NOT needed for line magics.</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13351,341 +13325,13 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">quickref</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-IPython -- An enhanced Interactive Python - Quick Reference Card
-================================================================
-
-obj?, obj??      : Get help, or more help for object (also works as
-                   ?obj, ??obj).
-?foo.*abc*       : List names in &#39;foo&#39; containing &#39;abc&#39; in them.
-%magic           : Information about IPython&#39;s &#39;magic&#39; % functions.
-
-Magic functions are prefixed by % or %%, and typically take their arguments
-without parentheses, quotes or even commas for convenience.  Line magics take a
-single % and cell magics are prefixed with two %%.
-
-Example magic function calls:
-
-%alias d ls -F   : &#39;d&#39; is now an alias for &#39;ls -F&#39;
-alias d ls -F    : Works if &#39;alias&#39; not a python name
-alist = %alias   : Get list of aliases to &#39;alist&#39;
-cd /usr/share    : Obvious. cd -&lt;tab&gt; to choose from visited dirs.
-%cd??            : See help AND source for magic %cd
-%timeit x=10     : time the &#39;x=10&#39; statement with high precision.
-%%timeit x=2**100
-x**100           : time &#39;x**100&#39; with a setup of &#39;x=2**100&#39;; setup code is not
-                   counted.  This is an example of a cell magic.
-
-System commands:
-
-!cp a.txt b/     : System command escape, calls os.system()
-cp a.txt b/      : after %rehashx, most system commands work without !
-cp ${f}.txt $bar : Variable expansion in magics and system commands
-files = !ls /usr : Capture system command output
-files.s, files.l, files.n: &#34;a b c&#34;, [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;], &#39;a\nb\nc&#39;
-
-History:
-
-_i, _ii, _iii    : Previous, next previous, next next previous input
-_i4, _ih[2:5]    : Input history line 4, lines 2-4
-exec(_i81)       : Execute input history line #81 again
-%rep 81          : Edit input history line #81
-_, __, ___       : previous, next previous, next next previous output
-_dh              : Directory history
-_oh              : Output history
-%hist            : Command history of current session.
-%hist -g foo     : Search command history of (almost) all sessions for &#39;foo&#39;.
-%hist -g         : Command history of (almost) all sessions.
-%hist 1/2-8      : Command history containing lines 2-8 of session 1.
-%hist 1/ ~2/     : Command history of session 1 and 2 sessions before current.
-%hist ~8/1-~6/5  : Command history from line 1 of 8 sessions ago to
-                   line 5 of 6 sessions ago.
-%edit 0/         : Open editor to execute code with history of current session.
-
-Autocall:
-
-f 1,2            : f(1,2)  # Off by default, enable with %autocall magic.
-/f 1,2           : f(1,2) (forced autoparen)
-,f 1 2           : f(&#34;1&#34;,&#34;2&#34;)
-;f 1 2           : f(&#34;1 2&#34;)
-
-Remember: TAB completion works in many contexts, not just file names
-or python names.
-
-The following magic functions are currently available:
-
-%alias:
-    Define an alias for a system command.
-%alias_magic:
-    ::
-%autoawait:
-    
-%autocall:
-    Make functions callable without having to type parentheses.
-%automagic:
-    Make magic functions callable without having to type the initial %.
-%autosave:
-    Set the autosave interval in the notebook (in seconds).
-%bookmark:
-    Manage IPython&#39;s bookmark system.
-%cat:
-    Alias for `!cat`
-%cd:
-    Change the current working directory.
-%clear:
-    Clear the terminal.
-%colors:
-    Switch color scheme for prompts, info system and exception handlers.
-%conda:
-    Run the conda package manager within the current kernel.
-%config:
-    configure IPython
-%connect_info:
-    Print information for connecting other clients to this kernel
-%cp:
-    Alias for `!cp`
-%debug:
-    ::
-%dhist:
-    Print your history of visited directories.
-%dirs:
-    Return the current directory stack.
-%doctest_mode:
-    Toggle doctest mode on and off.
-%ed:
-    Alias for `%edit`.
-%edit:
-    Bring up an editor and execute the resulting code.
-%env:
-    Get, set, or list environment variables.
-%gui:
-    Enable or disable IPython GUI event loop integration.
-%hist:
-    Alias for `%history`.
-%history:
-    ::
-%killbgscripts:
-    Kill all BG processes started by %%script and its family.
-%ldir:
-    Alias for `!ls -F -G -l %l | grep /$`
-%less:
-    Show a file through the pager.
-%lf:
-    Alias for `!ls -F -l -G %l | grep ^-`
-%lk:
-    Alias for `!ls -F -l -G %l | grep ^l`
-%ll:
-    Alias for `!ls -F -l -G`
-%load:
-    Load code into the current frontend.
-%load_ext:
-    Load an IPython extension by its module name.
-%loadpy:
-    Alias of `%load`
-%logoff:
-    Temporarily stop logging.
-%logon:
-    Restart logging.
-%logstart:
-    Start logging anywhere in a session.
-%logstate:
-    Print the status of the logging system.
-%logstop:
-    Fully stop logging and close log file.
-%ls:
-    Alias for `!ls -F -G`
-%lsmagic:
-    List currently available magic functions.
-%lx:
-    Alias for `!ls -F -l -G %l | grep ^-..x`
-%macro:
-    Define a macro for future re-execution. It accepts ranges of history,
-%magic:
-    Print information about the magic function system.
-%man:
-    Find the man page for the given command and display in pager.
-%matplotlib:
-    ::
-%mkdir:
-    Alias for `!mkdir`
-%more:
-    Show a file through the pager.
-%mv:
-    Alias for `!mv`
-%notebook:
-    ::
-%page:
-    Pretty print the object and display it through a pager.
-%pastebin:
-    Upload code to dpaste.com, returning the URL.
-%pdb:
-    Control the automatic calling of the pdb interactive debugger.
-%pdef:
-    Print the call signature for any callable object.
-%pdoc:
-    Print the docstring for an object.
-%pfile:
-    Print (or run through pager) the file where an object is defined.
-%pinfo:
-    Provide detailed information about an object.
-%pinfo2:
-    Provide extra detailed information about an object.
-%pip:
-    Run the pip package manager within the current kernel.
-%popd:
-    Change to directory popped off the top of the stack.
-%pprint:
-    Toggle pretty printing on/off.
-%precision:
-    Set floating point precision for pretty printing.
-%prun:
-    Run a statement through the python code profiler.
-%psearch:
-    Search for object in namespaces by wildcard.
-%psource:
-    Print (or run through pager) the source code for an object.
-%pushd:
-    Place the current dir on stack and change directory.
-%pwd:
-    Return the current working directory path.
-%pycat:
-    Show a syntax-highlighted file through a pager.
-%pylab:
-    ::
-%qtconsole:
-    Open a qtconsole connected to this kernel.
-%quickref:
-    Show a quick reference sheet 
-%recall:
-    Repeat a command, or get command to input line for editing.
-%rehashx:
-    Update the alias table with all executable files in $PATH.
-%reload_ext:
-    Reload an IPython extension by its module name.
-%rep:
-    Alias for `%recall`.
-%rerun:
-    Re-run previous input
-%reset:
-    Resets the namespace by removing all names defined by the user, if
-%reset_selective:
-    Resets the namespace by removing names defined by the user.
-%rm:
-    Alias for `!rm`
-%rmdir:
-    Alias for `!rmdir`
-%run:
-    Run the named file inside IPython as a program.
-%save:
-    Save a set of lines or a macro to a given filename.
-%sc:
-    Shell capture - run shell command and capture output (DEPRECATED use !).
-%set_env:
-    Set environment variables.  Assumptions are that either &#34;val&#34; is a
-%store:
-    Lightweight persistence for python variables.
-%sx:
-    Shell execute - run shell command and capture output (!! is short-hand).
-%system:
-    Shell execute - run shell command and capture output (!! is short-hand).
-%tb:
-    Print the last traceback.
-%time:
-    Time execution of a Python statement or expression.
-%timeit:
-    Time execution of a Python statement or expression
-%unalias:
-    Remove an alias
-%unload_ext:
-    Unload an IPython extension by its module name.
-%who:
-    Print all interactive variables, with some minimal formatting.
-%who_ls:
-    Return a sorted list of all interactive variables.
-%whos:
-    Like %who, but gives some extra information about each variable.
-%xdel:
-    Delete a variable, trying to clear it from anywhere that
-%xmode:
-    Switch modes for the exception handlers.
-%%!:
-    Shell execute - run shell command and capture output (!! is short-hand).
-%%HTML:
-    Alias for `%%html`.
-%%SVG:
-    Alias for `%%svg`.
-%%bash:
-    %%bash script magic
-%%capture:
-    ::
-%%debug:
-    ::
-%%file:
-    Alias for `%%writefile`.
-%%html:
-    ::
-%%javascript:
-    Run the cell block of Javascript code
-%%js:
-    Run the cell block of Javascript code
-%%latex:
-    Render the cell as a block of LaTeX
-%%markdown:
-    Render the cell as Markdown text block
-%%perl:
-    %%perl script magic
-%%prun:
-    Run a statement through the python code profiler.
-%%pypy:
-    %%pypy script magic
-%%python:
-    %%python script magic
-%%python2:
-    %%python2 script magic
-%%python3:
-    %%python3 script magic
-%%ruby:
-    %%ruby script magic
-%%script:
-    ::
-%%sh:
-    %%sh script magic
-%%svg:
-    Render the cell as an SVG literal
-%%sx:
-    Shell execute - run shell command and capture output (!! is short-hand).
-%%system:
-    Shell execute - run shell command and capture output (!! is short-hand).
-%%time:
-    Time execution of a Python statement or expression.
-%%timeit:
-    Time execution of a Python statement or expression
-%%writefile:
-    ::
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13708,7 +13354,7 @@ The following magic functions are currently available:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">bookmark</span> Home
@@ -13736,7 +13382,7 @@ The following magic functions are currently available:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">Dropbox</span>
@@ -13746,54 +13392,16 @@ The following magic functions are currently available:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/Users/dcorde3/Library/CloudStorage/Dropbox
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pwd</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[113]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;/Users/dcorde3/Library/CloudStorage/Dropbox&#39;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13808,7 +13416,7 @@ The following magic functions are currently available:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> -b Home
@@ -13818,55 +13426,16 @@ The following magic functions are currently available:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(bookmark:Home) -&gt; /Users/dcorde3/Library/CloudStorage/Dropbox
-/Users/dcorde3/Library/CloudStorage/Dropbox
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pwd</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[115]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;/Users/dcorde3/Library/CloudStorage/Dropbox&#39;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13881,7 +13450,7 @@ The following magic functions are currently available:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> my_fib_func.py
@@ -13902,60 +13471,16 @@ The following magic functions are currently available:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Overwriting my_fib_func.py
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">ls</span> # list files ( see our function)
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-blue-fg">Arquivos enviados</span>/                <span class="ansi-blue-fg">drivers</span>/
-Google Migration Report.csv       genneral-notes.txt
-<span class="ansi-blue-fg">Mac (2)</span>/                          my_fib_func.py
-<span class="ansi-blue-fg">My Mac (Davis-MacBook-Pro.local)</span>/ <span class="ansi-blue-fg">others</span>/
-<span class="ansi-blue-fg">Screenshots</span>/                      <span class="ansi-blue-fg">pessoal</span>/
-Vault.dbx-vault                   <span class="ansi-blue-fg">profissional</span>/
-<span class="ansi-blue-fg">Zotero</span>/                           <span class="ansi-blue-fg">shared</span>/
-<span class="ansi-blue-fg">academic</span>/                         <span class="ansi-blue-fg">site</span>/
-<span class="ansi-blue-fg">concursos</span>/
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13969,7 +13494,7 @@ Vault.dbx-vault                   <span class="ansi-blue-fg">profissional</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># %load my_fib_func.py</span>
@@ -14000,7 +13525,7 @@ Vault.dbx-vault                   <span class="ansi-blue-fg">profissional</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> my_fib_func.py
@@ -14021,45 +13546,13 @@ Vault.dbx-vault                   <span class="ansi-blue-fg">profissional</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span> fib(10)
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 10 µs, sys: 1 µs, total: 11 µs
-Wall time: 17.9 µs
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[120]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14074,31 +13567,13 @@ Wall time: 17.9 µs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">timeit</span> fib(10)
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3.84 µs ± 94.8 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -14112,7 +13587,7 @@ Wall time: 17.9 µs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main_dat</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
@@ -14128,31 +13603,13 @@ Wall time: 17.9 µs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">psearch</span> main*
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>main_dat
-main_key</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -14174,103 +13631,13 @@ main_key</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it?
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-red-fg">Docstring:</span>
-Time execution of a Python statement or expression
-
-Usage, in line mode:
-  %timeit [-n&lt;N&gt; -r&lt;R&gt; [-t|-c] -q -p&lt;P&gt; -o] statement
-or in cell mode:
-  %%timeit [-n&lt;N&gt; -r&lt;R&gt; [-t|-c] -q -p&lt;P&gt; -o] setup_code
-  code
-  code...
-
-Time execution of a Python statement or expression using the timeit
-module.  This function can be used both as a line and cell magic:
-
-- In line mode you can time a single-line statement (though multiple
-  ones can be chained with using semicolons).
-
-- In cell mode, the statement in the first line is used as setup code
-  (executed but not timed) and the body of the cell is timed.  The cell
-  body has access to any variables created in the setup code.
-
-Options:
--n&lt;N&gt;: execute the given statement &lt;N&gt; times in a loop. If &lt;N&gt; is not
-provided, &lt;N&gt; is determined so as to get sufficient accuracy.
-
--r&lt;R&gt;: number of repeats &lt;R&gt;, each consisting of &lt;N&gt; loops, and take the
-best result.
-Default: 7
-
--t: use time.time to measure the time, which is the default on Unix.
-This function measures wall time.
-
--c: use time.clock to measure the time, which is the default on
-Windows and measures wall time. On Unix, resource.getrusage is used
-instead and returns the CPU user time.
-
--p&lt;P&gt;: use a precision of &lt;P&gt; digits to display the timing result.
-Default: 3
-
--q: Quiet, do not print result.
-
--o: return a TimeitResult that can be stored in a variable to inspect
-    the result in more details.
-
-.. versionchanged:: 7.3
-    User variables are no longer expanded,
-    the magic line is always left unmodified.
-
-Examples
---------
-::
-
-  In [1]: %timeit pass
-  8.26 ns ± 0.12 ns per loop (mean ± std. dev. of 7 runs, 100000000 loops each)
-
-  In [2]: u = None
-
-  In [3]: %timeit u is None
-  29.9 ns ± 0.643 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
-  In [4]: %timeit -r 4 u == None
-
-  In [5]: import time
-
-  In [6]: %timeit -n1 time.sleep(2)
-
-The times reported by %timeit will be slightly higher than those
-reported by the timeit.py script when variables are accessed. This is
-due to the fact that %timeit executes the statement in the namespace
-of the shell, compared with timeit.py, which uses a single setup
-statement to import function or create variables. Generally, the bias
-does not matter as long as results from timeit.py are not mixed with
-those from %timeit.
-<span class="ansi-red-fg">File:</span>      /usr/local/anaconda3/lib/python3.9/site-packages/IPython/core/magics/execution.py
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -14307,7 +13674,7 @@ jupyter nbextensions_configurator enable --user</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert _using-jupyter-notebooks.ipynb --to html --template classic
@@ -14327,187 +13694,8 @@ jupyter nbextensions_configurator enable --user</code></pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] WARNING | pattern &#39;_using-jupyter-notebooks.ipynb&#39; matched no files
-This application is used to convert notebook files (*.ipynb)
-        to various other formats.
-
-        WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
-
-Options
-=======
-The options below are convenience aliases to configurable class-options,
-as listed in the &#34;Equivalent to&#34; description-line of the aliases.
-To see all configurable class-options for some &lt;cmd&gt;, use:
-    &lt;cmd&gt; --help-all
-
---debug
-    set log level to logging.DEBUG (maximize logging output)
-    Equivalent to: [--Application.log_level=10]
---show-config
-    Show the application&#39;s configuration (human-readable format)
-    Equivalent to: [--Application.show_config=True]
---show-config-json
-    Show the application&#39;s configuration (json format)
-    Equivalent to: [--Application.show_config_json=True]
---generate-config
-    generate default config file
-    Equivalent to: [--JupyterApp.generate_config=True]
--y
-    Answer yes to any questions instead of prompting.
-    Equivalent to: [--JupyterApp.answer_yes=True]
---execute
-    Execute the notebook prior to export.
-    Equivalent to: [--ExecutePreprocessor.enabled=True]
---allow-errors
-    Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if &#39;--execute&#39; was specified, too.
-    Equivalent to: [--ExecutePreprocessor.allow_errors=True]
---stdin
-    read a single notebook file from stdin. Write the resulting notebook with default basename &#39;notebook.*&#39;
-    Equivalent to: [--NbConvertApp.from_stdin=True]
---stdout
-    Write notebook output to stdout instead of files.
-    Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
---inplace
-    Run nbconvert in place, overwriting the existing notebook (only 
-            relevant when converting to notebook format)
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
---clear-output
-    Clear output of current file and save in place, 
-            overwriting the existing notebook.
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
---no-prompt
-    Exclude input and output prompts from converted document.
-    Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
---no-input
-    Exclude input cells and output prompts from converted document. 
-            This mode is ideal for generating code-free reports.
-    Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True --TemplateExporter.exclude_input_prompt=True]
---allow-chromium-download
-    Whether to allow downloading chromium if no suitable version is found on the system.
-    Equivalent to: [--WebPDFExporter.allow_chromium_download=True]
---disable-chromium-sandbox
-    Disable chromium security sandbox when converting to PDF..
-    Equivalent to: [--WebPDFExporter.disable_sandbox=True]
---show-input
-    Shows code input. This flag is only useful for dejavu users.
-    Equivalent to: [--TemplateExporter.exclude_input=False]
---embed-images
-    Embed the images as base64 dataurls in the output. This flag is only useful for the HTML/WebPDF/Slides exports.
-    Equivalent to: [--HTMLExporter.embed_images=True]
---log-level=&lt;Enum&gt;
-    Set the log level by value or name.
-    Choices: any of [0, 10, 20, 30, 40, 50, &#39;DEBUG&#39;, &#39;INFO&#39;, &#39;WARN&#39;, &#39;ERROR&#39;, &#39;CRITICAL&#39;]
-    Default: 30
-    Equivalent to: [--Application.log_level]
---config=&lt;Unicode&gt;
-    Full path of a config file.
-    Default: &#39;&#39;
-    Equivalent to: [--JupyterApp.config_file]
---to=&lt;Unicode&gt;
-    The export format to be used, either one of the built-in formats
-            [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;, &#39;webpdf&#39;]
-            or a dotted object name that represents the import path for an
-            ``Exporter`` class
-    Default: &#39;&#39;
-    Equivalent to: [--NbConvertApp.export_format]
---template=&lt;Unicode&gt;
-    Name of the template to use
-    Default: &#39;&#39;
-    Equivalent to: [--TemplateExporter.template_name]
---template-file=&lt;Unicode&gt;
-    Name of the template file to use
-    Default: None
-    Equivalent to: [--TemplateExporter.template_file]
---theme=&lt;Unicode&gt;
-    Template specific theme(e.g. the name of a JupyterLab CSS theme distributed
-    as prebuilt extension for the lab template)
-    Default: &#39;light&#39;
-    Equivalent to: [--HTMLExporter.theme]
---writer=&lt;DottedObjectName&gt;
-    Writer class used to write the 
-                                        results of the conversion
-    Default: &#39;FilesWriter&#39;
-    Equivalent to: [--NbConvertApp.writer_class]
---post=&lt;DottedOrNone&gt;
-    PostProcessor class used to write the
-                                        results of the conversion
-    Default: &#39;&#39;
-    Equivalent to: [--NbConvertApp.postprocessor_class]
---output=&lt;Unicode&gt;
-    overwrite base name use for output files.
-                can only be used when converting one notebook at a time.
-    Default: &#39;&#39;
-    Equivalent to: [--NbConvertApp.output_base]
---output-dir=&lt;Unicode&gt;
-    Directory to write output(s) to. Defaults
-                                  to output to the directory of each notebook. To recover
-                                  previous default behaviour (outputting to the current 
-                                  working directory) use . as the flag value.
-    Default: &#39;&#39;
-    Equivalent to: [--FilesWriter.build_directory]
---reveal-prefix=&lt;Unicode&gt;
-    The URL prefix for reveal.js (version 3.x).
-            This defaults to the reveal CDN, but can be any url pointing to a copy 
-            of reveal.js. 
-            For speaker notes to work, this must be a relative path to a local 
-            copy of reveal.js: e.g., &#34;reveal.js&#34;.
-            If a relative path is given, it must be a subdirectory of the
-            current directory (from which the server is run).
-            See the usage documentation
-            (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
-            for more details.
-    Default: &#39;&#39;
-    Equivalent to: [--SlidesExporter.reveal_url_prefix]
---nbformat=&lt;Enum&gt;
-    The nbformat version to write.
-            Use this to downgrade notebooks.
-    Choices: any of [1, 2, 3, 4]
-    Default: 4
-    Equivalent to: [--NotebookExporter.nbformat_version]
-
-Examples
---------
-
-    The simplest way to use nbconvert is
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to html
-
-            Options include [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;, &#39;webpdf&#39;].
-
-            &gt; jupyter nbconvert --to latex mynotebook.ipynb
-
-            Both HTML and LaTeX support multiple output templates. LaTeX includes
-            &#39;base&#39;, &#39;article&#39; and &#39;report&#39;.  HTML includes &#39;basic&#39;, &#39;lab&#39; and 
-            &#39;classic&#39;. You can specify the flavor of the format used.
-
-            &gt; jupyter nbconvert --to html --template lab mynotebook.ipynb
-
-            You can also pipe the output to stdout, rather than a file
-
-            &gt; jupyter nbconvert mynotebook.ipynb --stdout
-
-            PDF is generated via latex
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to pdf
-
-            You can get (and serve) a Reveal.js-powered slideshow
-
-            &gt; jupyter nbconvert myslides.ipynb --to slides --post serve
-
-            Multiple notebooks can be given at the command line in a couple of 
-            different ways:
-
-            &gt; jupyter nbconvert notebook*.ipynb
-            &gt; jupyter nbconvert notebook1.ipynb notebook2.ipynb
-
-            or you can specify the notebooks list in a config file, containing::
-
-                c.NbConvertApp.notebooks = [&#34;my_notebook.ipynb&#34;]
-
-            &gt; jupyter nbconvert --config mycfg.py
-
-To see all available configurables, use `--help-all`.
-
+<pre>[NbConvertApp] Converting notebook _using-jupyter-notebooks.ipynb to html
+[NbConvertApp] Writing 328913 bytes to _using-jupyter-notebooks.html
 </pre>
 </div>
 </div>
