@@ -31,7 +31,7 @@ format:
     -   Binary and Hexadecimal numbers
     -   Characters, ASCII, Unicode
     -   High vrs low level programming languages
-    -   Compiled vrs interpreted languages
+    -   Compiled *vs* interpreted languages
 
 -   Command Line
 
@@ -501,164 +501,249 @@ knitr::include_graphics("figs/glyph.png")
 
 *Note: If ASCII does not support characters in your name, [Unicode](https://docs.python.org/3.0/howto/unicode.html) will provide a solution.*
 
-XXXX Parei aqui! XXXX
 
 ## Hexadecimal and Unicode
 
-- ASCII uses 7 bits, limiting its range.
-- To represent a broader range of characters, more bits are needed.
-- Hexadecimal, or hex, is used in Unicode to represent these characters efficiently.
+<br>
+
+-   ASCII uses 7 bits, limiting its range.
+-   To represent a broader range of characters, more bits are needed.
+-   Hexadecimal, or hex, is used in Unicode to represent these characters efficiently.
 
 
 ## What is Hexadecimal?
 
-- Hexadecimal is a base-16 number system.
-- Hex digits include: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
-- In programming, hex is encountered more often than binary for compactness.
+<br>
+
+-   Hexadecimal is a base-16 number system.
+-   Hex digits include: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
+-   In programming, hex is encountered more often than binary for compactness.
 
 ## Hex to Binary Mapping
 
-- Each hex digit corresponds to 4 binary bits:
+<br>
 
-0000 = 0
-0001 = 1
-0010 = 2
-...
-1110 = E
-1111 = F
+-   Each hex digit corresponds to 4 binary bits:
 
-- One hex digit represents 4 bits, making it a shorthand for binary.
+    -   0000 = 0
+    -   0001 = 1
+    -   0010 = 2
+    -   ...
+    -   1110 = E
+    -   1111 = F
+
+-   One hex digit represents 4 bits, making it a shorthand for binary.
+-   This is due to the fact that four binary digits can represent sixteen possible values ($2^4$), which aligns with the sixteen possible values of a single hex digit (0 to F).
 
 ## Binary to Hex Conversion
 
-- Convert binary to hex by grouping into blocks of four bits.
-- Example: Binary `1001 1110 0000 1010` converts to Hex `9E0A`.
+<br>
 
-Each group of four binary digits corresponds to a single hexadecimal digit. This is due to the fact that four binary digits can represent sixteen possible values (2^4), which aligns with the sixteen possible values of a single hex digit (0 to F). The above explanation outlines this process step by step, resulting in the hexadecimal equivalent of the binary sequence.
+-   Convert binary to hex by grouping into blocks of four bits.
+-   Example: Binary `1001 1110 0000 1010` converts to Hex `9E0A`.
 
 ## Hexadecimal in File Formats
 
-- Files in hex format are often referred to as "binary" files.
-- This terminology is due to the direct conversion between hex and binary.
-- The conversion is unambiguous, making it a practical shorthand.
+<br>
+
+-   Files in hex format are often referred to as "binary" files.
+-   This terminology is due to the direct conversion between hex and binary.
+-   The conversion is unambiguous, making it a practical shorthand.
 
 ## Hexadecimal in HTML
 
-- HTML uses hexadecimal to represent colors.
-- Six-digit hex numbers specify colors:
+-   HTML uses hexadecimal to represent colors.
+-   Six-digit hex numbers specify colors:
 
-FFFFFF = White
-000000 = Black
+    -   FFFFFF = White
+    -   000000 = Black
 
-- Each pair of digits represents a color component (RGB).
-- In digital systems, each color channel typically has a range from 0 to 255 (in 8-bit systems), which gives a total of 256 intensity levels for each primary color. When you combine the three channels, you get a possible color palette of 256^3 or about 16.7 million colors. For example, an RGB value of 255, 0, 0 corresponds to bright red because the red channel is at full intensity, and the green and blue channels are off.
+-   Each pair of digits represents a color component (RGB).
+-   Each color channel typically has a range from 0 to 255 (in 8-bit systems), which gives a total of 256 intensity levels for each primary color. 
+-   When you combine the three channels, you get a possible color palette of $256^3$ or about 16.7 million colors. 
+-   For example, an RGB value of 255, 0, 0 corresponds to bright red because the red channel is at full intensity, and the green and blue channels are off.
 
-# "Understanding Unicode and UTF-8"
-
+# Understanding Unicode and UTF-8
 
 ## Encountering Unicode
 
-- Encountering a `UnicodeDecodeError` in Python indicates a character encoding issue.
-- This often arises when dealing with characters not represented in the ASCII set.
+<br>
 
+-   Encountering a `UnicodeDecodeError` in Python indicates a character encoding issue.
+
+-   This often arises when dealing with characters not represented in the ASCII set.
 
 ## What is Unicode?
 
-- Unicode is a standard that maps characters to code points.
-- A code point is an integer, usually represented in hexadecimal.
-- A Unicode string is a series of code points.
-- Encoding is the rule set for converting code points to bytes.
+<br>
 
+-   Unicode is a standard that maps characters to code points.
+-   A code point is an integer, usually represented in hexadecimal.
+-   A Unicode string is a series of code points.
+-   Encoding is the rule set for converting code points to bytes.
 
 ## ASCII and Unicode
 
-- Unicode code points < 128 directly map to ASCII bytes.
-- Code points >= 128 cannot be encoded in ASCII.
-- Python will raise a `UnicodeEncodeError` for these cases.
-- Unicode code charts: [Unicode Charts](http://www.unicode.org/charts/)
+<br>
+
+-   Unicode code points $<$ 128 directly map to ASCII bytes.
+-   Code points $>=$ 128 cannot be encoded in ASCII.
+-   Python will raise a `UnicodeEncodeError` for these cases.
+-   Unicode code charts: [Unicode Charts](http://www.unicode.org/charts/)
 
 
 ## UTF-8 Encoding
 
-- UTF-8 stands for Unicode Transformation Format 8-bit.
-- It is a variable-width encoding representing every Unicode character.
-- Python uses UTF-8 by default for source code.
+<br>
 
+-   UTF-8 stands for Unicode Transformation Format 8-bit.
+-   It is a variable-width encoding representing every Unicode character.
+-   Python uses UTF-8 by default for source code.
 
 ## Specifying Unicode in Python
 
-- `\xnn` for a two-digit hex code point.
-- `\unnnn` for a four-digit hex code point.
-- `\Unnnnnnnn` for an eight-digit hex code point.
-- Use full digit count, padding with leading zeroes as necessary.
+-   Python supports writing source code in UTF-8 by default:
+
+    - `\xnn` for a two-digit hex code point.
+    - `\unnnn` for a four-digit hex code point.
+    - `\Unnnnnnnn` for an eight-digit hex code point.
+    - Use full digit count, padding with leading zeroes as necessary.
 
 ## Practice Exercise
 
-- Try writing your name in Unicode (UTF-8).
+-   Try writing your name in Unicode (UTF-8).
 
-To write "DAVI" in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character. In UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for 'D', 'A', 'V', and 'I' are as follows:
+-   To write "DAVI" in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character. 
+-   In UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for 'D', 'A', 'V', and 'I' are as follows:
 
-"D": "\u0044"
-"A": "\u0041"
-"V": "\u0056"
-"I": "\u0049"
+    -   "D": "\\u0044"
+    -   "A": "\\u0041"
+    -   "V": "\\u0056"
+    -   "I": "\\u0049"
 
-"DAVI" in Unicode (UTF-8) using these escape sequences would be represented as "\u0044\u0041\u0056\u0049".
+-   "DAVI" in Unicode (UTF-8) using these escape sequences would be represented as "\\u0044\\u0041\\u0056\\u0049".
 
 # "High vs Low-Level Languages and the Genesis of Programming"
 
+<!---
 ## The Genesis of Programming
-
-- The earliest digital computers were Konrad Zuse's Computers.
-- In 1943, Zuse described computing as the deviation from a prescription to result specifications.
+-   The earliest digital computers were Konrad Zuse's Computers.
+-   In 1943, Zuse described computing as the deviation from a prescription to result specifications.
 - These computers were programmable and worked on binary instructions.
+--->
 
 ## Zuse's Computers
 
-XXXXX add image konrad_zuse_z4 XXXX
+<br>
 
-- Zuse's computers, including Z1, Z2, Z3, and Z4, were designed to read binary instructions from punch tape.
-- The logic of these machines was based on binary switching mechanisms (0-1 principle).
-- Example: Z4 had 512 bytes of memory.
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r  echo=FALSE, out.width = "60%", fig.align="center"}
+knitr::include_graphics("figs/konrad_zuse_z4.png") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+-   Zuse's computers, including Z1, Z2, Z3, and Z4, were designed to read binary instructions from punch tape.
+-   The logic of these machines was based on binary switching mechanisms (0-1 principle).
+-   Example: Z4 had 512 bytes of memory.
+
+
+:::
+
+::::
+
 
 ## What is Assembly Language?
 
-- Assembly language allows writing machine code in human-readable text.
-- Early assembly programming involved writing code on paper, which was then transcribed to punch cards.
+<br>
+
+-   Assembly language allows writing machine code in human-readable text.
+-   Early assembly programming involved writing code on paper, which was then transcribed to punch cards.
 
 ## First Assemblers
 
-XXXX add image assemblers XXXX
+<br>
 
-- The first assemblers were human!
-- Programmers wrote assembly code, which secretaries transcribed to binary for machine processing.
+:::: {.columns}
 
-## Programming Modern Computers
+::: {.column width="60%"}
 
-- Low-level languages, like Intel X86, hide hardware-specific details from the programmer.
-- High-level languages are designed for efficient programming across various hardware and operating systems.
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/assemblers.png") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+-   The first assemblers were human!
+-   Programmers wrote assembly code, which secretaries transcribed to binary for machine processing.
+
+
+:::
+
+::::
+
 
 ## High and Low-Level Languages
 
-XXXX add image high_low_languages XXXX
+<br>
 
-- **High-Level Languages:** Abstract from hardware details, portable across different systems.
-- **Low-Level Languages:** Closer to machine code, require consideration of hardware specifics.
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/high_low_languages.png") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+-   **High-Level Languages:** Abstract from hardware details, portable across different systems.
+
+-   **Low-Level Languages:** Closer to machine code, require consideration of hardware specifics.
+
+
+:::
+
+::::
+
 
 ## Compiled vs Interpreted Languages
 
-- **Compiled Languages:** Convert code to binary instructions before execution (e.g., C++, Fortran, Go).
-- **Interpreted Languages:** Run inside a program that interprets and executes commands immediately.
+<br>
+
+-   **Compiled Languages:** Convert code to binary instructions before execution (e.g., `C++`, `Fortran`, `Go`).
+
+-   **Interpreted Languages:** Run inside a program that interprets and executes commands immediately.
 
 ## Performance and Flexibility
 
-- Compiled languages are generally faster but require a compilation step.
-- Interpreted languages are more flexible but can be slower, though this can be mitigated (e.g., Python with C++ libraries).
+<br>
+
+-   Compiled languages are generally faster but require a compilation step.
+-   Interpreted languages are more flexible but can be slower, though this can be mitigated (e.g., `Python` with `C++` libraries).
 
 ## Summary
 
-- The evolution of programming languages from binary to high-level languages revolutionized computing.
-- Understanding these concepts helps grasp the efficiency and portability of modern programming.
+<br>
+
+-   The evolution of programming languages from binary to high-level languages revolutionized computing.
+
+-   Understanding these concepts helps grasp the efficiency and portability of modern programming.
 
 
 # Thank you!

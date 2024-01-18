@@ -351,7 +351,7 @@ Professor: Davi Moreira
 <li class="fragment">Binary and Hexadecimal numbers</li>
 <li class="fragment">Characters, ASCII, Unicode</li>
 <li class="fragment">High vrs low level programming languages</li>
-<li class="fragment">Compiled vrs interpreted languages</li>
+<li class="fragment">Compiled <em>vs</em> interpreted languages</li>
 </ul></li>
 <li class="fragment"><p>Command Line</p>
 <ul>
@@ -862,6 +862,7 @@ We can use them for more than representing numbers...they can represent characte
 </section>
 <section id="hexadecimal-and-unicode" class="slide level2 center">
 <h2>Hexadecimal and Unicode</h2>
+<p><br></p>
 <ul>
 <li class="fragment">ASCII uses 7 bits, limiting its range.</li>
 <li class="fragment">To represent a broader range of characters, more bits are needed.</li>
@@ -870,6 +871,7 @@ We can use them for more than representing numbers...they can represent characte
 </section>
 <section id="what-is-hexadecimal" class="slide level2 center">
 <h2>What is Hexadecimal?</h2>
+<p><br></p>
 <ul>
 <li class="fragment">Hexadecimal is a base-16 number system.</li>
 <li class="fragment">Hex digits include: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.</li>
@@ -878,24 +880,32 @@ We can use them for more than representing numbers...they can represent characte
 </section>
 <section id="hex-to-binary-mapping" class="slide level2 center">
 <h2>Hex to Binary Mapping</h2>
+<p><br></p>
 <ul>
-<li class="fragment">Each hex digit corresponds to 4 binary bits:</li>
-</ul>
-<p>0000 = 0 0001 = 1 0010 = 2 … 1110 = E 1111 = F</p>
+<li class="fragment"><p>Each hex digit corresponds to 4 binary bits:</p>
 <ul>
-<li class="fragment">One hex digit represents 4 bits, making it a shorthand for binary.</li>
+<li class="fragment">0000 = 0</li>
+<li class="fragment">0001 = 1</li>
+<li class="fragment">0010 = 2</li>
+<li class="fragment">…</li>
+<li class="fragment">1110 = E</li>
+<li class="fragment">1111 = F</li>
+</ul></li>
+<li class="fragment"><p>One hex digit represents 4 bits, making it a shorthand for binary.</p></li>
+<li class="fragment"><p>This is due to the fact that four binary digits can represent sixteen possible values (<span class="math inline">\(2^4\)</span>), which aligns with the sixteen possible values of a single hex digit (0 to F).</p></li>
 </ul>
 </section>
 <section id="binary-to-hex-conversion" class="slide level2 center">
 <h2>Binary to Hex Conversion</h2>
+<p><br></p>
 <ul>
 <li class="fragment">Convert binary to hex by grouping into blocks of four bits.</li>
 <li class="fragment">Example: Binary <code>1001 1110 0000 1010</code> converts to Hex <code>9E0A</code>.</li>
 </ul>
-<p>Each group of four binary digits corresponds to a single hexadecimal digit. This is due to the fact that four binary digits can represent sixteen possible values (2^4), which aligns with the sixteen possible values of a single hex digit (0 to F). The above explanation outlines this process step by step, resulting in the hexadecimal equivalent of the binary sequence.</p>
 </section>
 <section id="hexadecimal-in-file-formats" class="slide level2 center">
 <h2>Hexadecimal in File Formats</h2>
+<p><br></p>
 <ul>
 <li class="fragment">Files in hex format are often referred to as “binary” files.</li>
 <li class="fragment">This terminology is due to the direct conversion between hex and binary.</li>
@@ -905,29 +915,34 @@ We can use them for more than representing numbers...they can represent characte
 <section id="hexadecimal-in-html" class="slide level2 center">
 <h2>Hexadecimal in HTML</h2>
 <ul>
-<li class="fragment">HTML uses hexadecimal to represent colors.</li>
-<li class="fragment">Six-digit hex numbers specify colors:</li>
-</ul>
-<p>FFFFFF = White 000000 = Black</p>
+<li class="fragment"><p>HTML uses hexadecimal to represent colors.</p></li>
+<li class="fragment"><p>Six-digit hex numbers specify colors:</p>
 <ul>
-<li class="fragment">Each pair of digits represents a color component (RGB).</li>
-<li class="fragment">In digital systems, each color channel typically has a range from 0 to 255 (in 8-bit systems), which gives a total of 256 intensity levels for each primary color. When you combine the three channels, you get a possible color palette of 256^3 or about 16.7 million colors. For example, an RGB value of 255, 0, 0 corresponds to bright red because the red channel is at full intensity, and the green and blue channels are off.</li>
+<li class="fragment">FFFFFF = White</li>
+<li class="fragment">000000 = Black</li>
+</ul></li>
+<li class="fragment"><p>Each pair of digits represents a color component (RGB).</p></li>
+<li class="fragment"><p>Each color channel typically has a range from 0 to 255 (in 8-bit systems), which gives a total of 256 intensity levels for each primary color.</p></li>
+<li class="fragment"><p>When you combine the three channels, you get a possible color palette of <span class="math inline">\(256^3\)</span> or about 16.7 million colors.</p></li>
+<li class="fragment"><p>For example, an RGB value of 255, 0, 0 corresponds to bright red because the red channel is at full intensity, and the green and blue channels are off.</p></li>
 </ul>
 </section></section>
 <section>
 <section id="understanding-unicode-and-utf-8" class="title-slide slide level1 center">
-<h1>“Understanding Unicode and UTF-8”</h1>
+<h1>Understanding Unicode and UTF-8</h1>
 
 </section>
 <section id="encountering-unicode" class="slide level2 center">
 <h2>Encountering Unicode</h2>
+<p><br></p>
 <ul>
-<li class="fragment">Encountering a <code>UnicodeDecodeError</code> in Python indicates a character encoding issue.</li>
-<li class="fragment">This often arises when dealing with characters not represented in the ASCII set.</li>
+<li class="fragment"><p>Encountering a <code>UnicodeDecodeError</code> in Python indicates a character encoding issue.</p></li>
+<li class="fragment"><p>This often arises when dealing with characters not represented in the ASCII set.</p></li>
 </ul>
 </section>
 <section id="what-is-unicode" class="slide level2 center">
 <h2>What is Unicode?</h2>
+<p><br></p>
 <ul>
 <li class="fragment">Unicode is a standard that maps characters to code points.</li>
 <li class="fragment">A code point is an integer, usually represented in hexadecimal.</li>
@@ -937,15 +952,17 @@ We can use them for more than representing numbers...they can represent characte
 </section>
 <section id="ascii-and-unicode" class="slide level2 center">
 <h2>ASCII and Unicode</h2>
+<p><br></p>
 <ul>
-<li class="fragment">Unicode code points &lt; 128 directly map to ASCII bytes.</li>
-<li class="fragment">Code points &gt;= 128 cannot be encoded in ASCII.</li>
+<li class="fragment">Unicode code points <span class="math inline">\(&lt;\)</span> 128 directly map to ASCII bytes.</li>
+<li class="fragment">Code points <span class="math inline">\(&gt;=\)</span> 128 cannot be encoded in ASCII.</li>
 <li class="fragment">Python will raise a <code>UnicodeEncodeError</code> for these cases.</li>
 <li class="fragment">Unicode code charts: <a href="http://www.unicode.org/charts/">Unicode Charts</a></li>
 </ul>
 </section>
 <section id="utf-8-encoding" class="slide level2 center">
 <h2>UTF-8 Encoding</h2>
+<p><br></p>
 <ul>
 <li class="fragment">UTF-8 stands for Unicode Transformation Format 8-bit.</li>
 <li class="fragment">It is a variable-width encoding representing every Unicode character.</li>
@@ -955,45 +972,67 @@ We can use them for more than representing numbers...they can represent characte
 <section id="specifying-unicode-in-python" class="slide level2 center">
 <h2>Specifying Unicode in Python</h2>
 <ul>
+<li class="fragment"><p>Python supports writing source code in UTF-8 by default:</p>
+<ul>
 <li class="fragment"><code>\xnn</code> for a two-digit hex code point.</li>
 <li class="fragment"><code>\unnnn</code> for a four-digit hex code point.</li>
 <li class="fragment"><code>\Unnnnnnnn</code> for an eight-digit hex code point.</li>
 <li class="fragment">Use full digit count, padding with leading zeroes as necessary.</li>
+</ul></li>
 </ul>
 </section>
 <section id="practice-exercise-2" class="slide level2 center">
 <h2>Practice Exercise</h2>
 <ul>
-<li class="fragment">Try writing your name in Unicode (UTF-8).</li>
+<li class="fragment"><p>Try writing your name in Unicode (UTF-8).</p></li>
+<li class="fragment"><p>To write “DAVI” in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character.</p></li>
+<li class="fragment"><p>In UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for ‘D’, ‘A’, ‘V’, and ‘I’ are as follows:</p>
+<ul>
+<li class="fragment">“D”: “\u0044”</li>
+<li class="fragment">“A”: “\u0041”</li>
+<li class="fragment">“V”: “\u0056”</li>
+<li class="fragment">“I”: “\u0049”</li>
+</ul></li>
+<li class="fragment"><p>“DAVI” in Unicode (UTF-8) using these escape sequences would be represented as “\u0044\u0041\u0056\u0049”.</p></li>
 </ul>
-<p>To write “DAVI” in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character. In UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for ‘D’, ‘A’, ‘V’, and ‘I’ are as follows:</p>
-<p>“D”: “044” “A”: “041” “V”: “056” “I”: “049”</p>
-<p>“DAVI” in Unicode (UTF-8) using these escape sequences would be represented as “044041056049”.</p>
 </section></section>
 <section>
 <section id="high-vs-low-level-languages-and-the-genesis-of-programming" class="title-slide slide level1 center">
 <h1>“High vs Low-Level Languages and the Genesis of Programming”</h1>
-
-</section>
-<section id="the-genesis-of-programming" class="slide level2 center">
-<h2>The Genesis of Programming</h2>
-<ul>
-<li class="fragment">The earliest digital computers were Konrad Zuse’s Computers.</li>
-<li class="fragment">In 1943, Zuse described computing as the deviation from a prescription to result specifications.</li>
-<li class="fragment">These computers were programmable and worked on binary instructions.</li>
-</ul>
+<!---
+## The Genesis of Programming
+-   The earliest digital computers were Konrad Zuse's Computers.
+-   In 1943, Zuse described computing as the deviation from a prescription to result specifications.
+- These computers were programmable and worked on binary instructions.
+--->
 </section>
 <section id="zuses-computers" class="slide level2 center">
 <h2>Zuse’s Computers</h2>
-<p>XXXXX add image konrad_zuse_z4 XXXX</p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/konrad_zuse_z4.png" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br></p>
 <ul>
 <li class="fragment">Zuse’s computers, including Z1, Z2, Z3, and Z4, were designed to read binary instructions from punch tape.</li>
 <li class="fragment">The logic of these machines was based on binary switching mechanisms (0-1 principle).</li>
 <li class="fragment">Example: Z4 had 512 bytes of memory.</li>
 </ul>
+</div>
+</div>
 </section>
 <section id="what-is-assembly-language" class="slide level2 center">
 <h2>What is Assembly Language?</h2>
+<p><br></p>
 <ul>
 <li class="fragment">Assembly language allows writing machine code in human-readable text.</li>
 <li class="fragment">Early assembly programming involved writing code on paper, which was then transcribed to punch cards.</li>
@@ -1001,46 +1040,72 @@ We can use them for more than representing numbers...they can represent characte
 </section>
 <section id="first-assemblers" class="slide level2 center">
 <h2>First Assemblers</h2>
-<p>XXXX add image assemblers XXXX</p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/assemblers.png" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br></p>
 <ul>
 <li class="fragment">The first assemblers were human!</li>
 <li class="fragment">Programmers wrote assembly code, which secretaries transcribed to binary for machine processing.</li>
 </ul>
-</section>
-<section id="programming-modern-computers" class="slide level2 center">
-<h2>Programming Modern Computers</h2>
-<ul>
-<li class="fragment">Low-level languages, like Intel X86, hide hardware-specific details from the programmer.</li>
-<li class="fragment">High-level languages are designed for efficient programming across various hardware and operating systems.</li>
-</ul>
+</div>
+</div>
 </section>
 <section id="high-and-low-level-languages" class="slide level2 center">
 <h2>High and Low-Level Languages</h2>
-<p>XXXX add image high_low_languages XXXX</p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/high_low_languages.png" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br></p>
 <ul>
-<li class="fragment"><strong>High-Level Languages:</strong> Abstract from hardware details, portable across different systems.</li>
-<li class="fragment"><strong>Low-Level Languages:</strong> Closer to machine code, require consideration of hardware specifics.</li>
+<li class="fragment"><p><strong>High-Level Languages:</strong> Abstract from hardware details, portable across different systems.</p></li>
+<li class="fragment"><p><strong>Low-Level Languages:</strong> Closer to machine code, require consideration of hardware specifics.</p></li>
 </ul>
+</div>
+</div>
 </section>
 <section id="compiled-vs-interpreted-languages" class="slide level2 center">
 <h2>Compiled vs Interpreted Languages</h2>
+<p><br></p>
 <ul>
-<li class="fragment"><strong>Compiled Languages:</strong> Convert code to binary instructions before execution (e.g., C++, Fortran, Go).</li>
-<li class="fragment"><strong>Interpreted Languages:</strong> Run inside a program that interprets and executes commands immediately.</li>
+<li class="fragment"><p><strong>Compiled Languages:</strong> Convert code to binary instructions before execution (e.g., <code>C++</code>, <code>Fortran</code>, <code>Go</code>).</p></li>
+<li class="fragment"><p><strong>Interpreted Languages:</strong> Run inside a program that interprets and executes commands immediately.</p></li>
 </ul>
 </section>
 <section id="performance-and-flexibility" class="slide level2 center">
 <h2>Performance and Flexibility</h2>
+<p><br></p>
 <ul>
 <li class="fragment">Compiled languages are generally faster but require a compilation step.</li>
-<li class="fragment">Interpreted languages are more flexible but can be slower, though this can be mitigated (e.g., Python with C++ libraries).</li>
+<li class="fragment">Interpreted languages are more flexible but can be slower, though this can be mitigated (e.g., <code>Python</code> with <code>C++</code> libraries).</li>
 </ul>
 </section>
 <section id="summary" class="slide level2 center">
 <h2>Summary</h2>
+<p><br></p>
 <ul>
-<li class="fragment">The evolution of programming languages from binary to high-level languages revolutionized computing.</li>
-<li class="fragment">Understanding these concepts helps grasp the efficiency and portability of modern programming.</li>
+<li class="fragment"><p>The evolution of programming languages from binary to high-level languages revolutionized computing.</p></li>
+<li class="fragment"><p>Understanding these concepts helps grasp the efficiency and portability of modern programming.</p></li>
 </ul>
 </section></section>
 <section id="thank-you" class="title-slide slide level1 center">
