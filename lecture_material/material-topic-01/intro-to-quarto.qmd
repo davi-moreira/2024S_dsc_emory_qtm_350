@@ -11,8 +11,7 @@ editor_options:
 
 # About
 
-The document offers a short guide on utilizing Quarto effectively for data science projects with `R` and `Python`.<a name="cite_ref-1"></a>[<sup>[1]</sup>](#cite_note-1)
-
+The document offers a short guide on utilizing Quarto effectively for data science projects with `R` and `Python`.<a name="cite_ref-1"></a><sup>[\[1\]</sup>](#cite_note-1)
 
 # Learning goals
 
@@ -88,7 +87,7 @@ If you are having issues setting up these requirements, you should:
 
 -   Work with a conda environment, as described [here](https://quarto.org/docs/projects/virtual-environments.html#rstudio). This will make your life much easier!
 
-Below you can see a minimal example of a `.qmd` file running `Python` AND `R`: 
+Below you can see a minimal example of a `.qmd` file running `Python` AND `R`:
 
 ```{r echo = FALSE, comment = ""}
 cat(readr::read_file("quarto_python_example.qmd"))
@@ -141,7 +140,7 @@ To run the code of a chunk, you can:
 Code chunks are super flexible, and offer many different options for you to customize your code chunks. You can see the full list at <https://yihui.org/knitr/options>. Below you can see some of them:
 
 | Options   | Description                                                                                                                                                                                  |
-|----------------------------|--------------------------------------------|
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `eval`    | Evaluate the code chunk (if false, just echos the code into the output).                                                                                                                     |
 | `echo`    | Include the source code in output                                                                                                                                                            |
 | `output`  | Include the results of executing the code in the output (true, false, or asis to indicate that the output is raw markdown and should not have any of Quarto's standard enclosing markdown).  |
@@ -183,4 +182,4 @@ Quarto allows you to work with a source editor or the visual editor. The source 
 
 If using the visual editor, you will not need to learn much markdown syntax for authoring your document, as you can use the menus and shortcuts to add a header, bold text, insert a table, etc. If using the source editor, you can achieve these with markdown expressions like ##, **bold**, etc.
 
-<a name="cite_note-1"></a>1. This document was originally developed by [Professor Tiago Ventura](https://www.venturatiago.com/) and adapted to our courses purposes. 
+<a name="cite_note-1"></a>1. This document was originally developed by [Professor Tiago Ventura](https://www.venturatiago.com/) and adapted to our courses purposes.
