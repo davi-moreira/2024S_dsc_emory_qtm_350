@@ -21,20 +21,21 @@ format:
     theme: [simple,custom.scss]
 ---
 
-# Welcome to QTM 350 Data Science Computing {background-color="#0E315F"}
-
 ## Topic Overview
 
-<br>
+:::: {.columns}
 
+::: {.column width="50%"}
 -   Computational Literacy
+
     -   Binary and Hexadecimal numbers
     -   Characters, ASCII, Unicode
     -   High vrs low level programming languages
     -   Compiled vrs interpreted languages
 
 -   Command Line
-    -Shell basics
+
+    - Shell basics
     - Help!
     - Navigating your system
     - Managing your files
@@ -42,11 +43,20 @@ format:
     - Redirects, pipes, and loops
     - Scripting
 
+:::
+
+::: {.column width="50%"}
 -   Version Control
+
     - Data Science Workflow 
     - Reproducibility
     - Git and GitHub
-    
+
+:::
+
+::::
+
+<br>
 
 # Computational Literacy
 
@@ -56,9 +66,17 @@ format:
 
 ## What is a Computer?
 
-The road leading to today's computers goes back millennia. Historically, a computer was a person who makes calculations, especially with a calculating machine.
+<br>
+
+-   Historically, a computer was a person who makes calculations, especially with a calculating machine. 
+
+<br>
+
+-   To do calculations we use numbers. How to represent them?
 
 ## Representing numbers
+
+<br>
 
 Simplest ways to physically represent numbers for arithmetic:
 
@@ -69,9 +87,31 @@ Simplest ways to physically represent numbers for arithmetic:
 
 # Early mechanical calculators
 
-XXXX add image XXXXX
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r  echo=FALSE, out.width = "60%", fig.align="center"}
+knitr::include_graphics("figs/marble_rockers.jpeg") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
 
 - [Binary arithmetic using rockers](https://www.exploringbinary.com/the-binary-marble-adding-machine/)
+
+<br>
+
+-   [Check this video! 3 min](https://www.youtube.com/watch?v=GcDshWmhF4A&t=1s)
+
+:::
+
+::::
 
 <!---
 # Computing Today and Nomograms
@@ -87,65 +127,158 @@ Neural networks and parallels with generalized slide rules:
 
 # Four-species mechanical calculators
 
-XXX add image mechanical_calculator XXXX
+<br>
 
-- The first four-species calculating machine, which means that it is able to perform all four basic operations of arithmetic.
-- Built by Gottfried Wilhelm Leibniz in 1694
-- If you took a statistics course at a university, even as late as the 1970's, you may have found yourself using the sort of mechanical calculator pictured below.
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/mechanical_calculator.png") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+-   The first four-species calculating machine, which means that it is able to perform all four basic operations of arithmetic.
+
+
+- Built by Gottfried Wilhelm Leibniz in 1694.
+
+
+- If you took a statistics course before late 1970's, you may have found yourself using this sort of mechanical calculator.
+
+<br>
+
+
+:::
+
+::::
+
 
 # Silicon Microchip Computers
 
-XXX transistor XXXX
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/transistor.gif") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
 
 The 1970s marked the transition from mechanical to electronic:
 
-- Transistors act as switches for electronic signals
-- Integrated circuits on silicon microchips
-- Von Neumann architecture revolution
+-     Transistors act as switches for electronic signals
+-     Integrated circuits on silicon microchips
+-     Von Neumann architecture revolution
 
----
+<br>
+
+
+:::
+
+::::
 
 # Von Neumann Architecture
 
-XXXX image von_neumann_architecture XXX 
+<br>
 
-Key points:
+:::: {.columns}
 
--   The principal feature of a Von Neumann computer is that the program and any data are both stored together, usually in a slow-to-access storage medium such as a hard disk, and transferred as required to a faster, and more volatile storage medium (RAM) for execution or processing by a central processing unit (CPU).
--   Since this how practically all present day computers work, the term "von Neumann architecture" is rarely used now, but it was in common parlance in the computing profession through to the early 1970s.
--   When von Neumann proposed this architecture in 1945, it was a radical idea. Prior to then, programs were viewed as essentially part of the machine, and hence different from the data the machine operated on.
+::: {.column width="60%"}
 
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/von_neumann_architecture2.png") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+::: {.r-fit-text}
+-   Main feature: the program and any data are both stored together, usually in a slow-to-access storage medium such as a hard disk, and transferred as required to a faster, and more volatile storage medium [(RAM)](https://en.wikipedia.org/wiki/Random-access_memory) for execution or processing by a central processing unit (CPU).
+
+-   Since this, it is how practically all present day computers work, the term "Von Neumann architecture" is rarely used now, but it was in common parlance in the computing profession through to the early 1970s.
+
+-   When Von Neumann proposed this architecture in 1945, it was a radical idea. Prior to then, programs were viewed as essentially part of the machine, and hence different from the data the machine operated on.
+
+
+:::
+
+
+:::
+
+::::
 
 # Binary Numbers
 
-Digital computers understand the language of 0's and 1's called binary.
-
 ## Introduction to Binary
 
-- Watch this [three minute video](https://youtu.be/GcDshWmhF4A) to learn how a simple mechanical system of wooden rockers can be used to do binary arithmetic.
+<br>
 
-- In modern digital computers, transistors act as switches, with 1 for high voltage level and 0 for low voltage level.
+:::: {.columns}
 
-- Computers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip.
+::: {.column width="60%"}
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/transistor_chip.jpeg") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+::: {.r-fit-text}
+-   In modern digital computers, transistors act as switches, with 1 for high voltage level and 0 for low voltage level.
+
+<br>
+
+-   Computers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip.
+
+:::
+
+:::
+
+::::
+
 
 ## What is Binary?
 
-- A binary number is written using only the digits 0 and 1.
+-   A binary number is written using only the digits 0 and 1.
 
-- A single binary digit is a bit, e.g., 101 has three bits.
+-   A single binary digit is a bit, e.g., 101 has three bits.
 
-- An 8-bit group is called a byte.
+-   An 8-bit group is called a byte.
 
-- Binary numbers grow as follows:
-  - 0 represents zero
-  - 1 represents one
-  - 10 represents two
-  - 100 represents four
-  - 1000 represents eight, and so on...
+-   Binary numbers grow as follows:
+  
+    -   0 represents zero
+    -   1 represents one
+    -   10 represents two
+    -   100 represents four
+    -   1000 represents eight, and so on...
 
 ## Binary for Decimal 3
 
+<br>
+
 - **Question**: What binary number represents 3?
+
   - A) 101
   - B) 11
   - C) 111
@@ -154,6 +287,8 @@ Digital computers understand the language of 0's and 1's called binary.
 
 ## Binary Number for Decimal 3
 
+<br>
+
 **Question**: What binary number represents 3?
 
 - A) 101
@@ -161,43 +296,67 @@ Digital computers understand the language of 0's and 1's called binary.
 - C) 111
 - D) 010
 
-**Answer**: B) 11
-
-- In binary, the number 3 is represented as 11, which equates to $(1 * 2^1) + (1 * 2^0)$.
+-   **Answer**: b. 11
+    
+    - In binary, the number 3 is represented as 11, which equates to $(1 \times 2^1) + (1 \times 2^0)$.
 
 ## Machine Code
 
-XXXXX add matrix image XXXXX
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/matrix.avif") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
 
 -   Machine code or binary code is binary instructions that a CPU reads and executes, such as: 10001000 01010111 11000101 11110001 10100001 00010110.
 
--  Early programming was done directly in machine code, a challenging task for humans.
+-  Early programming was done directly in machine code!
+
+:::
+
+:::
+
+::::
+
 
 ## Distinct Numbers in a Byte
 
-- **Question:** How many distinct numbers are represented by a byte?
-
-1. 2^8-1
-2. 2^8
-3. 2
-4. 2^7
-
----
-
-## Distinct Numbers in a Byte
+<br>
 
 **Question:** How many distinct numbers are represented by a byte?
 
-1. 2^8-1
-2. 2^8
-3. 2
-4. 2^7
+- A) $2^{8}-1$
+- B) $2^8$
+- C) $2$
+- D) $2^7$
 
-**Answer**: 2) 2^8
 
-- A byte consists of 8 bits.
-- Each bit has two possible values (0 or 1).
-- Therefore, a byte can represent 2^8 or 256 distinct numbers, ranging from 0 to 255.
+## Distinct Numbers in a Byte
+
+<br>
+
+**Question:** How many distinct numbers are represented by a byte?
+
+- A) $2^{8}-1$
+- B) $2^8$
+- C) $2$
+- D) $2^7$
+
+-   **Answer**: B) $2^8$
+    
+    - A byte consists of 8 bits.
+    - Each bit has two possible values (0 or 1).
+    - Therefore, a byte can represent $2^8$ or 256 distinct numbers, ranging from 0 to 255.
 
 <!---
  ## Chess Board Legend - Problem 1
@@ -258,46 +417,80 @@ We can use them for more than representing numbers...they can represent characte
 
 --->
 
-# Converting Instructions into Binary & Understanding ASCII"
+# Converting Instructions into Binary & Understanding ASCII
 
 ## Characters and Glyphs
 
-- A **character** is the smallest component of text, like A, B, or /.
-- A **glyph** is the graphical representation of a character.
-- In programming, the display of glyphs is typically handled by GUI (Graphical User Interface) toolkits or font renderers.
+<br>
 
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r  echo=FALSE, out.width = "60%", fig.align="center"}
+knitr::include_graphics("figs/glyph.png") 
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+-   A **character** is the smallest component of text, like A, B, or /.
+-   A [**glyph**](https://en.wikipedia.org/wiki/Glyph) is the graphical representation of a character.
+-   In programming, the display of glyphs is typically handled by GUI (Graphical User Interface) toolkits or font renderers.
+
+:::
+
+::::
+
+# Converting instructions into Binary
 
 ## ASCII - The Basics
 
-- **ASCII** stands for American Standard Code for Information Interchange.
-- Standardized in 1968, it defines numeric codes for characters, ranging from 0 to 127.
-- Each character is assigned a unique numeric code value.
+<br>
+
+-   **ASCII** stands for American Standard Code for Information Interchange.
+-   Standardized in 1968, it defines numeric codes for characters, ranging from 0 to 127.
+-   Each character is assigned a unique numeric code value.
   
 ## ASCII Codes
 
-- Lowercase 'a' has the code value 97.
-- Uppercase 'A' is represented by the code value 65.
-- The code value 0 is the 'NUL' character, also known as the null byte.
+<br>
+
+-   ASCII defined numeric codes for various characters, with the numeric values running from 0 to 127. For example, the lowercase letter ‘a’ is assigned 97 as its code value.
+-   Uppercase 'A' is represented by the code value 65.
+-   The code value 0 is the 'NUL' character, also known as the null byte.
 
 ## ASCII Character Range
 
-- Control characters: Codes 0 through 31 and 127 are unprintable.
-- Spacing character: Code 32 is a nonprinting space.
-- Graphic characters: Codes 33 through 126 are printable.
+<br>
+
+-   Control characters: Codes 0 through 31 and 127 are unprintable.
+-   Spacing character: Code 32 is a nonprinting space.
+-   Graphic characters: Codes 33 through 126 are printable.
 
 ## ASCII Limitations
 
-- ASCII only includes unaccented characters.
-- Languages requiring accented characters cannot be represented.
-- Even English needs characters like ‘é’ for words such as ‘café’.
+<br>
+
+-   ASCII only includes unaccented characters.
+-   Languages requiring accented characters cannot be represented.
+-   Even English needs characters like ‘é’ for words such as ‘café’.
 
 ## Practice Exercise
 
+<br>
+
 - Write the characters of your name using ASCII codes.
 
-## Practice Exercise - ASCII Representation
+## Practice Exercise 
 
-- 'DAVI' using ASCII codes.
+
+<br>
+
+'DAVI' using ASCII codes.
 
 | Character | ASCII Code |
 |-----------|------------|
@@ -306,7 +499,9 @@ We can use them for more than representing numbers...they can represent characte
 | V         | 86         |
 | I         | 73         |
 
-*Note: If ASCII does not support characters in your name, Unicode will provide a solution.*
+*Note: If ASCII does not support characters in your name, [Unicode](https://docs.python.org/3.0/howto/unicode.html) will provide a solution.*
+
+XXXX Parei aqui! XXXX
 
 ## Hexadecimal and Unicode
 
