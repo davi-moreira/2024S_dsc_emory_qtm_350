@@ -17,7 +17,7 @@ format:
       buttons: false
     preview-links: auto
     #logo: images/quarto.png
-    footer: "Data science Computing"
+    footer: "Data Science Computing"
     theme: [simple,custom.scss]
 ---
 
