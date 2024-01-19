@@ -23,38 +23,34 @@ format:
 
 ## Topic Overview
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
--   Computational Literacy
+-   **Computational Literacy**
 
-    -   Binary and Hexadecimal numbers
-    -   Characters, ASCII, Unicode
-    -   High vrs low level programming languages
-    -   Compiled *vs* interpreted languages
+    -   **Binary and Hexadecimal numbers**
+    -   **Characters, ASCII, Unicode**
+    -   **High vrs low level programming languages**
+    -   **Compiled *vs* interpreted languages**
 
 -   Command Line
 
-    - Shell basics
-    - Help!
-    - Navigating your system
-    - Managing your files
-    - Working with text files
-    - Redirects, pipes, and loops
-    - Scripting
-
+    -   Shell basics
+    -   Help!
+    -   Navigating your system
+    -   Managing your files
+    -   Working with text files
+    -   Redirects, pipes, and loops
+    -   Scripting
 :::
 
 ::: {.column width="50%"}
 -   Version Control
 
-    - Data Science Workflow 
-    - Reproducibility
-    - Git and GitHub
-
+    -   Data Science Workflow
+    -   Reproducibility
+    -   Git and GitHub
 :::
-
-::::
+:::
 
 <br>
 
@@ -68,7 +64,7 @@ format:
 
 <br>
 
--   Historically, a computer was a person who makes calculations, especially with a calculating machine. 
+-   Historically, a computer was a person who makes calculations, especially with a calculating machine.
 
 <br>
 
@@ -80,39 +76,34 @@ format:
 
 Simplest ways to physically represent numbers for arithmetic:
 
-- Counting fingers
-- Marked stones, or marked bones
-- Incan Rope counting, called [Quipu](https://www.ecb.torontomu.ca/~elf/abacus/inca-khipu.html)
-- The [Abacus](https://www.ecb.torontomu.ca/~elf/abacus/)
+-   Counting fingers
+-   Marked stones, or marked bones
+-   Incan Rope counting, called [Quipu](https://www.ecb.torontomu.ca/~elf/abacus/inca-khipu.html)
+-   The [Abacus](https://www.ecb.torontomu.ca/~elf/abacus/)
 
 # Early mechanical calculators
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "60%", fig.align="center"}
 knitr::include_graphics("figs/marble_rockers.jpeg") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
-- [Binary arithmetic using rockers](https://www.exploringbinary.com/the-binary-marble-adding-machine/)
+-   [Binary arithmetic using rockers](https://www.exploringbinary.com/the-binary-marble-adding-machine/)
 
 <br>
 
 -   [Check this video! 3 min](https://www.youtube.com/watch?v=GcDshWmhF4A&t=1s)
-
+:::
 :::
 
-::::
-
+```{=html}
 <!---
 # Computing Today and Nomograms
 
@@ -124,104 +115,92 @@ Neural networks and parallels with generalized slide rules:
 - A two-phase approach: model discovery and evaluation
 
 --->
-
+```
 # Four-species mechanical calculators
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("figs/mechanical_calculator.png") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
 -   The first four-species calculating machine, which means that it is able to perform all four basic operations of arithmetic.
 
+-   Built by Gottfried Wilhelm Leibniz in 1694.
 
-- Built by Gottfried Wilhelm Leibniz in 1694.
-
-
-- If you took a statistics course before late 1970's, you may have found yourself using this sort of mechanical calculator.
+-   If you took a statistics course before late 1970's, you may have found yourself using this sort of mechanical calculator.
 
 <br>
-
-
 :::
-
-::::
-
+:::
 
 # Silicon Microchip Computers
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("figs/transistor.gif") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
 The 1970s marked the transition from mechanical to electronic:
 
--     Transistors act as switches for electronic signals
--     Integrated circuits on silicon microchips
--     Von Neumann architecture revolution
+-   
+
+    ```         
+    Transistors act as switches for electronic signals
+    ```
+
+-   
+
+    ```         
+    Integrated circuits on silicon microchips
+    ```
+
+-   
+
+    ```         
+    Von Neumann architecture revolution
+    ```
 
 <br>
-
-
 :::
-
-::::
+:::
 
 # Von Neumann Architecture
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("figs/von_neumann_architecture2.png") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
-::: {.r-fit-text}
+::: r-fit-text
 -   Main feature: the program and any data are both stored together, usually in a slow-to-access storage medium such as a hard disk, and transferred as required to a faster, and more volatile storage medium [(RAM)](https://en.wikipedia.org/wiki/Random-access_memory) for execution or processing by a central processing unit (CPU).
 
 -   Since this, it is how practically all present day computers work, the term "Von Neumann architecture" is rarely used now, but it was in common parlance in the computing profession through to the early 1970s.
 
 -   When Von Neumann proposed this architecture in 1945, it was a radical idea. Prior to then, programs were viewed as essentially part of the machine, and hence different from the data the machine operated on.
-
-
 :::
-
-
 :::
-
-::::
+:::
 
 # Binary Numbers
 
@@ -229,30 +208,23 @@ knitr::include_graphics("figs/von_neumann_architecture2.png")
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("figs/transistor_chip.jpeg") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
 -   In modern digital computers, transistors act as switches, with 1 for high voltage level and 0 for low voltage level.
 
 -   Computers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip.
-
 :::
-
 :::
 
 ::::
-
 
 ## What is Binary?
 
@@ -263,7 +235,7 @@ knitr::include_graphics("figs/transistor_chip.jpeg")
 -   An 8-bit group is called a byte.
 
 -   Binary numbers grow as follows:
-  
+
     -   0 represents zero
     -   1 represents one
     -   10 represents two
@@ -274,13 +246,23 @@ knitr::include_graphics("figs/transistor_chip.jpeg")
 
 <br>
 
-- **Question**: What binary number represents 3?
+-   **Question**: What binary number represents 3?
 
-  - A) 101
-  - B) 11
-  - C) 111
-  - D) 010
+    -   
 
+        A)  101
+
+    -   
+
+        B)  11
+
+    -   
+
+        C)  111
+
+    -   
+
+        D)  010
 
 ## Binary Number for Decimal 3
 
@@ -288,41 +270,45 @@ knitr::include_graphics("figs/transistor_chip.jpeg")
 
 **Question**: What binary number represents 3?
 
-- A) 101
-- B) 11
-- C) 111
-- D) 010
+-   
+
+    A)  101
+
+-   
+
+    B)  11
+
+-   
+
+    C)  111
+
+-   
+
+    D)  010
 
 -   **Answer**: b. 11
-    
-    - In binary, the number 3 is represented as 11, which equates to $(1 \times 2^1) + (1 \times 2^0)$.
+
+    -   In binary, the number 3 is represented as 11, which equates to $(1 \times 2^1) + (1 \times 2^0)$.
 
 ## Machine Code
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("figs/matrix.avif") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
 -   Machine code or binary code is binary instructions that a CPU reads and executes, such as: 10001000 01010111 11000101 11110001 10100001 00010110.
 
--  Early programming was done directly in machine code!
-
+-   Early programming was done directly in machine code!
 :::
-
 :::
-
 
 ## Distinct Numbers in a Byte
 
@@ -330,11 +316,21 @@ knitr::include_graphics("figs/matrix.avif")
 
 **Question:** How many distinct numbers are represented by a byte?
 
-- A) $2^{8}-1$
-- B) $2^8$
-- C) $2$
-- D) $2^7$
+-   
 
+    A)  $2^{8}-1$
+
+-   
+
+    B)  $2^8$
+
+-   
+
+    C)  $2$
+
+-   
+
+    D)  $2^7$
 
 ## Distinct Numbers in a Byte
 
@@ -342,17 +338,29 @@ knitr::include_graphics("figs/matrix.avif")
 
 **Question:** How many distinct numbers are represented by a byte?
 
-- A) $2^{8}-1$
-- B) $2^8$
-- C) $2$
-- D) $2^7$
+-   
+
+    A)  $2^{8}-1$
+
+-   
+
+    B)  $2^8$
+
+-   
+
+    C)  $2$
+
+-   
+
+    D)  $2^7$
 
 -   **Answer**: B) $2^8$
-    
-    - A byte consists of 8 bits.
-    - Each bit has two possible values (0 or 1).
-    - Therefore, a byte can represent $2^8$ or 256 distinct numbers, ranging from 0 to 255.
 
+    -   A byte consists of 8 bits.
+    -   Each bit has two possible values (0 or 1).
+    -   Therefore, a byte can represent $2^8$ or 256 distinct numbers, ranging from 0 to 255.
+
+````{=html}
 <!---
  ## Chess Board Legend - Problem 1
 
@@ -411,6 +419,7 @@ So what, what is so great about 64 switches being able to represent all the numb
 We can use them for more than representing numbers...they can represent characters like A or !
 
 --->
+````
 
 # Converting Instructions into Binary & Understanding ASCII
 
@@ -418,27 +427,21 @@ We can use them for more than representing numbers...they can represent characte
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "60%", fig.align="center"}
 knitr::include_graphics("figs/glyph.png") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
 -   A **character** is the smallest component of text, like A, B, or /.
 -   A [**glyph**](https://en.wikipedia.org/wiki/Glyph) is the graphical representation of a character.
 -   In programming, the display of glyphs is typically handled by GUI (Graphical User Interface) toolkits or font renderers.
-
 :::
-
-::::
+:::
 
 # Converting instructions into Binary
 
@@ -449,7 +452,7 @@ knitr::include_graphics("figs/glyph.png")
 -   **ASCII** stands for American Standard Code for Information Interchange.
 -   Standardized in 1968, it defines numeric codes for characters, ranging from 0 to 127.
 -   Each character is assigned a unique numeric code value.
-  
+
 ## ASCII Codes
 
 <br>
@@ -478,10 +481,9 @@ knitr::include_graphics("figs/glyph.png")
 
 <br>
 
-- Write the characters of your name using ASCII codes.
+-   Write the characters of your name using ASCII codes.
 
-## Practice Exercise 
-
+## Practice Exercise
 
 <br>
 
@@ -496,7 +498,6 @@ knitr::include_graphics("figs/glyph.png")
 
 *Note: If ASCII does not support characters in your name, [Unicode](https://docs.python.org/3.0/howto/unicode.html) will provide a solution.*
 
-
 ## Hexadecimal and Unicode
 
 <br>
@@ -504,7 +505,6 @@ knitr::include_graphics("figs/glyph.png")
 -   ASCII uses 7 bits, limiting its range.
 -   To represent a broader range of characters, more bits are needed.
 -   Hexadecimal, or hex, is used in Unicode to represent these characters efficiently.
-
 
 ## What is Hexadecimal?
 
@@ -528,6 +528,7 @@ knitr::include_graphics("figs/glyph.png")
     -   1111 = F
 
 -   One hex digit represents 4 bits, making it a shorthand for binary.
+
 -   This is due to the fact that four binary digits can represent sixteen possible values ($2^4$), which aligns with the sixteen possible values of a single hex digit (0 to F).
 
 ## Binary to Hex Conversion
@@ -548,14 +549,18 @@ knitr::include_graphics("figs/glyph.png")
 ## Hexadecimal in HTML
 
 -   HTML uses hexadecimal to represent colors.
+
 -   Six-digit hex numbers specify colors:
 
     -   FFFFFF = White
     -   000000 = Black
 
 -   Each pair of digits represents a color component (RGB).
--   Each color channel typically has a range from 0 to 255 (in 8-bit systems), which gives a total of 256 intensity levels for each primary color. 
--   When you combine the three channels, you get a possible color palette of $256^3$ or about 16.7 million colors. 
+
+-   Each color channel typically has a range from 0 to 255 (in 8-bit systems), which gives a total of 256 intensity levels for each primary color.
+
+-   When you combine the three channels, you get a possible color palette of $256^3$ or about 16.7 million colors.
+
 -   For example, an RGB value of 255, 0, 0 corresponds to bright red because the red channel is at full intensity, and the green and blue channels are off.
 
 # Understanding Unicode and UTF-8
@@ -586,7 +591,6 @@ knitr::include_graphics("figs/glyph.png")
 -   Python will raise a `UnicodeEncodeError` for these cases.
 -   Unicode code charts: [Unicode Charts](http://www.unicode.org/charts/)
 
-
 ## UTF-8 Encoding
 
 <br>
@@ -599,16 +603,17 @@ knitr::include_graphics("figs/glyph.png")
 
 -   Python supports writing source code in UTF-8 by default:
 
-    - `\xnn` for a two-digit hex code point.
-    - `\unnnn` for a four-digit hex code point.
-    - `\Unnnnnnnn` for an eight-digit hex code point.
-    - Use full digit count, padding with leading zeroes as necessary.
+    -   `\xnn` for a two-digit hex code point.
+    -   `\unnnn` for a four-digit hex code point.
+    -   `\Unnnnnnnn` for an eight-digit hex code point.
+    -   Use full digit count, padding with leading zeroes as necessary.
 
 ## Practice Exercise
 
 -   Try writing your name in Unicode (UTF-8).
 
--   To write "DAVI" in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character. 
+-   To write "DAVI" in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character.
+
 -   In UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for 'D', 'A', 'V', and 'I' are as follows:
 
     -   "D": "\\u0044"
@@ -620,40 +625,33 @@ knitr::include_graphics("figs/glyph.png")
 
 # "High vs Low-Level Languages and the Genesis of Programming"
 
+```{=html}
 <!---
 ## The Genesis of Programming
 -   The earliest digital computers were Konrad Zuse's Computers.
 -   In 1943, Zuse described computing as the deviation from a prescription to result specifications.
 - These computers were programmable and worked on binary instructions.
 --->
-
+```
 ## Zuse's Computers
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "60%", fig.align="center"}
 knitr::include_graphics("figs/konrad_zuse_z4.png") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
 -   Zuse's computers, including Z1, Z2, Z3, and Z4, were designed to read binary instructions from punch tape.
 -   The logic of these machines was based on binary switching mechanisms (0-1 principle).
 -   Example: Z4 had 512 bytes of memory.
-
-
 :::
-
-::::
-
+:::
 
 ## What is Assembly Language?
 
@@ -666,56 +664,40 @@ knitr::include_graphics("figs/konrad_zuse_z4.png")
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("figs/assemblers.png") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
 -   The first assemblers were human!
 -   Programmers wrote assembly code, which secretaries transcribed to binary for machine processing.
-
-
 :::
-
-::::
-
+:::
 
 ## High and Low-Level Languages
 
 <br>
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("figs/high_low_languages.png") 
 ```
-
 :::
 
 ::: {.column width="40%"}
-
 <br>
 
 -   **High-Level Languages:** Abstract from hardware details, portable across different systems.
 
 -   **Low-Level Languages:** Closer to machine code, require consideration of hardware specifics.
-
-
 :::
-
-::::
-
+:::
 
 ## Compiled vs Interpreted Languages
 
@@ -744,6 +726,5 @@ knitr::include_graphics("figs/high_low_languages.png")
 -   **Calculators**: The evolution from Leibniz’s four-species calculating machine to modern electronic computing.
 -   **Silicon Microchip Computers**: The 1970s revolution with transistors, integrated circuits, and the emergence of Von Neumann architecture.
 -   **Modern Programming Languages**: The spectrum from low-level assembly languages to high-level languages like `Python`; distinction between compiled and interpreted languages.
-
 
 # Thank you!

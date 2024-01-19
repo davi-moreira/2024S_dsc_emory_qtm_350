@@ -17,88 +17,121 @@ format:
       buttons: false
     preview-links: auto
     #logo: images/quarto.png
-    footer: "Data science Computing"
-    theme: [simple,custom.scss]
+    footer: "Data Science Computing"
+    theme: [simple, custom.scss]
 ---
-
-# Welcome to QTM 350 Data Science Computing {background-color="#0E315F"}
 
 ## Topic Overview
 
-<br>
-
+::: columns
+::: {.column width="50%"}
 -   Computational Literacy
+
     -   Binary and Hexadecimal numbers
     -   Characters, ASCII, Unicode
     -   High vrs low level programming languages
-    -   Compiled vrs interpreted languages
+    -   Compiled *vs* interpreted languages
 
--   Command Line
-    -Shell basics
-    - Help!
-    - Navigating your system
-    - Managing your files
-    - Working with text files
-    - Redirects, pipes, and loops
-    - Scripting
+-   **Command Line**
 
+    -   **Shell basics**
+    -   **Help!**
+    -   **Navigating your system**
+    -   **Managing your files**
+    -   **Working with text files**
+    -   **Redirects, pipes, and loops**
+    -   **Scripting**
+:::
+
+::: {.column width="50%"}
 -   Version Control
-    - Data Science Workflow 
-    - Reproducibility
-    - Git and GitHub
-    
+
+    -   Data Science Workflow
+    -   Reproducibility
+    -   Git and GitHub
+:::
+:::
+
+<br>
 
 # Command Line
 
-
 # What is the command line? What is the shell?
 
-.pull-left[
-### A computer in a nutshell
+## A computer in a nutshell
 
-- The **operating system (OS)** is system software that interfaces with (and manages access to) a computer's hardware. It also provides software resources.
-- The OS is divided into the kernel and user space.
-- The **kernel** is the core of the OS. It's responsible for interfacing with hardware (drivers), managing resources etc. Running software in the kernel is *extremely* sensitive! That's why users are kept away from it.
-- The **user space** provides an interface for users, who can run programs/applications on the machine. Hardware access of programs (e.g., memory usage) is managed by the kernel. Programs in user space are essentially in sandboxes, which sets a limit to how much damage they can do.
-]
+::: columns
+::: {.column width="50%"}
 
-.pull-right-center[
 <div align="center">
 <br>
-<img src="pics/diagram2-the-kernel-and-user-space.png" width="500"/>
+<img src="figs/kernel-and-user-space.png" width="700"/>
 </div>
-`Credit` [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)
-]
 
+:::{.r-stack}
+Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)
+:::
 
+:::
 
----
-# What is the command line? What is the shell? (cont.)
+::: {.column width="50%"}
+::: r-fit-text
 
-.pull-left[
-### A computer in a nutshell
+-   The **operating system (OS)** is system software that interfaces with (and manages access to) a computer's hardware. It also provides software resources.
+-   The OS is divided into the kernel and user space.
+-   The **kernel** is the core of the OS. It's responsible for interfacing with hardware (drivers), managing resources etc. Running software in the kernel is *extremely* sensitive! That's why users are kept away from it.
+-   The **user space** provides an interface for users, who can run programs/applications on the machine. Hardware access of programs (e.g., memory usage) is managed by the kernel. Programs in user space are essentially in sandboxes, which sets a limit to how much damage they can do.
+
+:::
+:::
+:::
+
+## A computer in a nutshell
+
+::: columns
+::: {.column width="50%"}
+
+![](figs/kernel-and-user-space.png){fig-align="center" height="400"}
+<br>
+
+![](figs/walnut.jpeg){fig-align="center" height="150"}
+
+:::{.r-stack}
+Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)/[Kkchaudhary11](https://commons.wikimedia.org/w/index.php?curid=49069244)
+:::
+
+:::
+
+::: {.column width="50%"}
+::: r-fit-text
 
 - The **shell** is just a general name for any user space program that allows access to resources in the system, via some kind of interface.
 - Shells come in many different flavours but are generally provided to aid a human operator in accessing the system. This could be interactively, by **typing at a terminal**, or via **scripts**, which are files that contain a sequence of commands.
 - Modern computers use **graphical user interfaces (GUIs)** as the standard tool for human-computer interaction.
 - **Why "kernel" and "shell"?** The kernel is the soft, edible part of a nut or seed, which is surrounded by a shell to protect it. Useful metaphor, no?
-]
 
-.pull-right-center[
-<div align="center">
+:::
+:::
+:::
+
+## Interacting with the shell
+
+::: columns
+::: {.column width="50%"}
+
+![](figs/diagram3-terminal-and-shell.png){fig-align="center" height="400"}
 <br>
-<img src="pics/diagram2-the-kernel-and-user-space.png" width="500"/>
-<img src="pics/image-walnut.jpeg" width="150"/>
-</div>
-`Credit` [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)/[Kkchaudhary11](https://commons.wikimedia.org/w/index.php?curid=49069244)
-]
+![](figs/teletype.jpg){fig-align="center" height="150"}
+![](figs/image-ibm3486.jpeg){fig-align="center" height="150"}
 
+:::{.r-stack}
+Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)/[Rama/Musée Bolo](https://en.wikipedia.org/wiki/Teletype_Model_33#/media/File:Teletype-IMG_7287.jpg)/[ClickRick](https://de.m.wikipedia.org/wiki/Datei:IBM_3486_terminal.jpg)
+:::
 
----
-# What is the command line? What is the shell? (cont.)
+:::
 
-.pull-left[
-### Interacting with the shell
+::: {.column width="50%"}
+::: r-fit-text
 
 - Things are still a bit more complicated.
 - We're not directly interacting with the "shell" but using a **terminal**.
@@ -106,25 +139,14 @@ format:
 - A shell program on its own does not do this - it requires a terminal as an interface.
 - **Why "terminal"?** Back in the old days (even before computer screen existed), terminal machines (hardware!) were used to let humans interface with large machines ("mainframes"). Often many terminals were connected to a single machine. 
 - When you want to work with a computer in a data center (or remotely ~ cloud computing), you'll still do pretty much the same.
-]
 
-.pull-right-center[
-<div align="center">
-<img src="pics/diagram3-terminal-and-shell.png" width="500"/>
-<img src="pics/teletype-model-33.jpeg" width="100"/>
-<img src="pics/IBM_3486_terminal.jpeg" width="200"/>
-</div>
-`Credit` [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)/[Rama/Musée Bolo](https://en.wikipedia.org/wiki/Teletype_Model_33#/media/File:Teletype-IMG_7287.jpg)/[ClickRick](https://de.m.wikipedia.org/wiki/Datei:IBM_3486_terminal.jpg)
-]
+:::
+:::
+:::
 
+XXXX Parei aqui embaixo XXXXX
 
-
-
----
-# What is the command line? What is the shell? (cont.)
-
-.pull-left[
-### Interacting with the shell
+## Interacting with the shell
 
 - Terminals are really quite simple - they're just interfaces.
 - The first thing that a terminal program will do is run a shell program - a program that we can use to operate the computer.
@@ -139,7 +161,7 @@ format:
 
 .pull-right-center[
 <div align="center">
-<img src="pics/diagram3-terminal-and-shell.png" width="500"/>
+<img src="figs/diagram3-terminal-and-shell.png" width="500"/>
 </div>
 `Credit` [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)
 ]
@@ -163,12 +185,12 @@ format:
 <div align="center">
 <br>
 <i>Left:</i> Command Prompt, <i>right:</i> Bash
-<img src="pics/command-prompt-screenshot.png" height="170"/>
-<img src="pics/bash-screenshot.png" height="170"/>
+<img src="figs/command-prompt-screenshot.png" height="170"/>
+<img src="figs/bash-screenshot.png" height="170"/>
 <br>
 <i>Left:</i> C Shell, <i>right:</i> more shells
-<img src="pics/cshell-screenshot.png" height="150"/>
-<img src="pics/seashells.jpeg" height="150"/>
+<img src="figs/cshell-screenshot.png" height="150"/>
+<img src="figs/seashells.jpeg" height="150"/>
 </div>
 `Credit` [Read-back spider](https://commons.wikimedia.org/wiki/File:Different_types_of_shells.jpg)/[Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)
 ]
@@ -188,7 +210,7 @@ format:
 .pull-right-center[
 <div align="center">
 <br>
-<img src="pics/terminal-meme.jpeg" width="350"/>
+<img src="figs/terminal-meme.jpeg" width="350"/>
 </div>
 ]
 
@@ -201,7 +223,7 @@ format:
 <br><br>
 <b>Why using this...</b>
 <br>
-<img src="pics/zsh-screenshot.png" width="530"/>
+<img src="figs/zsh-screenshot.png" width="530"/>
 </div>
 ]
 
@@ -210,13 +232,13 @@ format:
 <br><br>
 <b>... instead of this?</b>
 <br>
-<img src="pics/windows31-screenshot.png" height="170"/>
-<img src="pics/windows11-screenshot.jpg" height="170"/>
+<img src="figs/windows31-screenshot.png" height="170"/>
+<img src="figs/windows11-screenshot.jpg" height="170"/>
 </div>
 
 <div align="center">
-<img src="pics/macos8-screenshot.png" height="170"/>
-<img src="pics/macos-finder-screenshot.jpeg" height="170"/>
+<img src="figs/macos8-screenshot.png" height="170"/>
+<img src="figs/macos-finder-screenshot.jpeg" height="170"/>
 </div>
 ]
 
@@ -543,7 +565,7 @@ All Bash commands have the same basic syntax:
 - Can be a file, path, a set of files and folders, a string, and more
 - Sometimes more than just one argument is needed:
   ```bash
-  $ mv pics/cat.JPG best-pics/cat.jpeg
+  $ mv figs/cat.JPG best-figs/cat.jpeg
   ```
 ]
 
@@ -578,7 +600,7 @@ name: help
 .pull-right[
 <br><br>
 <div align="center">
-<img src="pics/beatles-help.jpeg" height=300/>
+<img src="figs/beatles-help.jpeg" height=300/>
 </div>
 ]
 
@@ -613,7 +635,7 @@ These and other `man` tricks are detailed in the help pages (hit "h" when you're
 .pull-right[
 <br>
 <div align="center">
-<img src="pics/rtfm-bayeux.png" height=370/>
+<img src="figs/rtfm-bayeux.png" height=370/>
 <b>RTFM</b>
 </div>
 ]
@@ -679,7 +701,7 @@ name: navigation
 .pull-right[
 <br>
 <div align="center">
-<img src="pics/that-way-giphy.gif" height=300/>
+<img src="figs/that-way-giphy.gif" height=300/>
 </div>
 ]
 
@@ -728,7 +750,7 @@ Beware of directory names that contain spaces. Say you have a directory called "
 .pull-right-small[
 <div align="center">
 <br>
-<img src="pics/expanding-brain.jpg" alt="Brain" height="450px"/>
+<img src="figs/expanding-brain.jpg" alt="Brain" height="450px"/>
 </div>
 ]
 
@@ -892,7 +914,7 @@ name: files
 .pull-right[
 <br><br>
 <div align="center">
-<img src="pics/organize.gif" height=300/>
+<img src="figs/organize.gif" height=300/>
 </div>
 ]
 
@@ -1156,7 +1178,7 @@ name: text
 .pull-right[
 <br>
 <div align="center">
-<img src="pics/bookshelf.gif" height=400/>
+<img src="figs/bookshelf.gif" height=400/>
 </div>
 ]
 
@@ -1371,7 +1393,7 @@ For a more detailed overview, see [here](https://effective-shell.com/docs/part-3
 .pull-right[
 <br>
 <div align="center">
-<img src="pics/evil-laugh.gif" height=400/>
+<img src="figs/evil-laugh.gif" height=400/>
 </div>
 ]
 
@@ -1402,7 +1424,7 @@ name: pipes
 .pull-right[
 <br><br><br>
 <div align="center">
-<img src="pics/pipe-giphy.gif" height=300/>
+<img src="figs/pipe-giphy.gif" height=300/>
 </div>
 ]
 
@@ -1638,7 +1660,7 @@ What does this script do?
 .pull-right[
 <br>
 <div align="center">
-<img src="pics/goldberg-machine-giphy.gif" height=450/>
+<img src="figs/goldberg-machine-giphy.gif" height=450/>
 </div>
 ]
 
@@ -1787,732 +1809,16 @@ If you want to dig deeper, check out
 - [Effective Shell](https://effective-shell.com/) (Dave Kerr)
 - [Using AWK and R to parse 25tb](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/) (Nick Strayer)
 
-
-# Version Control
-
-:::aside
-:::{.fragment}
-*this lecture draws on materials from Simon Munzert [Intro to Data Science](https://github.com/intro-to-data-science-21/lectures/tree/main) + Professor Tiago Ventura material.*
-:::
-:::
-
-# Workflow and Reproducibility {background-color="#447099"}
-
-## That's what we generally look for as data scientists
-
-<br>
-
-```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("week1_figs/resl2.png") 
-```
-
-## But we often don't teach students how to organize the mess behind it. {.centered}
-
-<br>
-
-```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("week2_figs/folder.png") 
-```
-
-## We often assume we are capable of keeping track our own work {.centered}
-
-<br>
-
-```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("https://media.giphy.com/media/kbz6iLCGXDLgI/giphy.gif") 
-```
-
-## But this assumption will set you up to fail
-
-
-<br>
-
-As you advance on your career as a data scientist:
-
--   Your projects will grow.
-
--   You will start collaborating with other colleagues (DS is fundamentally collaborative)
-
--   You will juggle through multiple project from now and from the past!
-
--   Project will come and go.
-
--   You will re-use code A LOT!
-
-
-## {}
-
-### You need to set up a system to keep track of you work (not you! the system!)
-
-## Reproducibility
-
-
-<br> 
-
-- Reproducibility is fundamental to the scientific method but [also a practical reality]{.red}
-
-- Think about your projects as [self-contained project]{.red} that need to be:
-
-    -   fully replicated by others (that's science)
-
-    -    replicable by you (that's the practical reality)
-
-## Best Practices
-
-
-<br>
-
--   Self Contained Projects
-
--   Documentation
-
--   Readability
-
--   Naming
-
--   Portability
-
--   Version Control
-
-## Self-Contained Projects
-
-<br>
-
-Always consider your work in terms of projects.
-
-- *A project is a self-contained unit of data science work that can be shared and replicated*
-
-- A self-contained project has:
-
-    -   content: data, code, outputs, literature, text
-    -   metadata: readme for the project and each folder, information about the tools you are running
-
-
-## Example of Project Setup
-
-<br>
-
-```       
-├── /data
-│   ├── /raw      
-│   ├── /processed  
-├── /docs 
-├── /code
-|   |── 01_clean_xxx.py
-|   |── 01_analysis_xxx.py
-
-├── /literature      
-
-├── /output      
-│   ├── /tables      
-│   ├── /figures  
-├── /misc 
-└── readme.txt            
-```
-
-## Documentation
-
-Use `#` to describe every single step of your code
-
-```{python}
-#| echo: true
-def distance_tree(geom, geo_neigh, n):
-    """"
-    function to calculate the closest point and get their index using scipy
-    geom: geo pandas data frame with the reference points
-    geo_neigh: geo pandas data frame the neighbors location point
-    n: str,  number of closest neighboors
-    """
-
-    # convert geometries to numpy
-    n_geom = np.array(list(geom.geometry.apply(lambda x: (x.x, x.y))))
-    n_geo_neigh = np.array(list(geo_neigh.geometry.apply(lambda x: (x.x, x.y))))
-
-    # estimate the trees
-    btree = cKDTree(n_geo_neigh) # btreee neighbors
-
-    # captures distances and indexes
-    dist, idx = btree.query(n_geom, n)
-```
-
-**vs** 
-
-```{python}
-#| eval: false
-
-def distance_tree(geom, geo_neigh, n):
-    n_geom = np.array(list(geom.geometry.apply(lambda x: (x.x, x.y))))
-    n_geo_neigh = np.array(list(geo_neigh.geometry.apply(lambda x: (x.x, x.y))))
-    btree = cKDTree(n_geo_neigh)
-    dist, idx = btree.query(n_geom, n)
-```
-
-##  Readability
-
-Make you code readable in plain english. This usually mean giving names to your variables and functions that fully describe what your intents are.
-
-- Avoid:
-
-  - Abbreviation
-  - Generic Names
-  - Misleading names
-  
-## Naming
-
-
-Use meaningful names for your code/data/notebooks.
-
-
-- File names should be meaningful
-
-- DO NOT USE SPACES. Use snake case (_) style for you files and code 
-
-<br>
-
-::: {.fragment}
-
-> `data analysis 2.py` &rarr;  `data_analysis_2.py`
-
-:::
-
-<br>
-
-::: {.fragment}
-
-> `model_analysis.py` &rarr; `model_analysis_het_treatment_effects_main_paper.py`
-
-:::
-
-## Portability
-
-- Use computational environments for your projects. (pyenv or conda)
-
-- Avoid absolute file paths
-
-  - Good Examples: "preprocessing.py" "figures/model-1.png" " /data/survey.csv"
-  - Terrible examples: "/Users/me/ppol5203/data.csv" - [only exists in your machine!!!]{.red}
-
-# Version Control  {background-color="#447099"}
-
-## Why version control (in theory)?
-
-```{r  echo=FALSE, out.width = "50%", fig.align="center"}
-knitr::include_graphics("week2_figs/final.jpeg") 
-```
-
-:::aside
-[phdcomics.com](http://phdcomics.com/comics/archive.php?comicid=1531&quot;&gt;creativity&lt;/a&gt;.&lt;!--more--&gt;&lt;/p&gt;)
-:::
-
-## Why version control (in practice)?
-
-- Easily handle collaboration (contribute to other people's work)
-
-- Allows you to “rewind the tape” to earlier incarnations of your notes, drafts, papers and code
-
-- It is like Microsoft Word track changes but for your entire project
-
-- Allows you to review, comment, and analyze other people's codes
-
-- Heavily adopted in the industry
-
-## What is version control?
-
-> Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. ([pro git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control))
-
-- **Git:** one of many options for version control in data science. Distributed system
-
-- **Github**: is a public remote host for Git repositories. A web-based platform to store git repos
-
-    - It has much more features, for example, git hub actions, pages, pull and push. we will go through some today
-
-- [TLDR:]{.red} you will git locally, and share and collaborate with others using Github.
-
-- Crucial to realize those are different!
-
-
-## CommandLine
-
-- Git is a commandline tool. To use git in your computer, you will need to access the commandline. 
-
-- The command line (CLI) is a program that allows you to interact directly with your operating system.
-
-
-    - If you're on a Mac a unix command line comes installed on your machine
-    
-    - If you're on a Windows machine, you have a few different options for commandline, and not all are unix-based
-
-- How will we use CLI?
-
-    - Run git
-    - Understand file paths on your computer
-    - Run scripts from the commandline
-    - Open notebook and interact with other programs
-    - Set up cluster computing. 
-    
-    
-## Basic Commands
-
-Where am I? 
-
-```{python}
-#| eval: false 
-pwd
-```
-
-How do I make a new directory with name foldername? 
-
-```{python}
-#| eval: false 
-mkdir foldername
-
-```
-
-How do I navigate to folder foldername? 
-
-```{python}
-#| eval: false 
-cd foldername
-```
-
-I’m lost; how do I get back to the home directory? 
-
-```{python}
-#| eval: false 
-cd ~
-```
-
-
-What files and directories are in this directory? 
-
-```{python}
-#| eval: false 
-ls
-```
-
-
-How do I navigate “up one level” in the dir structure? 
-
-```{python}
-#| eval: false 
-cd ..
-```
-
-
-## More Commands
-
-How do I create a file?
-
-```{python}
-#| eval: false 
-touch <file name>
-# or
-vim <file name>
-```
-
-
-How do I move files?
-
-```{python}
-#| eval: false 
-mv <old path> <new path>
-
-```
-
-How do I see a file?
-
-```{python}
-#| eval: false 
-cat <file name>
-```
-
-
-How do I ask for help>
-
-```{python}
-#| eval: false 
-man ls
-```
-
-
-## Version Control in Theory
-
-Key concepts in git: 
-
-- Git: snapshot + distributed VCS
-
-- Three stages of git
-
-- Time travel
-
-- Remotes with Github
-
-## Git: a distributed version control system
-
-:::: {.columns}
-::: {.column width="50%"}
-
-```{r  echo=FALSE, out.width = "100%", fig.align="center"}
-knitr::include_graphics("week2_figs/delta.png") 
-```
-:::
-
-::: {.column width="50%"}
-
-```{r  echo=FALSE, out.width = "100%", fig.align="center"}
-knitr::include_graphics("week2_figs/git.png") 
-```
-
-- This is the git system. 
-- it is distributed. 
-- Exists in your local machine
-
-:::
-
-
-::::
-
-:::aside
-Source: [pro git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
-:::
-
-
-## The three stages of Git
-
-
-```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("week2_figs/git_stages.png") 
-```
-
-## Time travel in Git
-
-```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("week2_figs/checkout.png") 
-```
-
-## Github (Remote Git Repositories)
-
-```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("week2_figs/git_remotes.png") 
-```
-
-# Git in Practice {background-color="#447099"}
-
-## Create your first repository
-
-Create an empty directory to be our git walkthrough 
-
-```{python}
-#| eval: false 
-# check where you are
-pwd 
-
-# create dir
-mkdir gitwalkthrough
-
-# change cd
-
-cd gitwalkthrough
-```
-
-
-Check if you have a git
-
-```{python}
-#| eval: false 
-git status
-```
-
-Start a repository
-
-```{python}
-#| eval: false 
-git init
-```
-
-Tracking and staging new files: make any changes you want, then stage
-
-```{python}
-#| eval: false 
-git add <file name>
-```
-
-First commit
-
-```{python}
-#| eval: false 
-git commit -m "add a tag"
-```
-
-
-## Git in Practice II: Time Travel
-
-Returning to a previous snapshot: 
-
-:::{.fragment}
-Make more changes
-
-```{python}
-#| eval: false 
-git add . track and stage
-git commit -m 'second commit' *second commit
-```
-
-
-Check your log
-
-```{python}
-#| eval: false 
-git log
-```
-
-
-Time travel with checkout
-
-```{python}
-#| eval: false 
-git checkout <hash> #to move to a past different snapshot
-
-```
-
-
-Check your directory
-
-```{python}
-#| eval: false 
-ls
-```
-
-:::
-
-## Git Branching
-
-- Branching allows us to work on different paths in Git. It is very useful for two purposes: 
-
-    - Experimenting with code
-
-    - Collaborating with colleagues. 
-
-- Visualize with [Visualize Git tool](https://git-school.github.io/visualizing-git/)
-
-## Git Branching in Practice
-
-
-:::{.fragment}
-
-Create a new branch
-
-```{python}
-#| eval: false 
-
-git checkout -b <branch-name>
-```
-
-Write code or create new files
-
-```{python}
-#| eval: false
-
-vim test4.txt
-```    
-
-Stage and commit 
-
-```{python}
-#| eval: false 
-git add .
-git commit -m " hello from alternative world"
-
-```
-
-
-Check status across different branches
-
-```{python}
-#| eval: false 
-ls  # test4.txt should be here
-git checkout master #move back to the master branch*
-ls  #no test4.txt
-```    
-
-Then we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch
-
-
-```{python}
-#| eval: false 
-git merge [new branch]
-```
-
-:::
-
-
-## Git conflicts
-
-When merging across different branches, sometimes there are conflicts between branches. 
-
-```
-<<<<<<< HEAD
-ADD EXAMPLE FROM class
-=======
-ADD EXAMPLE FROM CLASS
->>>>>>> new-branch
-```
-
-- Open your text editor and navigate to the file that has merge conflicts.
-
-- Solve the conflict (which may incorporate changes from both branches) and delete the conflict markers
-
-- Stage your changes (git add)
-
-- Commit your changes (git commit)
-
-## Git in Practice: Conflicts
-
-:::{.fragment}
-
-Create a new branch, change an file, and commit
-
-```{python}
-#| eval: false 
-git checkout -b "new" # create a branch call new, checkout directly
-vim test1.txt # make some modification
-git add test1.txt
-git commit -m "new file 1" # commit your changes
-```
-
-Do the same in the master branch
-
-```{python}
-#| eval: false 
-git checkout master # checkout to master branch
-vim test1.txt #make some modification and see that the old modification is not here
-git add test1.txt # stage
-git commit -m "new file 1 from master"  # commit your changes
-```
-
-Merge and solve conflict
-
-```{python}
-#| eval: false 
-git merge new
-```
-:::
-
-## {}
-
-:::{.fragment}
-
-Solve the conflict
-
-```{python}
-#| eval: false 
-vim test1.txt 
-git add test1.txt
-git commit -m "fixed conflict" ## commit your changes
-git log ## to see your merge complete
-```
-
-:::
-## Git Remotes: Git + Github.
-
-Most times, you will use git integrated with Github. Github allows multiple researchers to write and share code at the same time.
-
-This is my workflow for github.
-
-- Starting a New Project. Before you write any code:
-
-    - Go to your github, and create a new repository
-
-    - Open your terminal, and clone the project
-
-::: {.fragment}
-```{python}
-#| eval: false
-# clone
-git clone <url>
-
-#Move your working directory to this new folder
-cd <project-directory>
-
-#Write code!
-```
-:::
-
-## {}
-
-Track your changes: 
-
-```{python}
-#| eval: false
-git add . 
-```
-
-
-Commit: 
-
-```{python}
-#| eval: false
-git commit -m 'describe your commit'
-```
-
-Push the changes in your local repository to GitHub:
-
-```{python}
-#| eval: false
-git push 
-# or with branch
-git push-u origin [branch-name] 
-```
-
-
-## Can anybody push to my repository?
-
-> No, all repositories are read-only for anonymous users. By default only the owner of the repository has write access. If you can push to your own repo, it's because you are using one of the supported authentification methods (HTTPS, SSH, ...).
-
-> If you want to grant someone else privileges to push to your repo, you would need to configure that access in the project settings.
-
-> To contribute to projects in which you don't have push access, you push to your own copy of the repo, then ask for a pull-request. Linux is not a good example for that, because the kernel developers do not use GitHub pull requests.
-
-
-:::aside
-source: [https://stackoverflow.com/questions/17442930/can-anybody-push-to-my-project-on-github](https://stackoverflow.com/questions/17442930/can-anybody-push-to-my-project-on-github)
-:::
-
-
-## Pull from Remotes
-
-To keep up with your colleague work, you need to first pull their updates from the git repo.
-
-```{python}
-#| eval: false
-
-# go to your repo
-cd <gitrepo>
-
-# pull the changes
-git pull
-
-```
-
-See this [tutorial](https://www.atlassian.com/git/tutorials/syncing/git-pull)
-
 # Summary
 
 ## Summary
 
-Some key things to take from this topic:
+<br>
 
--   Data Science is about data:
-
-    -   Data collection;
-    -   Data management;
-    -   Data storage;
-    -   Data structure;
-    -   Data, Data, Data `...`
-
--   Data Science is also about...
-
-    -   Collaboration!
-
+-   XXX
 
 # Thank you!
+
+
+
+
