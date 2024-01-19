@@ -17,8 +17,8 @@ format:
       buttons: false
     preview-links: auto
     #logo: images/quarto.png
-    footer: "Data science Computing"
-    theme: [simple,custom.scss]
+    footer: "Data Science Computing"
+    theme: [simple, custom.scss]
 ---
 
 ## Topic Overview
@@ -243,10 +243,7 @@ knitr::include_graphics("figs/transistor_chip.jpeg")
 
 <br>
 
-::: {.r-fit-text}
 -   In modern digital computers, transistors act as switches, with 1 for high voltage level and 0 for low voltage level.
-
-<br>
 
 -   Computers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip.
 
@@ -325,8 +322,6 @@ knitr::include_graphics("figs/matrix.avif")
 :::
 
 :::
-
-::::
 
 
 ## Distinct Numbers in a Byte
@@ -737,13 +732,18 @@ knitr::include_graphics("figs/high_low_languages.png")
 -   Compiled languages are generally faster but require a compilation step.
 -   Interpreted languages are more flexible but can be slower, though this can be mitigated (e.g., `Python` with `C++` libraries).
 
+# Summary
+
 ## Summary
 
 <br>
 
--   The evolution of programming languages from binary to high-level languages revolutionized computing.
-
--   Understanding these concepts helps grasp the efficiency and portability of modern programming.
+-   **Computational Literacy**: Binary and hexadecimal numbers, characters (ASCII, Unicode), and distinction between high vs low-level programming languages.
+-   **Early Computing**: Konrad Zuse's pioneering work with programmable digital computers and the use of binary arithmetic.
+-   **Assembly Language**: The initial approach to programming using human-readable instructions for machine code.
+-   **Calculators**: The evolution from Leibniz’s four-species calculating machine to modern electronic computing.
+-   **Silicon Microchip Computers**: The 1970s revolution with transistors, integrated circuits, and the emergence of Von Neumann architecture.
+-   **Modern Programming Languages**: The spectrum from low-level assembly languages to high-level languages like `Python`; distinction between compiled and interpreted languages.
 
 
 # Thank you!

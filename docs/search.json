@@ -116,7 +116,7 @@
     "href": "topics-pages/page-topic-02.html",
     "title": "Topic 02",
     "section": "",
-    "text": "Slides\n\nComputational Literacy, Command Line, and Version Control\n\n\n\nLecture Material\n\nBasics of Command Line: html,  notebook \nVersion Control: html,  notebook \n\n\n\nProblem Set\n\nTBP\n\n\n\nRequired Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\n\n\n\nRecommended Readings\n\nEssential Computer Literacy: 50 min.\n\n\n\nAdditional Resources\n\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester"
+    "text": "Slides\n\nComputational Literacy\nCommand Line\nVersion Control\n\n\n\nLecture Material\n\nBasics of Command Line: html,  notebook \nVersion Control: html,  notebook \n\n\n\nProblem Set\n\nTBP\n\n\n\nRequired Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\n\n\n\nRecommended Readings\n\nEssential Computer Literacy: 50 min.\n\n\n\nAdditional Resources\n\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester"
   },
   {
     "objectID": "topics-pages/page-topic-01.html",
@@ -410,7 +410,7 @@
     "href": "syllabus.html#assessment",
     "title": "Syllabus: QTM 350 - Data Science Computing",
     "section": "Assessment",
-    "text": "Assessment\nFinal grades will be based on:\n\n\n\nAssignment\nPercentage\n\n\n\n\nLecture Quizzes\n10%\n\n\nProblem Sets\n40%\n\n\nFinal Project Proposal\n5%\n\n\nFinal Project Submission\n25%\n\n\nFinal Project Presentation\n10%\n\n\nPeer Review\n10%\n\n\n\n\nLecture Quizzes\nEach lecture will be accompanied by a set of questions, available on the course’s Canvas page and to be completed individually. Students may complete these quizzes either during or after class, but must submit them by 11:59 p.m. on the lecture day. To accommodate the learning process, the lowest two quiz scores will be excluded from the final grade calculation. While individual submission is mandatory, collaborative discussions are encouraged. Please note that no extensions for quiz submissions will be granted under any circumstances, ensuring fairness and consistency in assessment for all students.\n\n\nProblem Sets\nProblem sets aligned with each topic will be assigned to solidify and apply the concepts covered. These sets are to be collaboratively developed in groups of up to three members, emphasizing the importance of code collaboration. Consequently, individual submissions will not be accepted. The primary objective of these problem sets is to provide a practical application of the content discussed during the semester. Assignments will be distributed via Canvas and/or GitHub, and may be formatted as either a Jupyter Notebook (.ipynb), Quarto documents (.qmd), or HTML (.html). Groups will be required to submit the complete source code of their assignments (.ipynb or .qmd). Each problem set will be meticulously evaluated, with grading based on both the accuracy and the overall quality of the work submitted. For instance, you must guarantee:\n\nAll code must run;\nEach problem set material will have its own GitHub repository;\nReadable Solutions: To facilitate effective evaluation and comprehension of the coding assignments, students must adhere to the following standards for code readability:\n\nComprehensive Commenting: All code must include thorough comments. These comments are essential as they allow the Professor and Teaching Assistants to understand the purpose and functionality of the code solely through these annotations. It is crucial that the comments are clear and concise, providing insight into the logic and purpose behind each segment of code.\n\n\nStructured Code Segmentation: Solutions should be methodically organized into distinct code chunks within Jupyter or R Markdown notebooks. For clarity on this format, refer to examples provided in class or consult with the Professor or Teaching Assistants.\n\n\nDetailed Documentation of Functions: Every function defined by a student must be accompanied by a docstring. This documentation should clearly explain the function’s purpose, describe each input argument, and outline what the function returns.\n\n\n\n\nFinal Project\nAt the heart of Data Science lies the critical skill of managing data effectively. This encompasses the ability to collect, organize, retrieve, filter, sort, and prepare data, forming the foundational steps before embarking on any comprehensive analysis. This project is your opportunity to demonstrate proficiency in applying the concepts and techniques learned throughout the course. In groups up to three members, you will be expected to showcase your competence in handling and preparing data for insightful analysis. Through this project, you will apply the principles and methodologies covered in the course.\n\nFinal Project Proposal\nEach group is required to submit a concise, yet comprehensive, two-page proposal outlining their intended project. This proposal is a crucial step in ensuring the viability and academic rigor of your planned research. Prior to its development, it is mandatory for each group to arrange a 15-minute consultation meeting with me. This meeting is intended to provide guidance, clarify objectives, and ensure alignment with course goals. To make the most of this consultation, groups must submit a draft of their project ideas in advance of the meeting. Please note that these consultation meetings will be scheduled during Week 10. It is imperative to adhere to this timeline to ensure timely feedback and guidance on your proposals.\n\n\nFinal Project Submission\nStudents are provided with two distinct opportunities to submit their final projects. The first submission is madatory for all groups and must be completed before the start of the presentation week. This phase allows for a preliminary assessment of your project. The subsequent submission is optional and should occur by the course’s last date. This opportunity is particularly beneficial for incorporating improvements based on peer review feedback received after the first submission. The final deliverable should be a comprehensive GitHub repository and a .zip file encompassing the following components:\n\nRaw Source Data: Include the raw data utilized for your project. If the data file size exceeds GitHub’s limitations, it should be exclusively contained within the .zip file.\nDetailed README: Your repository should contain a README file providing an in-depth description of each included file, covering:\n\nInputs: Detail the inputs to each file, such as raw data or files containing credentials for API access.\nFunctionality: Clearly describe the major transformations and operations performed by the file.\nOutputs: Enumerate any outputs generated by the file (e.g. cleaned datasets).\n\nData Transformation and Organization Code: Submit all code files that are used to transform and organize your data.\nData Query for Analysis: Provide the set of code files that query your dataset, rendering it suitable for addressing your chosen data analysis question.\n\nFurther details and specific requirements will be shared before Week 10 of the course.\n\n\nFinal Project Presentation\nDuring the final week of the course, each group will have a 10 to 15-minute time slot to present their project. This presentation is a vital component of your project, providing an opportunity to showcase the depth of your analysis, the insights gained, and the skills acquired throughout the course. The scheduling of presentations will be randomly defined. Specific dates and the order of presentations for each group will be assigned and communicated in advance.\nFurther details and specific requirements will be shared before Week 13 of the course.\n\n\n\nPeer Review\nIn the week of presentations, your active participation in the peer review process will be essential. Each student is expected to engage constructively in evaluating and providing feedback on their colleagues’ projects. You will be asked to thoughtfully comment on various aspects of the projects, including methodology, data structure, presentation features, and the overall effectiveness of the conveyed message. This exercise is not only a crucial part of your learning experience but also an opportunity to contribute to the academic development of your peers."
+    "text": "Assessment\nFinal grades will be based on:\n\n\n\nAssignment\nPercentage\n\n\n\n\nLecture Quizzes\n10%\n\n\nProblem Sets\n40%\n\n\nFinal Project Proposal\n5%\n\n\nFinal Project Submission\n25%\n\n\nFinal Project Presentation\n10%\n\n\nPeer Review\n10%\n\n\n\n\nLecture Quizzes\nEach lecture will be accompanied by a set of questions, available on the course’s Canvas page and to be completed individually. Students may complete these quizzes either during or after class, the due dates will be posted in the course canvas page. To accommodate the learning process, the lowest two quizzes scores will be excluded from the final grade calculation. While individual submission is mandatory, collaborative discussions are encouraged. Please note that no extensions will be granted under any circumstances, ensuring fairness and consistency in assessment for all students.\n\n\nProblem Sets\nProblem sets aligned with each topic will be assigned to solidify and apply the concepts covered. These sets are to be collaboratively developed in groups of up to three members, emphasizing the importance of code collaboration. Consequently, individual submissions will not be accepted. Assignments will be distributed via Canvas and/or GitHub, and may be formatted as either a Jupyter Notebook (.ipynb), Quarto documents (.qmd), or HTML (.html). Groups will be required to submit the complete source code of their assignments (.ipynb, .qmd, or .html). Each problem set will be meticulously evaluated, with grading based on both the accuracy and the overall quality of the work submitted. For instance, you must guarantee:\n\nAll code must run;\nEach problem set material will have its own GitHub repository;\nReadable Solutions: To facilitate effective evaluation and comprehension of the coding assignments, students must adhere to the following standards for code readability:\n\nComprehensive Commenting: All code must include thorough comments. These comments are essential as they allow the Professor and Teaching Assistants to understand the purpose and functionality of the code solely through these annotations. It is crucial that the comments are clear and concise, providing insight into the logic and purpose behind each segment of code.\n\n\nStructured Code Segmentation: Solutions should be methodically organized into distinct code chunks within Jupyter or R Markdown notebooks. For clarity on this format, refer to examples provided in class or consult with the Professor or Teaching Assistants.\n\n\nDetailed Documentation of Functions: Every function defined by a student must be accompanied by a docstring. This documentation should clearly explain the function’s purpose, describe each input argument, and outline what the function returns.\n\n\n\n\nFinal Project\nAt the heart of Data Science lies the critical skill of managing data effectively. This encompasses the ability to collect, organize, retrieve, filter, sort, and prepare data, forming the foundational steps before embarking on any comprehensive analysis. This project is your opportunity to demonstrate proficiency in applying the concepts and techniques learned throughout the course. In groups up to three members, you will be expected to showcase your competence in handling and preparing data for insightful analysis. Through this project, you will apply the principles and methodologies covered in the course.\n\nFinal Project Proposal\nEach group is required to submit a concise, yet comprehensive, two-page proposal outlining their intended project. This proposal is a crucial step in ensuring the viability and academic rigor of your planned research. Prior to its development, it is mandatory for each group to arrange a 15-minute consultation meeting with me. This meeting is intended to provide guidance, clarify objectives, and ensure alignment with course goals. To make the most of this consultation, groups must submit a draft of their project ideas in advance of the meeting. Please note that these consultation meetings will be scheduled during Week 10. It is imperative to adhere to this timeline to ensure timely feedback and guidance on your proposals.\n\n\nFinal Project Submission\nStudents are provided with two distinct opportunities to submit their final projects. The first submission is madatory for all groups and must be completed before the start of the presentation week. This phase allows for a preliminary assessment of your project. The subsequent submission is optional and should occur by the course’s last date. This opportunity is particularly beneficial for incorporating improvements based on peer review feedback received after the first submission. The final deliverable should be a comprehensive GitHub repository and a .zip file encompassing the following components:\n\nRaw Source Data: Include the raw data utilized for your project. If the data file size exceeds GitHub’s limitations, it should be exclusively contained within the .zip file.\nDetailed README: Your repository should contain a README file providing an in-depth description of each included file, covering:\n\nInputs: Detail the inputs to each file, such as raw data or files containing credentials for API access.\nFunctionality: Clearly describe the major transformations and operations performed by the file.\nOutputs: Enumerate any outputs generated by the file (e.g. cleaned datasets).\n\nData Transformation and Organization Code: Submit all code files that are used to transform and organize your data.\nData Query for Analysis: Provide the set of code files that query your dataset, rendering it suitable for addressing your chosen data analysis question.\n\nFurther details and specific requirements will be shared before Week 10 of the course.\n\n\nFinal Project Presentation\nDuring the final week of the course, each group will have a 10 to 15-minute time slot to present their project. This presentation is a vital component of your project, providing an opportunity to showcase the depth of your analysis, the insights gained, and the skills acquired throughout the course. The scheduling of presentations will be randomly defined. Specific dates and the order of presentations for each group will be assigned and communicated in advance.\nFurther details and specific requirements will be shared before Week 13 of the course.\n\n\n\nPeer Review\nIn the week of presentations, your active participation in the peer review process will be essential. Each student is expected to engage constructively in evaluating and providing feedback on their colleagues’ projects. You will be asked to thoughtfully comment on various aspects of the projects, including methodology, data structure, presentation features, and the overall effectiveness of the conveyed message. This exercise is not only a crucial part of your learning experience but also an opportunity to contribute to the academic development of your peers."
   },
   {
     "objectID": "syllabus.html#grading",
@@ -502,5 +502,264 @@
     "title": "Quarto Python Example",
     "section": "Code",
     "text": "Code\nIn the code chunk, you just need to change the programming language you want to use inside of the brackets {}\n\n# R code chunck\n\nlibrary(ggplot2)\n\nmu &lt;- 0\nsigma &lt;- 1\nx &lt;- seq(mu - 3*sigma, mu + 3*sigma, length.out = 100)\ny &lt;- dnorm(x, mean = mu, sd = sigma)\ndata &lt;- data.frame(x, y)\n\nggplot(data, aes(x, y)) +\n  geom_line() +\n  theme_minimal() +\n  labs(title = \"Standard Normal Distribution\", x = \"X\", y = \"Density\")\n\n\n\n\n\n# Python code chunck\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport scipy.stats as stats\nimport math\n\nmu = 0\nvariance = 1\nsigma = math.sqrt(variance)\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)\nplt.plot(x, stats.norm.pdf(x, mu, sigma))\nplt.show()"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html",
+    "href": "slides/slides-topic-02-01.html",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "",
+    "text": "Computational Literacy\n\nBinary and Hexadecimal numbers\nCharacters, ASCII, Unicode\nHigh vrs low level programming languages\nCompiled vs interpreted languages\n\nCommand Line\n\nShell basics\nHelp!\nNavigating your system\nManaging your files\nWorking with text files\nRedirects, pipes, and loops\nScripting\n\n\n\n\nVersion Control\n\nData Science Workflow\nReproducibility\nGit and GitHub"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#topic-overview",
+    "href": "slides/slides-topic-02-01.html#topic-overview",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Topic Overview",
+    "text": "Topic Overview\n\n\n\nComputational Literacy\n\nBinary and Hexadecimal numbers\nCharacters, ASCII, Unicode\nHigh vrs low level programming languages\nCompiled vs interpreted languages\n\nCommand Line\n\nShell basics\nHelp!\nNavigating your system\nManaging your files\nWorking with text files\nRedirects, pipes, and loops\nScripting\n\n\n\n\nVersion Control\n\nData Science Workflow\nReproducibility\nGit and GitHub"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#what-is-a-computer-1",
+    "href": "slides/slides-topic-02-01.html#what-is-a-computer-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is a Computer?",
+    "text": "What is a Computer?\n\n\nHistorically, a computer was a person who makes calculations, especially with a calculating machine.\n\n\n\nTo do calculations we use numbers. How to represent them?"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#representing-numbers",
+    "href": "slides/slides-topic-02-01.html#representing-numbers",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Representing numbers",
+    "text": "Representing numbers\n\nSimplest ways to physically represent numbers for arithmetic:\n\nCounting fingers\nMarked stones, or marked bones\nIncan Rope counting, called Quipu\nThe Abacus"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#introduction-to-binary",
+    "href": "slides/slides-topic-02-01.html#introduction-to-binary",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Introduction to Binary",
+    "text": "Introduction to Binary\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn modern digital computers, transistors act as switches, with 1 for high voltage level and 0 for low voltage level.\nComputers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip.\n\n\n\n::::"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#what-is-binary",
+    "href": "slides/slides-topic-02-01.html#what-is-binary",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Binary?",
+    "text": "What is Binary?\n\nA binary number is written using only the digits 0 and 1.\nA single binary digit is a bit, e.g., 101 has three bits.\nAn 8-bit group is called a byte.\nBinary numbers grow as follows:\n\n0 represents zero\n1 represents one\n10 represents two\n100 represents four\n1000 represents eight, and so on…"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#binary-for-decimal-3",
+    "href": "slides/slides-topic-02-01.html#binary-for-decimal-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Binary for Decimal 3",
+    "text": "Binary for Decimal 3\n\n\nQuestion: What binary number represents 3?\n\n\n101\n\n\n11\n\n\n111\n\n\n010"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#binary-number-for-decimal-3",
+    "href": "slides/slides-topic-02-01.html#binary-number-for-decimal-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Binary Number for Decimal 3",
+    "text": "Binary Number for Decimal 3\n\nQuestion: What binary number represents 3?\n\n\n101\n\n\n11\n\n\n111\n\n\n010\n\nAnswer: b. 11\n\nIn binary, the number 3 is represented as 11, which equates to \\((1 \\times 2^1) + (1 \\times 2^0)\\)."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#machine-code",
+    "href": "slides/slides-topic-02-01.html#machine-code",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Machine Code",
+    "text": "Machine Code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine code or binary code is binary instructions that a CPU reads and executes, such as: 10001000 01010111 11000101 11110001 10100001 00010110.\nEarly programming was done directly in machine code!"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#distinct-numbers-in-a-byte",
+    "href": "slides/slides-topic-02-01.html#distinct-numbers-in-a-byte",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Distinct Numbers in a Byte",
+    "text": "Distinct Numbers in a Byte\n\nQuestion: How many distinct numbers are represented by a byte?\n\n\n\\(2^{8}-1\\)\n\n\n\\(2^8\\)\n\n\n\\(2\\)\n\n\n\\(2^7\\)"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#distinct-numbers-in-a-byte-1",
+    "href": "slides/slides-topic-02-01.html#distinct-numbers-in-a-byte-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Distinct Numbers in a Byte",
+    "text": "Distinct Numbers in a Byte\n\nQuestion: How many distinct numbers are represented by a byte?\n\n\n\\(2^{8}-1\\)\n\n\n\\(2^8\\)\n\n\n\\(2\\)\n\n\n\\(2^7\\)\n\nAnswer: B) \\(2^8\\)\n\nA byte consists of 8 bits.\nEach bit has two possible values (0 or 1).\nTherefore, a byte can represent \\(2^8\\) or 256 distinct numbers, ranging from 0 to 255."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#characters-and-glyphs",
+    "href": "slides/slides-topic-02-01.html#characters-and-glyphs",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Characters and Glyphs",
+    "text": "Characters and Glyphs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA character is the smallest component of text, like A, B, or /.\nA glyph is the graphical representation of a character.\nIn programming, the display of glyphs is typically handled by GUI (Graphical User Interface) toolkits or font renderers."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#ascii---the-basics",
+    "href": "slides/slides-topic-02-01.html#ascii---the-basics",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII - The Basics",
+    "text": "ASCII - The Basics\n\n\nASCII stands for American Standard Code for Information Interchange.\nStandardized in 1968, it defines numeric codes for characters, ranging from 0 to 127.\nEach character is assigned a unique numeric code value."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#ascii-codes",
+    "href": "slides/slides-topic-02-01.html#ascii-codes",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII Codes",
+    "text": "ASCII Codes\n\n\nASCII defined numeric codes for various characters, with the numeric values running from 0 to 127. For example, the lowercase letter ‘a’ is assigned 97 as its code value.\nUppercase ‘A’ is represented by the code value 65.\nThe code value 0 is the ‘NUL’ character, also known as the null byte."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#ascii-character-range",
+    "href": "slides/slides-topic-02-01.html#ascii-character-range",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII Character Range",
+    "text": "ASCII Character Range\n\n\nControl characters: Codes 0 through 31 and 127 are unprintable.\nSpacing character: Code 32 is a nonprinting space.\nGraphic characters: Codes 33 through 126 are printable."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#ascii-limitations",
+    "href": "slides/slides-topic-02-01.html#ascii-limitations",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII Limitations",
+    "text": "ASCII Limitations\n\n\nASCII only includes unaccented characters.\nLanguages requiring accented characters cannot be represented.\nEven English needs characters like ‘é’ for words such as ‘café’."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise",
+    "href": "slides/slides-topic-02-01.html#practice-exercise",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\n\n\nWrite the characters of your name using ASCII codes."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise-1",
+    "href": "slides/slides-topic-02-01.html#practice-exercise-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\n\n‘DAVI’ using ASCII codes.\n\n\n\nCharacter\nASCII Code\n\n\n\n\nD\n68\n\n\nA\n65\n\n\nV\n86\n\n\nI\n73\n\n\n\nNote: If ASCII does not support characters in your name, Unicode will provide a solution."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#hexadecimal-and-unicode",
+    "href": "slides/slides-topic-02-01.html#hexadecimal-and-unicode",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hexadecimal and Unicode",
+    "text": "Hexadecimal and Unicode\n\n\nASCII uses 7 bits, limiting its range.\nTo represent a broader range of characters, more bits are needed.\nHexadecimal, or hex, is used in Unicode to represent these characters efficiently."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#what-is-hexadecimal",
+    "href": "slides/slides-topic-02-01.html#what-is-hexadecimal",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Hexadecimal?",
+    "text": "What is Hexadecimal?\n\n\nHexadecimal is a base-16 number system.\nHex digits include: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\nIn programming, hex is encountered more often than binary for compactness."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#hex-to-binary-mapping",
+    "href": "slides/slides-topic-02-01.html#hex-to-binary-mapping",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hex to Binary Mapping",
+    "text": "Hex to Binary Mapping\n\n\nEach hex digit corresponds to 4 binary bits:\n\n0000 = 0\n0001 = 1\n0010 = 2\n…\n1110 = E\n1111 = F\n\nOne hex digit represents 4 bits, making it a shorthand for binary.\nThis is due to the fact that four binary digits can represent sixteen possible values (\\(2^4\\)), which aligns with the sixteen possible values of a single hex digit (0 to F)."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#binary-to-hex-conversion",
+    "href": "slides/slides-topic-02-01.html#binary-to-hex-conversion",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Binary to Hex Conversion",
+    "text": "Binary to Hex Conversion\n\n\nConvert binary to hex by grouping into blocks of four bits.\nExample: Binary 1001 1110 0000 1010 converts to Hex 9E0A."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#hexadecimal-in-file-formats",
+    "href": "slides/slides-topic-02-01.html#hexadecimal-in-file-formats",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hexadecimal in File Formats",
+    "text": "Hexadecimal in File Formats\n\n\nFiles in hex format are often referred to as “binary” files.\nThis terminology is due to the direct conversion between hex and binary.\nThe conversion is unambiguous, making it a practical shorthand."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#hexadecimal-in-html",
+    "href": "slides/slides-topic-02-01.html#hexadecimal-in-html",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hexadecimal in HTML",
+    "text": "Hexadecimal in HTML\n\nHTML uses hexadecimal to represent colors.\nSix-digit hex numbers specify colors:\n\nFFFFFF = White\n000000 = Black\n\nEach pair of digits represents a color component (RGB).\nEach color channel typically has a range from 0 to 255 (in 8-bit systems), which gives a total of 256 intensity levels for each primary color.\nWhen you combine the three channels, you get a possible color palette of \\(256^3\\) or about 16.7 million colors.\nFor example, an RGB value of 255, 0, 0 corresponds to bright red because the red channel is at full intensity, and the green and blue channels are off."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#encountering-unicode",
+    "href": "slides/slides-topic-02-01.html#encountering-unicode",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Encountering Unicode",
+    "text": "Encountering Unicode\n\n\nEncountering a UnicodeDecodeError in Python indicates a character encoding issue.\nThis often arises when dealing with characters not represented in the ASCII set."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#what-is-unicode",
+    "href": "slides/slides-topic-02-01.html#what-is-unicode",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Unicode?",
+    "text": "What is Unicode?\n\n\nUnicode is a standard that maps characters to code points.\nA code point is an integer, usually represented in hexadecimal.\nA Unicode string is a series of code points.\nEncoding is the rule set for converting code points to bytes."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#ascii-and-unicode",
+    "href": "slides/slides-topic-02-01.html#ascii-and-unicode",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII and Unicode",
+    "text": "ASCII and Unicode\n\n\nUnicode code points \\(&lt;\\) 128 directly map to ASCII bytes.\nCode points \\(&gt;=\\) 128 cannot be encoded in ASCII.\nPython will raise a UnicodeEncodeError for these cases.\nUnicode code charts: Unicode Charts"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#utf-8-encoding",
+    "href": "slides/slides-topic-02-01.html#utf-8-encoding",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "UTF-8 Encoding",
+    "text": "UTF-8 Encoding\n\n\nUTF-8 stands for Unicode Transformation Format 8-bit.\nIt is a variable-width encoding representing every Unicode character.\nPython uses UTF-8 by default for source code."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#specifying-unicode-in-python",
+    "href": "slides/slides-topic-02-01.html#specifying-unicode-in-python",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Specifying Unicode in Python",
+    "text": "Specifying Unicode in Python\n\nPython supports writing source code in UTF-8 by default:\n\n\\xnn for a two-digit hex code point.\n\\unnnn for a four-digit hex code point.\n\\Unnnnnnnn for an eight-digit hex code point.\nUse full digit count, padding with leading zeroes as necessary."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise-2",
+    "href": "slides/slides-topic-02-01.html#practice-exercise-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\n\nTry writing your name in Unicode (UTF-8).\nTo write “DAVI” in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character.\nIn UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for ‘D’, ‘A’, ‘V’, and ‘I’ are as follows:\n\n“D”: “\\u0044”\n“A”: “\\u0041”\n“V”: “\\u0056”\n“I”: “\\u0049”\n\n“DAVI” in Unicode (UTF-8) using these escape sequences would be represented as “\\u0044\\u0041\\u0056\\u0049”."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#zuses-computers",
+    "href": "slides/slides-topic-02-01.html#zuses-computers",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Zuse’s Computers",
+    "text": "Zuse’s Computers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nZuse’s computers, including Z1, Z2, Z3, and Z4, were designed to read binary instructions from punch tape.\nThe logic of these machines was based on binary switching mechanisms (0-1 principle).\nExample: Z4 had 512 bytes of memory."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#what-is-assembly-language",
+    "href": "slides/slides-topic-02-01.html#what-is-assembly-language",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Assembly Language?",
+    "text": "What is Assembly Language?\n\n\nAssembly language allows writing machine code in human-readable text.\nEarly assembly programming involved writing code on paper, which was then transcribed to punch cards."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#first-assemblers",
+    "href": "slides/slides-topic-02-01.html#first-assemblers",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "First Assemblers",
+    "text": "First Assemblers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe first assemblers were human!\nProgrammers wrote assembly code, which secretaries transcribed to binary for machine processing."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#high-and-low-level-languages",
+    "href": "slides/slides-topic-02-01.html#high-and-low-level-languages",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "High and Low-Level Languages",
+    "text": "High and Low-Level Languages\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHigh-Level Languages: Abstract from hardware details, portable across different systems.\nLow-Level Languages: Closer to machine code, require consideration of hardware specifics."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#compiled-vs-interpreted-languages",
+    "href": "slides/slides-topic-02-01.html#compiled-vs-interpreted-languages",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Compiled vs Interpreted Languages",
+    "text": "Compiled vs Interpreted Languages\n\n\nCompiled Languages: Convert code to binary instructions before execution (e.g., C++, Fortran, Go).\nInterpreted Languages: Run inside a program that interprets and executes commands immediately."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#performance-and-flexibility",
+    "href": "slides/slides-topic-02-01.html#performance-and-flexibility",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Performance and Flexibility",
+    "text": "Performance and Flexibility\n\n\nCompiled languages are generally faster but require a compilation step.\nInterpreted languages are more flexible but can be slower, though this can be mitigated (e.g., Python with C++ libraries)."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#summary-1",
+    "href": "slides/slides-topic-02-01.html#summary-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary",
+    "text": "Summary\n\n\nComputational Literacy: Binary and hexadecimal numbers, characters (ASCII, Unicode), and distinction between high vs low-level programming languages.\nEarly Computing: Konrad Zuse’s pioneering work with programmable digital computers and the use of binary arithmetic.\nAssembly Language: The initial approach to programming using human-readable instructions for machine code.\nCalculators: The evolution from Leibniz’s four-species calculating machine to modern electronic computing.\nSilicon Microchip Computers: The 1970s revolution with transistors, integrated circuits, and the emergence of Von Neumann architecture.\nModern Programming Languages: The spectrum from low-level assembly languages to high-level languages like Python; distinction between compiled and interpreted languages."
   }
 ]
