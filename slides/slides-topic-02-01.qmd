@@ -24,13 +24,16 @@ format:
 ## Topic Overview
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="34%"}
 -   **Computational Literacy**
 
     -   **Binary and Hexadecimal numbers**
     -   **Characters, ASCII, Unicode**
     -   **High vrs low level programming languages**
     -   **Compiled *vs* interpreted languages**
+
+:::
+::: {.column width="33%"}
 
 -   Command Line
 
@@ -41,18 +44,29 @@ format:
     -   Working with text files
     -   Redirects, pipes, and loops
     -   Scripting
+
+
 :::
 
-::: {.column width="50%"}
+::: {.column width="33%"}
 -   Version Control
 
     -   Data Science Workflow
     -   Reproducibility
     -   Git and GitHub
+    
+
 :::
 :::
 
 <br>
+
+:::aside
+:::{.fragment}
+*this lecture draws on materials from Professor Jacobson [Essential Computer Literacy: 50 min.](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/essential-computer-literacy/index.html#0).*
+
+:::
+:::
 
 # Computational Literacy
 
