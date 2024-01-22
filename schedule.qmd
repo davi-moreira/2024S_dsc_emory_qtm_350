@@ -1,7 +1,9 @@
 ---
 title: "Schedule"
 author: "Davi Moreira"
+date-modified: "last-modified"
 date: "2024-01-18"
+date-format: "MMM D, YYYY"
 # listing:
 #   - id: schedule
 #     contents:
