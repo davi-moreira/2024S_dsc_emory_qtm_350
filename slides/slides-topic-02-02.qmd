@@ -816,7 +816,7 @@ Beware of directory names that contain spaces. Say you have a directory called "
 
 ::: {.fragment}
 
-![](figs/expanding-brain.jpg){fig-align="center" height="600"}
+![](figs/expanding-brain.jpg){fig-align="center" height="700"}
 
 :::
 
@@ -1327,7 +1327,7 @@ For a more detailed overview, click [here](https://effective-shell.com/docs/part
 ::: {.column width="50%" align="center"}
 
 
-![](figs/bookshelf.gif){fig-align="center" height="500"}
+![](figs/bookshelf.gif){fig-align="center" height="600"}
 
 :::
 

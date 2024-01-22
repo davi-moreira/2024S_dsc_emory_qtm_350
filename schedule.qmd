@@ -25,10 +25,10 @@ editor: visual
 | Week    | Topic    | Title                                      | Date    |
 |:--------|:-------------------|:-------------------------------------------|:--------|
 | Week 01 | [Topic 01](./topics-pages/page-topic-01.qmd) | Introduction, Syllabus and Set up   | Jan 18  |
-| Week 02 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control                            | Jan 23  |
+| Week 02 | [Topic 01](./topics-pages/page-topic-01.qmd) | Introduction, Syllabus and Set up   | Jan 23  |
 | Week 02 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control                            | Jan 25  |
 | Week 03 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control | Jan 30  |
-| Week 03 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials                       | Feb 1   |
+| Week 03 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control                            | Feb 1   |
 | Week 04 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials                        | Feb 6   |
 | Week 04 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials                        | Feb 8   |
 | Week 05 | [Topic 04](./topics-pages/page-topic-04.qmd)  | API Interactions and Web Scraping          | Feb 13  |
