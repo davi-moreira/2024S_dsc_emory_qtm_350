@@ -31,10 +31,9 @@ format:
     -   **Characters, ASCII, Unicode**
     -   **High vrs low level programming languages**
     -   **Compiled *vs* interpreted languages**
-
 :::
-::: {.column width="33%"}
 
+::: {.column width="33%"}
 -   Command Line
 
     -   Shell basics
@@ -44,8 +43,6 @@ format:
     -   Working with text files
     -   Redirects, pipes, and loops
     -   Scripting
-
-
 :::
 
 ::: {.column width="33%"}
@@ -54,17 +51,14 @@ format:
     -   Data Science Workflow
     -   Reproducibility
     -   Git and GitHub
-    
-
 :::
 :::
 
 <br>
 
-:::aside
-:::{.fragment}
+::: aside
+::: fragment
 *this lecture draws on materials from Professor Jacobson [Essential Computer Literacy: 50 min.](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/essential-computer-literacy/index.html#0).*
-
 :::
 :::
 
@@ -224,9 +218,11 @@ knitr::include_graphics("figs/von_neumann_architecture2.png")
 
 ::: columns
 ::: {.column width="60%"}
+
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("figs/transistor_chip.jpeg") 
 ```
+
 :::
 
 ::: {.column width="40%"}
@@ -237,8 +233,6 @@ knitr::include_graphics("figs/transistor_chip.jpeg")
 -   Computers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip.
 :::
 :::
-
-::::
 
 ## What is Binary?
 
@@ -303,6 +297,97 @@ knitr::include_graphics("figs/transistor_chip.jpeg")
 -   **Answer**: b. 11
 
     -   In binary, the number 3 is represented as 11, which equates to $(1 \times 2^1) + (1 \times 2^0)$.
+
+
+## Practice Exercise: 
+
+1. What binary number represents 5?
+
+2. What binary number represents 7?
+
+3. What binary number represents 9?
+
+4. What binary number represents 11?
+
+<!---
+
+## Your turn! 10 minutes
+
+1. What binary number represents 5?
+
+    -   In binary, the number 5 is represented as 101, which equates to $(1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$.
+
+2. What binary number represents 7?
+
+    -    In binary, the number 7 is represented as 111, which equates to $(1 \times 2^2) + (1 \times 2^1) + (1 \times 2^0)$.
+
+3. What binary number represents 9?
+
+    -   In binary, the number 9 is represented as 1001, which equates to $(1 \times 2^3) + (0 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$.
+
+4. What binary number represents 11?
+
+    -   In binary, the number 11 is represented as 1011, which equates to $(1 \times 2^3) + (0 \times 2^2) + (1 \times 2^1) + (1 \times 2^0)$.
+
+--->
+
+
+<!--- ## Binary Number for Decimal 5
+
+Question: What binary number represents 5?
+
+- a. 101
+- b. 100
+- c. 111
+- d. 011
+
+**Answer**: a. 101
+
+In binary, the number 5 is represented as 101, which equates to $(1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$.
+
+## Binary Number for Decimal 7
+
+Question: What binary number represents 7?
+
+- a. 111
+- b. 101
+- c. 110
+- d. 011
+
+Answer: a. 111
+
+In binary, the number 7 is represented as 111, which equates to $(1 \times 2^2) + (1 \times 2^1) + (1 \times 2^0)$.
+
+
+## Binary Number for Decimal 9
+
+Question: What binary number represents 9?
+
+- a. 1001
+- b. 1010
+- c. 1100
+- d. 0111
+
+Answer: a. 1001
+
+In binary, the number 9 is represented as 1001, which equates to $(1 \times 2^3) + (0 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$.
+
+
+## Binary Number for Decimal 11
+
+Question: What binary number represents 11?
+
+- a. 1011
+- b. 1101
+- c. 1110
+- d. 1001
+
+Answer: a. 1011
+
+In binary, the number 11 is represented as 1011, which equates to $(1 \times 2^3) + (0 \times 2^2) + (1 \times 2^1) + (1 \times 2^0)$.
+
+--->
+
 
 ## Machine Code
 
@@ -374,7 +459,6 @@ knitr::include_graphics("figs/matrix.avif")
     -   Each bit has two possible values (0 or 1).
     -   Therefore, a byte can represent $2^8$ or 256 distinct numbers, ranging from 0 to 255.
 
-````{=html}
 <!---
  ## Chess Board Legend - Problem 1
 
@@ -433,7 +517,7 @@ So what, what is so great about 64 switches being able to represent all the numb
 We can use them for more than representing numbers...they can represent characters like A or !
 
 --->
-````
+
 
 # Converting Instructions into Binary & Understanding ASCII
 
@@ -497,9 +581,15 @@ knitr::include_graphics("figs/glyph.png")
 
 -   Write the characters of your name using ASCII codes.
 
+    -   [Check this table!](https://www.rapidtables.com/code/text/ascii-table.html)
+
 ## Practice Exercise
 
 <br>
+
+[Here we have an online translator!](http://www.unit-conversion.info/texttools/ascii/)
+
+. . .
 
 'DAVI' using ASCII codes.
 
@@ -551,6 +641,107 @@ knitr::include_graphics("figs/glyph.png")
 
 -   Convert binary to hex by grouping into blocks of four bits.
 -   Example: Binary `1001 1110 0000 1010` converts to Hex `9E0A`.
+
+
+## Practice Exercise
+
+
+1. Convert the decimal number 13 to binary.
+
+2. Convert the decimal number 13 to hexadecimal.
+
+<!---
+
+## Practice Exercise: Solution {.scrollable .smaller}
+
+1. Decimal 13 is `1101` in binary.
+
+    -   Break it down: $13 = (1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$.
+
+2. Binary 1101 is `D` in hexadecimal.
+
+    - Group the binary into blocks of four: `1101`.
+    - Convert each block to hex: `1101` (binary) = `D` (hex).
+
+    -   Let's take a closer look at how to convert the binary number `1101` to hexadecimal:
+
+    - Start with the binary number: `1101`
+    - Convert it to decimal by summing the powers of 2:
+    
+        - $1 \times 2^3$ = 8
+        - $1 \times 2^2$ = 4
+        - $0 \times 2^1$ = 0
+        - $1 \times 2^0$ = 1
+    
+    - Add the decimal values: $8 + 4 + 0 + 1 = 13$
+
+    - The decimal number `13` corresponds to the hexadecimal number `D`.
+
+    - Therefore, binary `1101` is `D` in hexadecimal.
+
+--->
+
+## Practice Exercise
+
+Now, convert the decimal number 27 to binary and then to hexadecimal.
+
+
+<!---
+
+## Practice Exercise Solution - part 1/2
+
+1. **Decimal to Binary**:
+
+. . . 
+
+- Divide the number by 2 and write down the remainder.
+
+- Continue dividing the quotient by 2 until you get a quotient of zero.
+
+- Write out the remainders in reverse order.
+
+. . .
+
+For the number `27`:
+
+- $27 / 2$ = 13 with a remainder of $1$.
+- $13 / 2$ = 6 with a remainder of $1$.
+- $6 / 2$ = 3 with a remainder of $0$.
+- $3 / 2$ = 1 with a remainder of $1$.
+- $1 / 2$ = 0 with a remainder of $1$.
+
+. . .
+
+Writing the remainders in reverse order gives us the binary: `11011`.
+
+
+## Practice Exercise Solution - part 2/2
+
+2. **Binary to Hexadecimal**:
+
+. . . 
+
+For the binary number `11011`:
+
+. . .
+
+1. Group the binary number into sets of four from the right: `1 1011`.
+
+2. Add a leading zero to the leftmost group to make it a set of four: `0001 1011`.
+
+3. Convert each group to hexadecimal:
+    - `0001` is `1` in hexadecimal.
+    - `1011` is `B` in hexadecimal.
+
+4. Combine the hexadecimal values to get the final result: `1B`.
+
+. . .
+
+Therefore, decimal `27` is `11011` in binary and `1B` in hexadecimal.
+
+--->
+
+
 
 ## Hexadecimal in File Formats
 
@@ -613,6 +804,8 @@ knitr::include_graphics("figs/glyph.png")
 -   It is a variable-width encoding representing every Unicode character.
 -   Python uses UTF-8 by default for source code.
 
+<!---
+
 ## Specifying Unicode in Python
 
 -   Python supports writing source code in UTF-8 by default:
@@ -622,9 +815,10 @@ knitr::include_graphics("figs/glyph.png")
     -   `\Unnnnnnnn` for an eight-digit hex code point.
     -   Use full digit count, padding with leading zeroes as necessary.
 
-## Practice Exercise
 
--   Try writing your name in Unicode (UTF-8).
+--->
+
+## Example
 
 -   To write "DAVI" in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character.
 
@@ -637,7 +831,7 @@ knitr::include_graphics("figs/glyph.png")
 
 -   "DAVI" in Unicode (UTF-8) using these escape sequences would be represented as "\\u0044\\u0041\\u0056\\u0049".
 
-# "High vs Low-Level Languages and the Genesis of Programming"
+# High vs Low-Level Languages and the Genesis of Programming
 
 ```{=html}
 <!---
@@ -653,7 +847,7 @@ knitr::include_graphics("figs/glyph.png")
 
 ::: columns
 ::: {.column width="60%"}
-```{r  echo=FALSE, out.width = "60%", fig.align="center"}
+```{r  echo=FALSE, out.width = "70%", fig.align="center"}
 knitr::include_graphics("figs/konrad_zuse_z4.png") 
 ```
 :::
@@ -719,7 +913,7 @@ knitr::include_graphics("figs/high_low_languages.png")
 
 -   **Compiled Languages:** Convert code to binary instructions before execution (e.g., `C++`, `Fortran`, `Go`).
 
--   **Interpreted Languages:** Run inside a program that interprets and executes commands immediately.
+-   **Interpreted Languages:** Run inside a program that interprets and executes commands immediately (e.g., `R`, `Python`).
 
 ## Performance and Flexibility
 

@@ -536,7 +536,7 @@
     "href": "slides/slides-topic-02-01.html#introduction-to-binary",
     "title": " QTM 350: Data Science Computing ",
     "section": "Introduction to Binary",
-    "text": "Introduction to Binary\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn modern digital computers, transistors act as switches, with 1 for high voltage level and 0 for low voltage level.\nComputers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip.\n\n\n\n::::"
+    "text": "Introduction to Binary\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn modern digital computers, transistors act as switches, with 1 for high voltage level and 0 for low voltage level.\nComputers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip."
   },
   {
     "objectID": "slides/slides-topic-02-01.html#what-is-binary",
@@ -619,15 +619,15 @@
     "objectID": "slides/slides-topic-02-01.html#practice-exercise",
     "href": "slides/slides-topic-02-01.html#practice-exercise",
     "title": " QTM 350: Data Science Computing ",
-    "section": "Practice Exercise",
-    "text": "Practice Exercise\n\n\nWrite the characters of your name using ASCII codes."
+    "section": "Practice Exercise:",
+    "text": "Practice Exercise:\n\nWhat binary number represents 5?\nWhat binary number represents 7?\nWhat binary number represents 9?\nWhat binary number represents 11?"
   },
   {
     "objectID": "slides/slides-topic-02-01.html#practice-exercise-1",
     "href": "slides/slides-topic-02-01.html#practice-exercise-1",
     "title": " QTM 350: Data Science Computing ",
     "section": "Practice Exercise",
-    "text": "Practice Exercise\n\n‘DAVI’ using ASCII codes.\n\n\n\nCharacter\nASCII Code\n\n\n\n\nD\n68\n\n\nA\n65\n\n\nV\n86\n\n\nI\n73\n\n\n\nNote: If ASCII does not support characters in your name, Unicode will provide a solution."
+    "text": "Practice Exercise\n\n\nWrite the characters of your name using ASCII codes.\n\nCheck this table!"
   },
   {
     "objectID": "slides/slides-topic-02-01.html#hexadecimal-and-unicode",
@@ -711,7 +711,7 @@
     "href": "slides/slides-topic-02-01.html#practice-exercise-2",
     "title": " QTM 350: Data Science Computing ",
     "section": "Practice Exercise",
-    "text": "Practice Exercise\n\nTry writing your name in Unicode (UTF-8).\nTo write “DAVI” in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character.\nIn UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for ‘D’, ‘A’, ‘V’, and ‘I’ are as follows:\n\n“D”: “\\u0044”\n“A”: “\\u0041”\n“V”: “\\u0056”\n“I”: “\\u0049”\n\n“DAVI” in Unicode (UTF-8) using these escape sequences would be represented as “\\u0044\\u0041\\u0056\\u0049”."
+    "text": "Practice Exercise\n\nHere we have an online translator!\n\n‘DAVI’ using ASCII codes.\n\n\n\nCharacter\nASCII Code\n\n\n\n\nD\n68\n\n\nA\n65\n\n\nV\n86\n\n\nI\n73\n\n\n\nNote: If ASCII does not support characters in your name, Unicode will provide a solution."
   },
   {
     "objectID": "slides/slides-topic-02-01.html#zuses-computers",
@@ -746,7 +746,7 @@
     "href": "slides/slides-topic-02-01.html#compiled-vs-interpreted-languages",
     "title": " QTM 350: Data Science Computing ",
     "section": "Compiled vs Interpreted Languages",
-    "text": "Compiled vs Interpreted Languages\n\n\nCompiled Languages: Convert code to binary instructions before execution (e.g., C++, Fortran, Go).\nInterpreted Languages: Run inside a program that interprets and executes commands immediately."
+    "text": "Compiled vs Interpreted Languages\n\n\nCompiled Languages: Convert code to binary instructions before execution (e.g., C++, Fortran, Go).\nInterpreted Languages: Run inside a program that interprets and executes commands immediately (e.g., R, Python)."
   },
   {
     "objectID": "slides/slides-topic-02-01.html#performance-and-flexibility",
@@ -1202,5 +1202,68 @@
     "title": " QTM 350: Data Science Computing ",
     "section": "Things we didn’t cover here",
     "text": "Things we didn’t cover here\nI hope that I’ve given you a sense of how the shell works and how powerful it is. My main goal has been to “demystify” the shell, so that you aren’t intimidated when we use shell commands later on.\nWe didn’t cover many things:\n\nUser roles and file permissions, environment variables, SSH, memory management (e.g. top and htop), GNU parallel, etc.\nAutomation; see here, here, and here are great places to start learning about automation on your own.\n\n\nIf you want to dig deeper, check out\n\nThe Unix Shell (Software Carpentery)\nThe Unix Workbench (Sean Kross)\nData Science at the Command Line (Jeroen Janssens)\nEffective Shell (Dave Kerr)\nUsing AWK and R to parse 25tb (Nick Strayer)"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#your-turn-10-minutes",
+    "href": "slides/slides-topic-02-01.html#your-turn-10-minutes",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Your turn! 10 minutes",
+    "text": "Your turn! 10 minutes\n\nWhat binary number represents 5?\nWhat binary number represents 7?\nWhat binary number represents 9?\nWhat binary number represents 11?"
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#your-turn-10-minutes-1",
+    "href": "slides/slides-topic-02-01.html#your-turn-10-minutes-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Your turn! 10 minutes",
+    "text": "Your turn! 10 minutes\n\nWhat binary number represents 5?\n\nIn binary, the number 5 is represented as 101, which equates to \\((1 \\times 2^2) + (0 \\times 2^1) + (1 \\times 2^0)\\).\n\nWhat binary number represents 7?\n\nIn binary, the number 7 is represented as 111, which equates to \\((1 \\times 2^2) + (1 \\times 2^1) + (1 \\times 2^0)\\).\n\nWhat binary number represents 9?\n\nIn binary, the number 9 is represented as 1001, which equates to \\((1 \\times 2^3) + (0 \\times 2^2) + (0 \\times 2^1) + (1 \\times 2^0)\\).\n\nWhat binary number represents 11?\n\nIn binary, the number 11 is represented as 1011, which equates to \\((1 \\times 2^3) + (0 \\times 2^2) + (1 \\times 2^1) + (1 \\times 2^0)\\)."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise-3",
+    "href": "slides/slides-topic-02-01.html#practice-exercise-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\n\nConvert the decimal number 13 to binary.\nConvert the decimal number 13 to hexadecimal."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise-solution",
+    "href": "slides/slides-topic-02-01.html#practice-exercise-solution",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise: Solution",
+    "text": "Practice Exercise: Solution\n\nDecimal 13 is 1101 in binary.\n\nBreak it down: \\(13 = (1 \\times 2^3) + (1 \\times 2^2) + (0 \\times 2^1) + (1 \\times 2^0)\\).\n\nBinary 1101 is D in hexadecimal.\n\nGroup the binary into blocks of four: 1101.\nConvert each block to hex: 1101 (binary) = D (hex).\nLet’s take a closer look at how to convert the binary number 1101 to hexadecimal:\nStart with the binary number: 1101\nConvert it to decimal by summing the powers of 2:\n\n\\(1 \\times 2^3\\) = 8\n\\(1 \\times 2^2\\) = 4\n\\(0 \\times 2^1\\) = 0\n\\(1 \\times 2^0\\) = 1\n\nAdd the decimal values: \\(8 + 4 + 0 + 1 = 13\\)\nThe decimal number 13 corresponds to the hexadecimal number D.\nTherefore, binary 1101 is D in hexadecimal."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise-4",
+    "href": "slides/slides-topic-02-01.html#practice-exercise-4",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\nNow, convert the decimal number 27 to binary and then to hexadecimal."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise-solution---part-12",
+    "href": "slides/slides-topic-02-01.html#practice-exercise-solution---part-12",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise Solution - part 1/2",
+    "text": "Practice Exercise Solution - part 1/2\n\nDecimal to Binary:\n\n\n\nDivide the number by 2 and write down the remainder.\nContinue dividing the quotient by 2 until you get a quotient of zero.\nWrite out the remainders in reverse order.\n\n\n\nFor the number 27:\n\n\\(27 / 2\\) = 13 with a remainder of \\(1\\).\n\\(13 / 2\\) = 6 with a remainder of \\(1\\).\n\\(6 / 2\\) = 3 with a remainder of \\(0\\).\n\\(3 / 2\\) = 1 with a remainder of \\(1\\).\n\\(1 / 2\\) = 0 with a remainder of \\(1\\).\n\n\n\nWriting the remainders in reverse order gives us the binary: 11011."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise-solution---part-22",
+    "href": "slides/slides-topic-02-01.html#practice-exercise-solution---part-22",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise Solution - part 2/2",
+    "text": "Practice Exercise Solution - part 2/2\n\nBinary to Hexadecimal:\n\n\nFor the binary number 11011:\n\n\n\nGroup the binary number into sets of four from the right: 1 1011.\nAdd a leading zero to the leftmost group to make it a set of four: 0001 1011.\nConvert each group to hexadecimal:\n\n0001 is 1 in hexadecimal.\n1011 is B in hexadecimal.\n\nCombine the hexadecimal values to get the final result: 1B.\n\n\n\nTherefore, decimal 27 is 11011 in binary and 1B in hexadecimal."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#practice-exercise-5",
+    "href": "slides/slides-topic-02-01.html#practice-exercise-5",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\n\nTry writing your name in Unicode (UTF-8).\nTo write “DAVI” in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character.\nIn UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for ‘D’, ‘A’, ‘V’, and ‘I’ are as follows:\n\n“D”: “\\u0044”\n“A”: “\\u0041”\n“V”: “\\u0056”\n“I”: “\\u0049”\n\n“DAVI” in Unicode (UTF-8) using these escape sequences would be represented as “\\u0044\\u0041\\u0056\\u0049”."
+  },
+  {
+    "objectID": "slides/slides-topic-02-01.html#example",
+    "href": "slides/slides-topic-02-01.html#example",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Example",
+    "text": "Example\n\nTo write “DAVI” in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character.\nIn UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for ‘D’, ‘A’, ‘V’, and ‘I’ are as follows:\n\n“D”: “\\u0044”\n“A”: “\\u0041”\n“V”: “\\u0056”\n“I”: “\\u0049”\n\n“DAVI” in Unicode (UTF-8) using these escape sequences would be represented as “\\u0044\\u0041\\u0056\\u0049”."
   }
 ]
