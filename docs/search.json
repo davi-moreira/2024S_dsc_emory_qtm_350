@@ -642,7 +642,7 @@
     "href": "topics-pages/page-topic-01.html",
     "title": "Topic 01",
     "section": "",
-    "text": "Slides\n\nTopic 01: Introduction, Syllabus and Set up\n\n\n\nLecture Material:\n\nInstructions for setting up the course.\nUsing Jupyter Notebooks: html, notebook\n\n\n\nUsing Quarto for Python and R html, notebook\n\n&lt;!— notebook —\n\n\nAdditional Resources\n\nPython and Anaconda Installation Guide\nElements of Data Science - The notebooks\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\nR & Python: A Love Story - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nUsing LaTex to write math in markdown - docx2latex.com",
+    "text": "Slides\n\nTopic 01: Introduction, Syllabus and Set up\n\n\n\nLecture Material:\n\nInstructions for setting up the course.\nUsing Jupyter Notebooks: html, notebook\n\n\n\n\nUsing Quarto for Python and R html, notebook\n\n&lt;!— notebook —\n\n\nAdditional Resources\n\nPython and Anaconda Installation Guide\nElements of Data Science - The notebooks\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\nR & Python: A Love Story - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nUsing LaTex to write math in markdown - docx2latex.com",
     "crumbs": [
       "Materials",
       "Topic 1: Intro"
