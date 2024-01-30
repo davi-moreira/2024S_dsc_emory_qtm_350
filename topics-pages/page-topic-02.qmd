@@ -45,8 +45,11 @@ tbl-colwidths: [10,50,40]
 
 # Lecture Material
 
--   Basics of Command Line (very short piece): [html](/lecture_material/material-topic-02/basics_of_cmd.html), <a href="
-https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/lecture_material/material-topic-02/_basics_of_cmd.ipynb" download> notebook </a>
+-   Basics of Command Line (very short piece): [html](/lecture_material/material-topic-02/basics_of_cmd.html), [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/_basics_of_cmd.ipynb)
+<!--- to generate the link: https://minhaskamal.github.io/DownGit/#/home --->
+
+<!---<a href="
+https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material-topic-02/_basics_of_cmd.ipynb" download> notebook </a>--->
 
 -   Version Control - TBP: [html](/lecture_material/topic-02/_version_control_git.html), <a href="/lecture_material/material-topic-02/_version_control_git.ipynb" download> notebook </a>
 
