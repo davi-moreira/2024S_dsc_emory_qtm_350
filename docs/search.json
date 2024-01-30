@@ -84,8 +84,8 @@
     "objectID": "slides/slides-topic-02-02.html#topic-overview",
     "href": "slides/slides-topic-02-02.html#topic-overview",
     "title": " QTM 350: Data Science Computing ",
-    "section": "",
-    "text": "Computational Literacy\n\nBinary and Hexadecimal numbers\nCharacters, ASCII, Unicode\nHigh vrs low level programming languages\nCompiled vs interpreted languages\n\n\n\n\nCommand Line\n\nShell basics\nHelp!\nNavigating your system\nManaging your files\nWorking with text files\nRedirects, pipes, and loops\nScripting\n\n\n\n\nVersion Control\n\nData Science Workflow\nReproducibility\nGit and GitHub\n\n\n\n\n\n\n\n\nthis lecture draws on materials from Simon Munzert Intro to Data Science."
+    "section": "Topic Overview",
+    "text": "Topic Overview\n\n\n\nComputational Literacy\n\nBinary and Hexadecimal numbers\nCharacters, ASCII, Unicode\nHigh vrs low level programming languages\nCompiled vs interpreted languages\n\n\n\n\nCommand Line\n\nShell basics\nHelp!\nNavigating your system\nManaging your files\nWorking with text files\nRedirects, pipes, and loops\nScripting\n\n\n\n\nVersion Control\n\nData Science Workflow\nReproducibility\nGit and GitHub\n\n\n\n\n\n\n\n\nthis lecture draws on materials from Simon Munzert Intro to Data Science."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#a-computer-in-a-nutshell",
@@ -141,7 +141,7 @@
     "href": "slides/slides-topic-02-02.html#the-unix-philosophy-1",
     "title": " QTM 350: Data Science Computing ",
     "section": "The Unix philosophy",
-    "text": "The Unix philosophy\nThe shell tools that we’re going to be using have their roots in the Unix family of operating systems originally developed at Bells Labs in the 1970s.\nBesides paying homage, acknowledging the Unix lineage is important because these tools still embody the “Unix philosophy”:\n\nDo One Thing And Do It Well\n\n. . .\nBy pairing and chaining well-designed individual components, we can build powerful and much more complex larger systems.\nYou can see why the Unix philosophy is also referred to as “minimalist and modular”.\nAgain, this philosophy is very clearly expressed in the design and functionality of the Unix shell."
+    "text": "The Unix philosophy\nThe shell tools that we’re going to be using have their roots in the Unix family of operating systems originally developed at Bells Labs in the 1970s.\nBesides paying homage, acknowledging the Unix lineage is important because these tools still embody the “Unix philosophy”:\n\nDo One Thing And Do It Well\n\n\nBy pairing and chaining well-designed individual components, we can build powerful and much more complex larger systems.\nYou can see why the Unix philosophy is also referred to as “minimalist and modular”.\nAgain, this philosophy is very clearly expressed in the design and functionality of the Unix shell."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#things-to-use-the-shell-for",
@@ -155,7 +155,7 @@
     "href": "slides/slides-topic-02-02.html#shell-first-look",
     "title": " QTM 350: Data Science Computing ",
     "section": "Shell: First look",
-    "text": "Shell: First look\nLet’s open up our shell.\nA convenient way to do this is through RStudio’s built-in Terminal.\nHitting Shift+Alt+T (or Shift+⌥+R on a Mac) will cause a “Terminal” tab to open up next to the “Console” tab.\nYour system default shell is loaded. To find out what that is, type:\necho $SHELL\n\n\n\n/bin/zsh\n\n\n\nIt’s Z bash in my case.\n. . .\nOf course, it’s always possible to open up the Shell directly if you prefer. It’s your turn!\n\nLinux\nMac\nWindows"
+    "text": "Shell: First look\nLet’s open up our shell.\nA convenient way to do this is through RStudio’s built-in Terminal.\nHitting Shift+Alt+T (or Shift+⌥+R on a Mac) will cause a “Terminal” tab to open up next to the “Console” tab.\nYour system default shell is loaded. To find out what that is, type:\necho $SHELL\n\n\n\n/bin/zsh\n\n\n\nIt’s Z bash in my case.\n\nOf course, it’s always possible to open up the Shell directly if you prefer. It’s your turn!\n\nLinux\nMac\nWindows"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#shell-first-look-1",
@@ -225,7 +225,7 @@
     "href": "slides/slides-topic-02-02.html#help-cheat-tldr-cheat.sh",
     "title": " QTM 350: Data Science Computing ",
     "section": "Help: cheat, tldr, cheat.sh",
-    "text": "Help: cheat, tldr, cheat.sh\nThere are various other utilities which provide more readable summaries/cheatsheets of various commands. Those include\n\ncheat\ncheat.sh\ntldr\n\n. . .\nThe first two need to be installed first. cheat.sh sheets are accessible via:\ncurl cheat.sh/ls  \n# List files one per line:\nls -1\n\n# List all files, including hidden files:\nls -a\n\n# List all files, with trailing `/` added to directory names:\nls -F\n\n# Long format list with size displayed using human readable units (KB, MB, GB):\nls -lh"
+    "text": "Help: cheat, tldr, cheat.sh\nThere are various other utilities which provide more readable summaries/cheatsheets of various commands. Those include\n\ncheat\ncheat.sh\ntldr\n\n\nThe first two need to be installed first. cheat.sh sheets are accessible via:\ncurl cheat.sh/ls  \n# List files one per line:\nls -1\n\n# List all files, including hidden files:\nls -a\n\n# List all files, with trailing `/` added to directory names:\nls -F\n\n# Long format list with size displayed using human readable units (KB, MB, GB):\nls -lh"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#navigating-your-file-system-1",
@@ -239,7 +239,7 @@
     "href": "slides/slides-topic-02-02.html#navigation",
     "title": " QTM 350: Data Science Computing ",
     "section": "Navigation",
-    "text": "Navigation\n\nKey navigation commands are:\n\npwd to print (the current) working directory.\ncd to change directory.\n\n. . .\npwd\n\n\n\n/Users/dcorde3/Library/CloudStorage/Dropbox/academic/cursos/cursos-davi/data_science_computing/2024S_dsc_emory_qtm_350/slides"
+    "text": "Navigation\n\nKey navigation commands are:\n\npwd to print (the current) working directory.\ncd to change directory.\n\n\npwd\n\n\n\n/Users/dcorde3/Library/CloudStorage/Dropbox/academic/cursos/cursos-davi/data_science_computing/2024S_dsc_emory_qtm_350/slides"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#navigation-1",
@@ -288,14 +288,14 @@
     "href": "slides/slides-topic-02-02.html#create-touch-and-mkdir",
     "title": " QTM 350: Data Science Computing ",
     "section": "Create: touch and mkdir",
-    "text": "Create: touch and mkdir\nOne of the most common shell tasks is object creation (files, directories, etc.).\nWe use mkdir to create directories. E.g., to create a new “testing” directory we do:\nmkdir testing\n\n. . .\nWe use touch to create (empty) files. If the file(s) already exist, touch changes a file’s “Access”, “Modify” and “Change” timestamps to the current time and date. To add some files to our new directory, we do:\ntouch testing/test1.txt testing/test2.txt testing/test3.txt\n\n. . .\nCheck that it worked:\nls testing\n\n\n\ntest1.txt test2.txt test3.txt"
+    "text": "Create: touch and mkdir\nOne of the most common shell tasks is object creation (files, directories, etc.).\nWe use mkdir to create directories. E.g., to create a new “testing” directory we do:\nmkdir testing\n\n\nWe use touch to create (empty) files. If the file(s) already exist, touch changes a file’s “Access”, “Modify” and “Change” timestamps to the current time and date. To add some files to our new directory, we do:\ntouch testing/test1.txt testing/test2.txt testing/test3.txt\n\n\n\nCheck that it worked:\nls testing\n\n\n\ntest1.txt test2.txt test3.txt"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#remove-rm-and-rmdir",
     "href": "slides/slides-topic-02-02.html#remove-rm-and-rmdir",
     "title": " QTM 350: Data Science Computing ",
     "section": "Remove: rm and rmdir",
-    "text": "Remove: rm and rmdir\nLet’s delete the objects that we just created. Start with one of the .txt files, by using rm. - We could delete all the files at the same time, but you’ll see why I want to keep some.\nrm testing/test1.txt\n\n. . .\nThe equivalent command for directories is rmdir.\nrmdir testing\n\n\n\nrmdir: testing: Directory not empty\n\n\n. . .\nUh oh… It won’t let us delete the directory while it still has files inside of it. The solution is to use the rm command again with the “recursive” (-r or -R) and “force” (-f) options. - Excluding the -f option is safer, but will trigger a confirmation prompt for every file, which I’d rather avoid here.\nrm -rf testing ## Success"
+    "text": "Remove: rm and rmdir\nLet’s delete the objects that we just created. Start with one of the .txt files, by using rm. - We could delete all the files at the same time, but you’ll see why I want to keep some.\nrm testing/test1.txt\n\n\nThe equivalent command for directories is rmdir.\nrmdir testing\n\n\n\nrmdir: testing: Directory not empty\n\n\n\n\nUh oh… It won’t let us delete the directory while it still has files inside of it. The solution is to use the rm command again with the “recursive” (-r or -R) and “force” (-f) options. - Excluding the -f option is safer, but will trigger a confirmation prompt for every file, which I’d rather avoid here.\nrm -rf testing ## Success"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#copy-cp",
@@ -309,28 +309,28 @@
     "href": "slides/slides-topic-02-02.html#move-and-rename-mv",
     "title": " QTM 350: Data Science Computing ",
     "section": "Move (and rename): mv",
-    "text": "Move (and rename): mv\nThe syntax for moving is $ mv object path/newobjectname\n ## Move the abc.txt file and show that it worked\nmv slides-topic-02-02-examples/ABC/abc.txt examples\nls slides-topic-02-02-examples/ABC ## empty\n\n## Move it back again\nmv slides-topic-02-02-examples/abc.txt slides-topic-02-02-examples/ABC\nls slides-topic-02-02-examples/ABC ## not empty\n\nTerminal!\n\n. . .\nNote that “moving” an object within the same directory, but with specifying newobjectname, is effectively the same as renaming it.\n ## Rename reps-copy to reps2 by \"moving\" it with a new name\nmv slides-topic-02-02-examples/copies/reps-copy.txt slides-topic-02-02-examples/copies/reps2.txt\nls slides-topic-02-02-examples/copies\n\nTerminal!"
+    "text": "Move (and rename): mv\nThe syntax for moving is $ mv object path/newobjectname\n ## Move the abc.txt file and show that it worked\nmv slides-topic-02-02-examples/ABC/abc.txt examples\nls slides-topic-02-02-examples/ABC ## empty\n\n## Move it back again\nmv slides-topic-02-02-examples/abc.txt slides-topic-02-02-examples/ABC\nls slides-topic-02-02-examples/ABC ## not empty\n\nTerminal!\n\n\nNote that “moving” an object within the same directory, but with specifying newobjectname, is effectively the same as renaming it.\n ## Rename reps-copy to reps2 by \"moving\" it with a new name\nmv slides-topic-02-02-examples/copies/reps-copy.txt slides-topic-02-02-examples/copies/reps2.txt\nls slides-topic-02-02-examples/copies\n\nTerminal!"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#rename-en-masse-zmv",
     "href": "slides/slides-topic-02-02.html#rename-en-masse-zmv",
     "title": " QTM 350: Data Science Computing ",
     "section": "Rename en masse : zmv",
-    "text": "Rename en masse : zmv\nA more convenient way to do renaming in zsh is with zmv. It has to be installed and autoloaded first:\nautoload -U zmv\n\nTerminal!\n\n. . .\nThe syntax is zmv &lt;options&gt; &lt;old-files-pattern&gt; &lt;new-files-pattern&gt;\nFor example, say we want to change the file type (i.e. extension) of a set of files in the slides-topic-02-02-examples/meals directory, we do:\ncd slides-topic-02-02-examples/meals\nzmv -n -W  \"*.csv\" \"*.txt\"\n\nTerminal!\n\n\n\nA very useful flag is -n which does not execute the command but prints the command that would be executed. Use this if you are unsure about your patterns. The -W flag ensures that the wildcard * is recycled in the second pattern."
+    "text": "Rename en masse : zmv\nA more convenient way to do renaming in zsh is with zmv. It has to be installed and autoloaded first:\nautoload -U zmv\n\nTerminal!\n\n\nThe syntax is zmv &lt;options&gt; &lt;old-files-pattern&gt; &lt;new-files-pattern&gt;\nFor example, say we want to change the file type (i.e. extension) of a set of files in the slides-topic-02-02-examples/meals directory, we do:\ncd slides-topic-02-02-examples/meals\nzmv -n -W  \"*.csv\" \"*.txt\"\n\nTerminal!\n\n\n\nA very useful flag is -n which does not execute the command but prints the command that would be executed. Use this if you are unsure about your patterns. The -W flag ensures that the wildcard * is recycled in the second pattern."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#rename-en-masse-zmv-1",
     "href": "slides/slides-topic-02-02.html#rename-en-masse-zmv-1",
     "title": " QTM 350: Data Science Computing ",
     "section": "Rename en masse : zmv",
-    "text": "Rename en masse : zmv\nzmv really shines in conjunction with regular expressions and wildcards (more on the next slide). This works especially well for dealing with a whole list of files or folders.\nAs another example, let’s change all of the file names in the slides-topic-02-02-examples/meals directory.\nzmv -n '(**/)(*).csv' '$1$2-tacos.csv'\n\nTerminal!\n\n\n. . .\nNotice that the patterns are now bit more complicated. The first is surrounded by single quotes, (**/) which defines a group that we can refer to later. It allows us to search in both the given directory and sub-directories (which we don’t have in this case). The second, (*) is also grouped. Both are referred to in the replacement pattern with $1 and $2.\nWant to learn more about zmv? Check out this."
+    "text": "Rename en masse : zmv\nzmv really shines in conjunction with regular expressions and wildcards (more on the next slide). This works especially well for dealing with a whole list of files or folders.\nAs another example, let’s change all of the file names in the slides-topic-02-02-examples/meals directory.\nzmv -n '(**/)(*).csv' '$1$2-tacos.csv'\n\nTerminal!\n\n\n\nNotice that the patterns are now bit more complicated. The first is surrounded by single quotes, (**/) which defines a group that we can refer to later. It allows us to search in both the given directory and sub-directories (which we don’t have in this case). The second, (*) is also grouped. Both are referred to in the replacement pattern with $1 and $2.\nWant to learn more about zmv? Check out this."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#wildcards",
     "href": "slides/slides-topic-02-02.html#wildcards",
     "title": " QTM 350: Data Science Computing ",
     "section": "Wildcards",
-    "text": "Wildcards\nWildcards are special characters that can be used as a replacement for other characters. The two most important ones are:\n\nReplace any number of characters with *.\n\nConvenient when you want to copy, move, or delete a whole class of files.\n\n\n. . .\ncp slides-topic-02-02-examples/*.sh slides-topic-02-02-examples/copies ## Copy any file with an .sh extension to \"copies\"\nrm slides-topic-02-02-examples/copies/* ## Delete everything in the \"copies\" directory\n\nTerminal!\n\n. . .\n\nReplace a single character with ?\n\nConvenient when you want to discriminate between similarly named files.\n\n\n. . .\nls slides-topic-02-02-examples/meals/??nday.csv\nls slides-topic-02-02-examples/meals/?onday.csv\n\nTerminal!"
+    "text": "Wildcards\nWildcards are special characters that can be used as a replacement for other characters. The two most important ones are:\n\nReplace any number of characters with *.\n\nConvenient when you want to copy, move, or delete a whole class of files.\n\n\n\ncp slides-topic-02-02-examples/*.sh slides-topic-02-02-examples/copies ## Copy any file with an .sh extension to \"copies\"\nrm slides-topic-02-02-examples/copies/* ## Delete everything in the \"copies\" directory\n\nTerminal!\n\n\n\n\nReplace a single character with ?\n\nConvenient when you want to discriminate between similarly named files.\n\n\n\n\nls slides-topic-02-02-examples/meals/??nday.csv\nls slides-topic-02-02-examples/meals/?onday.csv\n\nTerminal!"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#find",
@@ -358,21 +358,21 @@
     "href": "slides/slides-topic-02-02.html#counting-text-wc",
     "title": " QTM 350: Data Science Computing ",
     "section": "Counting text: wc",
-    "text": "Counting text: wc\n\nYou can use the wc command to count:\n\nThe lines of text\nThe number of words\nThe number of characters\n\n. . .\nLet’s demonstrate with a text file containing all of Shakespeare’s Sonnets.1\nwc slides-topic-02-02-examples/sonnets.txt\n\nTerminal!\n\nThe character count is actually higher than we’d get if we count by hand, because wc counts the invisible newline character “”.\n\nProject Gutenberg."
+    "text": "Counting text: wc\n\nYou can use the wc command to count:\n\nThe lines of text\nThe number of words\nThe number of characters\n\n\nLet’s demonstrate with a text file containing all of Shakespeare’s Sonnets.1\nwc slides-topic-02-02-examples/sonnets.txt\n\nTerminal!\n\nThe character count is actually higher than we’d get if we count by hand, because wc counts the invisible newline character “”.\n\nProject Gutenberg."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#read-everything-cat",
     "href": "slides/slides-topic-02-02.html#read-everything-cat",
     "title": " QTM 350: Data Science Computing ",
     "section": "Read everything: cat",
-    "text": "Read everything: cat\n\nThe simplest way to read in text is with the cat (“concatenate”) command. Note that cat will read in all of the text. You can scroll back up in your shell window, but this can still be a pain.\nAgain, let’s demonstrate using Shakespeare’s Sonnets. (This will overflow the slide.)\nWe also use the -n flag to show line numbers:\n\n. . .\ncat -n slides-topic-02-02-examples/sonnets.txt\n\nTerminal!"
+    "text": "Read everything: cat\n\nThe simplest way to read in text is with the cat (“concatenate”) command. Note that cat will read in all of the text. You can scroll back up in your shell window, but this can still be a pain.\nAgain, let’s demonstrate using Shakespeare’s Sonnets. (This will overflow the slide.)\nWe also use the -n flag to show line numbers:\n\n\ncat -n slides-topic-02-02-examples/sonnets.txt\n\nTerminal!"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#scroll-more-and-less",
     "href": "slides/slides-topic-02-02.html#scroll-more-and-less",
     "title": " QTM 350: Data Science Computing ",
     "section": "Scroll: more and less",
-    "text": "Scroll: more and less\n\nThe more and less commands provide extra functionality over cat. For example, they allow you to move through long text one page at a time. (While they look similar, less is more than more, more or less…)\n\nmore slides-topic-02-02-examples/sonnets.txt\n\n\nTerminal!\n\n\n\nYou can move forward and back using the f and b keys, and quit by hitting q."
+    "text": "Scroll: more and less\n\nThe more and less commands provide extra functionality over cat. For example, they allow you to move through long text one page at a time. (While they look similar, less is more than more, more or less…)\n\nmore slides-topic-02-02-examples/sonnets.txt\n\nTerminal!\n\n\n\nYou can move forward and back using the f and b keys, and quit by hitting q."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#preview-head-and-tail",
@@ -386,7 +386,7 @@
     "href": "slides/slides-topic-02-02.html#preview-head-and-tail-1",
     "title": " QTM 350: Data Science Computing ",
     "section": "Preview: head and tail",
-    "text": "Preview: head and tail\n\ntail works very similarly to head, but starting from the bottom. For example, we can see the very last row of a file as follows:\n\ntail -n 1 slides-topic-02-02-examples/sonnets.txt ## Last row\n\nTerminal!\n\n. . .\nBy using the -n +N option, we can specify that we want to preview all lines starting from row N and after, as in:\n\ntail -n +3024 slides-topic-02-02-examples/sonnets.txt ## Show everything from line 3024\n\nTerminal!"
+    "text": "Preview: head and tail\n\ntail works very similarly to head, but starting from the bottom. For example, we can see the very last row of a file as follows:\n\ntail -n 1 slides-topic-02-02-examples/sonnets.txt ## Last row\n\nTerminal!\n\n\nBy using the -n +N option, we can specify that we want to preview all lines starting from row N and after, as in:\n\ntail -n +3024 slides-topic-02-02-examples/sonnets.txt ## Show everything from line 3024\n\nTerminal!"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#find-patterns-grep",
@@ -400,14 +400,14 @@
     "href": "slides/slides-topic-02-02.html#find-patterns-grep-1",
     "title": " QTM 350: Data Science Computing ",
     "section": "Find patterns: grep",
-    "text": "Find patterns: grep\n\nNote that grep can be used to identify patterns in a group of files (e.g. within a directory) too.\n\nThis is particularly useful if you are trying to identify a file that contains, say, a function name.\n\n. . .\nHere’s a simple example: Which days will I eat pasta this week?\n\nI’m using the r (recursive) and l (just list the files; don’t print the output) flags.\n\n. . .\ngrep -rl \"pasta\" slides-topic-02-02-examples/meals\n\n\nslides-topic-02-02-examples/meals/mealplan.csv\nslides-topic-02-02-examples/meals/monday.csv\n\n\nTake a look at the grep man or cheat file for other useful examples and flags (e.g. -i for ignore case)."
+    "text": "Find patterns: grep\n\nNote that grep can be used to identify patterns in a group of files (e.g. within a directory) too.\n\nThis is particularly useful if you are trying to identify a file that contains, say, a function name.\n\n\nHere’s a simple example: Which days will I eat pasta this week?\n\nI’m using the r (recursive) and l (just list the files; don’t print the output) flags.\n\n\n\ngrep -rl \"pasta\" slides-topic-02-02-examples/meals\n\n\nslides-topic-02-02-examples/meals/mealplan.csv\nslides-topic-02-02-examples/meals/monday.csv\n\n\nTake a look at the grep man or cheat file for other useful examples and flags (e.g. -i for ignore case)."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#manipulate-text-sed",
     "href": "slides/slides-topic-02-02.html#manipulate-text-sed",
     "title": " QTM 350: Data Science Computing ",
     "section": "Manipulate text: sed",
-    "text": "Manipulate text: sed\nThere are two main commands for manipulating text in the shell, namely sed and awk. Both of these are very powerful and flexible. We’ll briefly look into sed for now. (Mac users, note that the MacOS sed works a bit differently; see here.)\nsed is the stream editor command. It takes input from a stream - which in many cases will simply be a file. It then performs operations on the text as it is read, and returns the output.\n. . .\n\n\n\nExample 1. Replace one text pattern with another.\ncat slides-topic-02-02-examples/nursery.txt\n\n\nJack and Jill \nWent up the hill\n\n\nsed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt\ncat slides-topic-02-02-examples/nursery.txt\n\n\nBill and Jill \nWent up the hill\nJack and Jill \nWent up the hill\n\n\n\n\nLet’s look at the expression s/Jack/Bill/g in detail:\n\nThe s indicates that we are going to run the substitute function, which is used to replace text.\nThe / indicates the start of the pattern we are searching for - Bill in this case.\nThe second / indicates the start of the replacement we will make when the pattern is found.\nThe final / indicates the end of the replacement - we can also optionally put flags after this slash. Here, g ensures global replacement (not just replacement of the first match)."
+    "text": "Manipulate text: sed\nThere are two main commands for manipulating text in the shell, namely sed and awk. Both of these are very powerful and flexible. We’ll briefly look into sed for now. (Mac users, note that the MacOS sed works a bit differently; see here.)\nsed is the stream editor command. It takes input from a stream - which in many cases will simply be a file. It then performs operations on the text as it is read, and returns the output.\n\n\n\n\nExample 1. Replace one text pattern with another.\ncat slides-topic-02-02-examples/nursery.txt\n\n\nJack and Jill \nWent up the hill\n\n\nsed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt\ncat slides-topic-02-02-examples/nursery.txt\n\n\nBill and Jill \nWent up the hill\nJack and Jill \nWent up the hill\n\n\n\n\nLet’s look at the expression s/Jack/Bill/g in detail:\n\nThe s indicates that we are going to run the substitute function, which is used to replace text.\nThe / indicates the start of the pattern we are searching for - Bill in this case.\nThe second / indicates the start of the replacement we will make when the pattern is found.\nThe final / indicates the end of the replacement - we can also optionally put flags after this slash. Here, g ensures global replacement (not just replacement of the first match)."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#summary-2",
@@ -435,63 +435,63 @@
     "href": "slides/slides-topic-02-02.html#redirect",
     "title": " QTM 350: Data Science Computing ",
     "section": "Redirect: >",
-    "text": "Redirect: &gt;\n\nYou can send output from the shell to a file using the redirect operator &gt;.\nFor example, let’s print a message to the shell using the echo command.\necho \"At first, I was afraid, I was petrified\"\n\n\nAt first, I was afraid, I was petrified\n\n\n\n. . .\nIf you wanted to save this output to a file, you need simply redirect it to the filename of choice.\necho \"At first, I was afraid, I was petrified\" &gt; survive.txt\nfind survive.txt ## Show that it now exists\n\n\nsurvive.txt"
+    "text": "Redirect: &gt;\n\nYou can send output from the shell to a file using the redirect operator &gt;.\nFor example, let’s print a message to the shell using the echo command.\necho \"At first, I was afraid, I was petrified\"\n\n\nAt first, I was afraid, I was petrified\n\n\n\n\nIf you wanted to save this output to a file, you need simply redirect it to the filename of choice.\necho \"At first, I was afraid, I was petrified\" &gt; survive.txt\nfind survive.txt ## Show that it now exists\n\n\nsurvive.txt"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#redirect-1",
     "href": "slides/slides-topic-02-02.html#redirect-1",
     "title": " QTM 350: Data Science Computing ",
     "section": "Redirect: >",
-    "text": "Redirect: &gt;\n\nIf you want to append text to an existing file, then you should use &gt;&gt;.\n\nUsing &gt; will try to overwrite the existing file contents.\n\n. . .\necho \"'Kept thinking I could never live without you by my side\" &gt;&gt; survive.txt\ncat survive.txt\n\n\n\nAt first, I was afraid, I was petrified\n'Kept thinking I could never live without you by my side\n\n\n\n\nAn example use case is when adding rules to your .gitignore, e.g. $ echo \"*.csv\" &gt;&gt;  .gitignore."
+    "text": "Redirect: &gt;\n\nIf you want to append text to an existing file, then you should use &gt;&gt;.\n\nUsing &gt; will try to overwrite the existing file contents.\n\n\necho \"'Kept thinking I could never live without you by my side\" &gt;&gt; survive.txt\ncat survive.txt\n\n\n\nAt first, I was afraid, I was petrified\n'Kept thinking I could never live without you by my side\n\n\n\n\nAn example use case is when adding rules to your .gitignore, e.g. $ echo \"*.csv\" &gt;&gt;  .gitignore."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#pipes",
     "href": "slides/slides-topic-02-02.html#pipes",
     "title": " QTM 350: Data Science Computing ",
     "section": "Pipes: |",
-    "text": "Pipes: |\nThe pipe operator | is one of the coolest features in Bash.\n\nIt allows us to chain (i.e. “pipe”) together a sequence of simple operations and thereby implement a more complex operation.\n\n. . .\n\n\nHere’s a simple example:\ncat -n slides-topic-02-02-examples/sonnets.txt 2&gt;/dev/null | head -n100 | tail -n10\n\n\n    91    Despite of wrinkles this thy golden time.\n    92      But if thou live, remember'd not to be,\n    93      Die single and thine image dies with thee.\n    94  \n    95    IV\n    96  \n    97    Unthrifty loveliness, why dost thou spend\n    98    Upon thy self thy beauty's legacy?\n    99    Nature's bequest gives nothing, but doth lend,\n   100    And being frank she lends to those are free:\n\n\n\n\nThis command sequence:\n\nIt reads the file sonnets.txt, numbering each line of the text.\nAny errors that might occur during this process are ignored (not printed to the terminal).\nIt then takes only the first 100 lines of the numbered text.\nFrom those 100 lines, it then takes only the last 10 lines.\nThe final output displayed in the terminal will be lines 91 to 100 of the sonnets.txt file, along with their corresponding line numbers.\n\n\n\ncat -n slides-topic-02-02-examples/sonnets.txt\n\ncat is used to concatenate and display files.\nThe -n option of cat numbers all output lines starting with line 1.\nslides-topic-02-02-examples/sonnets.txt is the file path to the text file being read. This file presumably contains sonnets or other text.\n\n\n\n\n2&gt;/dev/null\n\n2&gt; is used to redirect the standard error (stderr) output stream.\n/dev/null is a special file that discards all data written to it.\nThis redirection sends all error messages from cat (like file not found, no read permission, etc.) to /dev/null, effectively silencing any errors that cat might produce.\n\n| head -n100\n\nThe pipe | passes the output of the previous command (cat -n) to the next command as input.\nhead is used to output the first part of files.\nThe -n100 option tells head to print the first 100 lines of its input.\n\n| tail -n10\n\nAnother pipe | passes the output of head -n100 to the next command as input.\ntail outputs the last part of files.\nThe -n10 option tells tail to print the last 10 lines of its input."
+    "text": "Pipes: |\nThe pipe operator | is one of the coolest features in Bash.\n\nIt allows us to chain (i.e. “pipe”) together a sequence of simple operations and thereby implement a more complex operation.\n\n\n\n\nHere’s a simple example:\ncat -n slides-topic-02-02-examples/sonnets.txt 2&gt;/dev/null | head -n100 | tail -n10\n\n\n    91    Despite of wrinkles this thy golden time.\n    92      But if thou live, remember'd not to be,\n    93      Die single and thine image dies with thee.\n    94  \n    95    IV\n    96  \n    97    Unthrifty loveliness, why dost thou spend\n    98    Upon thy self thy beauty's legacy?\n    99    Nature's bequest gives nothing, but doth lend,\n   100    And being frank she lends to those are free:\n\n\n\n\nThis command sequence:\n\nIt reads the file sonnets.txt, numbering each line of the text.\nAny errors that might occur during this process are ignored (not printed to the terminal).\nIt then takes only the first 100 lines of the numbered text.\nFrom those 100 lines, it then takes only the last 10 lines.\nThe final output displayed in the terminal will be lines 91 to 100 of the sonnets.txt file, along with their corresponding line numbers.\n\n\n\ncat -n slides-topic-02-02-examples/sonnets.txt\n\ncat is used to concatenate and display files.\nThe -n option of cat numbers all output lines starting with line 1.\nslides-topic-02-02-examples/sonnets.txt is the file path to the text file being read. This file presumably contains sonnets or other text.\n\n\n\n\n2&gt;/dev/null\n\n2&gt; is used to redirect the standard error (stderr) output stream.\n/dev/null is a special file that discards all data written to it.\nThis redirection sends all error messages from cat (like file not found, no read permission, etc.) to /dev/null, effectively silencing any errors that cat might produce.\n\n| head -n100\n\nThe pipe | passes the output of the previous command (cat -n) to the next command as input.\nhead is used to output the first part of files.\nThe -n100 option tells head to print the first 100 lines of its input.\n\n| tail -n10\n\nAnother pipe | passes the output of head -n100 to the next command as input.\ntail outputs the last part of files.\nThe -n10 option tells tail to print the last 10 lines of its input."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#iteration-with-for-loops",
     "href": "slides/slides-topic-02-02.html#iteration-with-for-loops",
     "title": " QTM 350: Data Science Computing ",
     "section": "Iteration with for loops",
-    "text": "Iteration with for loops\n\nSometimes you want to loop an operation over certain parameters. for loops in Bash/Z shell work similarly to other programming languages that you are probably familiar with.\n\nThe basic syntax is:\nfor i in LIST\ndo \n  OPERATION $i ## the $ sign indicates a variable in bash\ndone\n. . .\nWe can also condense things into a single line by using ;.\nfor i in LIST; do OPERATION $i; done\nNote: Using ; isn’t limited to for loops. Semicolons are a standard way to denote line endings in Bash/Z shell."
+    "text": "Iteration with for loops\n\nSometimes you want to loop an operation over certain parameters. for loops in Bash/Z shell work similarly to other programming languages that you are probably familiar with.\n\nThe basic syntax is:\nfor i in LIST\ndo \n  OPERATION $i ## the $ sign indicates a variable in bash\ndone\n\nWe can also condense things into a single line by using ;.\nfor i in LIST; do OPERATION $i; done\nNote: Using ; isn’t limited to for loops. Semicolons are a standard way to denote line endings in Bash/Z shell."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#example-1-print-a-sequence-of-numbers",
     "href": "slides/slides-topic-02-02.html#example-1-print-a-sequence-of-numbers",
     "title": " QTM 350: Data Science Computing ",
     "section": "Example 1: Print a sequence of numbers",
-    "text": "Example 1: Print a sequence of numbers\nTo help make things concrete, here’s a simple for loop in action.\nfor i in 1 2 3 4 5; do echo $i; done\n\n\n1\n2\n3\n4\n5\n\n\n. . .\nFWIW (For What It’s Worth), we can use bash’s brace expansion ({1..n}) to save us from having to write out a long sequence of numbers.\nfor i in {1..5}; do echo $i; done"
+    "text": "Example 1: Print a sequence of numbers\nTo help make things concrete, here’s a simple for loop in action.\nfor i in 1 2 3 4 5; do echo $i; done\n\n\n1\n2\n3\n4\n5\n\n\n\nFWIW (For What It’s Worth), we can use bash’s brace expansion ({1..n}) to save us from having to write out a long sequence of numbers.\nfor i in {1..5}; do echo $i; done"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#example-2-combine-csvs",
     "href": "slides/slides-topic-02-02.html#example-2-combine-csvs",
     "title": " QTM 350: Data Science Computing ",
     "section": "Example 2: Combine CSVs",
-    "text": "Example 2: Combine CSVs\nHere’s a more realistic for loop use-case: Combining (i.e. concatenating) multiple CSVs.\nSay we want to combine all the “daily” files in the /meals directory into a single CSV, which I’ll call mealplan.csv. Here’s one attempt that incorporates various bash commands and tricks that we’ve learned so far. The basic idea is:\n\nCreate a new (empty) CSV\nThen, loop over the relevant input files, appending their contents to our new CSV\n\n. . .\n## create an empty CSV\ntouch slides-topic-02-02-examples/meals/mealplan.csv\n## loop over the input files and append their contents to our new CSV\nfor i in $(ls slides-topic-02-02-examples/meals/*day.csv)\n  do \n   cat $i &gt;&gt; slides-topic-02-02-examples/meals/mealplan.csv\ndone\n\nTerminal!\n\n. . .\n\nDid it work?"
+    "text": "Example 2: Combine CSVs\nHere’s a more realistic for loop use-case: Combining (i.e. concatenating) multiple CSVs.\nSay we want to combine all the “daily” files in the /meals directory into a single CSV, which I’ll call mealplan.csv. Here’s one attempt that incorporates various bash commands and tricks that we’ve learned so far. The basic idea is:\n\nCreate a new (empty) CSV\nThen, loop over the relevant input files, appending their contents to our new CSV\n\n\n## create an empty CSV\ntouch slides-topic-02-02-examples/meals/mealplan.csv\n## loop over the input files and append their contents to our new CSV\nfor i in $(ls slides-topic-02-02-examples/meals/*day.csv)\n  do \n   cat $i &gt;&gt; slides-topic-02-02-examples/meals/mealplan.csv\ndone\n\nTerminal!\n\n\n\n\nDid it work?"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#example-2-combine-csvs-1",
     "href": "slides/slides-topic-02-02.html#example-2-combine-csvs-1",
     "title": " QTM 350: Data Science Computing ",
     "section": "Example 2: Combine CSVs",
-    "text": "Example 2: Combine CSVs\n\ncat slides-topic-02-02-examples/meals/mealplan.csv\n\nTerminal!\n\n\n. . .\n\nHmmm. Sort of, but we need to get rid of the repeating header.\n. . .\n\nCan you think of a way? (Hint: tail and head…)"
+    "text": "Example 2: Combine CSVs\n\ncat slides-topic-02-02-examples/meals/mealplan.csv\n\nTerminal!\n\n\n\n\nHmmm. Sort of, but we need to get rid of the repeating header.\n\n\n\nCan you think of a way? (Hint: tail and head…)"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#example-2-combine-csvs-2",
     "href": "slides/slides-topic-02-02.html#example-2-combine-csvs-2",
     "title": " QTM 350: Data Science Computing ",
     "section": "Example 2: Combine CSVs",
-    "text": "Example 2: Combine CSVs\n\nLet’s try again. First delete the old file so we can start afresh.\nrm -f slides-topic-02-02-examples/meals/mealplan.csv ## delete old file\n\nTerminal!\n\n. . .\nHere’s our adapted gameplan:\n\nFirst, create the new file by grabbing the header (i.e. top line) from any of the input files and redirecting it. No need for touch this time.\nNext, loop over all the input files as before, but this time only append everything after the top line.\n\n. . .\n## create a new CSV by redirecting the top line of any file\nhead -1 slides-topic-02-02-examples/meals/monday.csv &gt; slides-topic-02-02-examples/meals/mealplan.csv\n## loop over the input files, appending everything after the top line\nfor i in $(ls slides-topic-02-02-examples/meals/*day.csv)\n do \n   tail -n +2 $i &gt;&gt; slides-topic-02-02-examples/meals/mealplan.csv\ndone\n\nTerminal!"
+    "text": "Example 2: Combine CSVs\n\nLet’s try again. First delete the old file so we can start afresh.\nrm -f slides-topic-02-02-examples/meals/mealplan.csv ## delete old file\n\nTerminal!\n\n\nHere’s our adapted gameplan:\n\nFirst, create the new file by grabbing the header (i.e. top line) from any of the input files and redirecting it. No need for touch this time.\nNext, loop over all the input files as before, but this time only append everything after the top line.\n\n\n\n## create a new CSV by redirecting the top line of any file\nhead -1 slides-topic-02-02-examples/meals/monday.csv &gt; slides-topic-02-02-examples/meals/mealplan.csv\n## loop over the input files, appending everything after the top line\nfor i in $(ls slides-topic-02-02-examples/meals/*day.csv)\n do \n   tail -n +2 $i &gt;&gt; slides-topic-02-02-examples/meals/mealplan.csv\ndone\n\nTerminal!"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#example-2-combine-csvs-3",
     "href": "slides/slides-topic-02-02.html#example-2-combine-csvs-3",
     "title": " QTM 350: Data Science Computing ",
     "section": "Example 2: Combine CSVs",
-    "text": "Example 2: Combine CSVs\n\nIt worked!\ncat slides-topic-02-02-examples/meals/mealplan.csv\n\nTerminal!\n\n. . .\n\nWe still have to sort the correct week order, but that’s an easy job in R or Python.\n\nThe explicit benefit of doing the concatenating in the shell is that it can be much more efficient, since all the files don’t simultaneously have to be held in memory (i.e RAM).\nThis doesn’t matter here, but can make a dramatic difference once we start working with lots of files (or even a few really big ones)."
+    "text": "Example 2: Combine CSVs\n\nIt worked!\ncat slides-topic-02-02-examples/meals/mealplan.csv\n\nTerminal!\n\n\n\nWe still have to sort the correct week order, but that’s an easy job in R or Python.\n\nThe explicit benefit of doing the concatenating in the shell is that it can be much more efficient, since all the files don’t simultaneously have to be held in memory (i.e RAM).\nThis doesn’t matter here, but can make a dramatic difference once we start working with lots of files (or even a few really big ones)."
   },
   {
     "objectID": "slides/slides-topic-02-02.html#scripting-1",
@@ -505,7 +505,7 @@
     "href": "slides/slides-topic-02-02.html#hello-world",
     "title": " QTM 350: Data Science Computing ",
     "section": "Hello World!",
-    "text": "Hello World!\n\n#!/bin/sh\necho \"\\nHello World!\\n\"\n\n#!/bin/sh is a shebang, indicating which program to run the command with (here: any Bash-compatible shell). However, it is typically ignored (note that it begins with the hash comment character.)\necho \"\\nHello World!\\n\" is the actual command that we want to run.\n\n. . .\nTo run this simple script, you can just type in the file name and press enter.\nslides-topic-02-02-examples/hello.sh\n# bash slides-topic-02-02-examples/hello.sh ## Also works\n\n\n\nHello World!"
+    "text": "Hello World!\n\n#!/bin/sh\necho \"\\nHello World!\\n\"\n\n#!/bin/sh is a shebang, indicating which program to run the command with (here: any Bash-compatible shell). However, it is typically ignored (note that it begins with the hash comment character.)\necho \"\\nHello World!\\n\" is the actual command that we want to run.\n\n\nTo run this simple script, you can just type in the file name and press enter.\nslides-topic-02-02-examples/hello.sh\n# bash slides-topic-02-02-examples/hello.sh ## Also works\n\n\n\nHello World!"
   },
   {
     "objectID": "slides/slides-topic-02-02.html#things-we-didnt-cover-here",
