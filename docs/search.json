@@ -743,8 +743,8 @@
     "objectID": "slides/slides-topic-02-01.html#topic-overview",
     "href": "slides/slides-topic-02-01.html#topic-overview",
     "title": " QTM 350: Data Science Computing ",
-    "section": "",
-    "text": "Computational Literacy\n\nBinary and Hexadecimal numbers\nCharacters, ASCII, Unicode\nHigh vrs low level programming languages\nCompiled vs interpreted languages\n\n\n\n\nCommand Line\n\nShell basics\nHelp!\nNavigating your system\nManaging your files\nWorking with text files\nRedirects, pipes, and loops\nScripting\n\n\n\n\nVersion Control\n\nData Science Workflow\nReproducibility\nGit and GitHub\n\n\n\n\n\n\n\n\nthis lecture draws on materials from Professor Jacobson Essential Computer Literacy: 50 min.."
+    "section": "Topic Overview",
+    "text": "Topic Overview\n\n\n\nComputational Literacy\n\nBinary and Hexadecimal numbers\nCharacters, ASCII, Unicode\nHigh vrs low level programming languages\nCompiled vs interpreted languages\n\n\n\n\nCommand Line\n\nShell basics\nHelp!\nNavigating your system\nManaging your files\nWorking with text files\nRedirects, pipes, and loops\nScripting\n\n\n\n\nVersion Control\n\nData Science Workflow\nReproducibility\nGit and GitHub\n\n\n\n\n\n\n\n\nthis lecture draws on materials from Professor Jacobson Essential Computer Literacy: 50 min.."
   },
   {
     "objectID": "slides/slides-topic-02-01.html#what-is-a-computer-1",
@@ -863,7 +863,7 @@
     "href": "slides/slides-topic-02-01.html#practice-exercise-2",
     "title": " QTM 350: Data Science Computing ",
     "section": "Practice Exercise",
-    "text": "Practice Exercise\n\nHere we have an online translator!\n. . .\n‘DAVI’ using ASCII codes.\n\n\n\nCharacter\nASCII Code\n\n\n\n\nD\n68\n\n\nA\n65\n\n\nV\n86\n\n\nI\n73\n\n\n\nNote: If ASCII does not support characters in your name, Unicode will provide a solution."
+    "text": "Practice Exercise\n\nHere we have an online translator!\n\n‘DAVI’ using ASCII codes.\n\n\n\nCharacter\nASCII Code\n\n\n\n\nD\n68\n\n\nA\n65\n\n\nV\n86\n\n\nI\n73\n\n\n\nNote: If ASCII does not support characters in your name, Unicode will provide a solution."
   },
   {
     "objectID": "slides/slides-topic-02-01.html#hexadecimal-and-unicode",
