@@ -4,35 +4,50 @@
     "href": "index.html",
     "title": "QTM 350: Data Science Computing",
     "section": "",
-    "text": "This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects."
+    "text": "This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#course-description",
     "href": "index.html#course-description",
     "title": "QTM 350: Data Science Computing",
     "section": "",
-    "text": "This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects."
+    "text": "This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#instructor-and-tas",
     "href": "index.html#instructor-and-tas",
     "title": "QTM 350: Data Science Computing",
     "section": "Instructor and TAs",
-    "text": "Instructor and TAs\n\nInstructor: Professor Davi Moreira\n\nEmail: davi.moreira@emory.edu\nOffice hours: Tuesdays, 9:15am - 10:15am, or by appointment\n\nZoom link in your Course Canvas Page.\n\n\n\n\nTeaching Assistant: Michael Cao\n\nEmail: michael.cao@emory.edu\nOffice Hours: Mondays, 6-7 pm\n\nZoom link in your Course Canvas Page."
+    "text": "Instructor and TAs\n\nInstructor: Professor Davi Moreira\n\nEmail: davi.moreira@emory.edu\nOffice hours: Tuesdays, 9:15am - 10:15am, or by appointment\n\nZoom link in your Course Canvas Page.\n\n\n\n\nTeaching Assistant: Michael Cao\n\nEmail: michael.cao@emory.edu\nOffice Hours: Mondays, 6-7 pm\n\nZoom link in your Course Canvas Page.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#learning-outcomes",
     "href": "index.html#learning-outcomes",
     "title": "QTM 350: Data Science Computing",
     "section": "Learning Outcomes",
-    "text": "Learning Outcomes\nBy the end of this course, students will be able to:\n\nDemonstrate proficiency in data science project collaboration and version control.\nUtilize advanced data storage, manipulation, and querying.\nHigh-level understanding of data structures, algorithms, and cloud computing concepts.\nCritically navigate the emergent trends in data science computing."
+    "text": "Learning Outcomes\nBy the end of this course, students will be able to:\n\nDemonstrate proficiency in data science project collaboration and version control.\nUtilize advanced data storage, manipulation, and querying.\nHigh-level understanding of data structures, algorithms, and cloud computing concepts.\nCritically navigate the emergent trends in data science computing.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#objectives",
     "href": "index.html#objectives",
     "title": "QTM 350: Data Science Computing",
     "section": "Objectives",
-    "text": "Objectives\n\nConceptual Understanding: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.\nTechnical Proficiency: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.\nCloud Computing Literacy: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.\nCritical Integrated Learning: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.\n\n\nCourse Infra-structure\nCourse Website: This class website will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nCanvas: The course Canvas site http://canvas.emory.edu should be checked on a regular basis for announcements and course material.."
+    "text": "Objectives\n\nConceptual Understanding: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.\nTechnical Proficiency: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.\nCloud Computing Literacy: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.\nCritical Integrated Learning: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.\n\n\nCourse Infra-structure\nCourse Website: This class website will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nCanvas: The course Canvas site http://canvas.emory.edu should be checked on a regular basis for announcements and course material..",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "schedule.html",
@@ -116,7 +131,11 @@
     "href": "topics-pages/page-topic-02.html",
     "title": "Topic 02",
     "section": "",
-    "text": "Slides\n\nComputational Literacy\nCommand Line\nVersion Control - TBP\n\n\n\nLecture Material\n\nBasics of Command Line (very short piece): html,  notebook \nVersion Control - TBP: html,  notebook \n\n\n\nProblem Set\n\nTBP\n\n\n\nRecommended Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\nEssential Computer Literacy: 50 min.\n\n\n\nAdditional Resources\n\nEffective Shell\nvim Video\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester"
+    "text": "Slides\n\nComputational Literacy\nCommand Line\nVersion Control - TBP\n\n\n\nLecture Material\n\nBasics of Command Line (very short piece): html,  notebook \nVersion Control - TBP: html,  notebook \n\n\n\nProblem Set\n\nTBP\n\n\n\nRecommended Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\nEssential Computer Literacy: 50 min.\n\n\n\nAdditional Resources\n\nEffective Shell\nvim Video\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester",
+    "crumbs": [
+      "Materials",
+      "Topic 2: Version Control"
+    ]
   },
   {
     "objectID": "topics-pages/page-topic-01.html",
