@@ -4,6 +4,7 @@ subtitle: "Computational Literacy, Command Line, and Version Control"
 description: ""
 author: "Davi Moreira"
 date: "2024-01-23"
+resources: "_using-jupyter-notebooks.qmd"
 #listing:
   # - id: slides
   #   contents:

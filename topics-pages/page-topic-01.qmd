@@ -4,7 +4,7 @@ subtitle: "Introduction, Syllabus and Set up"
 description: ""
 author: "Davi Moreira"
 date: "2024-01-18"
-resources: "_using-jupyter-notebooks.ipynb"
+resources: "_intro-to-quarto.qmd; _using-jupyter-notebooks.ipynb"
 #listing:
   # - id: slides
   #   contents:
