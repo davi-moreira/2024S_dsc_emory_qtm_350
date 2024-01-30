@@ -10,10 +10,10 @@ website:
     logo: "images/course_image_2.png"
     pinned: true
     align: center
-    # tools:
-    #   - icon: github
-    #     href: https://github.com/davi-moreira/2024S_dsc_emory_qtm_350
-    #     text: GitHub
+    tools:
+      - icon: github
+        href: https://github.com/davi-moreira/2024S_dsc_emory_qtm_350
+        text: GitHub
     style: docked
     contents:
       - href: index.qmd
