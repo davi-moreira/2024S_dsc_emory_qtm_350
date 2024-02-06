@@ -73,7 +73,7 @@ format:
 ![](figs/kernel-and-user-space.png){width="700"}
 
 ::: r-stack
-Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)
+Credit [Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)
 :::
 :::
 
@@ -98,7 +98,7 @@ Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a
 ![](figs/walnut.jpeg){fig-align="center" height="150"}
 
 ::: r-stack
-Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)/[Kkchaudhary11](https://commons.wikimedia.org/w/index.php?curid=49069244)
+Credit [Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)/[Kkchaudhary11](https://commons.wikimedia.org/w/index.php?curid=49069244)
 :::
 :::
 
@@ -125,7 +125,7 @@ Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a
 <center>![](figs/teletype.jpg){fig-align="right" height="150"} ![](figs/image-ibm3486.jpeg){fig-align="right" height="150"}</center>
 
 ::: r-stack
-Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)/[Rama/Musée Bolo](https://en.wikipedia.org/wiki/Teletype_Model_33#/media/File:Teletype-IMG_7287.jpg)/[ClickRick](https://de.m.wikipedia.org/wiki/Datei:IBM_3486_terminal.jpg)
+Credit [Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)/[Rama/Musée Bolo](https://en.wikipedia.org/wiki/Teletype_Model_33#/media/File:Teletype-IMG_7287.jpg)/[ClickRick](https://de.m.wikipedia.org/wiki/Datei:IBM_3486_terminal.jpg)
 :::
 :::
 
@@ -150,7 +150,7 @@ Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a
 ![](figs/diagram3-terminal-and-shell.png){fig-align="center" height="500"}
 
 ::: r-stack
-Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)
+Credit [Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)
 :::
 :::
 
@@ -182,7 +182,7 @@ Credit [Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a
 ::: columns
 ::: {.column width="60%" layout-halign="center"}
 ::: r-stack
-*Left:* Command Prompt, *Right:* Bash ![](figs/command-prompt-screenshot.png){fig-align="center" height="300"} ![](figs/bash-screenshot.png){fig-align="center" height="300"} <br> *Left:* C Shell, *Right:* more shells <br> ![](figs/cshell-screenshot.png){fig-align="center" height="250"} ![](figs/seashells.jpeg){fig-align="center" height="250"} <br> Credit [Read-back spider](https://commons.wikimedia.org/wiki/File:Different_types_of_shells.jpg)/[Dave Kerr](https://effective-shell.com/docs/part-2-core-skills/what-is-a-shell/)
+*Left:* Command Prompt, *Right:* Bash ![](figs/command-prompt-screenshot.png){fig-align="center" height="300"} ![](figs/bash-screenshot.png){fig-align="center" height="300"} <br> *Left:* C Shell, *Right:* more shells <br> ![](figs/cshell-screenshot.png){fig-align="center" height="250"} ![](figs/seashells.jpeg){fig-align="center" height="250"} <br> Credit [Read-back spider](https://commons.wikimedia.org/wiki/File:Different_types_of_shells.jpg)/[Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)
 :::
 :::
 
@@ -408,9 +408,7 @@ $ sort -u myfile.txt
 :::
 
 ::: {.column width="50%" align="center"}
-
-:::{.fragment}
-
+::: fragment
 **Commands** <br>
 
 -   You don't always need options or arguments.
@@ -422,7 +420,6 @@ $ sort -u myfile.txt
 <br>
 
 -   However, you always need a command.
-
 :::
 :::
 :::
@@ -596,9 +593,9 @@ man ls
 
 <br>
 
--   In your Terminal, access the `man` and explore the document. I want you to share with a colleague your first impression and five commands you found interesting. 
+-   In your Terminal, access the `man` and explore the document. I want you to share with a colleague your first impression and five commands you found interesting.
 
--   Please present your own (first impression + five commands) and colleague (first impression and five commands) views in the lecture quiz! 
+-   Please present your own (first impression + five commands) and colleague (first impression and five commands) views in the lecture quiz!
 
 ## Help: cheat, tldr, cheat.sh
 
@@ -828,7 +825,7 @@ drwxrwxr-x@ 3 dcorde3  206888963    96B Nov 27 09:51 ABC
 -   The `file` command can be used to ask the shell what it thinks a file is.
 
 ::: fragment
-<center>For a more detailed overview, click [here](https://effective-shell.com/docs/part-1-transitioning-to-the-shell/navigating-your-system/).</center>
+<center>For a more detailed overview, click [here](https://effective-shell.com/part-1-transitioning-to-the-shell/navigating-your-system/).</center>
 :::
 :::
 :::
@@ -1037,6 +1034,7 @@ zmv -n -W  "*.csv" "*.txt"
 
 <center>Terminal!</center>
 
+````{=html}
 <!---
 
 ````{=html}
@@ -1051,6 +1049,7 @@ mv -- wednesday.csv wednesday.txt
 ```
 ````
 --->
+````
 
 <br>
 
@@ -1160,7 +1159,7 @@ find . -size +2000k ## find files larger than 2000 KB
 -   The `zip`/`unzip` commands can zip/unzip a file/folder for us.
 
 ::: fragment
-For a more detailed overview, click [here](https://effective-shell.com/docs/part-1-transitioning-to-the-shell/managing-your-files/).
+For a more detailed overview, click [here](https://effective-shell.com/part-1-transitioning-to-the-shell/managing-your-files/).
 :::
 :::
 :::
@@ -1455,7 +1454,7 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 -   Your pager, for example the less program can be useful when inspecting the output of your text transformation commands.
 
 ::: fragment
-For a more detailed overview, click [here](https://effective-shell.com/docs/part-3-manipulating-text/).
+For a more detailed overview, click [here](https://effective-shell.com/part-3-manipulating-text/).
 :::
 :::
 :::
@@ -1470,10 +1469,11 @@ For a more detailed overview, click [here](https://effective-shell.com/docs/part
 
 -   [This chapter](https://effective-shell.com/part-3-manipulating-text/regex-essentials/) discussing regex in the context of the shell
 
-- [Regular Expression in Python](https://docs.python.org/3/howto/regex.html)
+-   [Regular Expression in Python](https://docs.python.org/3/howto/regex.html)
 
 -   [This base R regex intro](https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html)
 
+```{=html}
 <!----   [This intro from R4DS](https://r4ds.had.co.nz/strings.html)
 
 -   [This vignette from the stringr package](https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html)
@@ -1481,7 +1481,7 @@ For a more detailed overview, click [here](https://effective-shell.com/docs/part
 -   And, of course, the great presentations on the topic featured [in our I2DS Tools for Data Science Workshop](https://intro-to-data-science-21-workshop.github.io/)!
 
 --->
-
+```
 :::
 
 ::: {.column width="50%" align="center"}
@@ -1852,6 +1852,7 @@ slides-topic-02-02-examples/hello.sh
 # bash slides-topic-02-02-examples/hello.sh ## Also works
 ```
 
+````{=html}
 <!---````{=html}
 
 # Py script
@@ -1920,7 +1921,7 @@ With `nano`, open the script by typing `$ nano slides-topic-02-02-examples/hello
 - Finally, run the edited version of the script.
 
 ````--->
-
+````
 
 <!-- ############################################ -->
 
@@ -1948,13 +1949,12 @@ If you want to dig deeper, check out
 
 -   [Effective Shell](https://effective-shell.com/) (Dave Kerr)
 
--    [Efficient Way To Process Large Text/Log Files Using Awk With Python](https://techblogs.42gears.com/efficient-way-to-process-large-text-log-files-usin-wpython/)
+-   [Efficient Way To Process Large Text/Log Files Using Awk With Python](https://techblogs.42gears.com/efficient-way-to-process-large-text-log-files-usin-wpython/)
 
 -   [Using AWK and R to parse 25tb](https://livefreeordichotomize.com/posts/2019-06-04-using-awk-and-r-to-parse-25tb/) (Nick Strayer)
 
 -   [`./jq`](https://jqlang.github.io/jq/)
 
 -   [`awk`](https://en.wikipedia.org/wiki/AWK)
-
 
 # Thank you!

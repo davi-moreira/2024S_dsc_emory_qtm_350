@@ -347,7 +347,7 @@ dat <- read_csv("dat.csv")
 ::: columns
 ::: {.column width="50%"}
 
-::: r-fit-text
+<!---::: r-fit-text--->
 - Version Control is a way to track your files 
 
 - It is usually saved in a series of snapshots and branches, which you can move back and forth between
@@ -360,21 +360,21 @@ dat <- read_csv("dat.csv")
     - Prevent against data loss/damage by creating backup snapshots
     - Manage complex project structures (e.g. Linux)
 
-::: 
+<!---::: --->
 
 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/01-version-control.png){width="300"}</center>
+<center>![](figs/01-version-control.png){width="600"}</center>
 
 ::: 
 :::
 
 ## Why version control?
 
-<center>![](http://phdcomics.com/comics/archive/phd101212s.gif){width="300"}</center>
+<center>![](http://phdcomics.com/comics/archive/phd101212s.gif){width="550"}</center>
 
 <center>[phdcomics.com](http://phdcomics.com/comics/archive.php?comicid=1531&quot;&gt;creativity&lt;/a&gt;.&lt;!--more--&gt;&lt;/p&gt;)</center>
 
@@ -386,6 +386,7 @@ dat <- read_csv("dat.csv")
 
 **Have you ever...**
 
+::: r-fit-text
 - Changed your code, realized it was a mistake and wanted to revert back?
 - Lost code or had a backup that was too old?
 - Wanted to see the difference between different versions of your code?
@@ -395,13 +396,18 @@ dat <- read_csv("dat.csv")
 - Wanted to see how much work is being done, when, and by whom?
 - Wanted to experiment with but not interfering with working code?
 
+:::
+:::{.fragment} 
+
 <center> [si618/Stackoverflow](https://stackoverflow.com/questions/1408450/why-should-i-use-version-control)</center>
+
+:::
 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/version-control-joke-2.jpeg){width="300"}</center>
+<center>![](figs/version-control-joke-2.jpeg){width="500"}</center>
 
 <center>[bhimanshukalra/devrant.com](https://devrant.com/rants/1840468/version-control)</center>
 
@@ -415,6 +421,7 @@ dat <- read_csv("dat.csv")
 ::: columns
 ::: {.column width="50%"}
 
+<br>
 
 <center>![](figs/git-logo.png){width="300"}</center>
 
@@ -436,7 +443,9 @@ dat <- read_csv("dat.csv")
 
 :::{.fragment}
 
-<center>![](figs/github-logo.png){width="300"}</center>
+<br>
+
+<center>![](figs/github-logo.png){width="400"}</center>
 
 ::: r-fit-text
 
@@ -480,7 +489,7 @@ dat <- read_csv("dat.csv")
 
 **How to interact with Git?**
 
-- There are many [Git GUIs](https://en.wikipedia.org/wiki/Comparison_of_Git_GUIs), giving you the option to use git without the shell (often with reduced functionality). A popular choice is [GitHub Desktop](https://desktop.github.com/), but we will mainly use the [Git integration into the RStudio IDE](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
+- There are many [Git GUIs](https://en.wikipedia.org/wiki/Comparison_of_Git_GUIs), giving you the option to use git without the shell (often with reduced functionality). Popular choices are the [GitHub Desktop](https://desktop.github.com/), and the [Git integration into the RStudio IDE](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
 
 :::
 
@@ -490,12 +499,14 @@ dat <- read_csv("dat.csv")
 
 ::: {.column width="50%"}
 
-<center>![](figs/linus-torvalds.jpeg){width="200"}</center>
+
+
+<center>![[Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds)](figs/linus-torvalds.jpeg){width="300"}</center>
 <br>
-<center>![](figs/git-logo-2.png){width="200"}</center>
+<center>![](figs/git-logo-2.png){width="300"}</center>
 <br>
 
-<center>[Krd (photo), Von Sprat (crop/extraction), CC BY-SA 4.0.](https://commons.wikimedia.org/w/index.php?curid=54706023)</center>
+<!---<center>[Krd (photo), Von Sprat (crop/extraction), CC BY-SA 4.0.](https://commons.wikimedia.org/w/index.php?curid=54706023)</center>--->
 
 ::: 
 :::
@@ -510,6 +521,7 @@ dat <- read_csv("dat.csv")
 **Where does GitHub come from?**
 
 - GitHub.com launched in April 2008 by [Tom Preston-Werner, Chris Wanstrath, P.J. Hyett and Scott Chacon](https://productmint.com/github-business-model-how-does-github-make-money/).
+
 - In 2018, Microsoft acquired the company for more than US$7 billion.
 
 :::
@@ -517,6 +529,7 @@ dat <- read_csv("dat.csv")
 ::: {.fragment}
 
 **What's the business model?**
+
 - GitHub offers various subscription plans and has expanded its services beyond hosting Git-based version control.
 
 :::
@@ -524,8 +537,11 @@ dat <- read_csv("dat.csv")
 ::: {.fragment}
 
 **Some interesting facts**
+
 - GitHub's mascot is "[Octocat](https://github.com/octocat)", a human-cat-octopus hybrid with five arms. 
+
 - There are [56m+ developers on Github](https://octoverse.github.com/), with 60m+ new repositories created in 2020 alone.
+
 - Part of GitHub's history are controversies around issues like harassment allegations or incidences of censorship.
 
 :::
@@ -535,7 +551,7 @@ dat <- read_csv("dat.csv")
 
 ::: {.column width="50%"}
 
-<center>![](figs/octocat.png){width="300"}</center>
+<center>![](figs/octocat.png){width="400"}</center>
 
 <center>[Screenshot](https://github.com/octocat3)</center>
 
@@ -560,7 +576,7 @@ dat <- read_csv("dat.csv")
 
 - Data science involves product building, collaboration, transparency. GH helps with all that.
 - Journals have increasingly strict requirements regarding reproducibility and access. GH makes this easy (DOI integration, off-the-shelf licenses, etc.).
-- I host most of the code and data for my [papers](https://simonmunzert.github.io/publications.html) on GH. My [website](https://simonmunzert.github.io/) lives there. And this [course](https://github.com/intro-to-data-science-23) does, too.
+- My [website](https://davi-moreira.github.io/) lives there. And this [course](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350) does, too.
 
 :::
 :::
@@ -568,7 +584,7 @@ dat <- read_csv("dat.csv")
 
 ::: {.column width="50%"}
 
-<center>![](figs/github-van-nooren.webp){width="300"}</center>
+<center>![](figs/github-van-nooren.webp){width="500"}</center>
 
 
 <center>"[Democratic databases: science on GitHub](https://www.nature.com/news/democratic-databases-science-on-github-1.20719)" (Perkel, 2016, *Nature*).</center>
@@ -582,7 +598,7 @@ dat <- read_csv("dat.csv")
 
 ::: columns
 ::: {.column width="50%"}
-::: r-fit-text
+<!---::: r-fit-text--->
 
 Good news: It's free!
 
@@ -597,7 +613,7 @@ Some things to consider:
 - Register for a free account first, then pursue the special offers.
 - Choose your username [wisely](https://happygitwithr.com/github-acct.html). This isn't Instagram, so maybe avoid puns and "funny" nicknames.
 
-:::
+<!---:::--->
 
 ::: 
 
@@ -605,7 +621,7 @@ Some things to consider:
 
 ::: {.column width="50%"}
 
-<center>![](figs/brent-rambo.gif){width="300"}</center>
+<center>![](figs/brent-rambo.gif){width="600"}</center>
 
 :::
 :::
@@ -680,7 +696,7 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 ::: columns
 ::: {.column width="50%"}
 
-::: r-fit-text
+<!---::: r-fit-text--->
 
 **Some benefits of the shell**:
 
@@ -690,12 +706,12 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 
 - Knowing the basic Git commands in the shell is a good thing for a data scientist.
 
-::: 
+<!---:::---> 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/shell-spongebob.webp){width="300"}</center>
+<center>![](figs/shell-spongebob.webp){width="500"}</center>
 
 ::: 
 :::
@@ -706,24 +722,23 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 ::: columns
 ::: {.column width="50%"}
 
-::: r-fit-text
+<!---::: r-fit-text--->
 
-- Git goes through a long chain of operations and tasks befor tracking a change.
+- Git goes through a long chain of operations and tasks before tracking a change.
 
 - Many of these tasks are user controlled, and are required for changes to be tracked correctly.
 
-::: 
 
+<!---:::--->
 :::
-
 ::: {.column width="50%"}
 
-<center>![](figs/02-version-control.png){width="300"}</center>
+<center>![](figs/02-version-control.png){width="350"}</center>
+
+<center>[Git Cheatsheet](https://github.com/joshnh/Git-Commands)</center>
 
 ::: 
 :::
-
-[Git Cheatsheet](https://github.com/joshnh/Git-Commands)
 
 
 ## Repositories
@@ -731,7 +746,7 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 ::: columns
 ::: {.column width="50%"}
 
-::: r-fit-text
+<!---::: r-fit-text--->
 
 - Repositories, usually called ‘repos’, store the full history and source control of a project.
 
@@ -742,12 +757,12 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 - Any repository stored somewhere other than locally is called a ‘remote repository’.
 
 
-::: 
+<!---:::---> 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/03-version-control.png){width="300"}</center>
+<center>![](figs/03-version-control.png){width="400"}</center>
 
 ::: 
 :::
@@ -757,7 +772,7 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 ::: columns
 ::: {.column width="50%"}
 
-::: r-fit-text
+<!---::: r-fit-text--->
 
 - Repositories are timelines of the entire project, including all 
 
@@ -765,14 +780,14 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 
 - Any local directory interacting with a repository is technically a repository itself, however, it is better to call these directories ‘local repositories’, as they are instances of a remote repository.
 
-::: 
+<!---::: --->
 
 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/04-version-control.png){width="300"}</center>
+<center>![](figs/04-version-control.png){width="600"}</center>
 
 ::: 
 :::
@@ -782,7 +797,9 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 ::: columns
 ::: {.column width="50%"}
 
-::: r-fit-text
+<br>
+
+<!---::: r-fit-text--->
 
 - This diagram shows a little bit about how the basic Git workflow process works
 
@@ -790,14 +807,14 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 
 - A ‘commit’ is similar to taking a snapshot of the current state of the project, then storing it on a timeline.
 
-::: 
+<!---::: --->
 
 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/05-version-control.jpg){width="300"}</center>
+<center>![](figs/05-version-control.jpg){width="400"}</center>
 
 ::: 
 :::
@@ -819,17 +836,25 @@ Check out [these setup instructions](https://swcarpentry.github.io/git-novice/02
 
 4. I will try to add this folder to the `staging area`.
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git add .
 ```
+
+:::
 
 5. Error!
 
 6. We need to initialize the repository. **Do not do that in your root directory!**
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git init
 ```
+
+:::
 
 ::: 
 
@@ -838,7 +863,7 @@ git init
 
 ::: {.column width="50%"}
 
-<center>![](figs/06-version-control.png){width="300"}</center>
+<center>![](figs/06-version-control.png){width="600"}</center>
 
 ::: 
 :::
@@ -854,17 +879,24 @@ git init
 
 2. To check the `staging area` status.
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git status
 ```
 
+:::
+
 3. Let's add the `path` file to the `staging area`. Then, check its status.
+
+:::{.fragment}
 
 ```{bash, echo = T, eval = F}
 git add path.txt
 git status
 ```
 
+:::
 
 ::: 
 
@@ -872,7 +904,7 @@ git status
 
 ::: {.column width="50%"}
 
-<center>![](figs/08-version-control.png){width="300"}</center>
+<center>![](figs/08-version-control.png){width="600"}</center>
 
 ::: 
 :::
@@ -887,6 +919,8 @@ git status
 
 4. Let's create new files in the project and check `staging area` status:
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 touch file.txt
 touch script.py
@@ -895,13 +929,15 @@ touch style.css
 git status
 ```
 
+:::
+
 ::: 
 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/09-version-control.png){width="300"}</center>
+<center>![](figs/09-version-control.png){width="600"}</center>
 
 ::: 
 :::
@@ -916,10 +952,15 @@ git status
 
 5. Instead of adding each file to the `staging area` at once. We can do add all them together:
 
+:::{.fragment}
+
+
 ```{bash, echo = T, eval = F}
 git add .
 git status
 ```
+
+:::
 
 ::: 
 
@@ -928,7 +969,7 @@ git status
 
 ::: {.column width="50%"}
 
-<center>![](figs/10-version-control.png){width="300"}</center>
+<center>![](figs/10-version-control.png){width="600"}</center>
 
 ::: 
 :::
@@ -942,11 +983,15 @@ git status
 
 6. In the directory, let's delete the `.py` and the `.css` files. Check the status:
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 rm -f script.py
 rm -f style.css
 git status
 ```
+
+:::
 
 ::: 
 
@@ -954,7 +999,7 @@ git status
 
 ::: {.column width="50%"}
 
-<center>![](figs/11-version-control.png){width="300"}</center>
+<center>![](figs/11-version-control.png){width="600"}</center>
 
 ::: 
 :::
@@ -970,16 +1015,20 @@ git status
 
 1. (cont.) In the directory, let's do our "initial commit" :
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git commit -m "initial commit"
 ```
+
+:::
 
 ::: 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/12-version-control.png){width="300"}</center>
+<center>![](figs/12-version-control.png){width="600"}</center>
 
 ::: 
 :::
@@ -993,9 +1042,13 @@ git commit -m "initial commit"
 
 2. To check all commits in your `repo`:
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git log
 ```
+
+:::
 
 - Most important things here are:   
 
@@ -1009,11 +1062,12 @@ git log
 
 ::: {.column width="50%"}
 
-<center>![](figs/13-version-control.png){width="300"}</center>
+<center>![](figs/13-version-control.png){width="600"}</center>
 
 ::: 
 :::
 
+<!---
 
 ## Hands on! Git Checkout
 
@@ -1023,6 +1077,8 @@ git log
 ::: r-fit-text
 
 1. Let's make new commits in our `repo`:
+
+:::{.fragment}
 
 ```{bash, echo = T, eval = F}
 touch script.py  # new file
@@ -1036,16 +1092,20 @@ git commit -m "edditing file.txt". # new commit
 git log  # lets check
 ```
 
+:::
+
 ::: 
 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/14-version-control.png){width="300"}</center>
+<center>![](figs/14-version-control.png){width="600"}</center>
 
 ::: 
 :::
+
+--->
 
 ## Hands on! Git Checkout
 
@@ -1055,6 +1115,8 @@ git log  # lets check
 ::: r-fit-text
 
 1. First, let's make new commits in our `repo`:
+
+:::{.fragment}
 
 ```{bash, echo = T, eval = F}
 touch script.py  # new file
@@ -1070,20 +1132,20 @@ git commit -a -m "delete file.txt" # new commit
 git log  # lets check
 ```
 
+:::
+
 ::: 
 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/14-version-control.png){width="300"}</center>
+<center>![](figs/14-version-control.png){width="700"}</center>
 
 ::: 
 :::
 
-
-
-## Hands on! Reverse and Reset
+## Hands on! Git Checkout
 
 ::: columns
 ::: {.column width="50%"}
@@ -1092,12 +1154,16 @@ git log  # lets check
 
 2. We use `checkout` to go back in time to a given commit. Let's go back to the "initial commit":
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git checkout 2b543ff2b3423a6d01727a11603792783315680d
 git log
 ```
 
-- Check your folder/directory!
+:::
+
+- Check your `folder/directory`!
 
 - **Important**: doing this does not delete our commits. We just move back in time!
 
@@ -1107,12 +1173,12 @@ git log
 
 ::: {.column width="50%"}
 
-<center>![](figs/15-version-control.png){width="300"}</center>
+<center>![](figs/15-version-control.png){width="700"}</center>
 
 ::: 
 :::
 
-## Hands on! Reverse and Reset
+## Hands on! Git Checkout
 
 ::: columns
 ::: {.column width="50%"}
@@ -1121,12 +1187,16 @@ git log
 
 3. To "move back to the future", the most recent commit, we just need to go back to the main branch:
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git checkout main
 git log
 ```
 
-- Check your folder/directory!
+:::
+
+- Check your `folder/directory`!
 
 - **Important**: doing this does not delete our commits. We just move back and forth in time!
 
@@ -1136,7 +1206,7 @@ git log
 
 ::: {.column width="50%"}
 
-<center>![](figs/16-version-control.png){width="300"}</center>
+<center>![](figs/16-version-control.png){width="700"}</center>
 
 ::: 
 :::
@@ -1151,9 +1221,11 @@ git log
 
 1. Let's create a new text file, `notes.txt`,  and make some edits. 
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 touch notes.txt   
-echo "Welcome to QTM 350" >> notes.txt
+echo "Welcome to Data Science Computing" >> notes.txt
 git status
 git add .
 git status
@@ -1161,12 +1233,14 @@ echo "I hope you enjoy" >> notes.txt
 git status                          
 ```
 
+:::
+
 ::: 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/17-version-control.png){width="300"}</center>
+<center>![](figs/17-version-control.png){width="700"}</center>
 
 ::: 
 :::
@@ -1182,9 +1256,13 @@ git status
 
 3. To do so, we tell Git to ignore those files or folders. We create a `.gitignore` file.
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 touch .gitignore
 ```
+
+:::
 
 4. In the `.gitignore` we list everything we want Git to ignore.
 
@@ -1193,7 +1271,7 @@ touch .gitignore
 
 ::: {.column width="50%"}
 
-<center>![](figs/18-version-control.png){width="300"}</center>
+<center>![](figs/18-version-control.png){width="700"}</center>
 
 ::: 
 :::
@@ -1207,6 +1285,8 @@ touch .gitignore
 
 5. Let's add them to the `staging area` and do a new commit.
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git status
 git add .
@@ -1214,16 +1294,19 @@ git status
 git commit -m "added gitignore"
 ```
 
+:::
+
 ::: 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/19-version-control.png){width="300"}</center>
+<center>![](figs/19-version-control.png){width="700"}</center>
 
 ::: 
 :::
 
+<!---
 ## Hands on! `.gitignore`
 
 ::: columns
@@ -1235,9 +1318,13 @@ git commit -m "added gitignore"
 
 3. To do so, we tell Git to ignore those files or folders. We create a `.gitignore` file.
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 touch .gitignore
 ```
+
+:::
 
 4. In the `.gitignore` we list everything we want Git to ignore.
 
@@ -1246,7 +1333,7 @@ touch .gitignore
 
 ::: {.column width="50%"}
 
-<center>![](figs/18-version-control.png){width="300"}</center>
+<center>![](figs/18-version-control.png){width="700"}</center>
 
 ::: 
 :::
@@ -1260,6 +1347,8 @@ touch .gitignore
 
 5. Let's add them to the `staging area` and do a new commit.
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 git status
 git add .
@@ -1267,16 +1356,18 @@ git status
 git commit -m "added gitignore"
 ```
 
+:::
+
 ::: 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/19-version-control.png){width="300"}</center>
+<center>![](figs/19-version-control.png){width="700"}</center>
 
 ::: 
 :::
-
+--->
 
 ## Hands on! `.gitignore`
 
@@ -1291,6 +1382,8 @@ git commit -m "added gitignore"
 7. Let's edit the `notes.txt` file one more time.
 8. Finally, let's check if the `notes.txt` file is being tracked.
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 echo "New line in the file" >> notes.txt
 git status
@@ -1301,12 +1394,14 @@ echo "The previous edition was not the last one" >> notes.txt
 git status
 ```
 
+:::
+
 ::: 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/20-version-control.png){width="300"}</center>
+<center>![](figs/20-version-control.png){width="600"}</center>
 
 ::: 
 :::
@@ -1318,21 +1413,25 @@ git status
 ::: columns
 ::: {.column width="50%"}
 
-::: r-fit-text
+<!---::: r-fit-text--->
+
+<br>
 
 1. Git branches are a way to create separate development paths without overriding or creating copies of your project.
 
 2. Branches can be added, deleted, and merged, just like regular commits.
 
-::: 
+<!---::: --->
 
 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/01-branching.gif){width="300"}</center>
+
+<center>![](figs/01-branching.gif){width="700"}</center>
 <center>[Technical Foundations of Informatics](https://info201.github.io/git-branches.html)</center>
+
 ::: 
 :::
 
@@ -1341,7 +1440,7 @@ git status
 ::: columns
 ::: {.column width="50%"}
 
-::: r-fit-text
+<!---::: r-fit-text--->
 
 
 Branches can be used to:
@@ -1351,7 +1450,7 @@ Branches can be used to:
 - Creates separate branches for each stage of development (release, development, fixes, master)
 - Creates separate branches for project collaboration!
 
-::: 
+<!---::: --->
 
 :::
 
@@ -1373,6 +1472,8 @@ Branches can be used to:
 
 1. Let's create a `new_project` directory.
 
+:::{.fragment}
+
 ```{bash, echo = T, eval = F}
 mkdir new_project
 git init
@@ -1389,15 +1490,16 @@ cd ..
 git status
 ```
 
+:::
 
 ::: 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/04-branching.png){width="300"}</center>
+<center>![](figs/04-branching.png){width="550"}</center>
 
-<center>![](figs/03-branching.jpg){width="300"}</center>
+<center>![](figs/03-branching.jpg){width="550"}</center>
 
 ::: 
 :::
@@ -1413,6 +1515,9 @@ git status
 2. Let's do our initial commit, create a new branch `dev`, and  switch to the new branch.
 3. Then, let's go back to the `main` branch, create a new one `bugs`, and list them
 
+:::{.fragment}
+
+
 ```{bash, echo = T, eval = F}
 git add .
 git commit -m "initial commit"
@@ -1425,15 +1530,16 @@ git branch -a
 git branch -d bugs # to delete
 ```
 
+:::
 
 ::: 
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/05-branching.png){width="300"}</center>
+<center>![](figs/05-branching.png){width="550"}</center>
 
-<center>![](figs/03-branching.jpg){width="300"}</center>
+<center>![](figs/03-branching.jpg){width="550"}</center>
 
 ::: 
 :::
@@ -1450,6 +1556,8 @@ git branch -d bugs # to delete
 5. Add a `version.txt` file 
 6. Then, let's merge our branches.
 7. To move on in our workflow, we can move back to the `dev` branch and do a new commit and keep working in the `dev` branch.
+
+:::{.fragment}
 
 ```{bash, echo = T, eval = F}
 git checkout dev
@@ -1475,6 +1583,8 @@ git log
 
 ```
 
+:::
+
 Check this material for more on [Merge & Branches](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
 
 ::: 
@@ -1482,9 +1592,9 @@ Check this material for more on [Merge & Branches](https://git-scm.com/book/en/v
 
 ::: {.column width="50%"}
 
-<center>![](figs/06-branching.png){width="300"}</center>
+<center>![](figs/06-branching.png){width="550"}</center>
 
-<center>![](figs/03-branching.jpg){width="300"}</center>
+<center>![](figs/03-branching.jpg){width="550"}</center>
 
 ::: 
 :::
@@ -1493,28 +1603,27 @@ Check this material for more on [Merge & Branches](https://git-scm.com/book/en/v
 
 ## GitHub: Creating a New Repository
 
-::: columns
-::: {.column width="50%"}
-
-::: r-fit-text
 
 1. First, we create a new repo on GitHub
 
-<center>![](figs/01-github.png){width="300"}</center>
+:::{.fragment}
 
-::: 
+<center>![](figs/01-github.png){width="1300"}</center>
+
 :::
 
-::: {.column width="50%"}
+
+## GitHub: Creating a New Repository
+
 
 2. We copy the remote `repo` address.
 
+:::{.fragment}
 
+<center>![](figs/02-github.png){width="1300"}</center>
 
-<center>![](figs/03-github.png){width="300"}</center>
-
-::: 
 :::
+
 
 ## GitHub: Creating a New Repository
 
@@ -1523,7 +1632,9 @@ Check this material for more on [Merge & Branches](https://git-scm.com/book/en/v
 
 ::: r-fit-text
 
-3. We connect our local Git repo with the remote GitHub repo
+3. We connect our local `Git` repo with the remote `GitHub` repo
+:::
+:::{.fragment}
 
 ```{bash, echo = T, eval = F}
 cd Desktop/qtm_350_24S_02
@@ -1532,19 +1643,18 @@ git remote add origin https://github.com/davi-moreira/qtm_350_24S_02.git
 git remote -v
 ```
 
-<center>![](figs/03-github.png){width="300"}</center>
 
 ::: 
 :::
 
 ::: {.column width="50%"}
 
-4. xxx
-
-<center>![](figs/03-github.png){width="300"}</center>
+<center>![](figs/06-github.png){width="700"}</center>
 
 ::: 
 :::
+
+
 
 ## The Push and Pull System
 
@@ -1554,7 +1664,21 @@ git remote -v
 ::: r-fit-text
 
 
-XXX add description and imgage XXXX
+- The Git/GitHub push and pull system is central to collaborating on coding projects. It allows multiple developers to work on the same project without conflicts.
+
+
+- **The Push Operation**: Sends your local commits to the remote repository.
+    
+    - `git push origin main` - pushes commits from your local `main` branch to the remote `main` branch.
+
+- **The Pull Operation**: Fetches the latest changes from the remote repository and merges them into your local repository.
+
+    - `git pull origin main` - pulls changes from the remote `main` branch and merges them into your local `main` branch.
+
+- **Best Practices**:
+
+    - Pull often to keep your local repository up-to-date.
+    - Push regularly to share your contributions with the team.
 
 ::: 
 
@@ -1562,23 +1686,58 @@ XXX add description and imgage XXXX
 
 ::: {.column width="50%"}
 
-<center>![](figs/rproject-setup.png){width="300"}</center>
+<center>![](figs/01-push-pull.png){width="600"}</center>
 
 ::: 
 :::
+
 
 
 ## The Push and Pull System
-
-::: columns
-::: {.column width="50%"}
-
-::: r-fit-text
 
 
 1. Starting with the Pull request
-2. Lets create a news files in the remote `repo`
+2. Let's create a `README.md` file in the remote `repo` and `commit`: 
+
+:::{.fragment}
+
+<center>![](figs/03-github.png){width="1500"}</center>
+
+:::
+
+
+## The Push and Pull System
+
+2. Let's create a `README.md` file in the remote `repo` and `commit`: 
+
+:::{.fragment}
+
+<center>![](figs/04-github.png){width="700"}</center>
+
+:::
+
+## The Push and Pull System
+
+3. Let's create a `LICENSE` and `.gitignore` files in the remote `repo` and `commit`: 
+
+:::{.fragment}
+
+<center>![](figs/05-github.png){width="1300"}</center>
+
+:::
+
+
+## The Push and Pull System
+
+::: columns
+::: {.column width="50%"}
+
+::: r-fit-text
+
+
 3. Now we can make a `Pull` request
+
+:::{.fragment}
 
 ```{bash, echo = T, eval = F}
 git pull origin main
@@ -1587,17 +1746,15 @@ git log
 
 ```
 
+:::
 
 ::: 
-
 
 :::
 
 ::: {.column width="50%"}
 
-XXX Check images XXXX
-
-<center>![](figs/rproject-setup.png){width="300"}</center>
+<center>![](figs/07-github.png){width="700"}</center>
 
 ::: 
 :::
@@ -1609,11 +1766,12 @@ XXX Check images XXXX
 
 ::: r-fit-text
 
-
-1. Now let's check the Push request
-2. Lets delete the `LICENSE.md` file locally and commit
+1. Now let's see the Push request.
+2. Let's delete the `LICENSE.md` file locally and commit.
 3. Now we can make a `Push` request. Conditioned on your settings, it will requires your user name and password.
 4. Let's check the remote `repo` on GitHub.
+
+:::{.fragment}
 
 ```{bash, echo = T, eval = F}
 rm -rf LICENSE
@@ -1626,7 +1784,7 @@ git push -u origin main
 
 ```
 
-
+:::
 ::: 
 
 
@@ -1634,9 +1792,8 @@ git push -u origin main
 
 ::: {.column width="50%"}
 
-XXX Check images XXXX
-
-<center>![](figs/rproject-setup.png){width="300"}</center>
+<center>![](figs/08-github.png){width="480"}</center>
+<center>![](figs/09-github.png){width="480"}</center>
 
 ::: 
 :::
@@ -1648,9 +1805,11 @@ XXX Check images XXXX
 
 ::: r-fit-text
 
-
 1. Now let's create a branch to correct the mistake in the `README.md` file.
 
+:::
+
+:::{.fragment}
 
 ```{bash, echo = T, eval = F}
 git pull
@@ -1669,26 +1828,38 @@ git push origin err01
 # git push origin --delete err01 # to delete the branch in the remote repo
 ```
 
-
 ::: 
-
 
 :::
 
 ::: {.column width="50%"}
 
-XXX Check images XXXX
-
-<center>![](figs/rproject-setup.png){width="300"}</center>
+<center>![](figs/10-github.png){width="700"}</center>
 
 ::: 
 :::
+
+## The Push and Pull System
+
+Can anybody push to my repository?
+
+>No, all repositories are read-only for anonymous users. By default only the owner of the repository has write access. If you can push to your own repo, it’s because you are using one of the supported authentification methods (HTTPS, SSH, …).
+
+>If you want to grant someone else privileges to push to your repo, you would need to configure that access in the project settings.
+
+>To contribute to projects in which you don’t have push access, you push to your own copy of the repo, then ask for a pull-request.
+
+[source: https://stackoverflow.com/questions/17442930/can-anybody-push-to-my-project-on-github](https://stackoverflow.com/questions/17442930/can-anybody-push-to-my-project-on-github)
 
 # RStudio + GitHub + Git
 
 ## RStudio + GitHub + Git
 
-XXXX Colocar 
+<br>
+
+<center>![](figs/01-github-r.png){width="1000"}</center>
+
+<center>[Happy Git and GitHub for the useR](https://happygitwithr.com/), [Heaven King video](https://www.youtube.com/watch?v=uBWrpVrazzA)</center>
 
 ## RStudio + GitHub + Git
 
@@ -1699,71 +1870,11 @@ XXXX Colocar
 5. Create a new branch
 6. Merge
 7. Push and Pull
+8. **Have Fun!**
 
+# Collaboration with Git and GitHub
 
-# Collaboration
-
-
-# Collaborating on Data Science Projects with Git and GitHub
-
-## Project Setup and Organization
-
-- **Repository Setup:** Centralize the codebase with a GitHub repository.
-- **Directory Structure:** Organize with folders like `data`, `src`, `docs`, `notebooks`.
-- **README File:** Include project overview, setup instructions, and contribution guidelines.
-
-## 2. Version Control Best Practices
-
-- **Branching Strategy:** Adopt a strategy like "feature branch" workflow.
-- **Commit Messages:** Write clear, descriptive commit messages.
-
-XXX IMAGE 01-collaboration XXX
-
-XXX Parei aqui! XXXX
-
-## 3. Code Reviews and Pull Requests
-
-- **Pull Requests:** Use PRs for code review before merging.
-- **Code Review:** Encourage constructive feedback to improve code quality.
-
----
-
-## 4. Continuous Integration and Continuous Deployment (CI/CD)
-
-- **Automated Testing:** Set up tests to run on each pull request.
-- **Deployment Pipeline:** Automate deployment to environments with CI/CD tools.
-
----
-
-## 5. Issue Tracking and Project Management
-
-- **Issues:** Use GitHub Issues for task and bug tracking.
-- **Project Boards:** Visualize progress with GitHub Projects or similar tools.
-
----
-
-## 6. Documentation and Knowledge Sharing
-
-- **Wiki:** Document important info and setup guides in GitHub Wiki or `docs`.
-- **Code Comments:** Encourage comments within the code for clarity.
-
----
-
-## 7. Access Control and Security
-
-- **Access Permissions:** Manage roles like Read, Write, and Admin carefully.
-- **Secrets Management:** Securely manage sensitive information with GitHub Secrets.
-
----
-
-## Conclusion
-
-- Establish guidelines early and adapt as necessary.
-- Ensure regular communication and feedback among team members.
-
-
-
-## Collaboration
+## Collaborating Workflows
 
 ::: columns
 ::: {.column width="50%"}
@@ -1771,27 +1882,24 @@ XXX Parei aqui! XXXX
 ::: r-fit-text
 
 
-XXX PAREI AQUI FALTA FALAR DO R RSTUDIO E DE COLLABORATION!
+- There is no one size fits all Git workflow. 
+- It is important to develop a Git workflow that is a productivity enhancement for the team. 
+- A workflow should also complement business culture. 
 
 ::: 
 
-
-:::{.fragment}
-
-XXXX
-
-:::
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/rproject-setup.png){width="300"}</center>
+<center>![](figs/01-collaboration.png){width="700"}</center>
 
 ::: 
 :::
 
 
-## XXXXX
+
+## Centralized Workflow
 
 ::: columns
 ::: {.column width="50%"}
@@ -1799,41 +1907,101 @@ XXXX
 ::: r-fit-text
 
 
-XXX
+- Uses a central repository to serve as the single point-of-entry for all changes to the project. The default development branch it the `main` branch and all changes are committed into this branch. This workflow doesn’t require any other branches besides main.
+
+- Also check: 
+
+    -[Inviting collaborators to a personal repository](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository)
+
+::: 
+
+:::
+
+::: {.column width="50%"}
+
+<center>![](figs/02-collaboration.svg){width="700"}</center>
+<center>[Centralized workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow)</center>
+
+::: 
+:::
+
+
+
+## Feature Branch Workflow
+
+
+::: columns
+::: {.column width="50%"}
+
+::: r-fit-text
+
+- All feature development should take place in a dedicated branch instead of the `main` branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.
+
+- Also check: 
+
+    - [Inviting collaborators to a personal repository](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository) 
+    - [Resolving a merge conflict using the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
+    - [A Successful Git Branching Model](https://nvie.com/posts/a-successful-git-branching-model/)
+    -[Learn Git Branching](https://learngitbranching.js.org/)
 
 ::: 
 
 
-:::{.fragment}
+:::
 
-XXXX
+::: {.column width="50%"}
+
+<center>![](figs/01-collaboration.png){width="700"}</center>
+<center>[Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows)</center>
+
+::: 
+:::
+
+
+
+
+## Forking Workflow
+
+::: columns
+::: {.column width="50%"}
+
+::: r-fit-text
+
+- Instead of using a single server-side repository to act as the “central” codebase, it gives every developer a server-side repository. This means that each contributor has not one, but two Git repositories: a private local one and a public server-side one. 
+- Also check: 
+
+    - [Collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
+    - [Merging a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
+    - [Checking out pull requests locally](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally)
 
 :::
 :::
 
 ::: {.column width="50%"}
 
-<center>![](figs/rproject-setup.png){width="300"}</center>
+<center>![](figs/03-collaboration.svg){width="700"}</center>
+<center>[Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow)</center>
 
 ::: 
 :::
-
-
-
-
-
-
-# Branches and forking
-
-# Merge conflicts
-
-# Git from the shell
-
-# Git(Hub) + RStudio
-
-# Other tips
 
 # Summary
+
+## Summary
+
+- Project Management is a central practice in Data Science Projects
+
+- Keep Future-you Happy!
+
+- The Folder Structure must be respected.
+
+- Guidelines for naming scripts, modularizing code, and structuring your code effectively for future readability and usability.
+
+- Version Control helps to track changes in files and coordinate work among multiple people.
+
+- Git and GitHub are the current main tools for Version Control and Data Science project collaboration
+
+- There is no unique Collaborating Workflow, but one of them can fit your team!
 
 
 # Thank you!
