@@ -39,7 +39,7 @@ tbl-colwidths: [10,50,40]
 
 -   [Computational Literacy](/slides/slides-topic-02-01.html){target="_blank"}
 
--   [Command Line](/slides/slides-topic-02-02.html){target="_blank"}
+-   [Command Line](/slides/slides-topic-02-02-aux.html){target="_blank"}
 
 -   [Version Control](/slides/slides-topic-02-03.html){target="_blank"}
 
