@@ -1034,10 +1034,7 @@ zmv -n -W  "*.csv" "*.txt"
 
 <center>Terminal!</center>
 
-````{=html}
 <!---
-
-````{=html}
 ```bash
 mv -- friday.csv friday.txt
 mv -- monday.csv monday.txt
@@ -1047,9 +1044,7 @@ mv -- thursday.csv thursday.txt
 mv -- tuesday.csv tuesday.txt
 mv -- wednesday.csv wednesday.txt
 ```
-````
 --->
-````
 
 <br>
 
@@ -1067,7 +1062,6 @@ zmv -n '(**/)(*).csv' '$1$2-tacos.csv'
 
 <center>Terminal!</center>
 
-````{=html}
 <!---```bash
 mv -- friday.csv friday-tacos.csv
 mv -- monday.csv monday-tacos.csv
@@ -1076,8 +1070,7 @@ mv -- sunday.csv sunday-tacos.csv
 mv -- thursday.csv thursday-tacos.csv
 mv -- tuesday.csv tuesday-tacos.csv
 mv -- wednesday.csv wednesday-tacos.csv
-```--->
-````
+--->
 
 . . .
 
@@ -1370,21 +1363,13 @@ There are two main commands for manipulating text in the shell, namely `sed` and
 cat slides-topic-02-02-examples/nursery.txt
 ```
 
-```{python}
-!cat slides-topic-02-02-examples/nursery.txt
-```
 
 ```{bash sed1a}
 sed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt
 cat slides-topic-02-02-examples/nursery.txt
 ```
 
-```{python}
-!sed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt
-!cat slides-topic-02-02-examples/nursery.txt
-```
 
-````{=html}
 <!---`
 ``{bash}
 ## Change it back for when we want to re-knit the file.
@@ -1396,7 +1381,7 @@ sed 's/Bill/Jack/g' slides-topic-02-02-examples/nursery.txt
 !sed 's/Bill/Jack/g' slides-topic-02-02-examples/nursery.txt
 ```
 --->
-````
+
 :::
 
 ::: {.column style="width: 50%; font-size: 70%;"}
@@ -1409,7 +1394,6 @@ Let's look at the expression `s/Jack/Bill/g` in detail:
 :::
 :::
 
-````{=html}
 <!---
 ## Manipulate text: sed 
 
@@ -1422,19 +1406,17 @@ The command below uses, among other things:
 - `\s`, the whitespace metacharacter
 - `\n`, the newline metacharacter
 - `|`, the pipe operator (more on that later)
-
-```{bash sed2}
+--->
+<!---```{bash sed2}
 sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
+
 ```
 
 <br>
 
-```{python}
+<!---```{python}
 !sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
-```
-
---->
-````
+```--->
 
 ## Summary
 
