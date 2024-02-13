@@ -34,18 +34,18 @@ editor: visual
 | Week 04 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control                        | Feb 6   |
 | Week 04 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control                        | Feb 8   |
 | Week 05 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control          | Feb 13  |
-| Week 05 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials          | Feb 15  |
+| Week 05 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control          | Feb 15  |
 | Week 06 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials  | Feb 20  |
-| Week 06 | [Topic 04](./topics-pages/page-topic-04.qmd)  | API Interactions and Web Scraping  | Feb 22  |
-| Week 07 | [Topic 04](./topics-pages/page-topic-04.qmd)  | API Interactions and Web Scraping               | Feb 27  |
-| Week 07 | [Topic 05](./topics-pages/page-topic-05.qmd)  | Overview of Data Structure and Algorithms               | Feb 29  |
-| Week 08 | [Topic 05](./topics-pages/page-topic-05.qmd)  | Overview of Data Structure and Algorithms               | Mar 5   |
-| Week 08 | [Topic 06](./topics-pages/page-topic-06.qmd)  | SQL Operations and Operators               | Mar 7   |
+| Week 06 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials  | Feb 22  |
+| Week 07 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials               | Feb 27  |
+| Week 07 | [Topic 04](./topics-pages/page-topic-04.qmd)  | API Interactions and Web Scraping               | Feb 29  |
+| Week 08 | [Topic 04](./topics-pages/page-topic-04.qmd)  | API Interactions and Web Scraping               | Mar 5   |
+| Week 08 | [Topic 05](./topics-pages/page-topic-05.qmd)  | Overview of Data Structure and Algorithms               | Mar 7   |
 | Week 09 | -        | Spring Break (no classes, no office hours) | Mar 12  |
 | Week 09 | -        | Spring Break (no classes, no office hours) | Mar 14  |
-| Week 10 | [Topic 06](./topics-pages/page-topic-06.qmd)  | SQL Operations and Operators                                       | Mar 19  |
+| Week 10 | [Topic 05](./topics-pages/page-topic-05.qmd)  | Overview of Data Structure and Algorithms                                       | Mar 19  |
 | Week 10 | [Topic 06](./topics-pages/page-topic-06.qmd)  | SQL Operations and Operators                                       | Mar 21  |
-| Week 11 | [Topic 07](./topics-pages/page-topic-07.qmd)  | NoSQL | Mar 26  |
+| Week 11 | [Topic 06](./topics-pages/page-topic-06.qmd)  | SQL Operations and Operators | Mar 26  |
 | Week 11 | [Topic 07](./topics-pages/page-topic-07.qmd)  | NoSQL | Mar 28  |
 | Week 12 | [Topic 08](./topics-pages/page-topic-08.qmd)  | Database Design, Structures and Management | Apr 2   |
 | Week 12 | [Topic 08](./topics-pages/page-topic-08.qmd)  | Database Design, Structures and Management  | Apr 4   |

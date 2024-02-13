@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>QTM 350 Data Science Computing - Topic 2: In-Class Activity - Exploring the Command Line</title>
+<title>QTM 350 Data Science Computing - Problem Set: Collaboration and Version Control with Git and GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Topic 2: In-Class Activity - Exploring the Command Line</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Problem Set: Collaboration and Version Control with Git and GitHub</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -188,20 +188,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#in-class-activity-exploring-the-command-line" id="toc-in-class-activity-exploring-the-command-line" class="nav-link active" data-scroll-target="#in-class-activity-exploring-the-command-line">In-Class Activity: Exploring the Command Line</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Topic 2: In-Class Activity - Exploring the Command Line</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Problem Set: Collaboration and Version Control with Git and GitHub</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -218,55 +212,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="in-class-activity-exploring-the-command-line" class="level3">
-<h3 class="anchored" data-anchor-id="in-class-activity-exploring-the-command-line">In-Class Activity: Exploring the Command Line</h3>
-<p><strong>Objective</strong>: The goal of this activity is to put into practice the shell commands learned in class, including file navigation, file manipulation, and simple scripting.</p>
-<p><strong>Instructions</strong>:</p>
+<p><strong>Objective:</strong></p>
+<p>To familiarize students with the basics of version control using Git and GitHub, this problem set requires students to collaborate on a project, manage different versions of files through branches, commit changes, resolve conflicts, and merge their work into the main branch. The final product will be a cohesive document (README file) detailing their <em>utopian</em> data science project.</p>
+<p><strong>Problem Set Instructions:</strong></p>
 <ol type="1">
-<li><strong>Shell Basics</strong>:
+<li><strong>Setting Up:</strong>
 <ul>
-<li>Open your terminal or command line interface.</li>
-<li>Identify which shell you are using with the command <code>echo $SHELL</code>.</li>
-<li>Use <code>man</code> or <code>--help</code> to look up the manual for the <code>ls</code> command.</li>
+<li>Form groups of up to three members.</li>
+<li>Each group will create a new repository on GitHub.</li>
+<li>Each group will give a creative title to the <em>utopian</em> data science project.</li>
+<li>Initialize the repository with a README file describing the project’s goal.</li>
 </ul></li>
-<li><strong>Help!</strong>:
+<li><strong>Branching Out:</strong>
 <ul>
-<li>For each of the following commands, use <code>--help</code> or <code>man</code> to find out what they do: <code>cd</code>, <code>mkdir</code>, <code>rm</code>.</li>
+<li>Each member will create their own branch from the main branch.</li>
+<li>Assign different sections of the README file to each member for parallel development.</li>
 </ul></li>
-<li><strong>Navigating Your System</strong>:
+<li><strong>Collaborative Work:</strong>
 <ul>
-<li>Navigate to your home directory using <code>cd</code>.</li>
-<li>List all the files and directories in your home directory with a detailed view using <code>ls -l</code>.</li>
-<li>Create a new directory called <code>ds_activities</code>.</li>
+<li>Each member should clone the repository to their local machine.</li>
+<li>Members will checkout to their respective branches to start working on their assigned sections.</li>
 </ul></li>
-<li><strong>Managing Your Files</strong>:
+<li><strong>Committing and Pushing:</strong>
 <ul>
-<li>Inside <code>ds_activities</code>, create a new file called <code>my_script.sh</code>.</li>
-<li>Copy any text file from your system into this directory and rename it to <code>sample.txt</code>.</li>
+<li>After completing the work on their section, each member will commit the changes with a meaningful commit message.</li>
+<li>Push the commits to the corresponding remote branch on GitHub.</li>
 </ul></li>
-<li><strong>Working with Text Files</strong>:
+<li><strong>Pulling and Updating:</strong>
 <ul>
-<li>Use <code>cat</code> to display the contents of <code>sample.txt</code>.</li>
-<li>Use <code>head</code> and <code>tail</code> to display the first and last 10 lines of <code>sample.txt</code>.</li>
+<li>Before merging, each member should pull the latest changes from the main branch into their own to handle any new updates.</li>
+<li>Resolve any merge conflicts that might arise and commit the resolution.</li>
 </ul></li>
-<li><strong>Redirects, Pipes, and Loops</strong>:
+<li><strong>Code Review and Merging:</strong>
 <ul>
-<li>Redirect the output of <code>ls -l</code> to a file named <code>directory_list.txt</code>.</li>
-<li>Use a pipe to sort <code>directory_list.txt</code> alphabetically and display the results with <code>less</code>.</li>
+<li>Once all members have pushed their updates, perform a code/text review. You can use GitHub’s pull request feature.</li>
+<li>After reviewing, merge each feature branch into the main branch.</li>
+<li>Ensure that all members’ contributions are reflected in the main branch.</li>
 </ul></li>
-<li><strong>Scripting</strong>:
+<li><strong>Finalizing the README:</strong>
 <ul>
-<li>Edit <code>my_script.sh</code> to include a <code>bash</code> script that prints “Hello, Data Science!” to the terminal.</li>
-<li>Make <code>my_script.sh</code> executable with <code>chmod</code> and run it.</li>
+<li>Collaboratively edit the README file in the main branch to include:
+<ul>
+<li>Project title, description, objectives, and members.</li>
+<li>Contributions by each member.</li>
+<li>Challenges faced and how they were overcome.</li>
+<li>Any references or resources used.</li>
+</ul></li>
+</ul></li>
+<li><strong>Submission:</strong>
+<ul>
+<li>Submit the link of the the GitHub repository thorough GradeScope.</li>
+<li>Ensure the main branch contains the final README file and any other project files.</li>
+<li>The history should clearly show each member’s contributions and commits.</li>
 </ul></li>
 </ol>
-<p><strong>Submission</strong>: - Compress the <code>ds_activities</code> directory with all created files into a <code>.zip</code> file and submit it through Gradescope in the <code>Lecture Quiz 06</code>. - Name the zip file <code>FirstName_LastName_ds_activities.zip</code>.</p>
-<p><strong>Note</strong>: Remember to replace <code>FirstName</code> and <code>LastName</code> with your actual last and first names.</p>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li><strong>Collaboration:</strong> Participation from all members is evident from the commit history.</li>
+<li><strong>Documentation:</strong> The README file should be well-organized, informative, and reflective of the work done.</li>
+<li><strong>Commit Quality:</strong> Commit messages are clear, concise, and descriptive of the changes made.</li>
+</ul>
+<p><strong>Hints!</strong></p>
+<ul>
+<li>Commit frequently with clear messages that accurately describe each change.</li>
+<li>Regularly communicate with your team to avoid redundant work or conflicts.</li>
+<li>Use GitHub issues or project boards to manage and track tasks.</li>
+<li>Review each other’s code thoroughly before merging into the main branch.</li>
+<li>Check the additional material in the topic webpage and slides.</li>
+</ul>
 
 
 <!-- -->
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -708,7 +725,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Topic 2: In-Class Activity - Exploring the Command Line"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Problem Set: Collaboration and Version Control with Git and GitHub"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span><span class="co"> </span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  error: true</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
@@ -718,38 +735,64 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  chunk_output_type: console</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Activity: Exploring the Command Line</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>**Objective:**</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>**Objective**: The goal of this activity is to put into practice the shell commands learned in class, including file navigation, file manipulation, and simple scripting.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>To familiarize students with the basics of version control using Git and GitHub, this problem set requires students to collaborate on a project, manage different versions of files through branches, commit changes, resolve conflicts, and merge their work into the main branch. The final product will be a cohesive document (README file) detailing their *utopian* data science project.</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>**Instructions**:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>**Problem Set Instructions:**</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Shell Basics**:</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Open your terminal or command line interface.</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Identify which shell you are using with the command <span class="in">`echo $SHELL`</span>.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Use <span class="in">`man`</span> or <span class="in">`--help`</span> to look up the manual for the <span class="in">`ls`</span> command.</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Help!**:</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>For each of the following commands, use <span class="in">`--help`</span> or <span class="in">`man`</span> to find out what they do: <span class="in">`cd`</span>, <span class="in">`mkdir`</span>, <span class="in">`rm`</span>.</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Navigating Your System**:</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Navigate to your home directory using <span class="in">`cd`</span>.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>List all the files and directories in your home directory with a detailed view using <span class="in">`ls -l`</span>.</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Create a new directory called <span class="in">`ds_activities`</span>.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**Managing Your Files**:</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Inside <span class="in">`ds_activities`</span>, create a new file called <span class="in">`my_script.sh`</span>.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Copy any text file from your system into this directory and rename it to <span class="in">`sample.txt`</span>.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>**Working with Text Files**:</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Use <span class="in">`cat`</span> to display the contents of <span class="in">`sample.txt`</span>.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Use <span class="in">`head`</span> and <span class="in">`tail`</span> to display the first and last 10 lines of <span class="in">`sample.txt`</span>.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>**Redirects, Pipes, and Loops**:</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Redirect the output of <span class="in">`ls -l`</span> to a file named <span class="in">`directory_list.txt`</span>.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Use a pipe to sort <span class="in">`directory_list.txt`</span> alphabetically and display the results with <span class="in">`less`</span>.</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">7.  </span>**Scripting**:</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Edit <span class="in">`my_script.sh`</span> to include a <span class="in">`bash`</span> script that prints "Hello, Data Science!" to the terminal.</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Make <span class="in">`my_script.sh`</span> executable with <span class="in">`chmod`</span> and run it.</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>**Submission**: - Compress the <span class="in">`ds_activities`</span> directory with all created files into a <span class="in">`.zip`</span> file and submit it through Gradescope in the <span class="in">`Lecture Quiz 06`</span>. - Name the zip file <span class="in">`FirstName_LastName_ds_activities.zip`</span>.</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>**Note**: Remember to replace <span class="in">`FirstName`</span> and <span class="in">`LastName`</span> with your actual last and first names.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Setting Up:**</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Form groups of up to three members.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Each group will create a new repository on GitHub.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Each group will give a creative title to the  *utopian* data science project.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Initialize the repository with a README file describing the project's goal.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Branching Out:**</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Each member will create their own branch from the main branch.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Assign different sections of the README file to each member for parallel development.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Collaborative Work:**</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Each member should clone the repository to their local machine.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Members will checkout to their respective branches to start working on their assigned sections.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Committing and Pushing:**</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>After completing the work on their section, each member will commit the changes with a meaningful commit message.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Push the commits to the corresponding remote branch on GitHub.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Pulling and Updating:**</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Before merging, each member should pull the latest changes from the main branch into their own to handle any new updates.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Resolve any merge conflicts that might arise and commit the resolution.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Code Review and Merging:**</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Once all members have pushed their updates, perform a code/text review. You can use GitHub's pull request feature.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>After reviewing, merge each feature branch into the main branch.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Ensure that all members’ contributions are reflected in the main branch.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Finalizing the README:**</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Collaboratively edit the README file in the main branch to include:</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Project title, description, objectives, and members.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Contributions by each member.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Challenges faced and how they were overcome.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Any references or resources used.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**Submission:**</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Submit the link of the the GitHub repository thorough GradeScope.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Ensure the main branch contains the final README file and any other project files.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>The history should clearly show each member's contributions and commits.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>**Assessment Criteria:**</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Collaboration:** Participation from all members is evident from the commit history.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Documentation:** The README file should be well-organized, informative, and reflective of the work done.</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Commit Quality:** Commit messages are clear, concise, and descriptive of the changes made.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>**Hints!**</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Commit frequently with clear messages that accurately describe each change.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Regularly communicate with your team to avoid redundant work or conflicts.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use GitHub issues or project boards to manage and track tasks.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review each other’s code thoroughly before merging into the main branch.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check the additional material in the topic webpage and slides.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
