@@ -20,7 +20,7 @@ For example, my *utopian* data science project, `Rhetoric`, aims to daily collec
 
 1. **Setting Up:**
    - Form groups of up to three members.
-   - Each group will create a new public repository on GitHub.
+   - Each group will create a new public repository on GitHub with the following name: `2024s_qtm350_ps01`.
    - Each group will give a creative title to the  *utopian* data science project.
    - Initialize the repository with a README file describing the project's goal.
 
@@ -47,13 +47,13 @@ For example, my *utopian* data science project, `Rhetoric`, aims to daily collec
 
 7. **Finalizing the README:**
    - Collaboratively edit the README file in the main branch to include:
-     - Project title, description, objectives, and members.
+     - Project title, description, objectives, and members's names.
      - Contributions by each member.
      - Challenges faced and how they were overcome.
      - Any references or resources used.
 
 8. **Submission:**
-   - Submit the link of the the GitHub repository thorough GradeScope.
+   - Submit the link of the the GitHub repository thorough GradeScope. [Do not forget to assign the group members!](https://help.gradescope.com/article/m5qz2xsnjy-student-add-group-members)
    - Ensure the main branch contains the final README file and any other project files.
    - The history should clearly show each member's contributions and commits.
 
