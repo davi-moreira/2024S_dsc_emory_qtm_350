@@ -57,7 +57,7 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 
 # Problem Set
 
--   Problem Set - Collaboration and Version Control with Git and GitHub [html](/lecture_material/material-topic-02/problem_set_version_control.html){target="_blank"}
+- [Problem Set - Collaboration and Version Control with Git and GitHub](/lecture_material/material-topic-02/problem_set_version_control.html){target="_blank"}
 
 
 # Recommended Readings

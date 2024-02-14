@@ -13,11 +13,14 @@ editor_options:
 
 To familiarize students with the basics of version control using Git and GitHub, this problem set requires students to collaborate on a project, manage different versions of files through branches, commit changes, resolve conflicts, and merge their work into the main branch. The final product will be a cohesive document (README file) detailing their *utopian* data science project.
 
+For example, my *utopian* data science project, `Rhetoric`, aims to daily collect and store all world politicians' messages and speeches to forecast policy outcomes and regime transitions. 
+
+
 **Problem Set Instructions:**
 
 1. **Setting Up:**
    - Form groups of up to three members.
-   - Each group will create a new repository on GitHub.
+   - Each group will create a new public repository on GitHub.
    - Each group will give a creative title to the  *utopian* data science project.
    - Initialize the repository with a README file describing the project's goal.
 
@@ -66,4 +69,7 @@ To familiarize students with the basics of version control using Git and GitHub,
 - Regularly communicate with your team to avoid redundant work or conflicts.
 - Use GitHub issues or project boards to manage and track tasks.
 - Review each other’s code thoroughly before merging into the main branch.
-- Check the additional material in the topic webpage and slides.
+- Check the additional material in the topic webpage and slides. Also:
+
+    - [Resolving a merge conflict using the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
+    - [Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
