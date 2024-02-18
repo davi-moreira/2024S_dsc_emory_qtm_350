@@ -3,8 +3,9 @@ title: "Topic 03"
 subtitle: "Python essentials"
 description: ""
 author: "Davi Moreira"
-date: "last-modified"
-
+date-modified: "last-modified"
+date: "2024-02-18"
+date-format: "MMM D, YYYY"
 #listing:
   # - id: slides
   #   contents:

@@ -13122,7 +13122,11 @@ div#notebook {
 
 <p>The material assumes no prior knowledge of Python. Experience with programming concepts or another programming language will help, but is not required to understand the material.</p>
 <p><br></p>
-<center>![](img/py4ds.png)</center><p>This topic material is based on the <a href="https://www.tomasbeuzen.com/python-programming-for-data-science/README.html">Python Programming for Data Science</a> book and adapted for our purposes in the course.</p>
+<center>
+<div>
+<img src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/py4ds.png" width="200"/>
+</div>
+</center><p>This topic material is based on the <a href="https://www.tomasbeuzen.com/python-programming-for-data-science/README.html">Python Programming for Data Science</a> book and adapted for our purposes in the course.</p>
 
 </div>
 </div>
@@ -13214,7 +13218,11 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Numeric-data-types">Numeric data types<a class="anchor-link" href="#Numeric-data-types">&#182;</a></h3><p>A <strong>value</strong> is a piece of data that a computer program works with such as a number or text. There are different <strong>types</strong> of values: <code>42</code> is an integer and <code>"Hello!"</code> is a string. A <strong>variable</strong> is a name that refers to a value. In mathematics and statistics, we usually use variable names like $x$ and $y$. In Python, we can use any word as a variable name as long as it starts with a letter or an underscore. However, it should not be a <a href="https://docs.python.org/3.3/reference/lexical_analysis.html#keywords">reserved word</a> in Python such as <code>for</code>, <code>while</code>, <code>class</code>, <code>lambda</code>, etc. as these words encode special functionality in Python that we don't want to overwrite!</p>
 <p>It can be helpful to think of a variable as a box that holds some information (a single number, a vector, a string, etc). We use the <strong>assignment operator</strong> <code>=</code> to assign a value to a variable.</p>
-<center>![](img/box.png)</center><p>Image modified from: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fmedium.com%2F%40stevenpcurtis.sc%2Fwhat-is-a-variable-3447ac1331b9&amp;psig=AOvVaw3YbYfgb7XFOJ_sHP5eliob&amp;ust=1595365663851000&amp;source=images&amp;cd=vfe&amp;ved=0CA0QjhxqFwoTCMi8nrfe3OoCFQAAAAAdAAAAABAZ">medium.com</a></p>
+<center>
+<div>
+<img src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/box.png" width="400"/>
+</div>
+</center><p>Image modified from: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fmedium.com%2F%40stevenpcurtis.sc%2Fwhat-is-a-variable-3447ac1331b9&amp;psig=AOvVaw3YbYfgb7XFOJ_sHP5eliob&amp;ust=1595365663851000&amp;source=images&amp;cd=vfe&amp;ved=0CA0QjhxqFwoTCMi8nrfe3OoCFQAAAAAdAAAAABAZ">medium.com</a></p>
 <p><strong>Tip:</strong>
 See the <a href="https://docs.python.org/3/library/stdtypes.html">Python 3 documentation</a> for a summary of the standard built-in Python datatypes.</p>
 
@@ -15779,13 +15787,32 @@ Read more in the <a href="https://docs.python.org/3/library/stdtypes.html#truth-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_01-py-basics.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="se">\n</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_01-py-basics.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] Converting notebook _01-py-basics.ipynb to html
+[NbConvertApp] Writing 377383 bytes to _01-py-basics.html
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
