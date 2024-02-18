@@ -96,6 +96,8 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
     -   Read [Ch. 6](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration){target="_blank"} for more information regarding Git + Github.
 -   [Ch. 13 Detect Git from RStudio -Happy Git with R](https://happygitwithr.com/rstudio-see-git.html){target="_blank"} - Bryan, Jenny & Jim Hester
 
-- [Visualizing Git](https://git-school.github.io/visualizing-git/)
+- [Visualizing Git](https://git-school.github.io/visualizing-git/){target="_blank"}
+
+- [Introduction to Linux](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/introduction-to-linux/index.html#0){target="_blank"}
 
 
