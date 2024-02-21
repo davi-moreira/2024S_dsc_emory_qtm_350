@@ -98,6 +98,10 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 
 - [Visualizing Git](https://git-school.github.io/visualizing-git/){target="_blank"}
 
+- [Data Science at the Command Line](https://jeroenjanssens.com/dsatcl/)
+
+- [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
+
 - [Introduction to Linux](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/introduction-to-linux/index.html#0){target="_blank"}
 
 

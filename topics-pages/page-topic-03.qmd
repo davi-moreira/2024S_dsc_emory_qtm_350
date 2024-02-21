@@ -47,6 +47,8 @@ tbl-colwidths: [10,50,40]
 
 -   Python Basics: [html](/lecture_material/material-topic-03/01-py-basics.html){target="_blank"}, [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"} 
 
+-   Python Basics - Practice: [html](/lecture_material/material-topic-03/01-py-basics-practice.html){target="_blank"}, [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-03/_01-py-basics-practice.ipynb){target="_blank"} 
+
 <!---
 -   [Loops]
 
@@ -89,8 +91,13 @@ tbl-colwidths: [10,50,40]
 
 -   [Kaggle Learn Python Tutorials](https://www.kaggle.com/learn/python){target="_blank"}
 
+- [Research Software Engineering with Python](https://merely-useful.tech/py-rse/index.html)
 
+-[Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
 
+- [Python for Data Science](https://aeturrell.github.io/python4DS/welcome.html) 
+
+- [Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.htm) 
 
 
 
