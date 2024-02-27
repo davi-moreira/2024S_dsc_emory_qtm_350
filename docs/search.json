@@ -653,7 +653,7 @@
     "href": "topics-pages/page-topic-03.html",
     "title": "Topic 03",
     "section": "",
-    "text": "Lecture Material\n\nPython Basics: html, notebook\n\nIn-Class Activity - Python Basics: html, notebook\n\n\n\n\n\nProblem Set\n\nTBP\n\n\n\nRecommended Readings\n\nPython Programming for Data Science\nPython Data Science Handbook (PDSH)\n\n\n\nAdditional Resources\n\nPython documentation\nThink Python: How to Think Like a Computer Scientist\nA Whirlwind Tour of Python (WTP)\nPython for Data Analysis\nKaggle Learn Python Tutorials\nResearch Software Engineering with Python\n\n-Introduction to Cultural Analytics & Python\n\nPython for Data Science\nCoding for Economists",
+    "text": "Lecture Material\n\nPython Basics: html, notebook\n\nIn-Class Activity - Python Basics: html, notebook\n\nLoops & Functions: html, notebook\n\n\n\n\nProblem Set\n\nTBP\n\n\n\nRecommended Readings\n\nPython Programming for Data Science\nPython Data Science Handbook (PDSH)\n\n\n\nAdditional Resources\n\nPython documentation\nThink Python: How to Think Like a Computer Scientist\nA Whirlwind Tour of Python (WTP)\nPython for Data Analysis\nKaggle Learn Python Tutorials\nResearch Software Engineering with Python\n\n-Introduction to Cultural Analytics & Python\n\nPython for Data Science\nCoding for Economists",
     "crumbs": [
       "Materials",
       "Topic 3: Python Essentials"
