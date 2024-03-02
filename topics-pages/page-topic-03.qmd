@@ -53,6 +53,9 @@ tbl-colwidths: [10,50,40]
 
     -   In-Class Activity - Loops & Functions: [html](/lecture_material/material-topic-03/02-py-loops-functions-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_02-py-loops-functions-practice.ipynb){target="_blank"}
 
+-   Unit Tests & Classes: [html](/lecture_material/material-topic-03/03-py-tests-classes.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_03-py-tests-classes.ipynb){target="_blank"}
+
+    -   In-Class Activity - Loops & Functions: [html](/lecture_material/material-topic-03/03-py-tests-classes-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_03-py-tests-classes-practice.ipynb){target="_blank"}
 
 <!---
 
