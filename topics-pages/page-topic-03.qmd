@@ -57,19 +57,23 @@ tbl-colwidths: [10,50,40]
 
     -   In-Class Activity - Unit Tests & Classes: [html](/lecture_material/material-topic-03/03-py-tests-classes-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_03-py-tests-classes-practice.ipynb){target="_blank"}
 
+-   Style Guides, Scripts, Imports: [html](/lecture_material/material-topic-03/04-py-style-scripts-imports.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_04-py-style-scripts-imports.ipynb){target="_blank"}
+
+    -   In-Class Activity - Style Guides, Scripts, Imports: [html](/lecture_material/material-topic-03/04-py-style-scripts-imports-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_04-py-style-scripts-imports-practice.ipynb){target="_blank"}
+
+-   Introduction to Numpy: [html](/lecture_material/material-topic-03/05-py-numpy.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_05-py-numpy.ipynb){target="_blank"}
+
+-   Numpy: [html](/lecture_material/material-topic-03/06-py-numpy-addendum.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_06-py-numpy-addendum.ipynb){target="_blank"}
+
+    -   In-Class Activity - Numpy: [html](/lecture_material/material-topic-03/05-py-numpy-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_05-py-numpy-practice.ipynb){target="_blank"}
+
+
+-   Pandas: [html](/lecture_material/material-topic-03/07-py-pandas.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_07-py-pandas.ipynb){target="_blank"}
+
+    -   In-Class Activity - Pandas: [html](/lecture_material/material-topic-03/07-py-pandas-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_07-py-pandas-practice.ipynb){target="_blank"}
+
+
 <!---
-
-
-
-
-
--   [Strings]
-
--   [Lists]
-
--   [Unit Tests & Classes]
-
--   [Dictionaries]
 
 -   [Text Files and JSON files]
 
@@ -102,7 +106,7 @@ tbl-colwidths: [10,50,40]
 
 - [Research Software Engineering with Python](https://merely-useful.tech/py-rse/index.html)
 
--[Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
+- [Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
 
 - [Python for Data Science](https://aeturrell.github.io/python4DS/welcome.html) 
 
