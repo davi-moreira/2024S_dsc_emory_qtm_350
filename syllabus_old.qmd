@@ -19,7 +19,7 @@ subtitle: "Quantitative Theory and Methods Department, Emory University"
 
 ## Course Description
 
-This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, and Database Management. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize data and database structures for data science.
+This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects.
 
 **Course Website**: <https://davi-moreira.github.io/2024S_dsc_emory_qtm_350>
 
@@ -51,7 +51,7 @@ By the end of this course, students will be able to:
     
 -
     
-    3. High-level understanding of data structures, and algorithms. 
+    3. High-level understanding of data structures, algorithms, and cloud computing concepts. 
     
 -
     
@@ -61,6 +61,7 @@ By the end of this course, students will be able to:
 
 -   **Conceptual Understanding**: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.
 -   **Technical Proficiency**: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.
+-   **Cloud Computing Literacy**: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.
 -   **Critical Integrated Learning**: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.
 
 ## Course References
@@ -71,15 +72,15 @@ By the end of this course, students will be able to:
 -   [**Applied Computing**](https://runestone.academy/runestone/books/published/ac1/index.html): Applied Computing is an [online textbook](https://runestone.academy/). It provides an introduction to spreadsheets and SQL. To view the book, students need to [register](https://runestone.academy/runestone/default/user/register) using the course name.
 -   [**SQL & NoSQL Databases**](https://link.springer.com/book/10.1007/978-3-658-24549-8?source=shoppingads&locale=en-us&srsltid=AfmBOooFhPgF4FU06eeYUCeF2tELId4l3LBx1Fv8Ntb-xeUCTVUN3cUfu7o): Models, Languages, Consistency Options, and Architectures for Big Data Management: Explores relational (SQL) and non-relational (NoSQL) databases. Covers database management, modeling, languages, consistency, architecture, and more.
 -   [**Pro Git Book**](https://git-scm.com/book/en/v2): A comprehensive resource for learning Git, covering everything from the basics to advanced topics by Scott Chacon and Ben Straub.
-<!----   [**Overview of Cloud Computing**](https://dc.arcabc.ca/islandora/object/dc%3A54375): An introductory textbook on cloud computing by Michael Wufka and Massimo Canonico.--->
+-   [**Overview of Cloud Computing**](https://dc.arcabc.ca/islandora/object/dc%3A54375): An introductory textbook on cloud computing by Michael Wufka and Massimo Canonico.
 
 ## Additional References
 
-<!----   [**Google Cloud Computing Foundations**](https://edu.google.com/programs/cloud-computing-curriculum/?modal_active=none): Google Cloud experts develop and maintain the Computing Foundations reference material specifically for university courses such as this to ensure it keeps pace with cloud innovation and to prepare students seeking to launch or pivot to [careers](https://careers.google.com/students/) in a cloud-first world.--->
+-   [**Google Cloud Computing Foundations**](https://edu.google.com/programs/cloud-computing-curriculum/?modal_active=none): Google Cloud experts develop and maintain the Computing Foundations reference material specifically for university courses such as this to ensure it keeps pace with cloud innovation and to prepare students seeking to launch or pivot to [careers](https://careers.google.com/students/) in a cloud-first world.
 -   [**Big Data: Principles and best practices of scalable real-time data systems:**](https://www.amazon.com/exec/obidos/ASIN/1617290343/acmorg-20): It describes a scalable, easy to understand approach to big data systems that can be built and run by a small team.
 -   [**Version Control with Git: Powerful Tools and Techniques for Collaborative Software Development**](https://www.amazon.com/Version-Control-Git-collaborative-development/dp/1449316387): This book explains how Git works and how to use it effectively. By Jon Loeliger and Matthew McCullough.
 -   [**GitHub Learning Lab**](https://lab.github.com/): Offers a variety of exercises to get hands-on experience using Git and GitHub.
-<!----   [**AWS Academy Cloud Foundations (login required)**](https://awsacademy.instructure.com/courses/976): AWS experts develop and maintain the Cloud Foundations reference material to ensure it keeps pace with cloud innovation and prepares students for real-world, industry challenges. This digital textbook with accompanying labs comes in the form of a Canvas page, separate from the class Canvas page.--->
+-   [**AWS Academy Cloud Foundations (login required)**](https://awsacademy.instructure.com/courses/976): AWS experts develop and maintain the Cloud Foundations reference material to ensure it keeps pace with cloud innovation and prepares students for real-world, industry challenges. This digital textbook with accompanying labs comes in the form of a Canvas page, separate from the class Canvas page.
 
 ## Assessment
 
@@ -87,16 +88,16 @@ Final grades will be based on:
 
 | **Assignment**             | **Percentage** |
 |----------------------------|:--------------:|
-| Lecture Quizzes and Activities  |      60%       |
+| Lecture Quizzes            |      10%       |
 | Problem Sets               |      40%       |
-<!---| Final Project Proposal     |       5%       |
+| Final Project Proposal     |       5%       |
 | Final Project Submission   |      25%       |
 | Final Project Presentation |      10%       |
-| Peer Review                |      10%       |--->
+| Peer Review                |      10%       |
 
-### Lecture Quizzes and Activities
+### Lecture Quizzes
 
-Each lecture will be accompanied by a set of questions and/or practice activity, available on the course's Canvas page or Webpage to be completed individually. Students may complete these quizzes and activities either during or after class, the due dates will be posted in the course canvas page. To accommodate the learning process, the lowest two quizzes scores will be excluded from the final grade calculation. While individual submission is mandatory, collaborative discussions are encouraged. Please note that no extensions will be granted under any circumstances, ensuring fairness and consistency in assessment for all students.
+Each lecture will be accompanied by a set of questions, available on the course's Canvas page and to be completed individually. Students may complete these quizzes either during or after class, the due dates will be posted in the course canvas page. To accommodate the learning process, the lowest two quizzes scores will be excluded from the final grade calculation. While individual submission is mandatory, collaborative discussions are encouraged. Please note that no extensions will be granted under any circumstances, ensuring fairness and consistency in assessment for all students.
 
 ### Problem Sets
 
@@ -120,7 +121,7 @@ Problem sets aligned with each topic will be assigned to solidify and apply the 
 
     3.  **Detailed Documentation of Functions**: Every function defined by a student must be accompanied by a docstring. This documentation should clearly explain the function's purpose, describe each input argument, and outline what the function returns.
 
-<!---### Final Project
+### Final Project
 
 At the heart of Data Science lies the critical skill of managing data effectively. This encompasses the ability to collect, organize, retrieve, filter, sort, and prepare data, forming the foundational steps before embarking on any comprehensive analysis. This project is your opportunity to demonstrate proficiency in applying the concepts and techniques learned throughout the course. In groups up to three members, you will be expected to showcase your competence in handling and preparing data for insightful analysis. Through this project, you will apply the principles and methodologies covered in the course.
 
@@ -155,9 +156,6 @@ Further details and specific requirements will be shared before Week 13 of the c
 ### Peer Review
 
 In the week of presentations, your active participation in the peer review process will be essential. Each student is expected to engage constructively in evaluating and providing feedback on their colleagues' projects. You will be asked to thoughtfully comment on various aspects of the projects, including methodology, data structure, presentation features, and the overall effectiveness of the conveyed message. This exercise is not only a crucial part of your learning experience but also an opportunity to contribute to the academic development of your peers.
-
-
---->
 
 ## Grading
 
