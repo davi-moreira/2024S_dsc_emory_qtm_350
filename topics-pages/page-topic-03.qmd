@@ -65,26 +65,31 @@ tbl-colwidths: [10,50,40]
 
 -   Numpy: [html](/lecture_material/material-topic-03/06-py-numpy-addendum.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_06-py-numpy-addendum.ipynb){target="_blank"}
 
-    -   In-Class Activity - Numpy: [html](/lecture_material/material-topic-03/05-py-numpy-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_05-py-numpy-practice.ipynb){target="_blank"}
+    -   In-Class Activity - Numpy: [html](/lecture_material/material-topic-03/06-py-numpy-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_06-py-numpy-practice.ipynb){target="_blank"}
 
 
 -   Pandas: [html](/lecture_material/material-topic-03/07-py-pandas.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_07-py-pandas.ipynb){target="_blank"}
 
     -   In-Class Activity - Pandas: [html](/lecture_material/material-topic-03/07-py-pandas-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_07-py-pandas-practice.ipynb){target="_blank"}
 
+-   Data Wrangling: [html](/lecture_material/material-topic-03/08-py-wrangling-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_08-py-wrangling-basics.ipynb){target="_blank"}
+
+    -   In-Class Activity - Data Wrangling: [html](/lecture_material/material-topic-03/08-py-wrangling-basics-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_08-py-wrangling-basics-practice.ipynb){target="_blank"}
+
+-   Advanced Data Wrangling: [html](/lecture_material/material-topic-03/_09-py-wrangling-advanced.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_09-py-wrangling-advanced.ipynb){target="_blank"}
+
+    -   In-Class Activity - Advanced Data Wrangling: [html](/lecture_material/material-topic-03/09-py-wrangling-advanced-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_09-py-wrangling-advanced-practice.ipynb){target="_blank"}
 
 <!---
 
 -   [Text Files and JSON files]
 
--   [Numpy]
-
--   [Pandas]
 --->
 
 # Problem Set
 
-- TBP
+- **GradeScope Questions** about [Array programming with NumPy paper](https://www.nature.com/articles/s41586-020-2649-2){target="_blank"} (Check the Course Canvas page) 
+- **Advanced Data Wrangling In-Class Activity** (link and notebook above).
 
 # Recommended Readings
 
@@ -101,6 +106,8 @@ tbl-colwidths: [10,50,40]
 -   [A Whirlwind Tour of Python (WTP)](https://jakevdp.github.io/WhirlwindTourOfPython/index.html){target="_blank"}
 
 -   [Python for Data Analysis](https://wesmckinney.com/book/){target="_blank"}
+
+- [Array programming with NumPy paper](https://www.nature.com/articles/s41586-020-2649-2){target="_blank"}
 
 -   [Kaggle Learn Python Tutorials](https://www.kaggle.com/learn/python){target="_blank"}
 
