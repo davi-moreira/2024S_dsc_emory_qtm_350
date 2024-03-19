@@ -35,23 +35,23 @@ editor: visual
 | Week 04 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control                        | Feb 8   |
 | Week 05 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control          | Feb 13  |
 | Week 05 | [Topic 02](./topics-pages/page-topic-02.qmd)  | Computational Literacy, Command Line, and Version Control          | Feb 15  |
-| Week 06 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials  | Feb 20  |
-| Week 06 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials  | Feb 22  |
-| Week 07 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials  | Feb 27  |
-| Week 07 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials  | Feb 29  |
-| Week 08 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials  | Mar 5   |
-| Week 08 | [Topic 03](./topics-pages/page-topic-04.qmd)  | Python essentials  | Mar 7   |
+| Week 06 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials  | Feb 20  |
+| Week 06 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials  | Feb 22  |
+| Week 07 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials  | Feb 27  |
+| Week 07 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials  | Feb 29  |
+| Week 08 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials  | Mar 5   |
+| Week 08 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials  | Mar 7   |
 | Week 09 | -        | Spring Break (no classes, no office hours) | Mar 12  |
 | Week 09 | -        | Spring Break (no classes, no office hours) | Mar 14  |
-| Week 10 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Python essentials | Mar 19  |
-| Week 10 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Python essentials | Mar 21  |
-| Week 11 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Python essentials | Mar 26  |
-| Week 11 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Python essentials | Mar 28  |
-| Week 12 | [Topic 05](./topics-pages/page-topic-05.qmd)  | Algorithms and Data Structures | Apr 2 |
-| Week 12 | [Topic 06](./topics-pages/page-topic-06.qmd)  | Algorithms and Data Structures | Apr 4   |
-| Week 13 | [Topic 07](./topics-pages/page-topic-07.qmd)  | Algorithms and Data Structures | Apr 9   |
-| Week 13 | [Topic 08](./topics-pages/page-topic-08.qmd)  | Algorithms and Data Structures | Apr 11  |
-| Week 14 | [Topic 09](./topics-pages/page-topic-09.qmd)  | Algorithms and Data Structures | Apr 16  |
-| Week 14 | [Topic 10](./topics-pages/page-topic-10.qmd)  | Algorithms and Data Structures | Apr 18  |
-| Week 15 | [Topic 11](./topics-pages/page-topic-11.qmd)  | Algorithms and Data Structures  | Apr 23  |
-| Week 15 | [Topic 11](./topics-pages/page-topic-11.qmd)  | Course Review and Special Topics  | Apr 25  |
+| Week 10 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Mar 19  |
+| Week 10 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Mar 21  |
+| Week 11 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Mar 26  |
+| Week 11 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Mar 28  |
+| Week 12 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 2 |
+| Week 12 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 4   |
+| Week 13 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 9   |
+| Week 13 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 11  |
+| Week 14 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 16  |
+| Week 14 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 18  |
+| Week 15 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures  | Apr 23  |
+| Week 15 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Course Review and Special Topics  | Apr 25  |
