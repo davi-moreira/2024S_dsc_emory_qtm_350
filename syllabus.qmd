@@ -19,7 +19,7 @@ subtitle: "Quantitative Theory and Methods Department, Emory University"
 
 ## Course Description
 
-This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, and Database Management. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize data and database structures for data science.
+This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms. Prospective data scientists, statisticians, and other quantitative professionals will learn computational foundations to efficiently utilize data and database structures for data science.
 
 **Course Website**: <https://davi-moreira.github.io/2024S_dsc_emory_qtm_350>
 
@@ -59,8 +59,8 @@ By the end of this course, students will be able to:
 
 ## Objectives
 
--   **Conceptual Understanding**: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.
--   **Technical Proficiency**: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.
+-   **Conceptual Understanding**: To provide students with a foundational grasp of data structures and algorithms.
+-   **Technical Proficiency**: To equip students with practical skills in version control, Python programming, data structures, and algorithms enabling them to execute data manipulation and analysis tasks proficiently.
 -   **Critical Integrated Learning**: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.
 
 ## Course References

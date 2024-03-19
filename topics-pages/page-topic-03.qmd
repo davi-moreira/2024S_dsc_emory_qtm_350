@@ -59,6 +59,10 @@ tbl-colwidths: [10,50,40]
 
 -   Style Guides, Scripts, Imports: [html](/lecture_material/material-topic-03/04-py-style-scripts-imports.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_04-py-style-scripts-imports.ipynb){target="_blank"}
 
+    -   Additional Script File - Style Guides, Scripts, Imports: [wallet.py](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/wallet.py ){target="_blank"}
+
+    -   Data Folder - Style Guides, Scripts, Imports: [data.zip](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/data.zip ){target="_blank"}
+    
     -   In-Class Activity - Style Guides, Scripts, Imports: [html](/lecture_material/material-topic-03/04-py-style-scripts-imports-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_04-py-style-scripts-imports-practice.ipynb){target="_blank"}
 
 -   Introduction to Numpy: [html](/lecture_material/material-topic-03/05-py-numpy.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_05-py-numpy.ipynb){target="_blank"}

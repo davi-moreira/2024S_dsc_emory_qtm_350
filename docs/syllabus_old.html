@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./syllabus.html">Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Syllabus: QTM 350 - Data Science Computing</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link active">
+  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -176,8 +176,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#additional-references" id="toc-additional-references" class="nav-link" data-scroll-target="#additional-references">Additional References</a></li>
   <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a>
   <ul class="collapse">
-  <li><a href="#lecture-quizzes-and-activities" id="toc-lecture-quizzes-and-activities" class="nav-link" data-scroll-target="#lecture-quizzes-and-activities">Lecture Quizzes and Activities</a></li>
+  <li><a href="#lecture-quizzes" id="toc-lecture-quizzes" class="nav-link" data-scroll-target="#lecture-quizzes">Lecture Quizzes</a></li>
   <li><a href="#problem-sets" id="toc-problem-sets" class="nav-link" data-scroll-target="#problem-sets">Problem Sets</a></li>
+  <li><a href="#final-project" id="toc-final-project" class="nav-link" data-scroll-target="#final-project">Final Project</a></li>
+  <li><a href="#peer-review" id="toc-peer-review" class="nav-link" data-scroll-target="#peer-review">Peer Review</a></li>
   </ul></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   <li><a href="#ai-policy" id="toc-ai-policy" class="nav-link" data-scroll-target="#ai-policy">AI policy</a></li>
@@ -215,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="course-description" class="level2">
 <h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
-<p>This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms. Prospective data scientists, statisticians, and other quantitative professionals will learn computational foundations to efficiently utilize data and database structures for data science.</p>
+<p>This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects.</p>
 <p><strong>Course Website</strong>: <a href="https://davi-moreira.github.io/2024S_dsc_emory_qtm_350" class="uri">https://davi-moreira.github.io/2024S_dsc_emory_qtm_350</a></p>
 </section>
 <section id="instructor-and-tas" class="level2">
@@ -252,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Utilize advanced data storage, manipulation, and querying.</li>
 </ol></li>
 <li><ol start="3" type="1">
-<li>High-level understanding of data structures, and algorithms.</li>
+<li>High-level understanding of data structures, algorithms, and cloud computing concepts.</li>
 </ol></li>
 <li><ol start="4" type="1">
 <li>Critically navigate the emergent trends in data science computing.</li>
@@ -262,8 +264,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <ul>
-<li><strong>Conceptual Understanding</strong>: To provide students with a foundational grasp of data structures and algorithms.</li>
-<li><strong>Technical Proficiency</strong>: To equip students with practical skills in version control, Python programming, data structures, and algorithms enabling them to execute data manipulation and analysis tasks proficiently.</li>
+<li><strong>Conceptual Understanding</strong>: To provide students with a foundational grasp of data structures, algorithms, and data modeling techniques pertinent to SQL and NoSQL databases and data analytics.</li>
+<li><strong>Technical Proficiency</strong>: To equip students with practical skills in version control, Python programming, and database management using SQL and MySQL, enabling them to execute data manipulation and analysis tasks proficiently.</li>
+<li><strong>Cloud Computing Literacy</strong>: To introduce students to the fundamentals of cloud computing, focusing on models, components, and security considerations, and offer hands-on experience.</li>
 <li><strong>Critical Integrated Learning</strong>: To offer a holistic educational experience that combines theoretical learning with practice, ensuring students can apply their knowledge to real-world projects and foster an awareness of emerging trends in the data science computing landscape.</li>
 </ul>
 </section>
@@ -275,16 +278,18 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://greenteapress.com/thinkpython/html/index.html"><strong>Think Python</strong></a>: An introduction to programming using Python.</li>
 <li><a href="https://runestone.academy/runestone/books/published/ac1/index.html"><strong>Applied Computing</strong></a>: Applied Computing is an <a href="https://runestone.academy/">online textbook</a>. It provides an introduction to spreadsheets and SQL. To view the book, students need to <a href="https://runestone.academy/runestone/default/user/register">register</a> using the course name.</li>
 <li><a href="https://link.springer.com/book/10.1007/978-3-658-24549-8?source=shoppingads&amp;locale=en-us&amp;srsltid=AfmBOooFhPgF4FU06eeYUCeF2tELId4l3LBx1Fv8Ntb-xeUCTVUN3cUfu7o"><strong>SQL &amp; NoSQL Databases</strong></a>: Models, Languages, Consistency Options, and Architectures for Big Data Management: Explores relational (SQL) and non-relational (NoSQL) databases. Covers database management, modeling, languages, consistency, architecture, and more.</li>
-<li><a href="https://git-scm.com/book/en/v2"><strong>Pro Git Book</strong></a>: A comprehensive resource for learning Git, covering everything from the basics to advanced topics by Scott Chacon and Ben Straub. <!----   [**Overview of Cloud Computing**](https://dc.arcabc.ca/islandora/object/dc%3A54375): An introductory textbook on cloud computing by Michael Wufka and Massimo Canonico.---></li>
+<li><a href="https://git-scm.com/book/en/v2"><strong>Pro Git Book</strong></a>: A comprehensive resource for learning Git, covering everything from the basics to advanced topics by Scott Chacon and Ben Straub.</li>
+<li><a href="https://dc.arcabc.ca/islandora/object/dc%3A54375"><strong>Overview of Cloud Computing</strong></a>: An introductory textbook on cloud computing by Michael Wufka and Massimo Canonico.</li>
 </ul>
 </section>
 <section id="additional-references" class="level2">
 <h2 class="anchored" data-anchor-id="additional-references">Additional References</h2>
-<!----   [**Google Cloud Computing Foundations**](https://edu.google.com/programs/cloud-computing-curriculum/?modal_active=none): Google Cloud experts develop and maintain the Computing Foundations reference material specifically for university courses such as this to ensure it keeps pace with cloud innovation and to prepare students seeking to launch or pivot to [careers](https://careers.google.com/students/) in a cloud-first world.--->
 <ul>
+<li><a href="https://edu.google.com/programs/cloud-computing-curriculum/?modal_active=none"><strong>Google Cloud Computing Foundations</strong></a>: Google Cloud experts develop and maintain the Computing Foundations reference material specifically for university courses such as this to ensure it keeps pace with cloud innovation and to prepare students seeking to launch or pivot to <a href="https://careers.google.com/students/">careers</a> in a cloud-first world.</li>
 <li><a href="https://www.amazon.com/exec/obidos/ASIN/1617290343/acmorg-20"><strong>Big Data: Principles and best practices of scalable real-time data systems:</strong></a>: It describes a scalable, easy to understand approach to big data systems that can be built and run by a small team.</li>
 <li><a href="https://www.amazon.com/Version-Control-Git-collaborative-development/dp/1449316387"><strong>Version Control with Git: Powerful Tools and Techniques for Collaborative Software Development</strong></a>: This book explains how Git works and how to use it effectively. By Jon Loeliger and Matthew McCullough.</li>
-<li><a href="https://lab.github.com/"><strong>GitHub Learning Lab</strong></a>: Offers a variety of exercises to get hands-on experience using Git and GitHub. <!----   [**AWS Academy Cloud Foundations (login required)**](https://awsacademy.instructure.com/courses/976): AWS experts develop and maintain the Cloud Foundations reference material to ensure it keeps pace with cloud innovation and prepares students for real-world, industry challenges. This digital textbook with accompanying labs comes in the form of a Canvas page, separate from the class Canvas page.---></li>
+<li><a href="https://lab.github.com/"><strong>GitHub Learning Lab</strong></a>: Offers a variety of exercises to get hands-on experience using Git and GitHub.</li>
+<li><a href="https://awsacademy.instructure.com/courses/976"><strong>AWS Academy Cloud Foundations (login required)</strong></a>: AWS experts develop and maintain the Cloud Foundations reference material to ensure it keeps pace with cloud innovation and prepares students for real-world, industry challenges. This digital textbook with accompanying labs comes in the form of a Canvas page, separate from the class Canvas page.</li>
 </ul>
 </section>
 <section id="assessment" class="level2">
@@ -299,22 +304,34 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Lecture Quizzes and Activities</td>
-<td style="text-align: center;">60%</td>
+<td>Lecture Quizzes</td>
+<td style="text-align: center;">10%</td>
 </tr>
 <tr class="even">
 <td>Problem Sets</td>
 <td style="text-align: center;">40%</td>
 </tr>
+<tr class="odd">
+<td>Final Project Proposal</td>
+<td style="text-align: center;">5%</td>
+</tr>
+<tr class="even">
+<td>Final Project Submission</td>
+<td style="text-align: center;">25%</td>
+</tr>
+<tr class="odd">
+<td>Final Project Presentation</td>
+<td style="text-align: center;">10%</td>
+</tr>
+<tr class="even">
+<td>Peer Review</td>
+<td style="text-align: center;">10%</td>
+</tr>
 </tbody>
 </table>
-<!---| Final Project Proposal     |       5%       |
-| Final Project Submission   |      25%       |
-| Final Project Presentation |      10%       |
-| Peer Review                |      10%       |--->
-<section id="lecture-quizzes-and-activities" class="level3">
-<h3 class="anchored" data-anchor-id="lecture-quizzes-and-activities">Lecture Quizzes and Activities</h3>
-<p>Each lecture will be accompanied by a set of questions and/or practice activity, available on the course’s Canvas page or Webpage to be completed individually. Students may complete these quizzes and activities either during or after class, the due dates will be posted in the course canvas page. To accommodate the learning process, the lowest two quizzes scores will be excluded from the final grade calculation. While individual submission is mandatory, collaborative discussions are encouraged. Please note that no extensions will be granted under any circumstances, ensuring fairness and consistency in assessment for all students.</p>
+<section id="lecture-quizzes" class="level3">
+<h3 class="anchored" data-anchor-id="lecture-quizzes">Lecture Quizzes</h3>
+<p>Each lecture will be accompanied by a set of questions, available on the course’s Canvas page and to be completed individually. Students may complete these quizzes either during or after class, the due dates will be posted in the course canvas page. To accommodate the learning process, the lowest two quizzes scores will be excluded from the final grade calculation. While individual submission is mandatory, collaborative discussions are encouraged. Please note that no extensions will be granted under any circumstances, ensuring fairness and consistency in assessment for all students.</p>
 </section>
 <section id="problem-sets" class="level3">
 <h3 class="anchored" data-anchor-id="problem-sets">Problem Sets</h3>
@@ -333,44 +350,39 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Detailed Documentation of Functions</strong>: Every function defined by a student must be accompanied by a docstring. This documentation should clearly explain the function’s purpose, describe each input argument, and outline what the function returns.</li>
 </ol></li>
 </ul>
-<!---### Final Project
-
-At the heart of Data Science lies the critical skill of managing data effectively. This encompasses the ability to collect, organize, retrieve, filter, sort, and prepare data, forming the foundational steps before embarking on any comprehensive analysis. This project is your opportunity to demonstrate proficiency in applying the concepts and techniques learned throughout the course. In groups up to three members, you will be expected to showcase your competence in handling and preparing data for insightful analysis. Through this project, you will apply the principles and methodologies covered in the course.
-
-#### Final Project Proposal
-
-Each group is required to submit a concise, yet comprehensive, two-page proposal outlining their intended project. This proposal is a crucial step in ensuring the viability and academic rigor of your planned research. Prior to its development, it is mandatory for each group to arrange a 15-minute consultation meeting with me. This meeting is intended to provide guidance, clarify objectives, and ensure alignment with course goals. To make the most of this consultation, groups must submit a draft of their project ideas in advance of the meeting. Please note that these consultation meetings will be scheduled during Week 10. It is imperative to adhere to this timeline to ensure timely feedback and guidance on your proposals.
-
-#### Final Project Submission
-
-Students are provided with two distinct opportunities to submit their final projects. The first submission is madatory for all groups and must be completed before the start of the presentation week. This phase allows for a preliminary assessment of your project. The subsequent submission is optional and should occur by the course's last date. This opportunity is particularly beneficial for incorporating improvements based on peer review feedback received after the first submission. The final deliverable should be a comprehensive GitHub repository and a `.zip` file encompassing the following components:
-
--   **Raw Source Data**: Include the raw data utilized for your project. If the data file size exceeds GitHub's limitations, it should be exclusively contained within the `.zip` file.
-
--   **Detailed README**: Your repository should contain a `README` file providing an in-depth description of each included file, covering:
-
-    -   **Inputs**: Detail the inputs to each file, such as raw data or files containing credentials for API access.
-    -   **Functionality**: Clearly describe the major transformations and operations performed by the file.
-    -   **Outputs**: Enumerate any outputs generated by the file (e.g. cleaned datasets).
-
--   **Data Transformation and Organization Code**: Submit all code files that are used to transform and organize your data.
-
--   **Data Query for Analysis**: Provide the set of code files that query your dataset, rendering it suitable for addressing your chosen data analysis question.
-
-Further details and specific requirements will be shared before Week 10 of the course.
-
-#### Final Project Presentation
-
-During the final week of the course, each group will have a 10 to 15-minute time slot to present their project. This presentation is a vital component of your project, providing an opportunity to showcase the depth of your analysis, the insights gained, and the skills acquired throughout the course. The scheduling of presentations will be randomly defined. Specific dates and the order of presentations for each group will be assigned and communicated in advance.
-
-Further details and specific requirements will be shared before Week 13 of the course.
-
-### Peer Review
-
-In the week of presentations, your active participation in the peer review process will be essential. Each student is expected to engage constructively in evaluating and providing feedback on their colleagues' projects. You will be asked to thoughtfully comment on various aspects of the projects, including methodology, data structure, presentation features, and the overall effectiveness of the conveyed message. This exercise is not only a crucial part of your learning experience but also an opportunity to contribute to the academic development of your peers.
-
-
---->
+</section>
+<section id="final-project" class="level3">
+<h3 class="anchored" data-anchor-id="final-project">Final Project</h3>
+<p>At the heart of Data Science lies the critical skill of managing data effectively. This encompasses the ability to collect, organize, retrieve, filter, sort, and prepare data, forming the foundational steps before embarking on any comprehensive analysis. This project is your opportunity to demonstrate proficiency in applying the concepts and techniques learned throughout the course. In groups up to three members, you will be expected to showcase your competence in handling and preparing data for insightful analysis. Through this project, you will apply the principles and methodologies covered in the course.</p>
+<section id="final-project-proposal" class="level4">
+<h4 class="anchored" data-anchor-id="final-project-proposal">Final Project Proposal</h4>
+<p>Each group is required to submit a concise, yet comprehensive, two-page proposal outlining their intended project. This proposal is a crucial step in ensuring the viability and academic rigor of your planned research. Prior to its development, it is mandatory for each group to arrange a 15-minute consultation meeting with me. This meeting is intended to provide guidance, clarify objectives, and ensure alignment with course goals. To make the most of this consultation, groups must submit a draft of their project ideas in advance of the meeting. Please note that these consultation meetings will be scheduled during Week 10. It is imperative to adhere to this timeline to ensure timely feedback and guidance on your proposals.</p>
+</section>
+<section id="final-project-submission" class="level4">
+<h4 class="anchored" data-anchor-id="final-project-submission">Final Project Submission</h4>
+<p>Students are provided with two distinct opportunities to submit their final projects. The first submission is madatory for all groups and must be completed before the start of the presentation week. This phase allows for a preliminary assessment of your project. The subsequent submission is optional and should occur by the course’s last date. This opportunity is particularly beneficial for incorporating improvements based on peer review feedback received after the first submission. The final deliverable should be a comprehensive GitHub repository and a <code>.zip</code> file encompassing the following components:</p>
+<ul>
+<li><p><strong>Raw Source Data</strong>: Include the raw data utilized for your project. If the data file size exceeds GitHub’s limitations, it should be exclusively contained within the <code>.zip</code> file.</p></li>
+<li><p><strong>Detailed README</strong>: Your repository should contain a <code>README</code> file providing an in-depth description of each included file, covering:</p>
+<ul>
+<li><strong>Inputs</strong>: Detail the inputs to each file, such as raw data or files containing credentials for API access.</li>
+<li><strong>Functionality</strong>: Clearly describe the major transformations and operations performed by the file.</li>
+<li><strong>Outputs</strong>: Enumerate any outputs generated by the file (e.g.&nbsp;cleaned datasets).</li>
+</ul></li>
+<li><p><strong>Data Transformation and Organization Code</strong>: Submit all code files that are used to transform and organize your data.</p></li>
+<li><p><strong>Data Query for Analysis</strong>: Provide the set of code files that query your dataset, rendering it suitable for addressing your chosen data analysis question.</p></li>
+</ul>
+<p>Further details and specific requirements will be shared before Week 10 of the course.</p>
+</section>
+<section id="final-project-presentation" class="level4">
+<h4 class="anchored" data-anchor-id="final-project-presentation">Final Project Presentation</h4>
+<p>During the final week of the course, each group will have a 10 to 15-minute time slot to present their project. This presentation is a vital component of your project, providing an opportunity to showcase the depth of your analysis, the insights gained, and the skills acquired throughout the course. The scheduling of presentations will be randomly defined. Specific dates and the order of presentations for each group will be assigned and communicated in advance.</p>
+<p>Further details and specific requirements will be shared before Week 13 of the course.</p>
+</section>
+</section>
+<section id="peer-review" class="level3">
+<h3 class="anchored" data-anchor-id="peer-review">Peer Review</h3>
+<p>In the week of presentations, your active participation in the peer review process will be essential. Each student is expected to engage constructively in evaluating and providing feedback on their colleagues’ projects. You will be asked to thoughtfully comment on various aspects of the projects, including methodology, data structure, presentation features, and the overall effectiveness of the conveyed message. This exercise is not only a crucial part of your learning experience but also an opportunity to contribute to the academic development of your peers.</p>
 </section>
 </section>
 <section id="grading" class="level2">

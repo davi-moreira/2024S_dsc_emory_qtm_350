@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>_04-py-style-scripts-imports</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+<title>_09-py-wrangling-advanced</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
   import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
@@ -13088,7 +13088,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center>Python - Style Guides, Scripts, Imports <a class="tocSkip"></a></center></h1>
+<h1><center>Python - Advanced Data Wrangling With Pandas <a class="tocSkip"></a></center></h1>
 <h1><center>QTM 350: Data Science Computing <a class="tocSkip"></a></center></h1>
 <h1><center>Davi Moreira <a class="tocSkip"></a></center></h1>
 </div>
@@ -13105,16 +13105,13 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Describe why code style is important.</li>
-<li>Differentiate between the role of a linter like <code>flake8</code> and an autoformatter like <code>black</code>.</li>
-<li>Implement linting and formatting from the command line or within Jupyter or another IDE.</li>
-<li>Write a Python module (<code>.py</code> file) in VSCode or other IDE of your choice.</li>
-<li>Import installed or custom packages using the <code>import</code> syntax.</li>
-<li>Explain the notion of a reference in Python.</li>
-<li>Explain the notion of scoping in Python.</li>
-<li>Anticipate whether changing one variable will change another in Python.</li>
-<li>Anticipate whether a function changes the caller's version of an argument variable in Python.</li>
-<li>Select the appropriate choice between <code>==</code> and <code>is</code> in Python.</li>
+<li>Manipulate strings in Pandas by accessing methods from the <code>Series.str</code> attribute.</li>
+<li>Understand how to use regular expressions in Pandas for wrangling strings.</li>
+<li>Differentiate between datetime object in Pandas such as <code>Timestamp</code>, <code>Timedelta</code>, <code>Period</code>, <code>DateOffset</code>.</li>
+<li>Create these datetime objects with functions like <code>pd.Timestamp()</code>, <code>pd.Period()</code>, <code>pd.date_range()</code>, <code>pd.period_range()</code>.</li>
+<li>Index a datetime index with partial string indexing.</li>
+<li>Perform basic datetime operations like splitting a datetime into constituent parts (e.g., <code>year</code>, <code>weekday</code>, <code>second</code>, etc), apply offsets, change timezones, and resample with <code>.resample()</code>.</li>
+<li>Make basic plots in Pandas by accessing the <code>.plot</code> attribute or importing functions from <code>pandas.plotting</code>.</li>
 </ul>
 </div>
 </div>
@@ -13137,51 +13134,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.-Style-Guide">1. Style Guide<a class="anchor-link" href="#1.-Style-Guide">¶</a></h2><hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/xkcd.png"/></p>
-<p>Source: <a href="https://imgs.xkcd.com/comics/code_quality.png">xkcd.com</a>.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>It is incorrect to think that if your code works then you are done. Code has two "users" - the computer (which turns it into machine instructions) and humans, who will likely read and/or modify the code in the future. This section is about how to make your code suitable to that second audience, humans.</p>
-<p>Styling is particularly important for sharing your code to other users (including your future self!). Remember: "Code is read much more often than it is written". <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> is the Python Style Guide. It is worth skimming through PEP 8, but here are some highlights:</p>
-<ul>
-<li>Indent using 4 spaces</li>
-<li>Have whitespace around operators, e.g. <code>x = 1</code> not <code>x=1</code></li>
-<li>But avoid extra whitespace, e.g. <code>f(1)</code> not <code>f (1)</code></li>
-<li>Single and double quotes both fine for strings, but use <code>"""</code>triple double quotes<code>"""</code> for docstrings, not <code>'''</code>triple single quotes<code>'''</code></li>
-<li>Variable and function names use <code>underscores_between_words</code></li>
-<li>And much more...</li>
-</ul>
-<p>There's lots to remember but luckily <strong>linters</strong> &amp; <strong>formatters</strong> can help you adhere to uniform styling!</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Linters">Linters<a class="anchor-link" href="#Linters">¶</a></h3><p>Linting refers to highlighting programmatic and stylistic problems in your Python source code. Think of it like "spell check" in word processing software. Common linters include <code>pycodestyle</code>, <code>pylint</code>, <code>pyflakes</code>, <code>flake8</code>, etc. We'll use <a href="https://flake8.pycqa.org/en/latest/">flake8</a> in this lecture, which, if you don't have it, you can install with:</p>
-<pre><code>conda install -c anaconda flake8
-</code></pre>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>flake8</code> can be used from the command line to check files:</p>
-<pre><code>flake8 path/file_to_check.py
-</code></pre>
-<p>You can execute shell commands in Jupyter by prepending a command with an exclamation mark <code>!</code>. I've included an example script called <a href="https://github.com/TomasBeuzen/python-programming-for-data-science/blob/main/chapters/data/bad_style.py"><code>bad_style.py</code></a> in the data sub-directory, let's use <code>flake8</code> on that now:</p>
+<h2 id="Working-With-Strings">Working With Strings<a class="anchor-link" href="#Working-With-Strings">¶</a></h2><hr/>
 </div>
 </div>
 </div>
@@ -13190,7 +13143,9 @@ div#notebook {
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>flake8<span class="w"> </span>data/bad_style.py
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.max_rows"</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -13199,698 +13154,35 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Formatters">Formatters<a class="anchor-link" href="#Formatters">¶</a></h3><p>Formatting refers to restructuring how code appears by applying specific rules for line spacing, indents, line length, etc. Common formatters include <code>autopep8</code>, <code>black</code>, <code>yapf</code>, etc. We'll use <a href="https://black.readthedocs.io/en/stable/?badge=stable">black</a> in this lecture, which, if you don't have it, you can install with:</p>
-<pre><code>conda install -c conda-forge black
-</code></pre>
-<p><code>black</code> can also be used from the command line to format your files:</p>
-<pre><code>black path/file_to_check.py --check
-</code></pre>
-<p>The <code>--check</code> argument just checks if your code conforms to black style but doesn't reformat it in place, if you want your file reformatted, remove the argument.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>black<span class="w"> </span>data/bad_style.py<span class="w"> </span>--check
-</pre></div>
-</div>
+<p>Working with text data is common in data science. Luckily, Pandas Series and Index objects are equipped with a set of string processing methods which we'll explore here.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here's the file content before formatting:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span>  <span class="s1">'a'</span><span class="p">:</span><span class="mi">37</span><span class="p">,</span><span class="s1">'b'</span><span class="p">:</span><span class="mi">42</span><span class="p">,</span>
-<span class="s1">'c'</span><span class="p">:</span><span class="mi">927</span><span class="p">}</span>
-<span class="n">very_long_variable_name</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'field'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s1">'is_debug'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
-<span class="n">this</span><span class="o">=</span><span class="kc">True</span>
-
-<span class="k">if</span> <span class="n">very_long_variable_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">"field"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s1">'is_debug'</span><span class="p">]:</span>
- <span class="n">z</span> <span class="o">=</span> <span class="s1">'hello '</span><span class="o">+</span><span class="s1">'world'</span>
-<span class="k">else</span><span class="p">:</span>
- <span class="n">world</span> <span class="o">=</span> <span class="s1">'world'</span>
- <span class="n">a</span> <span class="o">=</span> <span class="s1">'hello </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">world</span><span class="p">)</span>
- <span class="n">f</span> <span class="o">=</span> <span class="sa">rf</span><span class="s1">'hello </span><span class="si">{</span><span class="n">world</span><span class="si">}</span><span class="s1">'</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">):</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">'hello ''world'</span><span class="c1">#FIXME: https://github.com/python/black/issues/26</span>
-<span class="k">class</span> <span class="nc">Foo</span>  <span class="p">(</span>     <span class="nb">object</span>  <span class="p">):</span>
-  <span class="k">def</span> <span class="nf">f</span>    <span class="p">(</span><span class="bp">self</span>   <span class="p">):</span>
-    <span class="k">return</span>       <span class="mi">37</span><span class="o">*-</span><span class="mi">2</span>
-  <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">42</span><span class="p">):</span>
-      <span class="k">return</span> <span class="n">y</span>
-<span class="c1"># fmt: off</span>
-<span class="n">custom_formatting</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>
-    <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span>
-<span class="p">]</span>
-<span class="c1"># fmt: on</span>
-<span class="n">regular_formatting</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>
-    <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span>
-<span class="p">]</span>
-</pre></div>
-</div>
+<h3 id="String-dtype">String dtype<a class="anchor-link" href="#String-dtype">¶</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>And here it is after formatting (note how you can toggle formatting on or off in your code using the <code># fmt: off</code>/<code># fmt: on</code> tags):</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">:</span> <span class="mi">927</span><span class="p">}</span>
-<span class="n">very_long_variable_name</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"field"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"is_debug"</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
-<span class="n">this</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="k">if</span> <span class="p">(</span>
-    <span class="n">very_long_variable_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-    <span class="ow">and</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">"field"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
-    <span class="ow">or</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">"is_debug"</span><span class="p">]</span>
-<span class="p">):</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="s2">"hello "</span> <span class="o">+</span> <span class="s2">"world"</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">world</span> <span class="o">=</span> <span class="s2">"world"</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="s2">"hello </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">world</span><span class="p">)</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">"hello </span><span class="si">{</span><span class="n">world</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">if</span> <span class="n">this</span><span class="p">:</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="s2">"hello "</span> <span class="s2">"world"</span>  <span class="c1"># FIXME: https://github.com/python/black/issues/26</span>
-
-
-<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">37</span> <span class="o">*</span> <span class="o">-</span><span class="mi">2</span>
-
-    <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">42</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">y</span>
-
-
-<span class="c1"># fmt: off</span>
-<span class="n">custom_formatting</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>
-    <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span>
-<span class="p">]</span>
-<span class="c1"># fmt: on</span>
-<span class="n">regular_formatting</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-</pre></div>
-</div>
+<p>String data is represented in pandas using the <code>object</code> dtype, which is a generic dtype for representing mixed data or data of unknown size. It would be better to have a dedicated dtype and Pandas has just introduced this: the <code>StringDtype</code>. <code>object</code> remains the default dtype for strings however, as Pandas looks to continue testing and improving the <code>string</code> dtype. You can read more about the <code>StringDtype</code> in the <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html#text-data-types">Pandas documentation here</a>.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Comments">Comments<a class="anchor-link" href="#Comments">¶</a></h3><p>Comments are important for understanding your code. While docstrings cover what a function <em>does</em>, your comments will help document <em>how</em> your code achieves its goal. There are PEP 8 guidelines on the length, spacing, etc of comments.</p>
-<ul>
-<li><strong>Comments</strong>: should start with a <code>#</code> followed by a single space and be preceded by at least two spaces.</li>
-<li><strong>Block Comments</strong>: each line of a block comment should start with a <code>#</code> followed by a single space and should be indented to the same level as the code it precedes.</li>
-<li>Generally, comments should not be unnecessarily verbose or just state the obvious, as this can be distracting and can actually make your code more difficult to read!</li>
-</ul>
-<p>Here is an example of a reasonable comment:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">random_walker</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span> 
-        
-        <span class="c1"># Generate a random number between 0 and 1.</span>
-        <span class="c1"># Then, go right, left, up or down if the number</span>
-        <span class="c1"># is in the interval [0,0.25), [0.25,0.5),</span>
-        <span class="c1"># [0.5,0.75) or [0.75,1) respectively.</span>
-        
-        <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span> 
-        <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.25</span><span class="p">:</span>
-            <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>      <span class="c1"># Go right</span>
-        <span class="k">elif</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
-            <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>      <span class="c1"># Go left</span>
-        <span class="k">elif</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.75</span><span class="p">:</span>
-            <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>      <span class="c1"># Go up</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">y</span> <span class="o">-=</span> <span class="mi">1</span>      <span class="c1"># Go down</span>
-
-        <span class="nb">print</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
-
-    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
-</pre></div>
-</div>
+<h3 id="String-Methods">String Methods<a class="anchor-link" href="#String-Methods">¶</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here are some <strong>bad examples</strong> of comments, because they are unnecessary or poorly formatted:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">random_walker</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-    <span class="c1"># intalize coords</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span><span class="c1"># loop T times</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.25</span><span class="p">:</span>
-            <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># go right</span>
-        <span class="k">elif</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
-            <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>  <span class="c1"># go left</span>
-        <span class="k">elif</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.75</span><span class="p">:</span>
-            <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>       <span class="c1"># go up</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">y</span> <span class="o">-=</span> <span class="mi">1</span>
-
-        <span class="c1"># Print the location</span>
-        <span class="nb">print</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-
-    <span class="c1"># In Python, the ** operator means exponentiation.</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.-Python-Scripts">2. Python Scripts<a class="anchor-link" href="#2.-Python-Scripts">¶</a></h2><hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Jupyter is a fantastic data science tool which allows you to code and create visualisations alongside text and images to create narratives. However, as your project grows, eventually you're going to need to create python scripts, <code>.py</code> files <code>.py</code> files are also called "modules" in Python and may contain functions, classes, variables, and/or runnable code.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="IDEs">IDEs<a class="anchor-link" href="#IDEs">¶</a></h3><p>You don't need any special software to write Python modules, you can write your code using any text editor and just save your file with a <code>.py</code> extension. But software exists to make your life much easier!</p>
-<p>IDE stands for "integrated development environment" and refers to software that provides comprehensive functionality for code development (e.g., compiling, debugging, formatting, testing, linting, etc). The most popular out-of-the-box Python IDEs are <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a href="https://www.spyder-ide.org/">Spyder</a>. There are also many editors available that can be customized with extensions to act as Python IDEs, e.g., <a href="https://code.visualstudio.com/">VSCode</a>, <a href="https://atom.io/">Atom</a>, <a href="https://www.sublimetext.com/">Sublime Text</a>. The benefit of these customisable editors is that they are light-weight and you can choose only the extensions you really need (as opposed to downloading a big, full-blown IDE like PyCharm).</p>
-<p>VSCode is my favourite editor and they have a <a href="https://code.visualstudio.com/docs/languages/python">great Python tutorial online</a> which I'd highly recommend if you're interested! We'll do some importing of custom <code>.py</code> files but won't do any work in an IDE.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.-Importing">3. Importing<a class="anchor-link" href="#3.-Importing">¶</a></h2><hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Python can access code in another module by importing it. This is done using the <code>import</code> statement, which you've probably seen a few times already. We'll discuss importing more and you can read all about it in the <a href="https://docs.python.org/3/reference/import.html">Python documentation</a> but for now, it's easiest to see it in action.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ways-of-Importing-Things">Ways of Importing Things<a class="anchor-link" href="#Ways-of-Importing-Things">¶</a></h3><p>I've written a <code>.py</code> file called <code>wallet.py</code> that contains a class <code>Wallet</code> that can be used to store, spend, and earn cash. Let's have a look at that file on GitHub before moving on.</p>
-<p>Let's <code>import</code> the code from <code>wallet.py</code> . We can import our <code>.py</code> file (our module) simply by:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">wallet</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can take a look at all the useable parts of that module by typing <code>dir(wallet)</code>:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">wallet</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can import a package using an alias with the <code>as</code> keyword:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">wallet</span> <span class="k">as</span> <span class="nn">w</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">w</span><span class="o">.</span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># the output is the creation of an object instance and its address in memory</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>And we can import just a specific function/class/variable from our module:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="n">Wallet</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># now I can refer to it without the module name prefix</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You can even mix up all these methods:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="n">Wallet</span> <span class="k">as</span> <span class="n">w</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">w</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>It's also possible to import everything in a module, though this is generally not recommended:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="o">*</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">InsufficientCashError</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Importing-Functions-from-Outside-your-Working-Directory">Importing Functions from Outside your Working Directory<a class="anchor-link" href="#Importing-Functions-from-Outside-your-Working-Directory">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I could do <code>import wallet</code> above because <code>wallet.py</code> is in my current working directory. But there are a few extra steps needed if it is in a different location. I've included a script called <code>hello.py</code> in a <code>data/</code> sub-directory of the directory housing this notebook. All it has in it is:</p>
-<div class="highlight"><pre><span></span><span class="n">PLANET</span> <span class="o">=</span> <span class="s2">"Earth"</span>
-
-
-<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hello </span><span class="si">{</span><span class="n">PLANET</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
-</pre></div>
-<p>Unfortunately I can't do this:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">hello</span> <span class="kn">import</span> <span class="n">hello_world</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>What we need to do is add this directory location to the paths that Python searches through when looking to import something. One way to do this it by using the <code>sys</code> module:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'data/'</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span> <span class="c1"># display the current paths Python is looking through</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>See that <code>data/</code> is now a valid path. So now I can import from <code>hello.py</code>:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">hello</span> <span class="kn">import</span> <span class="n">hello_world</span><span class="p">,</span> <span class="n">PLANET</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">PLANET</span>  <span class="c1"># note that I can import variable defined in a .py file!</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">hello_world</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Packages">Packages<a class="anchor-link" href="#Packages">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>As your code gets more complex, grows in modules, and you wish to share it, you'll want to turn it into a Python package. Packages are logical collections of modules that can be easily imported. If you're interested in creating your own packages, take a look at the <a href="https://py-pkgs.org/">py-pkgs book</a>. For now, we'll be using other people's popular data science packages, specifically, we'll look at <code>numpy</code>: "the fundamental package for scientific computing with Python".</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Importing-Installed-Packages">Importing Installed Packages<a class="anchor-link" href="#Importing-Installed-Packages">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We'll be using the <code>numpy</code> and <code>pandas</code> packages, which are probably the most popular for data science. When you install those packages, they are put in a location on your computer that Python already knows about, so we can simply import them at will.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>There are plenty of packages that come with the <a href="https://docs.python.org/3/library/">Python Standard Library</a> - these do not require installation with <code>conda</code> and you'll come across them throughout your data science journey, I'll show one example, <code>random</code>, below. But for more advanced stuff you'll to install and use packages like <code>numpy</code>, <code>pandas</code> and others. If you need some specific functionality, make sure you check if there's a package for it (there often is!). For example, one functionality I often want is a progress bar when looping over a <code>for</code> loop. This is available in the <a href="https://github.com/tqdm/tqdm">tqdm package</a>:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">10e5</span><span class="p">))):</span>
-    <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.-Intriguing-Behaviour-in-Python">4. Intriguing Behaviour in Python<a class="anchor-link" href="#4.-Intriguing-Behaviour-in-Python">¶</a></h2><hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="References">References<a class="anchor-link" href="#References">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>What do you think the code below will print?</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">y</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>And how about the next one?</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">y</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In Python, the list <code>x</code> is a <strong>reference</strong> to an object in the computer's memory. When you set <code>y = x</code> these two variables now refer to the same object in memory - the one that <code>x</code> referred to. Setting <code>x[0] = 2</code> modifies the object in memory. So <code>x</code> and <code>y</code> are both modified (it makes no different if you set <code>x[0] = 2</code> or <code>y[0] = 2</code>, both modify the same memory).</p>
-<p>Here's an analogy that might help understand what's going on:</p>
-<ul>
-<li>I share a Dropbox folder (or git repo) with you, and you modify it -- I sent you <em>the location of the stuff</em> (this is like the list case)</li>
-<li>I send you an email with a file attached, you download it and modify the file -- I sent you <em>the stuff itself</em> (this is like the integer case)</li>
-</ul>
-<p>Okay, what do you think will happen here:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># before we had x[0] = 2</span>
-<span class="n">y</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we are not modifying the contents of <code>x</code>, we are setting <code>x</code> to refer to a new list <code>[2]</code>.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Additional-Weirdness">Additional Weirdness<a class="anchor-link" href="#Additional-Weirdness">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can use <code>id()</code> to return the unique id of an object in memory.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>  <span class="c1"># this is a numpy array which we'll learn more about later</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x has the value: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y has the value: </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-</div>
+<p>We've seen how libraries like NumPy and Pandas can vectorise operations for increased speed and useability:</p>
 </div>
 </div>
 </div>
@@ -13900,44 +13192,2194 @@ div#notebook {
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-<span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is not the case for arrays of strings however:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="s1">'Gabriel'</span><span class="p">,</span> <span class="s1">'Juliana'</span><span class="p">,</span> <span class="s1">'Jin'</span><span class="p">,</span> <span class="s1">'Alice'</span><span class="p">])</span>
+<span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Instead, you would have to operate on each string object one at a time, using a loop for example:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But even this will fail if your array contains a missing value:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="s1">'Gabriel'</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">'Juliana'</span><span class="p">,</span> <span class="s1">'Jin'</span><span class="p">,</span> <span class="s1">'Alice'</span><span class="p">])</span>
+<span class="p">[</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pandas addresses both of these issues (vectorization and missing values) with its string methods. String methods can be accessed by the <code>.str</code> attribute of Pandas Series and Index objects. Pretty much all built-in string operations (<code>.upper()</code>, <code>.lower()</code>, <code>.split()</code>, etc) and more are available.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"ff"</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also operate on Index objects (i.e., index or column labels):</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                  <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Measured Feature'</span><span class="p">,</span> <span class="s1">'recorded feature'</span><span class="p">,</span> <span class="s1">'PredictedFeature'</span><span class="p">],</span>
+                  <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">"ROW</span><span class="si">{</span><span class="n">_</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's clean up those labels by:</p>
+<ol>
+<li>Removing the word "feature" and "Feature"</li>
+<li>Lowercase the "ROW" and add an underscore between the digit and letters</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"feature"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"w"</span><span class="p">,</span> <span class="s2">"w_"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Great that worked! There are so many string operations you can use in Pandas. Here's a full list of all the string methods available in Pandas that I pulled from the documentation:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Series.str.cat</code></td>
+<td>Concatenate strings</td>
+</tr>
+<tr>
+<td><code>Series.str.split</code></td>
+<td>Split strings on delimiter</td>
+</tr>
+<tr>
+<td><code>Series.str.rsplit</code></td>
+<td>Split strings on delimiter working from the end of the string</td>
+</tr>
+<tr>
+<td><code>Series.str.get</code></td>
+<td>Index into each element (retrieve i-th element)</td>
+</tr>
+<tr>
+<td><code>Series.str.join</code></td>
+<td>Join strings in each element of the Series with passed separator</td>
+</tr>
+<tr>
+<td><code>Series.str.get_dummies</code></td>
+<td>Split strings on the delimiter returning DataFrame of dummy variables</td>
+</tr>
+<tr>
+<td><code>Series.str.contains</code></td>
+<td>Return boolean array if each string contains pattern/regex</td>
+</tr>
+<tr>
+<td><code>Series.str.replace</code></td>
+<td>Replace occurrences of pattern/regex/string with some other string or the return value of a callable given the occurrence</td>
+</tr>
+<tr>
+<td><code>Series.str.repeat</code></td>
+<td>Duplicate values (<code>s.str.repeat(3)</code> equivalent to <code>x * 3</code>)</td>
+</tr>
+<tr>
+<td><code>Series.str.pad</code></td>
+<td>"Add whitespace to left, right, or both sides of strings"</td>
+</tr>
+<tr>
+<td><code>Series.str.center</code></td>
+<td>Equivalent to <code>str.center</code></td>
+</tr>
+<tr>
+<td><code>Series.str.ljust</code></td>
+<td>Equivalent to <code>str.ljust</code></td>
+</tr>
+<tr>
+<td><code>Series.str.rjust</code></td>
+<td>Equivalent to <code>str.rjust</code></td>
+</tr>
+<tr>
+<td><code>Series.str.zfill</code></td>
+<td>Equivalent to <code>str.zfill</code></td>
+</tr>
+<tr>
+<td><code>Series.str.wrap</code></td>
+<td>Split long strings into lines with length less than a given width</td>
+</tr>
+<tr>
+<td><code>Series.str.slice</code></td>
+<td>Slice each string in the Series</td>
+</tr>
+<tr>
+<td><code>Series.str.slice_replace</code></td>
+<td>Replace slice in each string with passed value</td>
+</tr>
+<tr>
+<td><code>Series.str.count</code></td>
+<td>Count occurrences of pattern</td>
+</tr>
+<tr>
+<td><code>Series.str.startswith</code></td>
+<td>Equivalent to <code>str.startswith(pat)</code> for each element</td>
+</tr>
+<tr>
+<td><code>Series.str.endswith</code></td>
+<td>Equivalent to <code>str.endswith(pat)</code> for each element</td>
+</tr>
+<tr>
+<td><code>Series.str.findall</code></td>
+<td>Compute list of all occurrences of pattern/regex for each string</td>
+</tr>
+<tr>
+<td><code>Series.str.match</code></td>
+<td>"Call <code>re.match</code> on each element, returning matched groups as list"</td>
+</tr>
+<tr>
+<td><code>Series.str.extract</code></td>
+<td>"Call <code>re.search</code> on each element, returning DataFrame with one row for each element and one column for each regex capture group"</td>
+</tr>
+<tr>
+<td><code>Series.str.extractall</code></td>
+<td>"Call <code>re.findall</code> on each element, returning DataFrame with one row for each match and one column for each regex capture group"</td>
+</tr>
+<tr>
+<td><code>Series.str.len</code></td>
+<td>Compute string lengths</td>
+</tr>
+<tr>
+<td><code>Series.str.strip</code></td>
+<td>Equivalent to <code>str.strip</code></td>
+</tr>
+<tr>
+<td><code>Series.str.rstrip</code></td>
+<td>Equivalent to <code>str.rstrip</code></td>
+</tr>
+<tr>
+<td><code>Series.str.lstrip</code></td>
+<td>Equivalent to <code>str.lstrip</code></td>
+</tr>
+<tr>
+<td><code>Series.str.partition</code></td>
+<td>Equivalent to <code>str.partition</code></td>
+</tr>
+<tr>
+<td><code>Series.str.rpartition</code></td>
+<td>Equivalent to <code>str.rpartition</code></td>
+</tr>
+<tr>
+<td><code>Series.str.lower</code></td>
+<td>Equivalent to <code>str.lower</code></td>
+</tr>
+<tr>
+<td><code>Series.str.casefold</code></td>
+<td>Equivalent to <code>str.casefold</code></td>
+</tr>
+<tr>
+<td><code>Series.str.upper</code></td>
+<td>Equivalent to <code>str.upper</code></td>
+</tr>
+<tr>
+<td><code>Series.str.find</code></td>
+<td>Equivalent to <code>str.find</code></td>
+</tr>
+<tr>
+<td><code>Series.str.rfind</code></td>
+<td>Equivalent to <code>str.rfind</code></td>
+</tr>
+<tr>
+<td><code>Series.str.index</code></td>
+<td>Equivalent to <code>str.index</code></td>
+</tr>
+<tr>
+<td><code>Series.str.rindex</code></td>
+<td>Equivalent to <code>str.rindex</code></td>
+</tr>
+<tr>
+<td><code>Series.str.capitalize</code></td>
+<td>Equivalent to <code>str.capitalize</code></td>
+</tr>
+<tr>
+<td><code>Series.str.swapcase</code></td>
+<td>Equivalent to <code>str.swapcase</code></td>
+</tr>
+<tr>
+<td><code>Series.str.normalize</code></td>
+<td>Return Unicode normal form. Equivalent to <code>unicodedata.normalize</code></td>
+</tr>
+<tr>
+<td><code>Series.str.translate</code></td>
+<td>Equivalent to <code>str.translate</code></td>
+</tr>
+<tr>
+<td><code>Series.str.isalnum</code></td>
+<td>Equivalent to <code>str.isalnum</code></td>
+</tr>
+<tr>
+<td><code>Series.str.isalpha</code></td>
+<td>Equivalent to <code>str.isalpha</code></td>
+</tr>
+<tr>
+<td><code>Series.str.isdigit</code></td>
+<td>Equivalent to <code>str.isdigit</code></td>
+</tr>
+<tr>
+<td><code>Series.str.isspace</code></td>
+<td>Equivalent to <code>str.isspace</code></td>
+</tr>
+<tr>
+<td><code>Series.str.islower</code></td>
+<td>Equivalent to <code>str.islower</code></td>
+</tr>
+<tr>
+<td><code>Series.str.isupper</code></td>
+<td>Equivalent to <code>str.isupper</code></td>
+</tr>
+<tr>
+<td><code>Series.str.istitle</code></td>
+<td>Equivalent to <code>str.istitle</code></td>
+</tr>
+<tr>
+<td><code>Series.str.isnumeric</code></td>
+<td>Equivalent to <code>str.isnumeric</code></td>
+</tr>
+<tr>
+<td><code>Series.str.isdecimal</code></td>
+<td>Equivalent to <code>str.isdecimal</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I will also mention that I often use the dataframe method <code>df.replace()</code> to do string replacements:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'col1'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'replace me'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">],</span>
+                   <span class="s1">'col2'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99999</span><span class="p">,</span> <span class="mi">3</span><span class="p">]})</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">'replace me'</span><span class="p">:</span> <span class="s1">'a'</span><span class="p">,</span>
+            <span class="mi">99999</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Regular-Expressions">Regular Expressions<a class="anchor-link" href="#Regular-Expressions">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A regular expression (regex) is a sequence of characters that defines a search pattern. For more complex string operations, you'll definitely want to use regex. <a href="https://www.rexegg.com/regex-quickstart.html">Here's a great cheatsheet</a> of regular expression syntax. You can also jump over to <a href="https://regexr.com/">RegExr.com</a> and play around until you find the expression you want. Many Pandas string functions accept regular expressions as input, these are the most common ones:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>match()</code></td>
+<td>Call re.match() on each element, returning a boolean.</td>
+</tr>
+<tr>
+<td><code>extract()</code></td>
+<td>Call re.match() on each element, returning matched groups as strings.</td>
+</tr>
+<tr>
+<td><code>findall()</code></td>
+<td>Call re.findall() on each element</td>
+</tr>
+<tr>
+<td><code>replace()</code></td>
+<td>Replace occurrences of pattern with some other string</td>
+</tr>
+<tr>
+<td><code>contains()</code></td>
+<td>Call re.search() on each element, returning a boolean</td>
+</tr>
+<tr>
+<td><code>count()</code></td>
+<td>Count occurrences of pattern</td>
+</tr>
+<tr>
+<td><code>split()</code></td>
+<td>Equivalent to str.split(), but accepts regexps</td>
+</tr>
+<tr>
+<td><code>rsplit()</code></td>
+<td>Equivalent to str.rsplit(), but accepts regexps</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For example, we can easily find all names in our Series that: i) Do not start with an uppercase vowel. ii) End with a character that is not a lowercase vowel. iii) Can have any characters or no character at all in between.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="s1">'Gabriel'</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">'Juliana'</span><span class="p">,</span> <span class="s1">'Jin'</span><span class="p">,</span> <span class="s1">'Alice'</span><span class="p">])</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">'^[^AEIOU].*[^aeiou]$'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>r</code> in the code <code>s.str.findall(r'^[^AEIOU].*[^aeiou]$')</code> indicates that the string is a raw string in Python. When a string is prefixed with <code>r</code> or <code>R</code>, it tells Python to interpret the string literally, meaning that escape characters are not processed. This is particularly useful when writing regular expressions, which often contain backslashes that would otherwise need to be escaped. For example, in regular expressions, the backslash <code>\</code> is used to escape special characters or to indicate a special sequence. If you were not using a raw string, you would need to use a double backslash <code>\\</code> to achieve the same result.</p>
+<p>The pattern provided here is <code>r'^[^AEIOU].*[^aeiou]$'</code>:</p>
+<ul>
+<li><code>^</code>: This asserts the position at the start of the string.</li>
+<li><code>[^AEIOU]</code>: This is a character class that matches any character that is not an uppercase vowel (A, E, I, O, U). The ^ inside the brackets negates the character class.</li>
+<li><code>.*</code>: The dot . matches any character (except for line terminators), and the asterisk * quantifies the dot to match zero or more times. Together, .* matches any sequence of characters.</li>
+<li><code>[^aeiou]$</code>: This is another character class similar to the first one, but it's at the end of the string due to the <code>$</code> anchor, and it matches any character that is not a lowercase vowel (a, e, i, o, u).</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Regex can do some truly magical things so keep it in mind when you're doing complicated text wrangling. Let's see one more example on the cycling dataset:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/cycling_data.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We could find all the comments that contains the string "Rain" or "rain":</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Comments'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[Rr]ain"</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we didn't want to include "Raining" or "raining", we could do:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Comments'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="sa">r</span><span class="s2">"^[Rr]ain$"</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can even split strings and separate them into new columns, for example, based on punctuation:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Comments'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[.,!]"</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>My point being here that you can pretty much do anything your heart desires!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Working-With-Datetimes">Working With Datetimes<a class="anchor-link" href="#Working-With-Datetimes">¶</a></h2><hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Just like with strings, Pandas has extensive functionality for working with time series data.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Datetime-dtype-and-Motivation-for-Using-Pandas">Datetime dtype and Motivation for Using Pandas<a class="anchor-link" href="#Datetime-dtype-and-Motivation-for-Using-Pandas">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python has built-in support for datetime format, that is, an object that contains time and date information, in the <code>datetime</code> module.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2005</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">54</span><span class="p">)</span>
+<span class="n">date</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also parse directly from a string, see <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes">format codes here</a>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s2">"July 9 2005, 13:54"</span><span class="p">,</span> <span class="s2">"%B </span><span class="si">%d</span><span class="s2"> %Y, %H:%M"</span><span class="p">)</span>
+<span class="n">date</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can then extract specific information from our data:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Year: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Month: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%B'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Day: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Day name: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%A'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Day of year: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%j'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Time of day: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%p'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And perform basic operations, like adding a week:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">date</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But as with strings, working with arrays of datetimes in Python can be difficult and inefficient. NumPy, therefore included a datetime object to work more effectively with dates:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">"2020-07-09"</span><span class="p">,</span> <span class="s2">"2020-08-10"</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">"datetime64"</span><span class="p">)</span>
+<span class="n">dates</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can create arrays using other built-in functions like <code>np.arange()</code> too:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="s2">"2020-07"</span><span class="p">,</span> <span class="s2">"2020-12"</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'datetime64[M]'</span><span class="p">)</span>
+<span class="n">dates</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can easily do operations on arrays of time. You can check out all the datetime units and their format in the documentation <a href="https://numpy.org/doc/stable/reference/arrays.datetime.html#datetime-units">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dates</span> <span class="o">+</span>  <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But while numpy helps bring datetimes into the array world, it's missing a lot of functionality that we would commonly want/need for wrangling tasks. This is where Pandas comes in. Pandas consolidates and extends functionality from the <code>datetime</code> module, <code>numpy</code>, and other libraries like <code>scikits.timeseries</code> into a single place. Pandas provides 4 key datetime objects which we'll explore:</p>
+<ol>
+<li>Timestamp (like np.datetime64)</li>
+<li>Timedelta (like np.timedelta64)</li>
+<li>Period (custom object for regular ranges of datetimes)</li>
+<li>DateOffset (custom object like timedelta but factoring in calendar rules)</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-Datetimes">Creating Datetimes<a class="anchor-link" href="#Creating-Datetimes">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="From-scratch">From scratch<a class="anchor-link" href="#From-scratch">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Most commonly you'll want to:</p>
+<ol>
+<li>Create a single point in time with <code>pd.Timestamp()</code>, e.g., <code>2005-07-09 00:00:00</code></li>
+<li>Create a span of time with <code>pd.Period()</code>, e.g., <code>2020 Jan</code></li>
+<li>Create an array of datetimes with <code>pd.date_range()</code> or <code>pd.period_range()</code></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2005-07-09'</span><span class="p">))</span>  <span class="c1"># parsed from string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2005</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">9</span><span class="p">))</span>  <span class="c1"># pass data directly</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2005</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">9</span><span class="p">)))</span>  <span class="c1"># from datetime object</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The above is a specific point in time. Below, we can use <code>pd.Period()</code> to specify a span of time (like a day):</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">span</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Period</span><span class="p">(</span><span class="s1">'2005-07-09'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">span</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">span</span><span class="o">.</span><span class="n">start_time</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">span</span><span class="o">.</span><span class="n">end_time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">point</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2005-07-09 12:00'</span><span class="p">)</span>
+<span class="n">span</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Period</span><span class="p">(</span><span class="s1">'2005-07-09'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Point: </span><span class="si">{</span><span class="n">point</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">" Span: </span><span class="si">{</span><span class="n">span</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Point in span? </span><span class="si">{</span><span class="n">span</span><span class="o">.</span><span class="n">start_time</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">span</span><span class="o">.</span><span class="n">end_time</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Often, you'll want to create arrays of datetimes, not just single values. Arrays of datetimes are of the class <code>DatetimeIndex</code>/<code>PeriodIndex</code>/<code>TimedeltaIndex</code>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">'2020-09-01 12:00'</span><span class="p">,</span>
+              <span class="s1">'2020-09-11 12:00'</span><span class="p">,</span>
+              <span class="n">freq</span><span class="o">=</span><span class="s1">'D'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">period_range</span><span class="p">(</span><span class="s1">'2020-09-01'</span><span class="p">,</span>
+                <span class="s1">'2020-09-11'</span><span class="p">,</span>
+                <span class="n">freq</span><span class="o">=</span><span class="s1">'D'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can use <code>Timedelta</code> objects to perform temporal operations like adding or subtracting time:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">'2020-09-01 12:00'</span><span class="p">,</span> <span class="s1">'2020-09-11 12:00'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'D'</span><span class="p">)</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s1">'1.5 hour'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, Pandas represents missing datetimes with <code>NaT</code>, which is just like <code>np.nan</code>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">NaT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="By-converting-existing-data">By converting existing data<a class="anchor-link" href="#By-converting-existing-data">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It's fairly common to have an array of dates as strings. We can use <code>pd.to_datetime()</code> to convert these to datetime:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">string_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'July 9, 2020'</span><span class="p">,</span> <span class="s1">'August 1, 2020'</span><span class="p">,</span> <span class="s1">'August 28, 2020'</span><span class="p">]</span>
+<span class="n">string_dates</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">string_dates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For more complex datetime format, use the <code>format</code> argument (see <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes">Python Format Codes</a> for help):</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">string_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2020 9 July'</span><span class="p">,</span> <span class="s1">'2020 1 August'</span><span class="p">,</span> <span class="s1">'2020 28 August'</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">string_dates</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">"%Y </span><span class="si">%d</span><span class="s2"> %B"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Or use a dictionary:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dict_dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">({</span><span class="s2">"year"</span><span class="p">:</span> <span class="p">[</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2020</span><span class="p">],</span>
+                             <span class="s2">"month"</span><span class="p">:</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                             <span class="s2">"day"</span><span class="p">:</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">]})</span>  <span class="c1"># note this is a series, not an index!</span>
+<span class="n">dict_dates</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="n">dict_dates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="By-reading-directly-from-an-external-source">By reading directly from an external source<a class="anchor-link" href="#By-reading-directly-from-an-external-source">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's practice by reading in our favourite cycling dataset:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/cycling_data.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Our index is just a plain old index at the moment, with dtype <code>object</code>, full of <code>string</code> dates:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We could manually convert our index to a datetime using <code>pd.to_datetime()</code>. But even better, <code>pd.read_csv()</code> has an argument <code>parse_dates</code> which can do this automatically when reading the file:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/cycling_data.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>parse_dates</code> argument is very flexible and you can specify the datetime format for harder to read dates. There are other related arguments like <code>date_parser</code>, <code>dayfirst</code>, etc that are also helpful, check out the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">Pandas documentation</a> for more.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Indexing-Datetimes">Indexing Datetimes<a class="anchor-link" href="#Indexing-Datetimes">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Datetime index objects are just like regular Index objects and can be selected, sliced, filtered, etc.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can do partial string indexing:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'2019-09'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Exact matching:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'2019-10-10'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'2019-10-10 13:47:14'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And slicing by ensuring that the DatetimeIndex of our DataFrame is sorted:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="c1"># print(df.index.min(), df.index.max())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'2019-10-01'</span><span class="p">:</span><span class="s1">'2019-10-11'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And for getting all results between two times of a day, use <code>df.between_time()</code>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">between_time</span><span class="p">(</span><span class="s1">'00:00'</span><span class="p">,</span> <span class="s1">'01:00'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Manipulating-Datetimes">Manipulating Datetimes<a class="anchor-link" href="#Manipulating-Datetimes">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Decomposition">Decomposition<a class="anchor-link" href="#Decomposition">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can easily decompose our timeseries into its constituent components. There are <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#time-date-components">many attributes</a> that define these constituents.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">second</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">weekday</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As well as methods we can use:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">day_name</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month_name</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that if you're operating on a Series rather than a DatetimeIndex object, you can access this functionality through the <code>.dt</code> attribute:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">'2011-12-29'</span><span class="p">,</span> <span class="s1">'2011-12-31'</span><span class="p">))</span>
+<span class="n">s</span><span class="o">.</span><span class="n">year</span>  <span class="c1"># raises error</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>  <span class="c1"># works</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Offsets-and-Timezones">Offsets and Timezones<a class="anchor-link" href="#Offsets-and-Timezones">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We saw before how we can use <code>Timedelta</code> to add/subtract time to our datetimes. <code>Timedelta</code> respects absolute time, which can be problematic in some cases, where time is not regular. For example, on March 10, 2024, US daylight savings started and clocks <strong>moved forward 1 hour</strong>. This extra "calendar hour" is not accounted for in absolute time:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2024-03-09 12:00:00'</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s1">'US/Eastern'</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s2">"1 day"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Original time: </span><span class="si">{</span><span class="n">t1</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">" Plus one day: </span><span class="si">{</span><span class="n">t2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># note that time has moved from 12:00 -&gt; 13:00</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Instead, we'd need to use a <code>Dateoffset</code>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">t3</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">DateOffset</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Original time: </span><span class="si">{</span><span class="n">t1</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">" Plus one day: </span><span class="si">{</span><span class="n">t3</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># note that time has stayed at 12:00</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can see that we started including timezone information above. By default, datetime objects are "timezone unaware". To associate times with a timezone, we can use the <code>tz</code> argument in construction, or we can use the <code>tz_localize()</code> method:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"        No timezone: </span><span class="si">{</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2024-03-09 12:00:00'</span><span class="p">)</span><span class="o">.</span><span class="n">tz</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"             tz arg: </span><span class="si">{</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2024-03-09 12:00:00'</span><span class="p">,</span><span class="w"> </span><span class="n">tz</span><span class="o">=</span><span class="s1">'US/Eastern'</span><span class="p">)</span><span class="o">.</span><span class="n">tz</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">".tz_localize method: </span><span class="si">{</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2024-03-09 12:00:00'</span><span class="p">)</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="s1">'US/Eastern'</span><span class="p">)</span><span class="o">.</span><span class="n">tz</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can convert between timezones using the <code>.tz_convert()</code> method. You might have noticed something funny about the times Tom have been riding to UBC:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/cycling_data.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There's something wrong with the timezone in this dataset. He was using the <code>Strava</code> app to document the rides, it was recording in Canadian time but converting to Australia time. Let's go ahead and fix that up:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="s2">"Canada/Pacific"</span><span class="p">)</span>  <span class="c1"># first specify the current timezone</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_convert</span><span class="p">(</span><span class="s2">"Australia/Sydney"</span><span class="p">)</span>  <span class="c1"># then convert to the proper timezone</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We could have also used a <code>DateOffset</code> if we knew the offset we wanted to apply, in this case, 7 hours:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/cycling_data.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">DateOffset</span><span class="p">(</span><span class="n">hours</span><span class="o">=-</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Resampling-and-Aggregating">Resampling and Aggregating<a class="anchor-link" href="#Resampling-and-Aggregating">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One of the most common operations you will want do when working with time series is resampling the time series to a coarser/finer/regular resolution. For example, you may want to resample daily data to weekly data. We can do that with the <code>.resample()</code> method. For example, let's resample the irregular cycling timeseries to a regular 12-hourly series:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">"1D"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>Resampler</code> objects are very similar to the <code>groupby</code> objects we saw in the previous topic. We need to apply an aggregating function on our grouped timeseries, just like we did with <code>groupby</code> objects:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Drop non-numeric columns before resampling</span>
+<span class="n">numeric_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">'number'</span><span class="p">])</span>
+<span class="n">dfr</span> <span class="o">=</span> <span class="n">numeric_df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">"1D"</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">dfr</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There's quite a few <code>NaN</code>s in there? Some days Tom didn't ride, but some might by weekends too...</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfr</span><span class="p">[</span><span class="s1">'Weekday'</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfr</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">day_name</span><span class="p">()</span>
+<span class="n">dfr</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pandas support "business time" operations and format codes in all the timeseries functions we've seen so far. You can check out <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">the documentation</a> for more info, but let's specify business days here to get rid of those weekends:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">numeric_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">'number'</span><span class="p">])</span>
+<span class="n">dfr</span> <span class="o">=</span> <span class="n">numeric_df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">"1B"</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># "B" is business day</span>
+<span class="n">dfr</span><span class="p">[</span><span class="s1">'Weekday'</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfr</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">day_name</span><span class="p">()</span>
+<span class="n">dfr</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Hierachical-Indexing">3. Hierachical Indexing<a class="anchor-link" href="#3.-Hierachical-Indexing">¶</a></h2><hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Hierachical indexing</strong>, sometimes called "multi-indexing" or "stacked indexing", is how Pandas "nests" data. The idea is to facilitate the storage of high dimensional data in a 2D dataframe.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/pandas_stacking.gif"/></p>
+<p>Source: <a href="https://giphy.com/gifs/panda-playing-QoCoLo2opwUW4">Giphy</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-a-Hierachical-Index">Creating a Hierachical Index<a class="anchor-link" href="#Creating-a-Hierachical-Index">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's start with a motivating example. Say you want to track how many courses each Data Science instructor taught over the years in a Pandas Series.</p>
+<p>We could use a tuple to make an appropriate index:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="mi">2019</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="mi">2020</span><span class="p">),</span>
+         <span class="p">(</span><span class="s1">'Gabriel'</span><span class="p">,</span> <span class="mi">2019</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Gabriel'</span><span class="p">,</span> <span class="mi">2020</span><span class="p">),</span>
+         <span class="p">(</span><span class="s1">'Juliana'</span><span class="p">,</span> <span class="mi">2019</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Juliana'</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)]</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can still kind of index this series:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">"Davi"</span><span class="p">,</span> <span class="mi">2019</span><span class="p">):(</span><span class="s2">"Davi"</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But if we wanted to get all of the values for 2019, we'd need to do some messy looping:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2019</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The better way to set up this problem is with a multi-index ("hierachical index"). We can create a multi-index with <code>pd.MultiIndex.from_tuple()</code>. There are <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.MultiIndex.html">other variations</a> of <code>.from_X</code> but tuple is most common.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="n">mi</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="n">mi</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can do more efficient and logical indexing:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'Davi'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="mi">2019</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">"Davi"</span><span class="p">,</span> <span class="mi">2019</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We could also create the index by passing iterables like a list of lists directly to the <code>index</code> argument, but it's not as explicit or intutitive as using <code>pd.MultIndex</code>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="s1">'Davi'</span><span class="p">,</span> <span class="s1">'Gabriel'</span><span class="p">,</span> <span class="s1">'Gabriel'</span><span class="p">,</span> <span class="s1">'Juliana'</span><span class="p">,</span> <span class="s1">'Juliana'</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">]]</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Stacking-/-Unstacking">Stacking / Unstacking<a class="anchor-link" href="#Stacking-/-Unstacking">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You might have noticed that we could also represent our multi-index series as a dataframe. Pandas noticed this too and provides the <code>.stack()</code> and <code>.unstack()</code> methods for switching between dataframes and multi-index series:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Using-a-Hierachical-Index">Using a Hierachical Index<a class="anchor-link" href="#Using-a-Hierachical-Index">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Observing the multi-index &lt;-&gt; dataframe equivalence above, you might wonder why we would even want multi-indices. Above, we were only dealing with 2D data, but a multi-index allows us to store any arbitrary number of dimensions:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="s1">'Davi'</span><span class="p">,</span> <span class="s1">'Gabriel'</span><span class="p">,</span> <span class="s1">'Gabriel'</span><span class="p">,</span> <span class="s1">'Juliana'</span><span class="p">,</span> <span class="s1">'Juliana'</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">]]</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'Davi'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">davi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"Courses"</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+                    <span class="s2">"Students"</span><span class="p">:</span> <span class="p">[</span><span class="mi">273</span><span class="p">,</span> <span class="mi">342</span><span class="p">]},</span>
+                    <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">])</span>
+<span class="n">gabriel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"Courses"</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+                     <span class="s2">"Students"</span><span class="p">:</span> <span class="p">[</span><span class="mi">293</span><span class="p">,</span> <span class="mi">420</span><span class="p">]},</span>
+                     <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">])</span>
+<span class="n">juliana</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"Courses"</span><span class="p">:</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+                     <span class="s2">"Students"</span><span class="p">:</span> <span class="p">[</span><span class="mi">363</span><span class="p">,</span> <span class="mi">190</span><span class="p">]},</span>
+                     <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here we have three 2D dataframes that we are going to join together. There are so many ways you can do this, but we will use <code>pd.concat()</code> and then specify the <code>keys</code> argument:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">davi</span><span class="p">,</span> <span class="n">gabriel</span><span class="p">,</span> <span class="n">juliana</span><span class="p">),</span>
+               <span class="n">keys</span><span class="o">=</span> <span class="p">[</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="s1">'Gabriel'</span><span class="p">,</span> <span class="s1">'Juliana'</span><span class="p">],</span>
+               <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">s3</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we have 3 dimensions of information in a single structure!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'Davi'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="mi">2019</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can access deeper levels in various ways:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="mi">2019</span><span class="p">][</span><span class="s1">'Courses'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="mi">2019</span><span class="p">),</span> <span class="s1">'Courses'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we name our index columns, we can also use <code>.query()</code>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">,</span> <span class="s2">"Year"</span><span class="p">])</span>
+<span class="n">s3</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"Year == 2019"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Or you might prefer the "stacked" version of our hierachical index:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s1">'Davi'</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="s1">'Courses'</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>By the way, we can also use all the previous methods we've learned about on hierachical dataframes:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'Students'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There's one important exception! We can now specify a <code>level</code> argument to chose which level of our multi-index to apply the function to:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Visualizing-DataFrames">Visualizing DataFrames<a class="anchor-link" href="#Visualizing-DataFrames">¶</a></h2><hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pandas provides a <code>.plot()</code> method on Series and DataFrames which we will see briefly here.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Simple-Plots">Simple Plots<a class="anchor-link" href="#Simple-Plots">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/cycling_data.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's go ahead and make a plot of the distances Tom have ridden:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Distance'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Cumulative distance might be more informative:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Distance'</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are many configuration options for these plots which build of the <code>matplotlib</code> library:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Distance'</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">"km"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is possible to use built-in themes which do a lot of the colour and text formatting for you:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x has the value: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y has the value: </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>So, it turns out <code>x += 5</code> is not identical <code>x = x + 5</code>. The former modifies the contents of <code>x</code>. The latter first evaluates <code>x + 5</code> to a new array of the same size, and then overwrites the name <code>x</code> with a reference to this new array.</p>
-<p>But there's good news - we don't need to memorize special rules for calling functions. Copying happens with <code>int</code>, <code>float</code>, <code>bool</code>, the rest is "by reference". Now you see why we care if objects are mutable or immutable... passing around a reference can be dangerous! General rule - if you do <code>x = ...</code> then you're not modifying the original, but if you do <code>x.SOMETHING = y</code> or <code>x[SOMETHING] = y</code> or <code>x *= y</code> then you probably are.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="copy-and-deepcopy"><code>copy</code> and <code>deepcopy</code><a class="anchor-link" href="#copy-and-deepcopy">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can force the certain copying behaviour using the <code>copy</code> library if we want to:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>  <span class="c1"># part of the standard library</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'ggplot'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">'font.size'</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                     <span class="s1">'axes.labelweight'</span><span class="p">:</span> <span class="s1">'bold'</span><span class="p">,</span>
+                     <span class="s1">'figure.figsize'</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)})</span>
 </pre></div>
 </div>
 </div>
@@ -13948,24 +15390,7 @@ div#notebook {
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">y</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># We "copied" x and saved that new object as y</span>
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">y</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Distance'</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s2">"km"</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -13974,7 +15399,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ok, so what do you think will happen here?</p>
+<p>Some people have also made custom themes, like this fun <a href="https://github.com/dhaitz/mplcyberpunk">cyberpunk theme</a>:</p>
 </div>
 </div>
 </div>
@@ -13983,18 +15408,11 @@ div#notebook {
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"hi"</span><span class="p">]]</span>  <span class="c1"># a list of lists</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mplcyberpunk</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"cyberpunk"</span><span class="p">)</span>
 
-<span class="n">y</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"After copy.copy():"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"pikachu"</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"After modifying x:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'Distance'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s2">"km"</span><span class="p">)</span>
+<span class="n">mplcyberpunk</span><span class="o">.</span><span class="n">add_glow_effects</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -14003,15 +15421,49 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>But wait.. we used <code>copy</code>, why are <code>x</code> and <code>y</code> both changed in the latter example? <code>copy</code> makes the <em>containers</em> different, i.e., only the outer list. But the outer lists contain references to objects which were not copied! This is what happens after <code>y = copy.copy(x)</code>:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/copy.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can use <code>is</code> to tell apart these scenarios (as opposed to <code>==</code>). <code>is</code> tells us if two objects are referring to the same object in memory, while <code>==</code> tells us if their contents are the same:</p>
+<p>There are many other kinds of plots you can make too:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Plot Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bar</code> or <code>barh</code></td>
+<td>bar plots</td>
+</tr>
+<tr>
+<td><code>hist</code></td>
+<td>histogram</td>
+</tr>
+<tr>
+<td><code>box</code></td>
+<td>boxplot</td>
+</tr>
+<tr>
+<td><code>kde</code> or <code>density</code></td>
+<td>density plots</td>
+</tr>
+<tr>
+<td><code>area</code></td>
+<td>area plots</td>
+</tr>
+<tr>
+<td><code>scatter</code></td>
+<td>scatter plots</td>
+</tr>
+<tr>
+<td><code>hexbin</code></td>
+<td>hexagonal bin plots</td>
+</tr>
+<tr>
+<td><code>pie</code></td>
+<td>pie plots</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -14020,7 +15472,11 @@ div#notebook {
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="c1"># they are both lists containing the same lists</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'ggplot'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">'font.size'</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                     <span class="s1">'axes.labelweight'</span><span class="p">:</span> <span class="s1">'bold'</span><span class="p">,</span>
+                     <span class="s1">'figure.figsize'</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)})</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'Distance'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -14031,7 +15487,7 @@ div#notebook {
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span> <span class="c1"># but they are not the *same* lists of lists</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Distance'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">density</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -14040,7 +15496,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So, by that logic we should be able to append to <code>y</code> without affecting <code>x</code>:</p>
+<h3 id="Pandas-Plotting">Pandas Plotting<a class="anchor-link" href="#Pandas-Plotting">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pandas also supports a few more advanced plotting functions in the <code>pandas.plotting</code> module. You can view them in the <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#plotting-tools">Pandas documentation</a>.</p>
 </div>
 </div>
 </div>
@@ -14049,10 +15512,7 @@ div#notebook {
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">scatter_matrix</span>
 </pre></div>
 </div>
 </div>
@@ -14063,7 +15523,7 @@ div#notebook {
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">df</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -14072,15 +15532,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>That makes sense, as weird as it seems:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/copy-append.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In short, <code>copy</code> only copies one level down. What if we want to copy everything? i.e., even the inner lists in our outer list... Enter our friend <code>deepcopy</code>:</p>
+<p>We have an outlier time in the data above, a time value of ~48,000. Let's remove it and re-plot.</p>
 </div>
 </div>
 </div>
@@ -14089,13 +15541,7 @@ div#notebook {
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"hi"</span><span class="p">]]</span>
-
-<span class="n">y</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"pikachu"</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Time &lt; 4000'</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -14104,23 +15550,61 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/deep-copy.png"/></p>
+<h2 id="'Pandas'(ydata)-Profiling">'Pandas'(ydata) Profiling<a class="anchor-link" href="#'Pandas'(ydata)-Profiling">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You can find a whole compilation of more intriguing behaviour in Python <a href="https://github.com/satwikkansal/wtfpython/blob/master/README.md">here</a>!</p>
+<p>Pandas profiling is a nifty tool for generating summary reports and doing exploratory data analysis on dataframes. <a href="https://github.com/pandas-profiling/pandas-profiling">Pandas profiling</a> is not part of base Pandas and it is changing its name to <a href="https://pypi.org/project/pandas-profiling/"><code>ydata-profiling</code></a>. 
+To run this section code I highly recommend you to use <a href="https://colab.google/">Google Colab</a>. You can also install the package in your machine with:</p>
+<pre><code>$ conda install -c conda-forge ydata-profiling
+</code></pre>
+<p>In Google Colab:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [45]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_04-py-style-scripts-imports.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">04</span>-py-style-scripts-imports.html
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>ydata-profiling
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ydata_profiling</span> <span class="kn">import</span> <span class="n">ProfileReport</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'cycling_data.csv'</span><span class="p">)</span> <span class="c1"># make sure the dataset is with the notebook in the root of you directory.</span>
+<span class="n">df</span><span class="o">.</span><span class="n">profile_report</span><span class="p">(</span><span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_09-py-wrangling-advanced.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">09</span>-py-wrangling-advanced.html
 </pre></div>
 </div>
 </div>
@@ -14130,8 +15614,8 @@ div#notebook {
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] Converting notebook _04-py-style-scripts-imports.ipynb to html
-[NbConvertApp] Writing 337809 bytes to 04-py-style-scripts-imports.html
+<pre>[NbConvertApp] Converting notebook _09-py-wrangling-advanced.ipynb to html
+[NbConvertApp] Writing 868887 bytes to 09-py-wrangling-advanced.html
 </pre>
 </div>
 </div>

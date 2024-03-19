@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>_04-py-style-scripts-imports</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-
+<html lang="en">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>_04-py-style-scripts-imports</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
 <style type="text/css">
   pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -81,9 +83,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
   </style>
-
-
-
 <style type="text/css">
 /*!
 *
@@ -13049,9 +13048,9 @@ div#notebook {
 }
 </style>
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     init_mathjax = function() {
         if (window.MathJax) {
         // MathJax loaded
@@ -13070,36 +13069,35 @@ div#notebook {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
+<main>
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center>Python - Style Guides, Scripts, Imports <a class="tocSkip"></center></h1>
-<h1><center>QTM 350: Data Science Computing <a class="tocSkip"></center></h1>
-<h1><center>Davi Moreira <a class="tocSkip"></center></h1>
-
+<h1><center>Python - Style Guides, Scripts, Imports <a class="tocSkip"></a></center></h1>
+<h1><center>QTM 350: Data Science Computing <a class="tocSkip"></a></center></h1>
+<h1><center>Davi Moreira <a class="tocSkip"></a></center></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Learning-Objectives">Learning Objectives<a class="anchor-link" href="#Learning-Objectives">&#182;</a></h2><hr>
+<h2 id="Learning-Objectives">Learning Objectives<a class="anchor-link" href="#Learning-Objectives">¶</a></h2><hr/>
 </div>
 </div>
 </div>
@@ -13118,39 +13116,36 @@ div#notebook {
 <li>Anticipate whether a function changes the caller's version of an argument variable in Python.</li>
 <li>Select the appropriate choice between <code>==</code> and <code>is</code> in Python.</li>
 </ul>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><hr>
-
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h2><hr/>
 <p>The material assumes no prior knowledge of Python. Experience with programming concepts or another programming language will help, but is not required to understand the material.</p>
-<p><br></p>
+<br/>
 <center>
 <div>
-<img src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/py4ds.png" width="200"/>
+<img alt="No description has been provided for this image" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/py4ds.png" width="200"/>
 </div>
-</center><p>This topic material is based on the <a href="https://www.tomasbeuzen.com/python-programming-for-data-science/README.html">Python Programming for Data Science</a> book and adapted for our purposes in the course.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.-Style-Guide">1. Style Guide<a class="anchor-link" href="#1.-Style-Guide">&#182;</a></h2><hr>
+</center>
+<p>This topic material is based on the <a href="https://www.tomasbeuzen.com/python-programming-for-data-science/README.html">Python Programming for Data Science</a> book and adapted for our purposes in the course.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/xkcd.png" alt=""></p>
+<h2 id="1.-Style-Guide">1. Style Guide<a class="anchor-link" href="#1.-Style-Guide">¶</a></h2><hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/xkcd.png"/></p>
 <p>Source: <a href="https://imgs.xkcd.com/comics/code_quality.png">xkcd.com</a>.</p>
-
 </div>
 </div>
 </div>
@@ -13168,17 +13163,15 @@ div#notebook {
 <li>And much more...</li>
 </ul>
 <p>There's lots to remember but luckily <strong>linters</strong> &amp; <strong>formatters</strong> can help you adhere to uniform styling!</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Linters">Linters<a class="anchor-link" href="#Linters">&#182;</a></h3><p>Linting refers to highlighting programmatic and stylistic problems in your Python source code. Think of it like "spell check" in word processing software. Common linters include <code>pycodestyle</code>, <code>pylint</code>, <code>pyflakes</code>, <code>flake8</code>, etc. We'll use <a href="https://flake8.pycqa.org/en/latest/">flake8</a> in this lecture, which, if you don't have it, you can install with:</p>
-
-<pre><code>conda install -c anaconda flake8</code></pre>
-
+<h3 id="Linters">Linters<a class="anchor-link" href="#Linters">¶</a></h3><p>Linting refers to highlighting programmatic and stylistic problems in your Python source code. Think of it like "spell check" in word processing software. Common linters include <code>pycodestyle</code>, <code>pylint</code>, <code>pyflakes</code>, <code>flake8</code>, etc. We'll use <a href="https://flake8.pycqa.org/en/latest/">flake8</a> in this lecture, which, if you don't have it, you can install with:</p>
+<pre><code>conda install -c anaconda flake8
+</code></pre>
 </div>
 </div>
 </div>
@@ -13186,79 +13179,72 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>flake8</code> can be used from the command line to check files:</p>
-
-<pre><code>flake8 path/file_to_check.py</code></pre>
+<pre><code>flake8 path/file_to_check.py
+</code></pre>
 <p>You can execute shell commands in Jupyter by prepending a command with an exclamation mark <code>!</code>. I've included an example script called <a href="https://github.com/TomasBeuzen/python-programming-for-data-science/blob/main/chapters/data/bad_style.py"><code>bad_style.py</code></a> in the data sub-directory, let's use <code>flake8</code> on that now:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>flake8<span class="w"> </span>data/bad_style.py
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>flake8<span class="w"> </span>data/bad_style.py
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Formatters">Formatters<a class="anchor-link" href="#Formatters">&#182;</a></h3><p>Formatting refers to restructuring how code appears by applying specific rules for line spacing, indents, line length, etc. Common formatters include <code>autopep8</code>, <code>black</code>, <code>yapf</code>, etc. We'll use <a href="https://black.readthedocs.io/en/stable/?badge=stable">black</a> in this lecture, which, if you don't have it, you can install with:</p>
-
-<pre><code>conda install -c conda-forge black</code></pre>
+<h3 id="Formatters">Formatters<a class="anchor-link" href="#Formatters">¶</a></h3><p>Formatting refers to restructuring how code appears by applying specific rules for line spacing, indents, line length, etc. Common formatters include <code>autopep8</code>, <code>black</code>, <code>yapf</code>, etc. We'll use <a href="https://black.readthedocs.io/en/stable/?badge=stable">black</a> in this lecture, which, if you don't have it, you can install with:</p>
+<pre><code>conda install -c conda-forge black
+</code></pre>
 <p><code>black</code> can also be used from the command line to format your files:</p>
-
-<pre><code>black path/file_to_check.py --check</code></pre>
+<pre><code>black path/file_to_check.py --check
+</code></pre>
 <p>The <code>--check</code> argument just checks if your code conforms to black style but doesn't reformat it in place, if you want your file reformatted, remove the argument.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>black<span class="w"> </span>data/bad_style.py<span class="w"> </span>--check
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>black<span class="w"> </span>data/bad_style.py<span class="w"> </span>--check
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here's the file content before formatting:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span>  <span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">37</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">42</span><span class="p">,</span>
-<span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">927</span><span class="p">}</span>
-<span class="n">very_long_variable_name</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;field&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s1">&#39;is_debug&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span>  <span class="s1">'a'</span><span class="p">:</span><span class="mi">37</span><span class="p">,</span><span class="s1">'b'</span><span class="p">:</span><span class="mi">42</span><span class="p">,</span>
+<span class="s1">'c'</span><span class="p">:</span><span class="mi">927</span><span class="p">}</span>
+<span class="n">very_long_variable_name</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'field'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s1">'is_debug'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
 <span class="n">this</span><span class="o">=</span><span class="kc">True</span>
 
-<span class="k">if</span> <span class="n">very_long_variable_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">&quot;field&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s1">&#39;is_debug&#39;</span><span class="p">]:</span>
- <span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;hello &#39;</span><span class="o">+</span><span class="s1">&#39;world&#39;</span>
+<span class="k">if</span> <span class="n">very_long_variable_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">"field"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s1">'is_debug'</span><span class="p">]:</span>
+ <span class="n">z</span> <span class="o">=</span> <span class="s1">'hello '</span><span class="o">+</span><span class="s1">'world'</span>
 <span class="k">else</span><span class="p">:</span>
- <span class="n">world</span> <span class="o">=</span> <span class="s1">&#39;world&#39;</span>
- <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;hello </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">world</span><span class="p">)</span>
- <span class="n">f</span> <span class="o">=</span> <span class="sa">rf</span><span class="s1">&#39;hello </span><span class="si">{</span><span class="n">world</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">):</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;hello &#39;&#39;world&#39;</span><span class="c1">#FIXME: https://github.com/python/black/issues/26</span>
+ <span class="n">world</span> <span class="o">=</span> <span class="s1">'world'</span>
+ <span class="n">a</span> <span class="o">=</span> <span class="s1">'hello </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">world</span><span class="p">)</span>
+ <span class="n">f</span> <span class="o">=</span> <span class="sa">rf</span><span class="s1">'hello </span><span class="si">{</span><span class="n">world</span><span class="si">}</span><span class="s1">'</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">):</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">'hello ''world'</span><span class="c1">#FIXME: https://github.com/python/black/issues/26</span>
 <span class="k">class</span> <span class="nc">Foo</span>  <span class="p">(</span>     <span class="nb">object</span>  <span class="p">):</span>
   <span class="k">def</span> <span class="nf">f</span>    <span class="p">(</span><span class="bp">self</span>   <span class="p">):</span>
     <span class="k">return</span>       <span class="mi">37</span><span class="o">*-</span><span class="mi">2</span>
@@ -13275,41 +13261,38 @@ div#notebook {
     <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span>
 <span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And here it is after formatting (note how you can toggle formatting on or off in your code using the <code># fmt: off</code>/<code># fmt: on</code> tags):</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">927</span><span class="p">}</span>
-<span class="n">very_long_variable_name</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;is_debug&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">:</span> <span class="mi">927</span><span class="p">}</span>
+<span class="n">very_long_variable_name</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"field"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"is_debug"</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
 <span class="n">this</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="k">if</span> <span class="p">(</span>
     <span class="n">very_long_variable_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-    <span class="ow">and</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">&quot;field&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
-    <span class="ow">or</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">&quot;is_debug&quot;</span><span class="p">]</span>
+    <span class="ow">and</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">"field"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="ow">or</span> <span class="n">very_long_variable_name</span><span class="p">[</span><span class="s2">"is_debug"</span><span class="p">]</span>
 <span class="p">):</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="s2">&quot;hello &quot;</span> <span class="o">+</span> <span class="s2">&quot;world&quot;</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="s2">"hello "</span> <span class="o">+</span> <span class="s2">"world"</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">world</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;hello </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">world</span><span class="p">)</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;hello </span><span class="si">{</span><span class="n">world</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">world</span> <span class="o">=</span> <span class="s2">"world"</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="s2">"hello </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">world</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">"hello </span><span class="si">{</span><span class="n">world</span><span class="si">}</span><span class="s2">"</span>
 <span class="k">if</span> <span class="n">this</span><span class="p">:</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;hello &quot;</span> <span class="s2">&quot;world&quot;</span>  <span class="c1"># FIXME: https://github.com/python/black/issues/26</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s2">"hello "</span> <span class="s2">"world"</span>  <span class="c1"># FIXME: https://github.com/python/black/issues/26</span>
 
 
 <span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -13328,32 +13311,29 @@ div#notebook {
 <span class="c1"># fmt: on</span>
 <span class="n">regular_formatting</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Comments">Comments<a class="anchor-link" href="#Comments">&#182;</a></h3><p>Comments are important for understanding your code. While docstrings cover what a function <em>does</em>, your comments will help document <em>how</em> your code achieves its goal. There are PEP 8 guidelines on the length, spacing, etc of comments.</p>
+<h3 id="Comments">Comments<a class="anchor-link" href="#Comments">¶</a></h3><p>Comments are important for understanding your code. While docstrings cover what a function <em>does</em>, your comments will help document <em>how</em> your code achieves its goal. There are PEP 8 guidelines on the length, spacing, etc of comments.</p>
 <ul>
 <li><strong>Comments</strong>: should start with a <code>#</code> followed by a single space and be preceded by at least two spaces.</li>
 <li><strong>Block Comments</strong>: each line of a block comment should start with a <code>#</code> followed by a single space and should be indented to the same level as the code it precedes.</li>
 <li>Generally, comments should not be unnecessarily verbose or just state the obvious, as this can be distracting and can actually make your code more difficult to read!</li>
 </ul>
 <p>Here is an example of a reasonable comment:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">random_walker</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">random_walker</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -13378,26 +13358,23 @@ div#notebook {
 
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here are some <strong>bad examples</strong> of comments, because they are unnecessary or poorly formatted:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">random_walker</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">random_walker</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="c1"># intalize coords</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
@@ -13419,16 +13396,14 @@ div#notebook {
     <span class="c1"># In Python, the ** operator means exponentiation.</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.-Python-Scripts">2. Python Scripts<a class="anchor-link" href="#2.-Python-Scripts">&#182;</a></h2><hr>
+<h2 id="2.-Python-Scripts">2. Python Scripts<a class="anchor-link" href="#2.-Python-Scripts">¶</a></h2><hr/>
 </div>
 </div>
 </div>
@@ -13436,24 +13411,22 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Jupyter is a fantastic data science tool which allows you to code and create visualisations alongside text and images to create narratives. However, as your project grows, eventually you're going to need to create python scripts, <code>.py</code> files <code>.py</code> files are also called "modules" in Python and may contain functions, classes, variables, and/or runnable code.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="IDEs">IDEs<a class="anchor-link" href="#IDEs">&#182;</a></h3><p>You don't need any special software to write Python modules, you can write your code using any text editor and just save your file with a <code>.py</code> extension. But software exists to make your life much easier!</p>
+<h3 id="IDEs">IDEs<a class="anchor-link" href="#IDEs">¶</a></h3><p>You don't need any special software to write Python modules, you can write your code using any text editor and just save your file with a <code>.py</code> extension. But software exists to make your life much easier!</p>
 <p>IDE stands for "integrated development environment" and refers to software that provides comprehensive functionality for code development (e.g., compiling, debugging, formatting, testing, linting, etc). The most popular out-of-the-box Python IDEs are <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a href="https://www.spyder-ide.org/">Spyder</a>. There are also many editors available that can be customized with extensions to act as Python IDEs, e.g., <a href="https://code.visualstudio.com/">VSCode</a>, <a href="https://atom.io/">Atom</a>, <a href="https://www.sublimetext.com/">Sublime Text</a>. The benefit of these customisable editors is that they are light-weight and you can choose only the extensions you really need (as opposed to downloading a big, full-blown IDE like PyCharm).</p>
 <p>VSCode is my favourite editor and they have a <a href="https://code.visualstudio.com/docs/languages/python">great Python tutorial online</a> which I'd highly recommend if you're interested! We'll do some importing of custom <code>.py</code> files but won't do any work in an IDE.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.-Importing">3. Importing<a class="anchor-link" href="#3.-Importing">&#182;</a></h2><hr>
+<h2 id="3.-Importing">3. Importing<a class="anchor-link" href="#3.-Importing">¶</a></h2><hr/>
 </div>
 </div>
 </div>
@@ -13461,206 +13434,177 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Python can access code in another module by importing it. This is done using the <code>import</code> statement, which you've probably seen a few times already. We'll discuss importing more and you can read all about it in the <a href="https://docs.python.org/3/reference/import.html">Python documentation</a> but for now, it's easiest to see it in action.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ways-of-Importing-Things">Ways of Importing Things<a class="anchor-link" href="#Ways-of-Importing-Things">&#182;</a></h3><p>I've written a <code>.py</code> file called <code>wallet.py</code> that contains a class <code>Wallet</code> that can be used to store, spend, and earn cash. Let's have a look at that file on GitHub before moving on.</p>
+<h3 id="Ways-of-Importing-Things">Ways of Importing Things<a class="anchor-link" href="#Ways-of-Importing-Things">¶</a></h3><p>I've written a <code>.py</code> file called <code>wallet.py</code> that contains a class <code>Wallet</code> that can be used to store, spend, and earn cash. Let's have a look at that file on GitHub before moving on.</p>
 <p>Let's <code>import</code> the code from <code>wallet.py</code> . We can import our <code>.py</code> file (our module) simply by:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">wallet</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">wallet</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can take a look at all the useable parts of that module by typing <code>dir(wallet)</code>:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">wallet</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">wallet</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can import a package using an alias with the <code>as</code> keyword:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">wallet</span> <span class="k">as</span> <span class="nn">w</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">wallet</span> <span class="k">as</span> <span class="nn">w</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w</span><span class="o">.</span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># the output is the creation of an object instance and its address in memory</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">w</span><span class="o">.</span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># the output is the creation of an object instance and its address in memory</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And we can import just a specific function/class/variable from our module:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="n">Wallet</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="n">Wallet</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># now I can refer to it without the module name prefix</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># now I can refer to it without the module name prefix</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You can even mix up all these methods:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="n">Wallet</span> <span class="k">as</span> <span class="n">w</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="n">Wallet</span> <span class="k">as</span> <span class="n">w</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">w</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It's also possible to import everything in a module, though this is generally not recommended:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wallet</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">Wallet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InsufficientCashError</span><span class="p">()</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">InsufficientCashError</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Importing-Functions-from-Outside-your-Working-Directory">Importing Functions from Outside your Working Directory<a class="anchor-link" href="#Importing-Functions-from-Outside-your-Working-Directory">&#182;</a></h4>
+<h4 id="Importing-Functions-from-Outside-your-Working-Directory">Importing Functions from Outside your Working Directory<a class="anchor-link" href="#Importing-Functions-from-Outside-your-Working-Directory">¶</a></h4>
 </div>
 </div>
 </div>
@@ -13668,104 +13612,91 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I could do <code>import wallet</code> above because <code>wallet.py</code> is in my current working directory. But there are a few extra steps needed if it is in a different location. I've included a script called <code>hello.py</code> in a <code>data/</code> sub-directory of the directory housing this notebook. All it has in it is:</p>
-<div class="highlight"><pre><span></span><span class="n">PLANET</span> <span class="o">=</span> <span class="s2">&quot;Earth&quot;</span>
+<div class="highlight"><pre><span></span><span class="n">PLANET</span> <span class="o">=</span> <span class="s2">"Earth"</span>
 
 
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">PLANET</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hello </span><span class="si">{</span><span class="n">PLANET</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
 </pre></div>
 <p>Unfortunately I can't do this:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">hello</span> <span class="kn">import</span> <span class="n">hello_world</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">hello</span> <span class="kn">import</span> <span class="n">hello_world</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What we need to do is add this directory location to the paths that Python searches through when looking to import something. One way to do this it by using the <code>sys</code> module:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;data/&#39;</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'data/'</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span> <span class="c1"># display the current paths Python is looking through</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>See that <code>data/</code> is now a valid path. So now I can import from <code>hello.py</code>:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">hello</span> <span class="kn">import</span> <span class="n">hello_world</span><span class="p">,</span> <span class="n">PLANET</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">hello</span> <span class="kn">import</span> <span class="n">hello_world</span><span class="p">,</span> <span class="n">PLANET</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PLANET</span>  <span class="c1"># note that I can import variable defined in a .py file!</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">PLANET</span>  <span class="c1"># note that I can import variable defined in a .py file!</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hello_world</span><span class="p">()</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">hello_world</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Packages">Packages<a class="anchor-link" href="#Packages">&#182;</a></h3>
+<h3 id="Packages">Packages<a class="anchor-link" href="#Packages">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13773,14 +13704,13 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As your code gets more complex, grows in modules, and you wish to share it, you'll want to turn it into a Python package. Packages are logical collections of modules that can be easily imported. If you're interested in creating your own packages, take a look at the <a href="https://py-pkgs.org/">py-pkgs book</a>. For now, we'll be using other people's popular data science packages, specifically, we'll look at <code>numpy</code>: "the fundamental package for scientific computing with Python".</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Importing-Installed-Packages">Importing Installed Packages<a class="anchor-link" href="#Importing-Installed-Packages">&#182;</a></h4>
+<h4 id="Importing-Installed-Packages">Importing Installed Packages<a class="anchor-link" href="#Importing-Installed-Packages">¶</a></h4>
 </div>
 </div>
 </div>
@@ -13788,83 +13718,73 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We'll be using the <code>numpy</code> and <code>pandas</code> packages, which are probably the most popular for data science. When you install those packages, they are put in a location on your computer that Python already knows about, so we can simply import them at will.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are plenty of packages that come with the <a href="https://docs.python.org/3/library/">Python Standard Library</a> - these do not require installation with <code>conda</code> and you'll come across them throughout your data science journey, I'll show one example, <code>random</code>, below. But for more advanced stuff you'll to install and use packages like <code>numpy</code>, <code>pandas</code> and others. If you need some specific functionality, make sure you check if there's a package for it (there often is!). For example, one functionality I often want is a progress bar when looping over a <code>for</code> loop. This is available in the <a href="https://github.com/tqdm/tqdm">tqdm package</a>:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">10e5</span><span class="p">))):</span>
     <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span>
 </pre></div>
-
-    </div>
 </div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.-Intriguing-Behaviour-in-Python">4. Intriguing Behaviour in Python<a class="anchor-link" href="#4.-Intriguing-Behaviour-in-Python">&#182;</a></h2><hr>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="References">References<a class="anchor-link" href="#References">&#182;</a></h3>
+<h2 id="4.-Intriguing-Behaviour-in-Python">4. Intriguing Behaviour in Python<a class="anchor-link" href="#4.-Intriguing-Behaviour-in-Python">¶</a></h2><hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="References">References<a class="anchor-link" href="#References">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13872,49 +13792,43 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What do you think the code below will print?</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">y</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And how about the next one?</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">y</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13926,38 +13840,34 @@ div#notebook {
 <li>I send you an email with a file attached, you download it and modify the file -- I sent you <em>the stuff itself</em> (this is like the integer case)</li>
 </ul>
 <p>Okay, what do you think will happen here:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># before we had x[0] = 2</span>
 <span class="n">y</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here we are not modifying the contents of <code>x</code>, we are setting <code>x</code> to refer to a new list <code>[2]</code>.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Additional-Weirdness">Additional Weirdness<a class="anchor-link" href="#Additional-Weirdness">&#182;</a></h3>
+<h3 id="Additional-Weirdness">Additional Weirdness<a class="anchor-link" href="#Additional-Weirdness">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13965,59 +13875,53 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can use <code>id()</code> to return the unique id of an object in memory.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>  <span class="c1"># this is a numpy array which we&#39;ll learn more about later</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>  <span class="c1"># this is a numpy array which we'll learn more about later</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x has the value: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y has the value: </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x has the value: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y has the value: </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x has the value: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y has the value: </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x has the value: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y has the value: </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">, id: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So, it turns out <code>x += 5</code> is not identical <code>x = x + 5</code>. The former modifies the contents of <code>x</code>. The latter first evaluates <code>x + 5</code> to a new array of the same size, and then overwrites the name <code>x</code> with a reference to this new array.</p>
 <p>But there's good news - we don't need to memorize special rules for calling functions. Copying happens with <code>int</code>, <code>float</code>, <code>bool</code>, the rest is "by reference". Now you see why we care if objects are mutable or immutable... passing around a reference can be dangerous! General rule - if you do <code>x = ...</code> then you're not modifying the original, but if you do <code>x.SOMETHING = y</code> or <code>x[SOMETHING] = y</code> or <code>x *= y</code> then you probably are.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="copy-and-deepcopy"><code>copy</code> and <code>deepcopy</code><a class="anchor-link" href="#copy-and-deepcopy">&#182;</a></h3>
+<h3 id="copy-and-deepcopy"><code>copy</code> and <code>deepcopy</code><a class="anchor-link" href="#copy-and-deepcopy">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14025,93 +13929,82 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can force the certain copying behaviour using the <code>copy</code> library if we want to:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>  <span class="c1"># part of the standard library</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>  <span class="c1"># part of the standard library</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">y</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># We &quot;copied&quot; x and saved that new object as y</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># We "copied" x and saved that new object as y</span>
 <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">y</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ok, so what do you think will happen here?</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]]</span>  <span class="c1"># a list of lists</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"hi"</span><span class="p">]]</span>  <span class="c1"># a list of lists</span>
 
 <span class="n">y</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After copy.copy():&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"After copy.copy():"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pikachu&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After modifying x:&quot;</span><span class="p">)</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"pikachu"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"After modifying x:"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>But wait.. we used <code>copy</code>, why are <code>x</code> and <code>y</code> both changed in the latter example? <code>copy</code> makes the <em>containers</em> different, i.e., only the outer list. But the outer lists contain references to objects which were not copied! This is what happens after <code>y = copy.copy(x)</code>:</p>
-<p><img src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/copy.png" alt=""></p>
-
+<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/copy.png"/></p>
 </div>
 </div>
 </div>
@@ -14119,79 +14012,68 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can use <code>is</code> to tell apart these scenarios (as opposed to <code>==</code>). <code>is</code> tells us if two objects are referring to the same object in memory, while <code>==</code> tells us if their contents are the same:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="c1"># they are both lists containing the same lists</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="c1"># they are both lists containing the same lists</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span> <span class="c1"># but they are not the *same* lists of lists</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span> <span class="c1"># but they are not the *same* lists of lists</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So, by that logic we should be able to append to <code>y</code> without affecting <code>x</code>:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That makes sense, as weird as it seems:</p>
-<p><img src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/copy-append.png" alt=""></p>
-
+<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/copy-append.png"/></p>
 </div>
 </div>
 </div>
@@ -14199,34 +14081,30 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In short, <code>copy</code> only copies one level down. What if we want to copy everything? i.e., even the inner lists in our outer list... Enter our friend <code>deepcopy</code>:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]]</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"hi"</span><span class="p">]]</span>
 
 <span class="n">y</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pikachu&quot;</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"pikachu"</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/deep-copy.png" alt=""></p>
-
+<p><img alt="" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/deep-copy.png"/></p>
 </div>
 </div>
 </div>
@@ -14234,58 +14112,41 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You can find a whole compilation of more intriguing behaviour in Python <a href="https://github.com/satwikkansal/wtfpython/blob/master/README.md">here</a>!</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In [45]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_04-py-style-scripts-imports.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">04</span>-py-style-scripts-imports.html
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_04-py-style-scripts-imports.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">04</span>-py-style-scripts-imports.html
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook _04-py-style-scripts-imports.ipynb to html
-[NbConvertApp] Writing 340314 bytes to 04-py-style-scripts-imports.html
+[NbConvertApp] Writing 337809 bytes to 04-py-style-scripts-imports.html
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center>Thank you!<a class="tocSkip"></center></h1>
-
+<h1><center>Thank you!<a class="tocSkip"></a></center></h1>
 </div>
 </div>
 </div>
-    </div>
-  </div>
+</div>
+</div>
+</main>
 </body>
-
-
-
-
- 
-
-
 </html>

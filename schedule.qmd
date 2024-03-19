@@ -48,10 +48,10 @@ editor: visual
 | Week 11 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Python essentials | Mar 26  |
 | Week 11 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Python essentials | Mar 28  |
 | Week 12 | [Topic 05](./topics-pages/page-topic-05.qmd)  | Algorithms and Data Structures | Apr 2 |
-| Week 12 | [Topic 06](./topics-pages/page-topic-06.qmd)  | Algorithms and Data Structures  | Apr 4   |
-| Week 13 | [Topic 07](./topics-pages/page-topic-07.qmd)  | API Interactions and Web Scraping             | Apr 9   |
-| Week 13 | [Topic 08](./topics-pages/page-topic-08.qmd)  | SQL vs NoSQL             | Apr 11  |
-| Week 14 | [Topic 09](./topics-pages/page-topic-09.qmd)  | SQL Operations and Operators             | Apr 16  |
-| Week 14 | [Topic 10](./topics-pages/page-topic-10.qmd)  | Database Design, Structures and Management             | Apr 18  |
-| Week 15 | [Topic 11](./topics-pages/page-topic-11.qmd)  | Create, Populate and Manipulate databases                              | Apr 23  |
-| Week 15 | [Topic 11](./topics-pages/page-topic-11.qmd)  | Cloud Computing and Data Bases                              | Apr 25  |
+| Week 12 | [Topic 06](./topics-pages/page-topic-06.qmd)  | Algorithms and Data Structures | Apr 4   |
+| Week 13 | [Topic 07](./topics-pages/page-topic-07.qmd)  | Algorithms and Data Structures | Apr 9   |
+| Week 13 | [Topic 08](./topics-pages/page-topic-08.qmd)  | Algorithms and Data Structures | Apr 11  |
+| Week 14 | [Topic 09](./topics-pages/page-topic-09.qmd)  | Algorithms and Data Structures | Apr 16  |
+| Week 14 | [Topic 10](./topics-pages/page-topic-10.qmd)  | Algorithms and Data Structures | Apr 18  |
+| Week 15 | [Topic 11](./topics-pages/page-topic-11.qmd)  | Algorithms and Data Structures  | Apr 23  |
+| Week 15 | [Topic 11](./topics-pages/page-topic-11.qmd)  | Course Review and Special Topics  | Apr 25  |
