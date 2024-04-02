@@ -108,6 +108,10 @@ tbl-colwidths: [10,50,40]
 
 - [Array programming with NumPy paper](https://www.nature.com/articles/s41586-020-2649-2){target="_blank"}
 
+- [Pandas Tutor](https://pandastutor.com/index.html)
+
+- [Learning Data Science](https://www.oreilly.com/library/view/learning-data-science/9781098112998/)
+
 -   [Kaggle Learn Python Tutorials](https://www.kaggle.com/learn/python){target="_blank"}
 
 - [Research Software Engineering with Python](https://merely-useful.tech/py-rse/index.html)

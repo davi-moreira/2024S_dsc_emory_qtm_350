@@ -1,0 +1,59 @@
+library(reticulate)
+use_python("/usr/local/anaconda3/bin/python3.9", required = TRUE)
+library(reticulate)
+use_python("/usr/local/anaconda3/bin/python3.9", required = TRUE)
+library(reticulate)
+use_python("/usr/local/anaconda3/bin/python3.9", required = TRUE)
+library(reticulate)
+use_python("/usr/local/anaconda3/bin/python3.9", required = TRUE)
+reticulate::repl_python()
+2^8
+reticulate::repl_python()
+reticulate::repl_python()
+reticulate::repl_python()
+!sed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt
+!cat slides-topic-02-02-examples/nursery.txt
+#
+# ## Programa
+#
+# - Potential Outcomes Causal Model
+#
+# - Causal Diagrams
+#
+# - Drawing Causal Diagrams
+#
+# ```{r message=FALSE, warning=FALSE, include=FALSE, results='hide'}
+library(tidyverse)
+library(matrixStats)
+library(kableExtra)
+library(haven)
+library(here)
+bd <- tibble(
+y1 = c(7,5,5,7,4,10,1,5,3,9),
+y0 = c(1,6,1,8,2,1,10,6,7,8),
+delta = y1-y0
+)
+head(bd) %>% kable() %>% kable_styling()
+bd <- bd %>% mutate(Y = rowMaxs(as.matrix(bd[,c("y1","y0")])),
+D = case_when(delta > 0 ~ 1,
+TRUE ~ 0))
+head(bd) %>% kable() %>% kable_styling()
+#
+# ## Programa
+#
+# - Potential Outcomes Causal Model
+#
+# - Causal Diagrams
+#
+# - Drawing Causal Diagrams
+#
+# ```{r message=FALSE, warning=FALSE, include=FALSE, results='hide'}
+library(tidyverse)
+library(matrixStats)
+library(dagitty)
+library(ggdag)
+library(jtools)
+library(kableExtra)
+library(haven)
+library(here)
+yule_bd <- read_dta(here("data/yule.dta"))

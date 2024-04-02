@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>_01-py-basics-practice</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-
+<html lang="en">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>_01-py-basics-practice</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
 <style type="text/css">
   pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -25,6 +27,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 .highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #008400 } /* Generic.Inserted */
@@ -81,9 +84,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
   </style>
-
-
-
 <style type="text/css">
 /*!
 *
@@ -13049,9 +13049,9 @@ div#notebook {
 }
 </style>
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     init_mathjax = function() {
         if (window.MathJax) {
         // MathJax loaded
@@ -13070,59 +13070,56 @@ div#notebook {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
+<main>
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="../docs/banner.png" alt=""></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1><center>Python Basics - Practice <a class="tocSkip"></center></h1>
-<h1><center>QTM 350: Data Science Computing <a class="tocSkip"></center></h1>
-<h1><center>Davi Moreira <a class="tocSkip"></center></h1>
-
+<p><img alt="" src="../docs/banner.png"/></p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2>Introduction <a class="tocSkip"></h2>
-<hr>
-
+<h1><center>Python Basics - Practice <a class="tocSkip"></a></center></h1>
+<h1><center>QTM 350: Data Science Computing <a class="tocSkip"></a></center></h1>
+<h1><center>Davi Moreira <a class="tocSkip"></a></center></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>Introduction <a class="tocSkip"></a></h2>
+<hr/>
 <center>
 <div>
-<img src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/py4ds.png" width="200"/>
+<img alt="No description has been provided for this image" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/py4ds.png" width="200"/>
 </div>
-</center><p>This topic material is based on the <a href="https://www.tomasbeuzen.com/python-programming-for-data-science/README.html">Python Programming for Data Science</a> book and adapted for our purposes in the course.</p>
-
+</center>
+<p>This topic material is based on the <a href="https://www.tomasbeuzen.com/python-programming-for-data-science/README.html">Python Programming for Data Science</a> book and adapted for our purposes in the course.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13130,27 +13127,24 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What is 5 to the power of 5?</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Your answer here.</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13158,27 +13152,24 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What is the remainder from dividing 73 by 6?</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Your answer here.</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13186,27 +13177,24 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>How many times does the whole number 3 go into 123? What is the remainder of dividing 123 by 3?</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Your answer here.</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13214,29 +13202,26 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Split the following string into a list by splitting on the space character:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;MDS is going virtual!&quot;</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"MDS is going virtual!"</span>
 
 <span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13244,33 +13229,30 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Given the following variables:</p>
-
 <pre><code>thing = "light"
-speed = 299792458  # m/s</code></pre>
+speed = 299792458  # m/s
+</code></pre>
 <p>Use f-strings to print:</p>
-
-<pre><code>The speed of light is 2.997925e+08 m/s.</code></pre>
-
+<pre><code>The speed of light is 2.997925e+08 m/s.
+</code></pre>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Your answer here.</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h2>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13278,29 +13260,26 @@ speed = 299792458  # m/s</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Given this nested list, use indexing to grab the word "MDS":</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;MDS&quot;</span><span class="p">]],</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="p">[</span><span class="s2">"MDS"</span><span class="p">]],</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 
 <span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="7.">7.<a class="anchor-link" href="#7.">&#182;</a></h3>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13308,36 +13287,33 @@ speed = 299792458  # m/s</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Given this nest dictionary grab the word "MDS":</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;outer&quot;</span><span class="p">:</span> <span class="p">[</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"outer"</span><span class="p">:</span> <span class="p">[</span>
         <span class="mi">1</span><span class="p">,</span>
         <span class="mi">2</span><span class="p">,</span>
         <span class="mi">3</span><span class="p">,</span>
-        <span class="p">{</span><span class="s2">&quot;inner&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;inception&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;inner_inner&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;MDS&quot;</span><span class="p">]}]},</span>
+        <span class="p">{</span><span class="s2">"inner"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"this"</span><span class="p">,</span> <span class="s2">"is"</span><span class="p">,</span> <span class="s2">"inception"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"inner_inner"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"MDS"</span><span class="p">]}]},</span>
     <span class="p">]</span>
 <span class="p">}</span>
 
 <span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="8.">8.<a class="anchor-link" href="#8.">&#182;</a></h3>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13345,28 +13321,25 @@ speed = 299792458  # m/s</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Why does the following cell return an error?</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13374,29 +13347,26 @@ speed = 299792458  # m/s</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Use string methods to extract the website domain from an email, e.g., from the string <code>"davi.moreira@fakemail.com"</code>, you should extract <code>"fakemail"</code>.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">email</span> <span class="o">=</span> <span class="s2">&quot;davi.moreira@fakemail.com&quot;</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">email</span> <span class="o">=</span> <span class="s2">"davi.moreira@fakemail.com"</span>
 
 <span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13409,54 +13379,42 @@ speed = 299792458  # m/s</code></pre>
 <li>return "Are you a pirate?" if <code>language</code> is <code>"R"</code> (any kind of capitalization)</li>
 <li>else return "What is <code>language</code>?" if <code>language</code> is anything else.</li>
 </ul>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">language</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">language</span> <span class="o">=</span> <span class="s2">"python"</span>
 
 <span class="c1"># Your answer here.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_01-py-basics-practice.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">01</span>-py-basics-practice.html
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_01-py-basics-practice.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">01</span>-py-basics-practice.html
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center>Have fun!<a class="tocSkip"></center></h1>
-
+<h1><center>Have fun!<a class="tocSkip"></a></center></h1>
 </div>
 </div>
 </div>
-    </div>
-  </div>
+</div>
+</div>
+</main>
 </body>
-
-
-
-
- 
-
-
 </html>
