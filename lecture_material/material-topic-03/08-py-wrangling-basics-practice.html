@@ -3,8 +3,8 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>_08-wrangling-basics-practice</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs';
+<title>_08-py-wrangling-basics-practice</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <style type="text/css">
@@ -27,6 +27,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 .highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #008400 } /* Generic.Inserted */
@@ -13104,7 +13105,7 @@ div#notebook {
 <img alt="No description has been provided for this image" src="https://raw.githubusercontent.com/davi-moreira/2024S_dsc_emory_qtm_350/main/lecture_material/material-topic-03/img/py4ds.png" width="200"/>
 </div>
 </center>
-<p>This topic material is based on the [Python Programming for Data Science](https://www.tomasbeuzen.com/python-programming-for-data-science/README.html) book and adapted for our purposes in the course.</p>
+<p>This topic material is based on the <a href="https://www.tomasbeuzen.com/python-programming-for-data-science/README.html">Python Programming for Data Science</a> book and adapted for our purposes in the course.</p>
 </div>
 </div>
 </div>
@@ -13371,7 +13372,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that the dataset is wide, I want you to answer the same question from Question 5 above: "What country produces the most kg C02 per person per year?". Specifically, I want you to notice that the way we answer the same data analysis question changes depending on the format of the data (wide vs long). You can form your own opinion on which option you prefer - remember that many visualization libraries work best with long data. 
+<p>Now that the dataset is wide, I want you to answer the same question from Question 5 above: "What country produces the most kg C02 per person per year?". Specifically, I want you to notice that the way we answer the same data analysis question changes depending on the format of the data (wide vs long). You can form your own opinion on which option you prefer - remember that many visualization libraries work best with long data.
 <strong>Hint</strong>: you can index the outer layer of a multi-index column using the same syntax we've seen previously: <code>df['co2_emmission']</code>, if you wanted to access an inner index, you'd have to use a tuple: <code>df[("consumption", "Beef")]</code>.</p>
 </div>
 </div>
@@ -13389,7 +13390,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_08-wrangling-basics-practice.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">08</span>-wrangling-basics-practice.html
@@ -13402,9 +13403,8 @@ div#notebook {
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Fatal Python error: config_get_locale_encoding: failed to get the locale encoding: nl_langinfo(CODESET) failed
-Python runtime state: preinitialized
-
+<pre>[NbConvertApp] Converting notebook _08-wrangling-basics-practice.ipynb to html
+[NbConvertApp] Writing 285591 bytes to 08-wrangling-basics-practice.html
 </pre>
 </div>
 </div>
