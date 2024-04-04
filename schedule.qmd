@@ -47,11 +47,11 @@ editor: visual
 | Week 10 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Mar 21  |
 | Week 11 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Mar 26  |
 | Week 11 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Mar 28  |
-| Week 12 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 2 |
-| Week 12 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 4   |
-| Week 13 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 9   |
+| Week 12 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Apr 2 |
+| Week 12 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Apr 4 |
+| Week 13 | [Topic 03](./topics-pages/page-topic-03.qmd)  | Python essentials | Apr 9 |
 | Week 13 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 11  |
 | Week 14 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 16  |
 | Week 14 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures | Apr 18  |
 | Week 15 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures  | Apr 23  |
-| Week 15 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Course Review and Special Topics  | Apr 25  |
+| Week 15 | [Topic 04](./topics-pages/page-topic-04.qmd)  | Algorithms and Data Structures, and Course Review | Apr 25  |
