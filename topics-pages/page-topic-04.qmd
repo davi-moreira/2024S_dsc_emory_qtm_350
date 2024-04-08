@@ -1,9 +1,11 @@
 ---
 title: "Topic 04"
-subtitle: "API Interactions and Web Scraping"
+subtitle: "Algorithms and Data Structures"
 description: ""
 author: "Davi Moreira"
-date: "2024-02-13"
+date-modified: "last-modified"
+date: "2024-02-18"
+date-format: "MMM D, YYYY"
 #listing:
   # - id: slides
   #   contents:
@@ -34,30 +36,76 @@ date: "2024-02-13"
 tbl-colwidths: [10,50,40]
 ---
 
-# Lectures Notes:
+# Lecture Material
 
--   XXX
+-   Time Complexity, Big O, Space Complexity: [html](/lecture_material/material-topic-04/01-py-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"}
 
--   XXX
+    -   In-Class Activity - Python Basics: [html](/lecture_material/material-topic-03/01-py-basics-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics-practice.ipynb){target="_blank"}
+    
 
-# Slides
+-   Searching, sorting, hash tables: [html](/lecture_material/material-topic-04/01-py-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"}
 
--   [Topic 01:Introduction, Set up, IDEs, Command line](/slides/topic-02.html)
+    -   In-Class Activity - TBP
 
-# Readings
+-   Recursive algorithms: [html](/lecture_material/material-topic-04/01-py-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"}
 
-XXXX
+    -   In-Class Activity - TBP
 
-**Required Readings**
+-   Recursive data structures: [html](/lecture_material/material-topic-04/01-py-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"}
 
--   XXX
+    -   In-Class Activity - TBP
 
--   XXX
+-   Graphs, graph searches: [html](/lecture_material/material-topic-04/01-py-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"}
 
-**Readings**
+    -   In-Class Activity - TBP
 
--   XXXX
 
-**Additional**
+# Problem Set
 
--   XXX
+- **TBP**
+
+# Recommended Readings/Videos
+
+<!---- [](){target="_blank"}--->
+
+- [Introduction to Big O Notation and Time Complexity (video)](https://www.youtube.com/watch?v=D6xkbGLQesk){target="_blank"}
+
+- [Binary search video - watch until 31:00.](https://www.youtube.com/watch?v=y62zj9ozPOM&t=1314s){target="_blank"}
+
+- [Graph traversals video](https://www.youtube.com/watch?v=bIA8HEEUxZI){target="_blank"}
+
+- [brilliant.org on Graph Theory](https://brilliant.org/wiki/graph-theory/){target="_blank"}
+
+- [brilliant.org on Traversals](https://brilliant.org/wiki/traversals/){target="_blank"}
+
+- [brilliant.org on BSTs](https://brilliant.org/wiki/binary-search-trees/){target="_blank"}
+
+-   [Data Structures and Algorithms in Python](https://www.amazon.com/Structures-Algorithms-Python-Michael-Goodrich/dp/1118290275){target="_blank"}
+
+-   [Algorithms](https://highered.mheducation.com/sites/0073523402/index.html){target="_blank"}
+
+-   [Introduction to Algorithms](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/){target="_blank"}
+
+-   [Algorithm Design](https://www.amazon.com/Algorithm-Design-Jon-Kleinberg/dp/0321295358){target="_blank"}
+
+# Additional Resources
+
+-   [P vs. NP and the Computational Complexity Zoo (video)](https://www.youtube.com/watch?v=YX40hbAHx3s){target="_blank"}
+
+-   [Lecture Slides for Algorithm Design](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/){target="_blank"}
+
+-   [Visualizing Algorithms](https://bost.ocks.org/mike/algorithms/){target="_blank"}
+
+- [Professor Mike Gelbart (videos)](https://www.youtube.com/playlist?list=PLWmXHcz_53Q02OsWy9IduQiSGUSnVGFhm){target="_blank"}
+
+-   [Professor Scott Aaronson Blog](https://scottaaronson.blog/){target="_blank"}
+
+-   [Python: Recursion - Exercises, Practice, Solution](https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion.php){target="_blank"}
+
+-   [StackOverflow post on generators](https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python/231855#231855){target="_blank"}
+
+-   [Linear programming and discrete optimization with Python using PuLP](https://towardsdatascience.com/linear-programming-and-discrete-optimization-with-python-using-pulp-449f3c5f6e99){target="_blank"}
+
+-   [Dynamic programming](https://web.mit.edu/15.053/www/AMP-Chapter-11.pdf){target="_blank"}
+
+-   [500 Data Structures and Algorithms practice problems and their solutions](https://kingrayhan.medium.com/500-data-structures-and-algorithms-practice-problems-and-their-solutions-b45a83d803f0){target="_blank"}

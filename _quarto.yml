@@ -34,8 +34,8 @@ website:
             text: "Topic 2: Version Control"
           - href: topics-pages/page-topic-03.qmd
             text: "Topic 3: Python Essentials"
-          # - href: topics-pages/page-topic-04.qmd
-          #   text: "Topic 4: Web Scraping"
+          - href: topics-pages/page-topic-04.qmd
+            text: "Topic 4: Algorithms and Data Structures"
           # - href: topics-pages/page-topic-05.qmd
           #   text: "Topic 5: Data Structures"
           # - href: topics-pages/page-topic-06.qmd
