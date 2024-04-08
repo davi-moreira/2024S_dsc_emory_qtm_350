@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>_03-py-tests-classes-practice-solutions</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+<title>_07-py-pandas-practice-solutions</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
   import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
@@ -13089,7 +13089,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center>Python Unit Tests &amp; Classes - Practice <a class="tocSkip"></a></center></h1>
+<h1><center>Python - Pandas - Practice Solutions<a class="tocSkip"></a></center></h1>
 <h1><center>QTM 350: Data Science Computing <a class="tocSkip"></a></center></h1>
 <h1><center>Davi Moreira <a class="tocSkip"></a></center></h1>
 </div>
@@ -13112,7 +13112,67 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Unit-Tests-&amp;-Classes">Unit Tests &amp; Classes<a class="anchor-link" href="#Unit-Tests-&amp;-Classes">¶</a></h1>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this set of practice exercises we'll be investigating the carbon footprint of different foods. We'll be leveraging a dataset compiled by <a href="https://r-tastic.co.uk/post/from-messy-to-tidy/">Kasia Kulma</a> and contributed to <a href="https://github.com/rfordatascience/tidytuesday">R's Tidy Tuesday project</a>.</p>
+<p>Start by importing pandas with the alias <code>pd</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The dataset we'll be working with has the following columns:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">column</th>
+<th style="text-align:left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">country</td>
+<td style="text-align:left">Country Name</td>
+</tr>
+<tr>
+<td style="text-align:left">food_category</td>
+<td style="text-align:left">Food Category</td>
+</tr>
+<tr>
+<td style="text-align:left">consumption</td>
+<td style="text-align:left">Consumption (kg/person/year)</td>
+</tr>
+<tr>
+<td style="text-align:left">co2_emmission</td>
+<td style="text-align:left">Co2 Emission (Kg CO2/person/year)</td>
+</tr>
+</tbody>
+</table>
+<p>Import the dataset as a dataframe named <code>df</code> from this url: <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-18/food_consumption.csv">https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-18/food_consumption.csv</a></p>
 </div>
 </div>
 </div>
@@ -13121,35 +13181,138 @@ div#notebook {
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-18/food_consumption.csv"</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[2]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>country</th>
+<th>food_category</th>
+<th>consumption</th>
+<th>co2_emmission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Argentina</td>
+<td>Pork</td>
+<td>10.51</td>
+<td>37.20</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Argentina</td>
+<td>Poultry</td>
+<td>38.66</td>
+<td>41.53</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Argentina</td>
+<td>Beef</td>
+<td>55.48</td>
+<td>1712.00</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Argentina</td>
+<td>Lamb &amp; Goat</td>
+<td>1.56</td>
+<td>54.63</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Argentina</td>
+<td>Fish</td>
+<td>4.36</td>
+<td>6.96</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>1425</th>
+<td>Bangladesh</td>
+<td>Milk - inc. cheese</td>
+<td>21.91</td>
+<td>31.21</td>
+</tr>
+<tr>
+<th>1426</th>
+<td>Bangladesh</td>
+<td>Wheat and Wheat Products</td>
+<td>17.47</td>
+<td>3.33</td>
+</tr>
+<tr>
+<th>1427</th>
+<td>Bangladesh</td>
+<td>Rice</td>
+<td>171.73</td>
+<td>219.76</td>
+</tr>
+<tr>
+<th>1428</th>
+<td>Bangladesh</td>
+<td>Soybeans</td>
+<td>0.61</td>
+<td>0.27</td>
+</tr>
+<tr>
+<th>1429</th>
+<td>Bangladesh</td>
+<td>Nuts inc. Peanut Butter</td>
+<td>0.72</td>
+<td>1.27</td>
+</tr>
+</tbody>
+</table>
+<p>1430 rows × 4 columns</p>
+</div></div>
+</div>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a></h2>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The function <code>area()</code> accepts the argument <code>radius</code> and calculates the area of a circle. Write three tests using <code>assert</code> statements for the following conditions:</p>
-<ol>
-<li>Assert that <code>area(1)</code> returns a <code>float</code>;</li>
-<li>Assert that <code>area(0)</code> returns a value of 0;</li>
-<li>Assert that <code>area(5)</code> is approximately equal to 78.5 (hint: <code>math.isclose(..., abs_tol=0.1)</code>)</li>
-</ol>
+<p>How many rows and columns are there in the dataframe?</p>
 </div>
 </div>
 </div>
@@ -13158,11 +13321,33 @@ div#notebook {
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Calculate the area of a circle based on the given radius."""</span>
-    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>(1430, 4)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is the type of data in each column of <code>df</code>?</p>
 </div>
 </div>
 </div>
@@ -13171,284 +13356,7 @@ div#notebook {
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">area</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nb">float</span><span class="p">),</span> <span class="s1">'Test 1 failed!'</span>
-<span class="k">assert</span> <span class="n">area</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'Test 2 failed!'</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">area</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="mf">78.5</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In the spirit of the EAFP (easier to ask for forgiveness than permission) philosophy. Modify the code of the function <code>area()</code> and add a <code>try</code>/<code>except</code> statement to catch the type error raised by passing a string to <code>area()</code> as shown below:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
-<div class="input">
-<div class="prompt input_prompt">In [5]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">area</span><span class="p">(</span><span class="s1">'10'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">area</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">'</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">10</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">'</span><span class="ansi-yellow-bg">)</span>
-
-Cell <span class="ansi-green-fg">In[3], line 3</span>, in <span class="ansi-cyan-fg">area</span><span class="ansi-blue-fg">(radius)</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">area</span>(radius):
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">"""Calculate the area of a circle based on the given radius."""</span>
-<span class="ansi-green-fg">----&gt; 3</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> math<span style="color: rgb(98,98,98)">.</span>pi <span style="color: rgb(98,98,98)">*</span> <span class="ansi-yellow-bg">radius</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">2</span>
-
-<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for ** or pow(): 'str' and 'int'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [6]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Calculate the area of a circle based on the given radius."""</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
-    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"radius should be a number but you entered a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Some other error occurred!"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In the spirit of the LBYL (look before you leap) philosophy. Modify the code of the function <code>area()</code> and add a conditional <code>if</code>/<code>else</code> statement to make sure that a user has passed a number (<code>int</code> or <code>float</code>) to the <code>area()</code> function. If they pass something else, raise a <code>TypeError</code>.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [7]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Calculate the area of a circle based on the given radius."""</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
-        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"radius should be a number but you entered a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For this exercise I want you to create a class called <code>Circle</code>. It should have the following characteristics:</p>
-<ol>
-<li>It should be initiated with the argument <code>radius</code> and store this as an instance attribute.</li>
-<li>Have a method <code>area()</code> which calculates the area of the circle.</li>
-<li>Have a method <code>circumference()</code> which calculates the circumference of the circle.</li>
-<li>Have the method <code>__str__()</code> which is a special method in Python and controls what is output to the screen when you <code>print()</code> an instance of your class (learn more <a href="https://realpython.com/lessons/how-and-when-use-__str__/">here</a>). The <code>print()</code> statement should print the string <code>f"A Circle with radius {self.radius}"</code>.</li>
-</ol>
-<p>I've provided some tests for you to check your class.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [8]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""A circle with a radius r."""</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">radius</span>
-
-    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Calculate the area of the circle."""</span>
-        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
-
-    <span class="k">def</span> <span class="nf">circumference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Calculate the circumference of the circle."""</span>
-        <span class="k">return</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">"A Circle with radius </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">radius</span><span class="si">}</span><span class="s2">"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
-<div class="input">
-<div class="prompt input_prompt">In [9]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">Circle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"Test 1 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Circle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="p">(),</span> <span class="mf">28.3</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 2 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Circle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">circumference</span><span class="p">(),</span> <span class="mf">18.8</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 3 failed."</span>
-<span class="k">assert</span> <span class="n">Circle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"A Circle with radius 3"</span><span class="p">,</span> <span class="s2">"Test 4 failed."</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, let's create a new class <code>sphere</code> that inherits from the <code>circle</code> class we created above. It should have the following characteristics:</p>
-<ol>
-<li>It should be initiated exactly the same as <code>Circle</code> was, with the single argument <code>radius</code> which is stored as an instance attribute.</li>
-<li>Have a method <code>volume()</code> which calculates the volume of the sphere ($\frac{4}{3}{\pi}{r^3}$).</li>
-<li>Outputs the string <code>f"A Sphere with volume 4.19"</code> when you call <code>print(Sphere(1))</code> (hint: recall the <code>__str__()</code> method from the previous question).</li>
-</ol>
-<p>I've provided some tests for you to check your class.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [10]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Sphere</span><span class="p">(</span><span class="n">Circle</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""A sphere with a radius r."""</span>
-    
-    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Calculate the volume of the sphere."""</span>
-        <span class="k">return</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">3</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">"A Sphere with volume </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">volume</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
-<div class="input">
-<div class="prompt input_prompt">In [11]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">Sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"Test 1 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="p">(),</span> <span class="mf">28.3</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 2 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">circumference</span><span class="p">(),</span> <span class="mf">18.8</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 3 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">volume</span><span class="p">(),</span> <span class="mf">113.1</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 3 failed."</span>
-<span class="k">assert</span> <span class="n">Sphere</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"A Sphere with volume 4.19"</span><span class="p">,</span> <span class="s2">"Test 4 failed."</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Imagine that users of our <code>Sphere</code> class often want to instantiate our class with a <code>circumference</code> instead of a <code>radius</code>. Add a <a href="https://pages.github.ubc.ca/MDS-2020-21/DSCI_511_py-prog_students/lectures/lecture3-tests-classes.html#methods-class-methods-static-methods">class method</a> called <code>from_circ()</code> to the <code>Sphere</code> class that allows users to do this. The method should calculate the <code>radius</code> from the passed <code>circumference</code>, and then use that <code>radius</code> to make an instance of <code>Sphere</code>.</p>
-<p>I've provided some tests for you to check your modified class.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [12]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Sphere</span><span class="p">(</span><span class="n">Circle</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""A sphere with a radius r."""</span>
-    
-    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Calculate the volume of the sphere."""</span>
-        <span class="k">return</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">3</span>
-    
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_circ</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">circumference</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Make an instance of Sphere from a circumference."""</span>
-        <span class="n">radius</span> <span class="o">=</span> <span class="n">circumference</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">"A Sphere with volume </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">volume</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
-<div class="input">
-<div class="prompt input_prompt">In [13]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Test 1 failed."</span>
-<span class="k">assert</span> <span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s2">"Test 2 failed."</span> 
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 3 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">volume</span><span class="p">(),</span> <span class="mf">3.65</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 4 failed."</span>
-<span class="k">assert</span> <span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"A Sphere with volume 3.65"</span><span class="p">,</span> <span class="s2">"Test 5 failed."</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [14]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_03-py-tests-classes-practice-solutions.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">03</span>-py-tests-classes-practice-solutions.html
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -13458,8 +13366,457 @@ Cell <span class="ansi-green-fg">In[3], line 3</span>, in <span class="ansi-cyan
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] Converting notebook _03-py-tests-classes-practice-solutions.ipynb to html
-[NbConvertApp] Writing 295555 bytes to 03-py-tests-classes-practice-solutions.html
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1430 entries, 0 to 1429
+Data columns (total 4 columns):
+ #   Column         Non-Null Count  Dtype  
+---  ------         --------------  -----  
+ 0   country        1430 non-null   object 
+ 1   food_category  1430 non-null   object 
+ 2   consumption    1430 non-null   float64
+ 3   co2_emmission  1430 non-null   float64
+dtypes: float64(2), object(2)
+memory usage: 44.8+ KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is the mean <code>co2_emission</code> of the whole dataset?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">"co2_emmission"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>74.383993006993</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How many different kinds of foods are there in the dataset? How many countries are in the dataset?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"There are </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">'food_category'</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s2"> foods."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"There are </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">'country'</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s2"> countries."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>There are 11 foods.
+There are 130 countries.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is the maximum <code>co2_emmission</code> in the dataset and which food type and country does it belong to?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'co2_emmission'</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>country          Argentina
+food_category         Beef
+consumption          55.48
+co2_emmission       1712.0
+Name: 2, dtype: object</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How many countries produce more than 1000 Kg CO2/person/year for at least one food type?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"co2_emmission &gt; 1000"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>country</th>
+<th>food_category</th>
+<th>consumption</th>
+<th>co2_emmission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>2</th>
+<td>Argentina</td>
+<td>Beef</td>
+<td>55.48</td>
+<td>1712.00</td>
+</tr>
+<tr>
+<th>13</th>
+<td>Australia</td>
+<td>Beef</td>
+<td>33.86</td>
+<td>1044.85</td>
+</tr>
+<tr>
+<th>57</th>
+<td>USA</td>
+<td>Beef</td>
+<td>36.24</td>
+<td>1118.29</td>
+</tr>
+<tr>
+<th>90</th>
+<td>Brazil</td>
+<td>Beef</td>
+<td>39.25</td>
+<td>1211.17</td>
+</tr>
+<tr>
+<th>123</th>
+<td>Bermuda</td>
+<td>Beef</td>
+<td>33.15</td>
+<td>1022.94</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Which country consumes the least amount of beef per person per year?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"food_category == 'Beef'"</span><span class="p">)</span>
+   <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"consumption"</span><span class="p">)</span>
+   <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>country</th>
+<th>food_category</th>
+<th>consumption</th>
+<th>co2_emmission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1410</th>
+<td>Liberia</td>
+<td>Beef</td>
+<td>0.78</td>
+<td>24.07</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Which country consumes the most amount of soybeans per person per year?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"food_category == 'Soybeans'"</span><span class="p">)</span>
+   <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"consumption"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+   <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>country</th>
+<th>food_category</th>
+<th>consumption</th>
+<th>co2_emmission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1010</th>
+<td>Taiwan. ROC</td>
+<td>Soybeans</td>
+<td>16.95</td>
+<td>7.63</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is the total emissions of all the meat products (Pork, Poultry, Fish, Lamb &amp; Goat, Beef) in the dataset combined?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">meat</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Poultry'</span><span class="p">,</span> <span class="s1">'Pork'</span><span class="p">,</span> <span class="s1">'Fish'</span><span class="p">,</span> <span class="s1">'Lamb &amp; Goat'</span><span class="p">,</span> <span class="s1">'Beef'</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">"co2_emmission"</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">'food_category'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">meat</span><span class="p">)]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>74441.13</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is the total emissions of all other (non-meat) products in the dataset combined?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">meat</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Poultry'</span><span class="p">,</span> <span class="s1">'Pork'</span><span class="p">,</span> <span class="s1">'Fish'</span><span class="p">,</span> <span class="s1">'Lamb &amp; Goat'</span><span class="p">,</span> <span class="s1">'Beef'</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">"co2_emmission"</span><span class="p">][</span><span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="s1">'food_category'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">meat</span><span class="p">)]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[12]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>31927.98</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_07-py-pandas-practice-solutions.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">07</span>-py-pandas-practice-solutions.html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] Converting notebook _07-py-pandas-practice-solutions.ipynb to html
+[NbConvertApp] Writing 292948 bytes to 07-py-pandas-practice-solutions.html
 </pre>
 </div>
 </div>

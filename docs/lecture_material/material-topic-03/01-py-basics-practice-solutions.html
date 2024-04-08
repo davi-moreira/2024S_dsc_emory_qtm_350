@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>_03-py-tests-classes-practice-solutions</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+<title>_01-py-basics-practice-solutions</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
   import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
@@ -13089,7 +13089,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center>Python Unit Tests &amp; Classes - Practice <a class="tocSkip"></a></center></h1>
+<h1><center>Python Basics - Practice Solutions<a class="tocSkip"></a></center></h1>
 <h1><center>QTM 350: Data Science Computing <a class="tocSkip"></a></center></h1>
 <h1><center>Davi Moreira <a class="tocSkip"></a></center></h1>
 </div>
@@ -13112,93 +13112,294 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Unit-Tests-&amp;-Classes">Unit Tests &amp; Classes<a class="anchor-link" href="#Unit-Tests-&amp;-Classes">¶</a></h1>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is 5 to the power of 5?</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [34]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="mi">5</span> <span class="o">**</span> <span class="mi">5</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[34]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>3125</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a></h2>
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The function <code>area()</code> accepts the argument <code>radius</code> and calculates the area of a circle. Write three tests using <code>assert</code> statements for the following conditions:</p>
-<ol>
-<li>Assert that <code>area(1)</code> returns a <code>float</code>;</li>
-<li>Assert that <code>area(0)</code> returns a value of 0;</li>
-<li>Assert that <code>area(5)</code> is approximately equal to 78.5 (hint: <code>math.isclose(..., abs_tol=0.1)</code>)</li>
-</ol>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is the remainder from dividing 73 by 6?</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Calculate the area of a circle based on the given radius."""</span>
-    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="mi">73</span> <span class="o">%</span> <span class="mi">6</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[35]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How many times does the whole number 3 go into 123? What is the remainder of dividing 123 by 3?</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [36]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">area</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nb">float</span><span class="p">),</span> <span class="s1">'Test 1 failed!'</span>
-<span class="k">assert</span> <span class="n">area</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'Test 2 failed!'</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">area</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="mf">78.5</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">123</span> <span class="o">//</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">123</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>41
+0
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the spirit of the EAFP (easier to ask for forgiveness than permission) philosophy. Modify the code of the function <code>area()</code> and add a <code>try</code>/<code>except</code> statement to catch the type error raised by passing a string to <code>area()</code> as shown below:</p>
+<p>Split the following string into a list by splitting on the space character:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [37]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"MDS is going virtual!"</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[37]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>['MDS', 'is', 'going', 'virtual!']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Given the following variables:</p>
+<pre><code>thing = "light"
+speed = 299792458  # m/s
+</code></pre>
+<p>Use f-strings to print:</p>
+<pre><code>The speed of light is 2.997925e+08 m/s.
+</code></pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [38]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">thing</span> <span class="o">=</span> <span class="s2">"light"</span>
+<span class="n">speed</span> <span class="o">=</span> <span class="mi">299792458</span>  <span class="c1"># m/s</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The speed of </span><span class="si">{</span><span class="n">thing</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">speed</span><span class="si">:</span><span class="s2">2e</span><span class="si">}</span><span class="s2"> m/s."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The speed of light is 2.997925e+08 m/s.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Given this nested list, use indexing to grab the word "MDS":</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [39]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="p">[</span><span class="s2">"MDS"</span><span class="p">]],</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[39]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>['MDS']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Given this nest dictionary grab the word "MDS":</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [40]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"outer"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mi">1</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">,</span>
+        <span class="p">{</span><span class="s2">"inner"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"this"</span><span class="p">,</span> <span class="s2">"is"</span><span class="p">,</span> <span class="s2">"inception"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"inner_inner"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"MDS"</span><span class="p">]}]},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">d</span><span class="p">[</span><span class="s1">'outer'</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="s1">'inner'</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="s1">'inner_inner'</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[40]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>'MDS'</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Why does the following cell return an error?</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [41]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">area</span><span class="p">(</span><span class="s1">'10'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
 </pre></div>
 </div>
 </div>
@@ -13211,244 +13412,93 @@ div#notebook {
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">area</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">'</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">10</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">'</span><span class="ansi-yellow-bg">)</span>
+Cell <span class="ansi-green-fg">In[41], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> t <span style="color: rgb(98,98,98)">=</span> (<span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>, <span style="color: rgb(98,98,98)">3</span>, <span style="color: rgb(98,98,98)">4</span>, <span style="color: rgb(98,98,98)">5</span>)
+<span class="ansi-green-fg">----&gt; 2</span> <span class="ansi-yellow-bg">t</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">-</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">1</span><span class="ansi-yellow-bg">]</span> <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">6</span>
 
-Cell <span class="ansi-green-fg">In[3], line 3</span>, in <span class="ansi-cyan-fg">area</span><span class="ansi-blue-fg">(radius)</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">area</span>(radius):
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">"""Calculate the area of a circle based on the given radius."""</span>
-<span class="ansi-green-fg">----&gt; 3</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> math<span style="color: rgb(98,98,98)">.</span>pi <span style="color: rgb(98,98,98)">*</span> <span class="ansi-yellow-bg">radius</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">2</span>
-
-<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for ** or pow(): 'str' and 'int'</pre>
+<span class="ansi-red-fg">TypeError</span>: 'tuple' object does not support item assignment</pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Answer:</strong> Because tuples are immutable!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use string methods to extract the website domain from an email, e.g., from the string <code>"davi.moreira@fakemail.com"</code>, you should extract <code>"fakemail"</code>.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [42]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Calculate the area of a circle based on the given radius."""</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
-    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"radius should be a number but you entered a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Some other error occurred!"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">email</span> <span class="o">=</span> <span class="s2">"davi.moreira@fakemail.com"</span>
+
+<span class="n">email</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"@"</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">".com"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[42]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>'fakemail'</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the spirit of the LBYL (look before you leap) philosophy. Modify the code of the function <code>area()</code> and add a conditional <code>if</code>/<code>else</code> statement to make sure that a user has passed a number (<code>int</code> or <code>float</code>) to the <code>area()</code> function. If they pass something else, raise a <code>TypeError</code>.</p>
+<p>Given the variable <code>language</code> which contains a string, use <code>if/elif/else</code> to write a program that:</p>
+<ul>
+<li>return "I love snakes!" if <code>language</code> is <code>"python"</code> (any kind of capitalization)</li>
+<li>return "Are you a pirate?" if <code>language</code> is <code>"R"</code> (any kind of capitalization)</li>
+<li>else return "What is <code>language</code>?" if <code>language</code> is anything else.</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [43]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Calculate the area of a circle based on the given radius."""</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
-        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"radius should be a number but you entered a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For this exercise I want you to create a class called <code>Circle</code>. It should have the following characteristics:</p>
-<ol>
-<li>It should be initiated with the argument <code>radius</code> and store this as an instance attribute.</li>
-<li>Have a method <code>area()</code> which calculates the area of the circle.</li>
-<li>Have a method <code>circumference()</code> which calculates the circumference of the circle.</li>
-<li>Have the method <code>__str__()</code> which is a special method in Python and controls what is output to the screen when you <code>print()</code> an instance of your class (learn more <a href="https://realpython.com/lessons/how-and-when-use-__str__/">here</a>). The <code>print()</code> statement should print the string <code>f"A Circle with radius {self.radius}"</code>.</li>
-</ol>
-<p>I've provided some tests for you to check your class.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [8]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""A circle with a radius r."""</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">language</span> <span class="o">=</span> <span class="s2">"python"</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">radius</span>
-
-    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Calculate the area of the circle."""</span>
-        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
-
-    <span class="k">def</span> <span class="nf">circumference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Calculate the circumference of the circle."""</span>
-        <span class="k">return</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">"A Circle with radius </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">radius</span><span class="si">}</span><span class="s2">"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
-<div class="input">
-<div class="prompt input_prompt">In [9]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">Circle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"Test 1 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Circle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="p">(),</span> <span class="mf">28.3</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 2 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Circle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">circumference</span><span class="p">(),</span> <span class="mf">18.8</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 3 failed."</span>
-<span class="k">assert</span> <span class="n">Circle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"A Circle with radius 3"</span><span class="p">,</span> <span class="s2">"Test 4 failed."</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, let's create a new class <code>sphere</code> that inherits from the <code>circle</code> class we created above. It should have the following characteristics:</p>
-<ol>
-<li>It should be initiated exactly the same as <code>Circle</code> was, with the single argument <code>radius</code> which is stored as an instance attribute.</li>
-<li>Have a method <code>volume()</code> which calculates the volume of the sphere ($\frac{4}{3}{\pi}{r^3}$).</li>
-<li>Outputs the string <code>f"A Sphere with volume 4.19"</code> when you call <code>print(Sphere(1))</code> (hint: recall the <code>__str__()</code> method from the previous question).</li>
-</ol>
-<p>I've provided some tests for you to check your class.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [10]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Sphere</span><span class="p">(</span><span class="n">Circle</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""A sphere with a radius r."""</span>
-    
-    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Calculate the volume of the sphere."""</span>
-        <span class="k">return</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">3</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">"A Sphere with volume </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">volume</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
-<div class="input">
-<div class="prompt input_prompt">In [11]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">Sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"Test 1 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="p">(),</span> <span class="mf">28.3</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 2 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">circumference</span><span class="p">(),</span> <span class="mf">18.8</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 3 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">volume</span><span class="p">(),</span> <span class="mf">113.1</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 3 failed."</span>
-<span class="k">assert</span> <span class="n">Sphere</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"A Sphere with volume 4.19"</span><span class="p">,</span> <span class="s2">"Test 4 failed."</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Imagine that users of our <code>Sphere</code> class often want to instantiate our class with a <code>circumference</code> instead of a <code>radius</code>. Add a <a href="https://pages.github.ubc.ca/MDS-2020-21/DSCI_511_py-prog_students/lectures/lecture3-tests-classes.html#methods-class-methods-static-methods">class method</a> called <code>from_circ()</code> to the <code>Sphere</code> class that allows users to do this. The method should calculate the <code>radius</code> from the passed <code>circumference</code>, and then use that <code>radius</code> to make an instance of <code>Sphere</code>.</p>
-<p>I've provided some tests for you to check your modified class.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [12]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Sphere</span><span class="p">(</span><span class="n">Circle</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""A sphere with a radius r."""</span>
-    
-    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Calculate the volume of the sphere."""</span>
-        <span class="k">return</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">3</span>
-    
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_circ</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">circumference</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Make an instance of Sphere from a circumference."""</span>
-        <span class="n">radius</span> <span class="o">=</span> <span class="n">circumference</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">"A Sphere with volume </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">volume</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
-<div class="input">
-<div class="prompt input_prompt">In [13]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Test 1 failed."</span>
-<span class="k">assert</span> <span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s2">"Test 2 failed."</span> 
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 3 failed."</span>
-<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">volume</span><span class="p">(),</span> <span class="mf">3.65</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">"Test 4 failed."</span>
-<span class="k">assert</span> <span class="n">Sphere</span><span class="o">.</span><span class="n">from_circ</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"A Sphere with volume 3.65"</span><span class="p">,</span> <span class="s2">"Test 5 failed."</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [14]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_03-py-tests-classes-practice-solutions.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">03</span>-py-tests-classes-practice-solutions.html
+<span class="n">language</span> <span class="o">=</span> <span class="s2">"python"</span>
+<span class="k">if</span> <span class="n">language</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"python"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"I love snakes!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">language</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"r"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Are you a pirate?"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"What is </span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2">?"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -13458,8 +13508,30 @@ Cell <span class="ansi-green-fg">In[3], line 3</span>, in <span class="ansi-cyan
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] Converting notebook _03-py-tests-classes-practice-solutions.ipynb to html
-[NbConvertApp] Writing 295555 bytes to 03-py-tests-classes-practice-solutions.html
+<pre>I love snakes!
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [44]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_01-py-basics-practice-solutions.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">01</span>-py-basics-practice-solutions.html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] Converting notebook _01-py-basics-practice-solutions.ipynb to html
+[NbConvertApp] Writing 293251 bytes to 01-py-basics-practice-solutions.html
 </pre>
 </div>
 </div>
