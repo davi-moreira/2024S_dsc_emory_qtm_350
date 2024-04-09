@@ -38,10 +38,13 @@ tbl-colwidths: [10,50,40]
 
 # Lecture Material
 
--   Time Complexity, Big O, Space Complexity: [html](/lecture_material/material-topic-04/01-py-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"}
+-   Time Complexity, Big O, Space Complexity: [html](/lecture_material/material-topic-04/01-py-complexity-big-O.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_01-py-complexity-big-O.ipynb){target="_blank"}
 
-    -   In-Class Activity - Python Basics: [html](/lecture_material/material-topic-03/01-py-basics-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics-practice.ipynb){target="_blank"}
-    
+    -   In-Class Activity - Time Complexity, Big O, Space Complexity: [html](/lecture_material/material-topic-04/01-py-complexity-big-O-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_01-py-complexity-big-O-practice.ipynb){target="_blank"}
+
+<!---
+
+    -   In-Class Activity - Time Complexity, Big O, Space Complexity  - Solutions: [html](/lecture_material/material-topic-04/01-py-complexity-big-O-practice-solutions.html){target="_blank"}
 
 -   Searching, sorting, hash tables: [html](/lecture_material/material-topic-04/01-py-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"}
 
@@ -59,6 +62,7 @@ tbl-colwidths: [10,50,40]
 
     -   In-Class Activity - TBP
 
+--->
 
 # Problem Set
 
