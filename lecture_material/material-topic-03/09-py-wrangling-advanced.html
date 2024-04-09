@@ -4,7 +4,7 @@
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>_09-py-wrangling-advanced</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <style type="text/css">
@@ -27,6 +27,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 .highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #008400 } /* Generic.Inserted */
@@ -13656,40 +13657,16 @@ div#notebook {
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>match()</code></td>
-<td>Call re.match() on each element, returning a boolean.</td>
-</tr>
-<tr>
-<td><code>extract()</code></td>
-<td>Call re.match() on each element, returning matched groups as strings.</td>
-</tr>
-<tr>
-<td><code>findall()</code></td>
-<td>Call re.findall() on each element</td>
-</tr>
-<tr>
-<td><code>replace()</code></td>
-<td>Replace occurrences of pattern with some other string</td>
-</tr>
-<tr>
-<td><code>contains()</code></td>
-<td>Call re.search() on each element, returning a boolean</td>
-</tr>
-<tr>
-<td><code>count()</code></td>
-<td>Count occurrences of pattern</td>
-</tr>
-<tr>
-<td><code>split()</code></td>
-<td>Equivalent to str.split(), but accepts regexps</td>
-</tr>
-<tr>
-<td><code>rsplit()</code></td>
-<td>Equivalent to str.rsplit(), but accepts regexps</td>
-</tr>
 </tbody>
 </table>
+<p>|<code>match()</code>|Call re.match() on each element, returning a boolean.
+|<code>extract()</code>|Call re.match() on each element, returning matched groups as strings.
+|<code>findall()</code>|Call re.findall() on each element
+|<code>replace()</code>|Replace occurrences of pattern with some other string
+|<code>contains()</code>|Call re.search() on each element, returning a boolean
+|<code>count()</code>|Count occurrences of pattern
+|<code>split()</code>|Equivalent to str.split(), but accepts regexps
+|<code>rsplit()</code>|Equivalent to str.rsplit(), but accepts regexps</p>
 </div>
 </div>
 </div>
@@ -15550,14 +15527,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="'Pandas'(ydata)-Profiling">'Pandas'(ydata) Profiling<a class="anchor-link" href="#'Pandas'(ydata)-Profiling">¶</a></h2>
+<h2 id="'Pandas'-(ydata)-Profiling">'Pandas' (<code>ydata</code>) Profiling<a class="anchor-link" href="#'Pandas'-(ydata)-Profiling">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pandas profiling is a nifty tool for generating summary reports and doing exploratory data analysis on dataframes. <a href="https://github.com/pandas-profiling/pandas-profiling">Pandas profiling</a> is not part of base Pandas and it is changing its name to <a href="https://pypi.org/project/pandas-profiling/"><code>ydata-profiling</code></a>. 
+<p>Pandas profiling is a nifty tool for generating summary reports and doing exploratory data analysis on dataframes. <a href="https://github.com/pandas-profiling/pandas-profiling">Pandas profiling</a> is not part of base Pandas and it is changing its name to <a href="https://pypi.org/project/pandas-profiling/"><code>ydata-profiling</code></a>.
 To run this section code I highly recommend you to use <a href="https://colab.google/">Google Colab</a>. You can also install the package in your machine with:</p>
 <pre><code>$ conda install -c conda-forge ydata-profiling
 </code></pre>
@@ -15601,7 +15578,7 @@ To run this section code I highly recommend you to use <a href="https://colab.go
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_09-py-wrangling-advanced.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">09</span>-py-wrangling-advanced.html
@@ -15615,7 +15592,7 @@ To run this section code I highly recommend you to use <a href="https://colab.go
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook _09-py-wrangling-advanced.ipynb to html
-[NbConvertApp] Writing 868887 bytes to 09-py-wrangling-advanced.html
+[NbConvertApp] Writing 408719 bytes to 09-py-wrangling-advanced.html
 </pre>
 </div>
 </div>
