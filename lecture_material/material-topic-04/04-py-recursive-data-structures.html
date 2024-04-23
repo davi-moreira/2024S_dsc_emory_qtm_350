@@ -13114,7 +13114,6 @@ div#notebook {
 <li>Nearest neighbours intro</li>
 <li>$k$-d trees</li>
 <li>Amortization</li>
-<li>Activities (time-permitting)</li>
 </ul>
 </div>
 </div>
@@ -13132,7 +13131,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [60]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13176,22 +13175,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [61]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">]]</span>
 <span class="n">x</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[61]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>[[1, 2, 3], ['a', 'b', 'c']]</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13201,7 +13190,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>This is a list of lists.</li>
-<li>We also had dicts of dicts in Lab 1; another example is the JSON format.</li>
+<li>We also had dicts of dicts; another example is the JSON format.</li>
 <li>We can also have a doll within a doll:</li>
 </ul>
 </div>
@@ -13224,7 +13213,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [62]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">TreasureBox</span><span class="p">:</span>
@@ -13351,7 +13340,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [63]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span> <span class="o">=</span> <span class="n">TreasureBox</span><span class="p">(</span><span class="s2">"$5"</span><span class="p">)</span>
@@ -13367,11 +13356,11 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's interpret the code above:</p>
 <ol>
-<li><p><code>box = TreasureBox("$5")</code>: An instance of the <code>TreasureBox</code> class is created with a treasure of "$5". This is the initial box.</p>
+<li><p><code>box = TreasureBox('\$5')</code>: An instance of the <code>TreasureBox</code> class is created with a treasure of $5. This is the initial box.</p>
 </li>
-<li><p><code>box = box.append_outer("$100")</code>: The <code>append_outer</code> method is called on the <code>box</code> object. A new <code>TreasureBox</code> instance is created with a treasure of "$100". This new box is set to encompass the original box. The `next` attribute of this new `TreasureBox` points to the original `box` containing "$5". The variable <code>box</code> is then updated to reference this new outer box.</p>
+<li><p><code>box = box.append_outer("\$100")</code>: The <code>append_outer</code> method is called on the <code>box</code> object. A new <code>TreasureBox</code> instance is created with a treasure of "$100". This new box is set to encompass the original box. The <code>next</code> attribute of this new <code>TreasureBox</code> points to the original <code>box</code> containing "$5". The variable <code>box</code> is then updated to reference this new outer box.</p>
 </li>
-<li><p><code>box = box.append_outer("$20")</code>: The <code>append_outer</code> method is invoked again, this time on the updated <code>box</code> object (which now contains the "$100" treasure and encapsulates the "$5" treasure). A new <code>TreasureBox</code> with a treasure of "$20" is created and is set to encompass the "$100" box. The variable <code>box</code> is updated once more to reference this newest outer box.</p>
+<li><p><code>box = box.append_outer("\$20")</code>: The <code>append_outer</code> method is invoked again, this time on the updated <code>box</code> object (which now contains the $100 treasure and encapsulates the $5 treasure). A new <code>TreasureBox</code> with a treasure of $20 is created and is set to encompass the $100 box. The variable <code>box</code> is updated once more to reference this newest outer box.</p>
 </li>
 </ol>
 <p>After these operations, we have a nested structure of <code>TreasureBox</code> instances that can be visualized like this:</p>
@@ -13386,7 +13375,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [64]:</div>
+<div class="prompt input_prompt">In [104]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13397,9 +13386,9 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[64]:</div>
+<div class="prompt output_prompt">Out[104]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>'$20'</pre>
+<pre>'D'</pre>
 </div>
 </div>
 </div>
@@ -13407,7 +13396,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [65]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -13415,34 +13404,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[65]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>'$100'</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [66]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[66]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>'$5'</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13456,7 +13425,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [67]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -13474,7 +13443,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [68]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span> <span class="o">=</span> <span class="n">TreasureBox</span><span class="p">(</span><span class="s2">"Initial box"</span><span class="p">)</span>
@@ -13487,7 +13456,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [69]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13495,20 +13464,10 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[69]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>'Initial box'</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [70]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -13516,34 +13475,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[70]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>'Box in initial box'</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [71]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[71]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>'Box in the second box'</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13557,7 +13496,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [72]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">box</span> <span class="o">=</span> <span class="n">TreasureBox</span><span class="p">(</span><span class="s2">"A"</span><span class="p">)</span>
@@ -13569,16 +13508,6 @@ div#notebook {
 
 <span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[72]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>'B'</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13619,7 +13548,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [73]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">TreasureBox</span><span class="p">:</span>
@@ -13648,7 +13577,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [74]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Usage:</span>
@@ -13665,21 +13594,6 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># Outputs "B"</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">box</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>  <span class="c1"># Outputs "E"</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>D
-C
-A
-B
-E
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13740,7 +13654,7 @@ E
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [75]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">BinaryTree</span><span class="p">:</span>
@@ -13836,7 +13750,7 @@ E
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [76]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">BinaryTree</span><span class="p">(</span><span class="s2">"General"</span><span class="p">)</span>
@@ -13851,7 +13765,7 @@ E
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [77]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">tree</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">"Clown"</span><span class="p">)</span>
@@ -13859,20 +13773,10 @@ E
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[77]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [78]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">tree</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">"Captain B"</span><span class="p">)</span>
@@ -13880,20 +13784,10 @@ E
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[78]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [79]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
@@ -13901,34 +13795,14 @@ E
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[79]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>__main__.BinaryTree</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [80]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[80]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>__main__.BinaryTree</pre>
-</div>
 </div>
 </div>
 </div>
@@ -14017,7 +13891,7 @@ E
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [81]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># You can ignore the code - we'll just look at the plot</span>
@@ -14034,7 +13908,7 @@ E
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [82]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Creating Dataframe</span>
@@ -14061,79 +13935,6 @@ E
 
 <span class="n">chart1</span> <span class="o">+</span> <span class="n">chart2</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[82]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<style>
-  #altair-viz-ffc437b883cd4572b8aea711fd53792c.vega-embed {
-    width: 100%;
-    display: flex;
-  }
-
-  #altair-viz-ffc437b883cd4572b8aea711fd53792c.vega-embed details,
-  #altair-viz-ffc437b883cd4572b8aea711fd53792c.vega-embed details summary {
-    position: relative;
-  }
-</style>
-<div id="altair-viz-ffc437b883cd4572b8aea711fd53792c"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ffc437b883cd4572b8aea711fd53792c") {
-      outputDiv = document.getElementById("altair-viz-ffc437b883cd4572b8aea711fd53792c");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"mark": {"type": "circle"}, "encoding": {"color": {"value": "red"}, "size": {"value": 50}, "x": {"axis": {"title": ""}, "field": "m0", "type": "quantitative"}, "y": {"axis": {"title": ""}, "field": "m1", "type": "quantitative"}}}], "data": {"name": "data-c1efa3485bc54d5ce629e74e2a4b8128"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-c1efa3485bc54d5ce629e74e2a4b8128": [{"x0": 0.417022004702574, "x1": 0.7203244934421581, "m0": 0.5, "m1": 0.5}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977, "m0": 0.5, "m1": 0.5}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978, "m0": 0.5, "m1": 0.5}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774, "m0": 0.5, "m1": 0.5}, {"x0": 0.39676747423066994, "x1": 0.538816734003357, "m0": 0.5, "m1": 0.5}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595, "m0": 0.5, "m1": 0.5}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454, "m0": 0.5, "m1": 0.5}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022, "m0": 0.5, "m1": 0.5}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517, "m0": 0.5, "m1": 0.5}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788, "m0": 0.5, "m1": 0.5}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975, "m0": 0.5, "m1": 0.5}, {"x0": 0.31342417815924284, "x1": 0.6923226156693141, "m0": 0.5, "m1": 0.5}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473, "m0": 0.5, "m1": 0.5}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236, "m0": 0.5, "m1": 0.5}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131, "m0": 0.5, "m1": 0.5}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217, "m0": 0.5, "m1": 0.5}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171, "m0": 0.5, "m1": 0.5}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295, "m0": 0.5, "m1": 0.5}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729, "m0": 0.5, "m1": 0.5}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675, "m0": 0.5, "m1": 0.5}]}}, {"mode": "vega-lite"});
-</script></div>
 </div>
 </div>
 </div>
@@ -14166,7 +13967,7 @@ E
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [83]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># It's OK if you don't understand this code, especially during lecture</span>
@@ -14207,7 +14008,7 @@ E
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [84]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -14215,40 +14016,10 @@ E
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[4.17022005e-01 7.20324493e-01]
- [1.14374817e-04 3.02332573e-01]
- [1.46755891e-01 9.23385948e-02]
- [1.86260211e-01 3.45560727e-01]
- [3.96767474e-01 5.38816734e-01]
- [4.19194514e-01 6.85219500e-01]
- [2.04452250e-01 8.78117436e-01]
- [2.73875932e-02 6.70467510e-01]
- [4.17304802e-01 5.58689828e-01]
- [1.40386939e-01 1.98101489e-01]
- [8.00744569e-01 9.68261576e-01]
- [3.13424178e-01 6.92322616e-01]
- [8.76389152e-01 8.94606664e-01]
- [8.50442114e-02 3.90547832e-02]
- [1.69830420e-01 8.78142503e-01]
- [9.83468338e-02 4.21107625e-01]
- [9.57889530e-01 5.33165285e-01]
- [6.91877114e-01 3.15515631e-01]
- [6.86500928e-01 8.34625672e-01]
- [1.82882773e-02 7.50144315e-01]]
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [85]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
@@ -14258,34 +14029,14 @@ E
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[85]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>8</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [86]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[86]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>array([0.4173048 , 0.55868983])</pre>
-</div>
 </div>
 </div>
 </div>
@@ -14376,7 +14127,7 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [87]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># You do not need to read/understand this code,</span>
@@ -14547,7 +14298,7 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [88]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># np.median(X[:,0])</span>
@@ -14558,86 +14309,13 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [89]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">kdt</span> <span class="o">=</span> <span class="n">KDTree</span><span class="p">()</span>
 <span class="n">kdt</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">kdt</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[89]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<style>
-  #altair-viz-9f2d94f6b86b46e2932d9d2656046be8.vega-embed {
-    width: 100%;
-    display: flex;
-  }
-
-  #altair-viz-9f2d94f6b86b46e2932d9d2656046be8.vega-embed details,
-  #altair-viz-9f2d94f6b86b46e2932d9d2656046be8.vega-embed details summary {
-    position: relative;
-  }
-</style>
-<div id="altair-viz-9f2d94f6b86b46e2932d9d2656046be8"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-9f2d94f6b86b46e2932d9d2656046be8") {
-      outputDiv = document.getElementById("altair-viz-9f2d94f6b86b46e2932d9d2656046be8");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-27c49ca2d2c0e4fe4f94f1d7c160a361"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-9bc712eec4862e0da7b537a787dfb3ee"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-27c49ca2d2c0e4fe4f94f1d7c160a361": [{"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}], "data-9bc712eec4862e0da7b537a787dfb3ee": [{"x0": 0.25893821394538014, "x1": 0.0}, {"x0": 0.25893821394538014, "x1": 1.0}]}}, {"mode": "vega-lite"});
-</script></div>
 </div>
 </div>
 </div>
@@ -14660,7 +14338,7 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [90]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">kdt</span> <span class="o">=</span> <span class="n">KDTree</span><span class="p">()</span>
@@ -14672,84 +14350,11 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [91]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">kdt</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[91]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<style>
-  #altair-viz-1509735d3068453d9af94f3febca137e.vega-embed {
-    width: 100%;
-    display: flex;
-  }
-
-  #altair-viz-1509735d3068453d9af94f3febca137e.vega-embed details,
-  #altair-viz-1509735d3068453d9af94f3febca137e.vega-embed details summary {
-    position: relative;
-  }
-</style>
-<div id="altair-viz-1509735d3068453d9af94f3febca137e"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-1509735d3068453d9af94f3febca137e") {
-      outputDiv = document.getElementById("altair-viz-1509735d3068453d9af94f3febca137e");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-27c49ca2d2c0e4fe4f94f1d7c160a361"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-9bc712eec4862e0da7b537a787dfb3ee"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-7973e3913bac78a2baa4c4ec11621abd"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-e97518c52016479bcce556dfc5709844"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-dd7c6600cc9575f5eda9bc467c82864d"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-8d3d33f07fb14f5590a66386df1a92e2"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-27c49ca2d2c0e4fe4f94f1d7c160a361": [{"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}], "data-9bc712eec4862e0da7b537a787dfb3ee": [{"x0": 0.25893821394538014, "x1": 0.0}, {"x0": 0.25893821394538014, "x1": 1.0}], "data-7973e3913bac78a2baa4c4ec11621abd": [{"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}], "data-e97518c52016479bcce556dfc5709844": [{"x0": 0.0, "x1": 0.38333417602404996}, {"x0": 0.25893821394538014, "x1": 0.38333417602404996}], "data-dd7c6600cc9575f5eda9bc467c82864d": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}], "data-8d3d33f07fb14f5590a66386df1a92e2": [{"x0": 0.25893821394538014, "x1": 0.6887710580330368}, {"x0": 1.0, "x1": 0.6887710580330368}]}}, {"mode": "vega-lite"});
-</script></div>
 </div>
 </div>
 </div>
@@ -14780,7 +14385,7 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [92]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">kdt</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">depth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -14788,83 +14393,10 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[92]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<style>
-  #altair-viz-62bd3c706cff4747bc6af2799eed1fd0.vega-embed {
-    width: 100%;
-    display: flex;
-  }
-
-  #altair-viz-62bd3c706cff4747bc6af2799eed1fd0.vega-embed details,
-  #altair-viz-62bd3c706cff4747bc6af2799eed1fd0.vega-embed details summary {
-    position: relative;
-  }
-</style>
-<div id="altair-viz-62bd3c706cff4747bc6af2799eed1fd0"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-62bd3c706cff4747bc6af2799eed1fd0") {
-      outputDiv = document.getElementById("altair-viz-62bd3c706cff4747bc6af2799eed1fd0");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-27c49ca2d2c0e4fe4f94f1d7c160a361"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-9bc712eec4862e0da7b537a787dfb3ee"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-7973e3913bac78a2baa4c4ec11621abd"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-e97518c52016479bcce556dfc5709844"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-657747fab5880c708469930737ea95ef"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-05126c66c4ff0f169733929c9a1f1121"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-a5bfb3ebb114c79d889a25cb59fe8c56"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-27c1ded7b6ba14a375b2a970054cbf74"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-dd7c6600cc9575f5eda9bc467c82864d"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-8d3d33f07fb14f5590a66386df1a92e2"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-a86604c8a75a2a2ce7fe89bf9a1b4dc2"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-1b7adb1dccc7cebdbc14ba303905813a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-fb99218048d74684c8738b9f89b0a7c6"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-115aab6c315102839f7afa8a96ddcf0a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}], "encoding": {}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-27c49ca2d2c0e4fe4f94f1d7c160a361": [{"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}], "data-9bc712eec4862e0da7b537a787dfb3ee": [{"x0": 0.25893821394538014, "x1": 0.0}, {"x0": 0.25893821394538014, "x1": 1.0}], "data-7973e3913bac78a2baa4c4ec11621abd": [{"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}], "data-e97518c52016479bcce556dfc5709844": [{"x0": 0.0, "x1": 0.38333417602404996}, {"x0": 0.25893821394538014, "x1": 0.38333417602404996}], "data-657747fab5880c708469930737ea95ef": [{"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}], "data-05126c66c4ff0f169733929c9a1f1121": [{"x0": 0.14038693859523377, "x1": 0.0}, {"x0": 0.14038693859523377, "x1": 0.38333417602404996}], "data-a5bfb3ebb114c79d889a25cb59fe8c56": [{"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}], "data-27c1ded7b6ba14a375b2a970054cbf74": [{"x0": 0.0983468338330501, "x1": 0.38333417602404996}, {"x0": 0.0983468338330501, "x1": 1.0}], "data-dd7c6600cc9575f5eda9bc467c82864d": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}], "data-8d3d33f07fb14f5590a66386df1a92e2": [{"x0": 0.25893821394538014, "x1": 0.6887710580330368}, {"x0": 1.0, "x1": 0.6887710580330368}], "data-a86604c8a75a2a2ce7fe89bf9a1b4dc2": [{"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}], "data-1b7adb1dccc7cebdbc14ba303905813a": [{"x0": 0.4191945144032948, "x1": 0.0}, {"x0": 0.4191945144032948, "x1": 0.6887710580330368}], "data-fb99218048d74684c8738b9f89b0a7c6": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}], "data-115aab6c315102839f7afa8a96ddcf0a": [{"x0": 0.6865009276815837, "x1": 0.6887710580330368}, {"x0": 0.6865009276815837, "x1": 1.0}]}}, {"mode": "vega-lite"});
-</script></div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [93]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">kdt</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">depth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -14872,160 +14404,14 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[93]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<style>
-  #altair-viz-24931717d5bf43cabbed8d67a8712cfa.vega-embed {
-    width: 100%;
-    display: flex;
-  }
-
-  #altair-viz-24931717d5bf43cabbed8d67a8712cfa.vega-embed details,
-  #altair-viz-24931717d5bf43cabbed8d67a8712cfa.vega-embed details summary {
-    position: relative;
-  }
-</style>
-<div id="altair-viz-24931717d5bf43cabbed8d67a8712cfa"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-24931717d5bf43cabbed8d67a8712cfa") {
-      outputDiv = document.getElementById("altair-viz-24931717d5bf43cabbed8d67a8712cfa");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-27c49ca2d2c0e4fe4f94f1d7c160a361"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-9bc712eec4862e0da7b537a787dfb3ee"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-7973e3913bac78a2baa4c4ec11621abd"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-e97518c52016479bcce556dfc5709844"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-657747fab5880c708469930737ea95ef"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-05126c66c4ff0f169733929c9a1f1121"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-6b8208f326e6d944cb4cc74e5f514bf5"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-2978f75270fea57a0d7c409ec5258dd1"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-37491875782d34cf27b2db40e9de331f"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-272cfdd71140b1f14cf76a091111326a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-a5bfb3ebb114c79d889a25cb59fe8c56"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-27c1ded7b6ba14a375b2a970054cbf74"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-77b7cd5628178a8b9abe841181f4d4b3"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-fbe160e667b26ef5e7db63c19939b7bd"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-3521b7894724bfe0a27c0f3d4c5996fb"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-6c14a308836a7be6db6e93f732cfb20e"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-dd7c6600cc9575f5eda9bc467c82864d"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-8d3d33f07fb14f5590a66386df1a92e2"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-a86604c8a75a2a2ce7fe89bf9a1b4dc2"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-1b7adb1dccc7cebdbc14ba303905813a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-f6d6a57b9dbe9d83aa23a54c12a86580"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-35a861d08b68bdd3a757d9c51f87cd66"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-b7e3c74d0c3d5dedc8a8b6cf9fe980d2"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-673f77417a2199ec3b94475ae364545e"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-fb99218048d74684c8738b9f89b0a7c6"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-115aab6c315102839f7afa8a96ddcf0a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-17c8966e93f384d27cce5fdd45404893"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-dce5973907b059c02e1b5d21eb984509"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-9e7d634cc980b362c98bcff5248a1192"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-1781e5fe6884bdb5eb306e4f06d51867"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}], "encoding": {}}], "encoding": {}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-27c49ca2d2c0e4fe4f94f1d7c160a361": [{"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}], "data-9bc712eec4862e0da7b537a787dfb3ee": [{"x0": 0.25893821394538014, "x1": 0.0}, {"x0": 0.25893821394538014, "x1": 1.0}], "data-7973e3913bac78a2baa4c4ec11621abd": [{"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}], "data-e97518c52016479bcce556dfc5709844": [{"x0": 0.0, "x1": 0.38333417602404996}, {"x0": 0.25893821394538014, "x1": 0.38333417602404996}], "data-657747fab5880c708469930737ea95ef": [{"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}], "data-05126c66c4ff0f169733929c9a1f1121": [{"x0": 0.14038693859523377, "x1": 0.0}, {"x0": 0.14038693859523377, "x1": 0.38333417602404996}], "data-6b8208f326e6d944cb4cc74e5f514bf5": [{"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}], "data-2978f75270fea57a0d7c409ec5258dd1": [{"x0": 0.0, "x1": 0.17069367793236107}, {"x0": 0.14038693859523377, "x1": 0.17069367793236107}], "data-37491875782d34cf27b2db40e9de331f": [{"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}], "data-272cfdd71140b1f14cf76a091111326a": [{"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.25893821394538014, "x1": 0.1981014890848788}], "data-a5bfb3ebb114c79d889a25cb59fe8c56": [{"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}], "data-27c1ded7b6ba14a375b2a970054cbf74": [{"x0": 0.0983468338330501, "x1": 0.38333417602404996}, {"x0": 0.0983468338330501, "x1": 1.0}], "data-77b7cd5628178a8b9abe841181f4d4b3": [{"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}], "data-fbe160e667b26ef5e7db63c19939b7bd": [{"x0": 0.0, "x1": 0.7103059125616848}, {"x0": 0.0983468338330501, "x1": 0.7103059125616848}], "data-3521b7894724bfe0a27c0f3d4c5996fb": [{"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}], "data-6c14a308836a7be6db6e93f732cfb20e": [{"x0": 0.0983468338330501, "x1": 0.8781174363909454}, {"x0": 0.25893821394538014, "x1": 0.8781174363909454}], "data-dd7c6600cc9575f5eda9bc467c82864d": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}], "data-8d3d33f07fb14f5590a66386df1a92e2": [{"x0": 0.25893821394538014, "x1": 0.6887710580330368}, {"x0": 1.0, "x1": 0.6887710580330368}], "data-a86604c8a75a2a2ce7fe89bf9a1b4dc2": [{"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}], "data-1b7adb1dccc7cebdbc14ba303905813a": [{"x0": 0.4191945144032948, "x1": 0.0}, {"x0": 0.4191945144032948, "x1": 0.6887710580330368}], "data-f6d6a57b9dbe9d83aa23a54c12a86580": [{"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}], "data-35a861d08b68bdd3a757d9c51f87cd66": [{"x0": 0.25893821394538014, "x1": 0.5487532812245544}, {"x0": 0.4191945144032948, "x1": 0.5487532812245544}], "data-b7e3c74d0c3d5dedc8a8b6cf9fe980d2": [{"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}], "data-673f77417a2199ec3b94475ae364545e": [{"x0": 0.4191945144032948, "x1": 0.5331652849730171}, {"x0": 1.0, "x1": 0.5331652849730171}], "data-fb99218048d74684c8738b9f89b0a7c6": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}], "data-115aab6c315102839f7afa8a96ddcf0a": [{"x0": 0.6865009276815837, "x1": 0.6887710580330368}, {"x0": 0.6865009276815837, "x1": 1.0}], "data-17c8966e93f384d27cce5fdd45404893": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}], "data-dce5973907b059c02e1b5d21eb984509": [{"x0": 0.25893821394538014, "x1": 0.706323554555736}, {"x0": 0.6865009276815837, "x1": 0.706323554555736}], "data-9e7d634cc980b362c98bcff5248a1192": [{"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}], "data-1781e5fe6884bdb5eb306e4f06d51867": [{"x0": 0.6865009276815837, "x1": 0.8946066635038473}, {"x0": 1.0, "x1": 0.8946066635038473}]}}, {"mode": "vega-lite"});
-</script></div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [94]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">kdt</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">depth</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[94]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<style>
-  #altair-viz-8a7a490da911400796f79411e6f3f677.vega-embed {
-    width: 100%;
-    display: flex;
-  }
-
-  #altair-viz-8a7a490da911400796f79411e6f3f677.vega-embed details,
-  #altair-viz-8a7a490da911400796f79411e6f3f677.vega-embed details summary {
-    position: relative;
-  }
-</style>
-<div id="altair-viz-8a7a490da911400796f79411e6f3f677"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-8a7a490da911400796f79411e6f3f677") {
-      outputDiv = document.getElementById("altair-viz-8a7a490da911400796f79411e6f3f677");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-27c49ca2d2c0e4fe4f94f1d7c160a361"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-9bc712eec4862e0da7b537a787dfb3ee"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-7973e3913bac78a2baa4c4ec11621abd"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-e97518c52016479bcce556dfc5709844"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-657747fab5880c708469930737ea95ef"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-05126c66c4ff0f169733929c9a1f1121"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-6b8208f326e6d944cb4cc74e5f514bf5"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-2978f75270fea57a0d7c409ec5258dd1"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-03e125d35e5be573ece06c807ca2a7b4"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-69ecfa8dd2be3a07621be85a8e886a0f"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-322b8b176f219d4ba47b132335a0fe3d"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-e98355266a71f3e6704d92bfb50c9109"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-37491875782d34cf27b2db40e9de331f"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-272cfdd71140b1f14cf76a091111326a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-391d93bbf5f172546c6f6dfe04ab8f9f"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-50c7a10c9da802f911a4732cc0b1d32d"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-a4b4189cc6142edad10a2ee278f59f2e"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-e9959138dcf076b2aff2b14a732e2bc5"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-de3270efd3c1298a8783de7603e79ac7"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-9e813ff60b0e2165894ea790b5451d58"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-0d64c17c51be70f62db6e756b7989b59"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-19d2099a2e93c2928b4bb07cf2cfcccf"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-a5bfb3ebb114c79d889a25cb59fe8c56"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-27c1ded7b6ba14a375b2a970054cbf74"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-77b7cd5628178a8b9abe841181f4d4b3"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-fbe160e667b26ef5e7db63c19939b7bd"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-69dec39d147bd16689dd551b94ff838a"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-1a996f2865c4c9c20465800b0e30c721"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-2fc53f74066f757f3e6b1ea5b4836033"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-7701acf289018ab82c5fa5c134d2e7e7"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-3521b7894724bfe0a27c0f3d4c5996fb"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-6c14a308836a7be6db6e93f732cfb20e"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-f22e98b1a1c1388a30bf58a81394e016"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-51fd9eaff8f61217169baeb9b7bf41e7"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-efda157698f4b31d2ad85a40dc535aec"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-e5f380769378b8c102cc63e703d8b944"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-dfcbfc5a7c77db96fd699ccd9908fd61"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-f611c266102f65c7ac3cbc3e5e71fe07"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-4a7879d612107509b0c915165e4c4b04"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-5367093ff4d935a4c363631880f4bd5c"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}], "encoding": {}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-dd7c6600cc9575f5eda9bc467c82864d"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-8d3d33f07fb14f5590a66386df1a92e2"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-a86604c8a75a2a2ce7fe89bf9a1b4dc2"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-1b7adb1dccc7cebdbc14ba303905813a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-f6d6a57b9dbe9d83aa23a54c12a86580"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-35a861d08b68bdd3a757d9c51f87cd66"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-7b001dbd3571a57eda12a699561888b4"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-5562a44acd61b07b1e3988dde02a556a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-033ded7ff6c860b2c881d6a68c561170"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-4388312d38abf221c504b684770d33ab"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-b7e3c74d0c3d5dedc8a8b6cf9fe980d2"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-673f77417a2199ec3b94475ae364545e"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-2784434c55369a820e42d22ebff017fa"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-33a04cc8b2613720e9414b16ee492c07"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-9766cf63b3cf3e37823e0f7b44eccc54"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-70ca9dd25a3bad2aae27d9fbecdbc714"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-681cd1580939c94ac0410bbefbf314e8"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-f736da05b7cb3ae5f739cb994442795f"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-69fb0c7812914a2e2e60fefdd1acdefc"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-dc2250b1edbb81c5341d537cf80bd5fa"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-fb99218048d74684c8738b9f89b0a7c6"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-115aab6c315102839f7afa8a96ddcf0a"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-17c8966e93f384d27cce5fdd45404893"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-dce5973907b059c02e1b5d21eb984509"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-54b778381f78e1d1696cd32561e57faa"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-046c73c328634988a74f03b35d994bf4"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-e8fcb803498330aef9b8277544705a5e"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-07380f28811f75705ed7e36a04dedb77"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}, {"layer": [{"data": {"name": "data-9e7d634cc980b362c98bcff5248a1192"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-1781e5fe6884bdb5eb306e4f06d51867"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-8786f7f8b756a52cfc4187a478c33238"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-ae56ae1a82d807f651c75a7db25ab1b3"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-97d6b2b2a74c446c3ab1dc9dbc080c4a"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-b0f764309992b163dcc8d99cf4dc9f85"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"layer": [{"data": {"name": "data-30d5c00377d1badaff11945afa377d25"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-c9ee1d657e8a342c5c7b2db9ad067966"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}, {"layer": [{"data": {"name": "data-9cb91d435b010d61ed33816cac2f3760"}, "mark": {"type": "circle", "size": 60}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}, {"data": {"name": "data-c44b65c192db3ed8f6a45caacb128b73"}, "mark": {"type": "line"}, "encoding": {"x": {"axis": {"grid": false}, "field": "x0", "type": "quantitative"}, "y": {"axis": {"grid": false}, "field": "x1", "type": "quantitative"}}}], "encoding": {}}], "encoding": {}}], "encoding": {}}], "encoding": {}}], "encoding": {}}], "encoding": {}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-27c49ca2d2c0e4fe4f94f1d7c160a361": [{"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}], "data-9bc712eec4862e0da7b537a787dfb3ee": [{"x0": 0.25893821394538014, "x1": 0.0}, {"x0": 0.25893821394538014, "x1": 1.0}], "data-7973e3913bac78a2baa4c4ec11621abd": [{"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}], "data-e97518c52016479bcce556dfc5709844": [{"x0": 0.0, "x1": 0.38333417602404996}, {"x0": 0.25893821394538014, "x1": 0.38333417602404996}], "data-657747fab5880c708469930737ea95ef": [{"x0": 0.08504421136977791, "x1": 0.03905478323288236}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}], "data-05126c66c4ff0f169733929c9a1f1121": [{"x0": 0.14038693859523377, "x1": 0.0}, {"x0": 0.14038693859523377, "x1": 0.38333417602404996}], "data-6b8208f326e6d944cb4cc74e5f514bf5": [{"x0": 0.00011437481734488664, "x1": 0.30233257263183977}, {"x0": 0.08504421136977791, "x1": 0.03905478323288236}], "data-2978f75270fea57a0d7c409ec5258dd1": [{"x0": 0.0, "x1": 0.17069367793236107}, {"x0": 0.14038693859523377, "x1": 0.17069367793236107}], "data-03e125d35e5be573ece06c807ca2a7b4": [{"x0": 0.08504421136977791, "x1": 0.03905478323288236}], "data-69ecfa8dd2be3a07621be85a8e886a0f": [{"x0": 0.08504421136977791, "x1": 0.0}, {"x0": 0.08504421136977791, "x1": 0.17069367793236107}], "data-322b8b176f219d4ba47b132335a0fe3d": [{"x0": 0.00011437481734488664, "x1": 0.30233257263183977}], "data-e98355266a71f3e6704d92bfb50c9109": [{"x0": 0.00011437481734488664, "x1": 0.17069367793236107}, {"x0": 0.00011437481734488664, "x1": 0.38333417602404996}], "data-37491875782d34cf27b2db40e9de331f": [{"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.14675589081711304, "x1": 0.0923385947687978}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}], "data-272cfdd71140b1f14cf76a091111326a": [{"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.25893821394538014, "x1": 0.1981014890848788}], "data-391d93bbf5f172546c6f6dfe04ab8f9f": [{"x0": 0.14675589081711304, "x1": 0.0923385947687978}], "data-50c7a10c9da802f911a4732cc0b1d32d": [{"x0": 0.14675589081711304, "x1": 0.0}, {"x0": 0.14675589081711304, "x1": 0.1981014890848788}], "data-a4b4189cc6142edad10a2ee278f59f2e": [{"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.1862602113776709, "x1": 0.34556072704304774}], "data-e9959138dcf076b2aff2b14a732e2bc5": [{"x0": 0.16332357498645234, "x1": 0.1981014890848788}, {"x0": 0.16332357498645234, "x1": 0.38333417602404996}], "data-de3270efd3c1298a8783de7603e79ac7": [{"x0": 0.14038693859523377, "x1": 0.1981014890848788}], "data-9e813ff60b0e2165894ea790b5451d58": [{"x0": 0.14038693859523377, "x1": 0.1981014890848788}, {"x0": 0.16332357498645234, "x1": 0.1981014890848788}], "data-0d64c17c51be70f62db6e756b7989b59": [{"x0": 0.1862602113776709, "x1": 0.34556072704304774}], "data-19d2099a2e93c2928b4bb07cf2cfcccf": [{"x0": 0.16332357498645234, "x1": 0.34556072704304774}, {"x0": 0.25893821394538014, "x1": 0.34556072704304774}], "data-a5bfb3ebb114c79d889a25cb59fe8c56": [{"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}, {"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}], "data-27c1ded7b6ba14a375b2a970054cbf74": [{"x0": 0.0983468338330501, "x1": 0.38333417602404996}, {"x0": 0.0983468338330501, "x1": 1.0}], "data-77b7cd5628178a8b9abe841181f4d4b3": [{"x0": 0.018288277344191806, "x1": 0.7501443149449675}, {"x0": 0.027387593197926163, "x1": 0.6704675101784022}], "data-fbe160e667b26ef5e7db63c19939b7bd": [{"x0": 0.0, "x1": 0.7103059125616848}, {"x0": 0.0983468338330501, "x1": 0.7103059125616848}], "data-69dec39d147bd16689dd551b94ff838a": [{"x0": 0.027387593197926163, "x1": 0.6704675101784022}], "data-1a996f2865c4c9c20465800b0e30c721": [{"x0": 0.027387593197926163, "x1": 0.38333417602404996}, {"x0": 0.027387593197926163, "x1": 0.7103059125616848}], "data-2fc53f74066f757f3e6b1ea5b4836033": [{"x0": 0.018288277344191806, "x1": 0.7501443149449675}], "data-7701acf289018ab82c5fa5c134d2e7e7": [{"x0": 0.018288277344191806, "x1": 0.7103059125616848}, {"x0": 0.018288277344191806, "x1": 1.0}], "data-3521b7894724bfe0a27c0f3d4c5996fb": [{"x0": 0.0983468338330501, "x1": 0.42110762500505217}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}, {"x0": 0.20445224973151743, "x1": 0.8781174363909454}], "data-6c14a308836a7be6db6e93f732cfb20e": [{"x0": 0.0983468338330501, "x1": 0.8781174363909454}, {"x0": 0.25893821394538014, "x1": 0.8781174363909454}], "data-f22e98b1a1c1388a30bf58a81394e016": [{"x0": 0.0983468338330501, "x1": 0.42110762500505217}], "data-51fd9eaff8f61217169baeb9b7bf41e7": [{"x0": 0.0983468338330501, "x1": 0.38333417602404996}, {"x0": 0.0983468338330501, "x1": 0.8781174363909454}], "data-efda157698f4b31d2ad85a40dc535aec": [{"x0": 0.20445224973151743, "x1": 0.8781174363909454}, {"x0": 0.1698304195645689, "x1": 0.8781425034294131}], "data-e5f380769378b8c102cc63e703d8b944": [{"x0": 0.18714133464804317, "x1": 0.8781174363909454}, {"x0": 0.18714133464804317, "x1": 1.0}], "data-dfcbfc5a7c77db96fd699ccd9908fd61": [{"x0": 0.1698304195645689, "x1": 0.8781425034294131}], "data-f611c266102f65c7ac3cbc3e5e71fe07": [{"x0": 0.0983468338330501, "x1": 0.8781425034294131}, {"x0": 0.18714133464804317, "x1": 0.8781425034294131}], "data-4a7879d612107509b0c915165e4c4b04": [{"x0": 0.20445224973151743, "x1": 0.8781174363909454}], "data-5367093ff4d935a4c363631880f4bd5c": [{"x0": 0.18714133464804317, "x1": 0.8781174363909454}, {"x0": 0.25893821394538014, "x1": 0.8781174363909454}], "data-dd7c6600cc9575f5eda9bc467c82864d": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}], "data-8d3d33f07fb14f5590a66386df1a92e2": [{"x0": 0.25893821394538014, "x1": 0.6887710580330368}, {"x0": 1.0, "x1": 0.6887710580330368}], "data-a86604c8a75a2a2ce7fe89bf9a1b4dc2": [{"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}], "data-1b7adb1dccc7cebdbc14ba303905813a": [{"x0": 0.4191945144032948, "x1": 0.0}, {"x0": 0.4191945144032948, "x1": 0.6887710580330368}], "data-f6d6a57b9dbe9d83aa23a54c12a86580": [{"x0": 0.39676747423066994, "x1": 0.538816734003357}, {"x0": 0.41730480236712697, "x1": 0.5586898284457517}], "data-35a861d08b68bdd3a757d9c51f87cd66": [{"x0": 0.25893821394538014, "x1": 0.5487532812245544}, {"x0": 0.4191945144032948, "x1": 0.5487532812245544}], "data-7b001dbd3571a57eda12a699561888b4": [{"x0": 0.39676747423066994, "x1": 0.538816734003357}], "data-5562a44acd61b07b1e3988dde02a556a": [{"x0": 0.39676747423066994, "x1": 0.0}, {"x0": 0.39676747423066994, "x1": 0.5487532812245544}], "data-033ded7ff6c860b2c881d6a68c561170": [{"x0": 0.41730480236712697, "x1": 0.5586898284457517}], "data-4388312d38abf221c504b684770d33ab": [{"x0": 0.41730480236712697, "x1": 0.5487532812245544}, {"x0": 0.41730480236712697, "x1": 0.6887710580330368}], "data-b7e3c74d0c3d5dedc8a8b6cf9fe980d2": [{"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.6918771139504734, "x1": 0.31551563100606295}, {"x0": 0.9578895301505019, "x1": 0.5331652849730171}], "data-673f77417a2199ec3b94475ae364545e": [{"x0": 0.4191945144032948, "x1": 0.5331652849730171}, {"x0": 1.0, "x1": 0.5331652849730171}], "data-2784434c55369a820e42d22ebff017fa": [{"x0": 0.6918771139504734, "x1": 0.31551563100606295}], "data-33a04cc8b2613720e9414b16ee492c07": [{"x0": 0.6918771139504734, "x1": 0.0}, {"x0": 0.6918771139504734, "x1": 0.5331652849730171}], "data-9766cf63b3cf3e37823e0f7b44eccc54": [{"x0": 0.9578895301505019, "x1": 0.5331652849730171}, {"x0": 0.4191945144032948, "x1": 0.6852195003967595}], "data-70ca9dd25a3bad2aae27d9fbecdbc714": [{"x0": 0.6885420222768983, "x1": 0.5331652849730171}, {"x0": 0.6885420222768983, "x1": 0.6887710580330368}], "data-681cd1580939c94ac0410bbefbf314e8": [{"x0": 0.4191945144032948, "x1": 0.6852195003967595}], "data-f736da05b7cb3ae5f739cb994442795f": [{"x0": 0.4191945144032948, "x1": 0.6852195003967595}, {"x0": 0.6885420222768983, "x1": 0.6852195003967595}], "data-69fb0c7812914a2e2e60fefdd1acdefc": [{"x0": 0.9578895301505019, "x1": 0.5331652849730171}], "data-dc2250b1edbb81c5341d537cf80bd5fa": [{"x0": 0.6885420222768983, "x1": 0.5331652849730171}, {"x0": 1.0, "x1": 0.5331652849730171}], "data-fb99218048d74684c8738b9f89b0a7c6": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}, {"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}], "data-115aab6c315102839f7afa8a96ddcf0a": [{"x0": 0.6865009276815837, "x1": 0.6887710580330368}, {"x0": 0.6865009276815837, "x1": 1.0}], "data-17c8966e93f384d27cce5fdd45404893": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}, {"x0": 0.417022004702574, "x1": 0.7203244934421581}], "data-dce5973907b059c02e1b5d21eb984509": [{"x0": 0.25893821394538014, "x1": 0.706323554555736}, {"x0": 0.6865009276815837, "x1": 0.706323554555736}], "data-54b778381f78e1d1696cd32561e57faa": [{"x0": 0.31342417815924284, "x1": 0.6923226156693141}], "data-046c73c328634988a74f03b35d994bf4": [{"x0": 0.31342417815924284, "x1": 0.6887710580330368}, {"x0": 0.31342417815924284, "x1": 0.706323554555736}], "data-e8fcb803498330aef9b8277544705a5e": [{"x0": 0.417022004702574, "x1": 0.7203244934421581}], "data-07380f28811f75705ed7e36a04dedb77": [{"x0": 0.417022004702574, "x1": 0.706323554555736}, {"x0": 0.417022004702574, "x1": 1.0}], "data-9e7d634cc980b362c98bcff5248a1192": [{"x0": 0.6865009276815837, "x1": 0.8346256718973729}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}, {"x0": 0.8763891522960383, "x1": 0.8946066635038473}], "data-1781e5fe6884bdb5eb306e4f06d51867": [{"x0": 0.6865009276815837, "x1": 0.8946066635038473}, {"x0": 1.0, "x1": 0.8946066635038473}], "data-8786f7f8b756a52cfc4187a478c33238": [{"x0": 0.6865009276815837, "x1": 0.8346256718973729}], "data-ae56ae1a82d807f651c75a7db25ab1b3": [{"x0": 0.6865009276815837, "x1": 0.6887710580330368}, {"x0": 0.6865009276815837, "x1": 0.8946066635038473}], "data-97d6b2b2a74c446c3ab1dc9dbc080c4a": [{"x0": 0.8763891522960383, "x1": 0.8946066635038473}, {"x0": 0.8007445686755367, "x1": 0.9682615757193975}], "data-b0f764309992b163dcc8d99cf4dc9f85": [{"x0": 0.8385668604857874, "x1": 0.8946066635038473}, {"x0": 0.8385668604857874, "x1": 1.0}], "data-30d5c00377d1badaff11945afa377d25": [{"x0": 0.8007445686755367, "x1": 0.9682615757193975}], "data-c9ee1d657e8a342c5c7b2db9ad067966": [{"x0": 0.6865009276815837, "x1": 0.9682615757193975}, {"x0": 0.8385668604857874, "x1": 0.9682615757193975}], "data-9cb91d435b010d61ed33816cac2f3760": [{"x0": 0.8763891522960383, "x1": 0.8946066635038473}], "data-c44b65c192db3ed8f6a45caacb128b73": [{"x0": 0.8385668604857874, "x1": 0.8946066635038473}, {"x0": 1.0, "x1": 0.8946066635038473}]}}, {"mode": "vega-lite"});
-</script></div>
 </div>
 </div>
 </div>
@@ -15039,21 +14425,11 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [95]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">kdt</span><span class="o">.</span><span class="n">approximateNearestNeighbour</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[95]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>array([0.87638915, 0.89460666])</pre>
-</div>
 </div>
 </div>
 </div>
@@ -15089,21 +14465,11 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [96]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">[</span><span class="n">nearest_neighbour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]))]</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[96]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>array([0.87638915, 0.89460666])</pre>
-</div>
 </div>
 </div>
 </div>
@@ -15124,7 +14490,7 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [97]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">kdt</span><span class="o">.</span><span class="n">approximateNearestNeighbour</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]))</span>
@@ -15132,34 +14498,14 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[97]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>array([0.69187711, 0.31551563])</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [98]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">[</span><span class="n">nearest_neighbour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]))]</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[98]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>array([0.4173048 , 0.55868983])</pre>
-</div>
 </div>
 </div>
 </div>
@@ -15180,7 +14526,7 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [99]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">n_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10_000</span><span class="p">,</span> <span class="mi">100_000</span><span class="p">]</span>
@@ -15207,28 +14553,6 @@ Recursive data structures like BSTs can be used to efficiently implement nearest
     <span class="n">time</span> <span class="o">=</span> <span class="o">%</span><span class="k">timeit</span> -q -o -r 3 nearest_neighbour(X, query)
     <span class="n">results</span><span class="p">[</span><span class="s2">"Brute force"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">average</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>n:  100
-  KDTree
-  Brute force
-n:  1000
-  KDTree
-  Brute force
-n:  10000
-  KDTree
-  Brute force
-n:  100000
-  KDTree
-  Brute force
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -15268,75 +14592,12 @@ n:  100000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [100]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
 <span class="n">df</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[100]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>n</th>
-<th>KDTree init</th>
-<th>KDTree query</th>
-<th>Brute force</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>100</td>
-<td>0.000029</td>
-<td>0.000019</td>
-<td>0.000004</td>
-</tr>
-<tr>
-<th>1</th>
-<td>1000</td>
-<td>0.000084</td>
-<td>0.000024</td>
-<td>0.000031</td>
-</tr>
-<tr>
-<th>2</th>
-<td>10000</td>
-<td>0.001756</td>
-<td>0.000032</td>
-<td>0.000200</td>
-</tr>
-<tr>
-<th>3</th>
-<td>100000</td>
-<td>0.027282</td>
-<td>0.000031</td>
-<td>0.001777</td>
-</tr>
-</tbody>
-</table>
-</div></div>
 </div>
 </div>
 </div>
@@ -15451,7 +14712,7 @@ n:  100000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [101]:</div>
+<div class="prompt input_prompt">In [102]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_04-py-recursive-data-structures.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic<span class="w"> </span>--output<span class="w"> </span><span class="m">04</span>-py-recursive-data-structures.html
@@ -15465,7 +14726,7 @@ n:  100000
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook _04-py-recursive-data-structures.ipynb to html
-[NbConvertApp] Writing 483145 bytes to 04-py-recursive-data-structures.html
+[NbConvertApp] Writing 484672 bytes to 04-py-recursive-data-structures.html
 </pre>
 </div>
 </div>
