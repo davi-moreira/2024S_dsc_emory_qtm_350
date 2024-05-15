@@ -45,20 +45,19 @@ tbl-colwidths: [10,50,40]
 
 # Lecture Material
 
--   Basics of Command Line (very short piece): [html](/lecture_material/material-topic-02/basics_of_cmd.html){target="_blank"}, [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/_basics_of_cmd.ipynb){target="_blank"}
-<!--- to generate the link: https://minhaskamal.github.io/DownGit/#/home --->
+-   Basics of Command Line (very short piece): [html](/lecture_material/material-topic-02/basics_of_cmd.html){target="_blank"}, [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/_basics_of_cmd.ipynb){target="_blank"} <!--- to generate the link: https://minhaskamal.github.io/DownGit/#/home --->
 
+```{=html}
 <!---<a href="
 https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material-topic-02/_basics_of_cmd.ipynb" download> notebook </a>--->
-
+```
 -   Basics of Command Line (slides material):[`.zip`](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/examples.zip){target="_blank"}
 
 -   In-Class Activity - Exploring the Command Line: [html](/lecture_material/material-topic-02/command_line_activity.html){target="_blank"}
 
 # Problem Set
 
-- [Problem Set - Collaboration and Version Control with Git and GitHub](/lecture_material/material-topic-02/problem_set_version_control.html){target="_blank"}
-
+-   [Problem Set - Collaboration and Version Control with Git and GitHub](/lecture_material/material-topic-02/problem_set_version_control.html){target="_blank"}
 
 # Recommended Readings
 
@@ -80,9 +79,7 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 
     -   [Ch. 3: Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell){target="_blank"}
 
-
-- [Essential Computer Literacy: 50 min.](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/essential-computer-literacy/index.html#0){target="_blank"}
-
+-   [Essential Computer Literacy: 50 min.](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/essential-computer-literacy/index.html#0){target="_blank"}
 
 # Additional Resources
 
@@ -91,17 +88,17 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 -   [vim Video](https://missing.csail.mit.edu/2020/editors/){target="_blank"}
 
 -   More on Git/Github in Pro Git:
+
     -   [Read 1.4 - 1.7](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line){target="_blank"} for help on installation and commandline
 
     -   Read [Ch. 6](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration){target="_blank"} for more information regarding Git + Github.
+
 -   [Ch. 13 Detect Git from RStudio -Happy Git with R](https://happygitwithr.com/rstudio-see-git.html){target="_blank"} - Bryan, Jenny & Jim Hester
 
-- [Visualizing Git](https://git-school.github.io/visualizing-git/){target="_blank"}
+-   [Visualizing Git](https://git-school.github.io/visualizing-git/){target="_blank"}
 
-- [Data Science at the Command Line](https://jeroenjanssens.com/dsatcl/)
+-   [Data Science at the Command Line](https://jeroenjanssens.com/dsatcl/)
 
-- [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
+-   [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
 
-- [Introduction to Linux](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/introduction-to-linux/index.html#0){target="_blank"}
-
-
+-   [Introduction to Linux](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/introduction-to-linux/index.html#0){target="_blank"}
